@@ -1,0 +1,123 @@
+/* Base Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: none;
+  background: transparent;
+}
+
+/* Sizing */
+.btn-lg {
+  height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+  border-radius: var(--radius-md);
+}
+
+.btn-md {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 15px;
+  border-radius: var(--radius-md);
+}
+
+.btn-sm {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--c-primary);
+  color: var(--c-white);
+  box-shadow: 0 4px 12px -2px rgba(37, 84, 223, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: var(--c-primary-hover);
+  box-shadow: 0 6px 16px -2px rgba(37, 84, 223, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--c-white);
+  color: var(--c-text-primary);
+  border: 1px solid var(--c-border-mid);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--c-base);
+  border-color: var(--c-text-secondary);
+  transform: translateY(-1px);
+}
+
+/* Ghost / Tertiary Button */
+.btn-ghost {
+  color: var(--c-primary);
+  padding: 0 16px;
+}
+
+.btn-ghost:hover {
+  background-color: var(--c-surface);
+  color: var(--c-primary-hover);
+  border-radius: var(--radius-sm);
+}
+
+/* Icon Arrow Button (Used in Protocol Strip) */
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: var(--radius-full);
+  background-color: var(--c-white);
+  border: 1px solid var(--c-border-light);
+  color: var(--c-text-secondary);
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-icon:hover {
+  background-color: var(--c-primary);
+  border-color: var(--c-primary);
+  color: var(--c-white);
+  transform: scale(1.05);
+}
+
+.btn-icon:disabled {
+  opacity: 0.5;
+  background-color: var(--c-surface);
+  color: var(--c-text-muted);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Icon Spacing helper inside buttons */
+.btn svg.icon-right {
+  margin-left: 8px;
+}
+
+.btn svg.icon-left {
+  margin-right: 8px;
+}
