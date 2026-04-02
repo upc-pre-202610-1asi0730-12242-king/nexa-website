@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa | Dashboard</title>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Nexa</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="index.html" class="menu-item active">
+                    <i class="ph ph-squares-four"></i> <span>Dashboard</span>
+                </a>
+                <a href="envios.html" class="menu-item">
+                    <i class="ph ph-truck"></i> <span>Envíos</span>
+                </a>
+                <a href="reportes.html" class="menu-item">
+                    <i class="ph ph-chart-bar"></i> <span>Reportes</span>
+                </a>
+                <a href="configuracion.html" class="menu-item">
+                    <i class="ph ph-gear"></i> <span>Configuración</span>
+                </a>
+                <a href="usuario.html" class="menu-item">
+                    <i class="ph ph-user"></i> <span>Usuario</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <header class="top-nav">
+                <div class="user-profile">
+                    <div class="avatar"><i class="ph-fill ph-user"></i></div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <!-- Resumen y Gráficas -->
+                <div class="grid-layout main-grid">
+                    <!-- Data Numérica -->
+                    <div class="glass-box">
+                        <h3 class="box-title">Resumen de Envíos</h3>
+                        <div class="stats-row mt-4">
+                            <div class="stat-box">
+                                <span class="stat-label">Envíos activos</span>
+                                <span class="stat-number">13</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Actividad reciente</span>
+                                <span class="stat-number color-primary">23 <span
+                                        class="text-sm text-dim">envíos</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Listado Corto -->
+                    <div class="glass-box">
+                        <h3 class="box-title">Tus Envíos <span class="arrow-icon"><i
+                                    class="ph ph-caret-right"></i></span></h3>
+                        <div class="list-container mt-4">
+                            <div class="list-item">
+                                <div class="item-icon"><i class="ph-fill ph-airplane-tilt"></i></div>
+                                <div class="item-info">
+                                    <strong>Envío #22A3</strong>
+                                    <span>Ruta: Lima - Arequipa</span>
+                                </div>
+                                <div class="item-status status-green">En Camino</div>
+                            </div>
+                            <div class="list-item">
+                                <div class="item-icon"><i class="ph-fill ph-airplane-tilt"></i></div>
+                                <div class="item-info">
+                                    <strong>Envío #1103</strong>
+                                    <span>Ruta: Callao - Piura</span>
+                                </div>
+                                <div class="item-status status-green">En Camino</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gráficos Medios -->
+                <div class="grid-layout charts-grid mt-4">
+                    <div class="glass-box box-chart">
+                        <h3 class="box-title">Peso total</h3>
+                        <div class="mock-chart area-chart">
+                            <div class="y-labels"><span>15</span><span>12</span><span>0</span></div>
+                            <div class="chart-content">
+                                <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+                                    <path d="M0,35 C20,30 30,10 50,20 C70,30 80,10 100,5 O100,40 0,40 Z"
+                                        class="svg-area" />
+                                    <path d="M0,35 C20,30 30,10 50,20 C70,30 80,10 100,5" class="svg-line" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="x-labels"><span>12</span><span>72</span><span>165</span><span>200</span></div>
+                    </div>
+
+                    <div class="glass-box box-chart">
+                        <h3 class="box-title">Volumen</h3>
+                        <div class="mock-chart bar-chart">
+                            <div class="y-labels"><span>200</span><span>100</span><span>0</span></div>
+                            <div class="chart-content bars">
+                                <div class="bar" style="height: 40%;"></div>
+                                <div class="bar" style="height: 20%;"></div>
+                                <div class="bar" style="height: 60%;"></div>
+                                <div class="bar" style="height: 30%;"></div>
+                                <div class="bar" style="height: 80%;"></div>
+                                <div class="bar" style="height: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="x-labels">
+                            <span>M</span><span>S</span><span>M</span><span>S</span><span>F</span><span>D</span></div>
+                    </div>
+                </div>
+
+                <!-- Entregas Diarias -->
+                <div class="glass-box mt-4">
+                    <div class="flex-between">
+                        <h3 class="box-title">Entregas Diarias</h3>
+                        <span class="text-sm text-dim">Ver todas</span>
+                    </div>
+                    <div class="mock-chart big-bar-chart mt-4">
+                        <div class="y-labels"><span>20</span><span>15</span><span>10</span><span>5</span><span>0</span>
+                        </div>
+                        <div class="chart-content bars wide">
+                            <div class="bar" style="height: 30%;"></div>
+                            <div class="bar" style="height: 70%;"></div>
+                            <div class="bar" style="height: 45%;"></div>
+                            <div class="bar" style="height: 60%;"></div>
+                            <div class="bar" style="height: 85%;"></div>
+                            <div class="bar" style="height: 50%;"></div>
+                            <div class="bar" style="height: 75%;"></div>
+                            <div class="bar" style="height: 40%;"></div>
+                            <div class="bar" style="height: 85%;"></div>
+                            <div class="bar" style="height: 35%;"></div>
+                            <div class="bar" style="height: 20%;"></div>
+                        </div>
+                    </div>
+                    <div class="x-labels wide-labels mt-2">
+                        <span>A</span><span>M</span><span>S</span><span>D</span><span>F</span><span>D</span><span>J</span><span>J</span><span>S</span><span>S</span><span>M</span>
+                    </div>
+                </div>
+
+                <!-- Tabla de la Imagen -->
+                <div class="glass-box mt-4 no-pad">
+                    <div class="pad-wrapper flex-between">
+                        <h3 class="box-title m-0">Registro de Actividad</h3>
+                        <span class="text-sm text-dim">Ver mes</span>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Envío ID</th>
+                                <th>Destino</th>
+                                <th>Estados</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Envío #2109</td>
+                                <td>Ruta: Lima – Trujillo</td>
+                                <td><span class="status-badge status-yellow">En Camino</span></td>
+                            </tr>
+                            <tr>
+                                <td>Envío #2103</td>
+                                <td>Ruta: Callao Cercado</td>
+                                <td><span class="status-badge status-yellow">En Camino</span></td>
+                            </tr>
+                            <tr>
+                                <td>Envío #2565</td>
+                                <td>Ruta: Arequipa Sur</td>
+                                <td><span class="status-badge status-yellow">En Camino</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <i class="ph ph-caret-left"></i> <span>1</span> <span class="active">2</span> <span>3</span> <i
+                            class="ph ph-caret-right"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <button class="fab-btn">
+            <span class="fab-icon"><i class="ph ph-plus"></i></span>
+            <span class="fab-text">Añadir Registro</span>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
