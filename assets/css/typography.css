@@ -1,0 +1,72 @@
+:root {
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  
+  /* Font Sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+  --text-4xl: 48px;
+  --text-5xl: 64px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--c-text-secondary);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--c-text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+}
+
+p {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-4);
+}
+
+.text-lead {
+  font-size: clamp(18px, 2vw, 20px);
+}
+
+.text-small {
+  font-size: var(--text-sm);
+}
+
+.label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--c-text-label);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.text-accent {
+  color: var(--c-primary);
+}
