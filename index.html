@@ -1,203 +1,790 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexa | Dashboard</title>
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexa — One place to run your cold-chain operation. Manage orders, inventory, temperature, and deliveries without WhatsApp chaos." />
+  <meta name="author" content="Nexa" />
+  <meta property="og:title" content="Nexa — Your Cold-Chain Operation, Finally Visible" />
+  <meta property="og:description" content="Stop chasing updates on WhatsApp. Nexa gives your team one place to manage cold-chain operations." />
+  <meta property="og:type" content="website" />
+  <title>Nexa — Your Cold-Chain Operation, Finally Visible</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-
 <body>
-    <div class="app-wrapper">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <h2>Nexa</h2>
-            </div>
 
-            <nav class="sidebar-menu">
-                <a href="index.html" class="menu-item active">
-                    <i class="ph ph-squares-four"></i> <span>Dashboard</span>
-                </a>
-                <a href="envios.html" class="menu-item">
-                    <i class="ph ph-truck"></i> <span>Envíos</span>
-                </a>
-                <a href="reportes.html" class="menu-item">
-                    <i class="ph ph-chart-bar"></i> <span>Reportes</span>
-                </a>
-                <a href="configuracion.html" class="menu-item">
-                    <i class="ph ph-gear"></i> <span>Configuración</span>
-                </a>
-                <a href="usuario.html" class="menu-item">
-                    <i class="ph ph-user"></i> <span>Usuario</span>
-                </a>
-            </nav>
-        </aside>
+<!-- ============================================================
+     NAVBAR — Flat Enterprise Bar
+     ============================================================ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
 
-        <!-- Main Workspace -->
-        <main class="main-content">
-            <header class="top-nav">
-                <div class="user-profile">
-                    <div class="avatar"><i class="ph-fill ph-user"></i></div>
-                </div>
-            </header>
+    <!-- Logo -->
+    <a href="index.html" class="navbar-logo" aria-label="Nexa home">
+      <div class="navbar-logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="2 12 6 4 10 9 13 6"></polyline>
+          <circle cx="13" cy="6" r="1.5" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </div>
+      <span class="navbar-logo-text">Nexa</span>
+    </a>
 
-            <div class="content-body">
-                <!-- Resumen y Gráficas -->
-                <div class="grid-layout main-grid">
-                    <!-- Data Numérica -->
-                    <div class="glass-box">
-                        <h3 class="box-title">Resumen de Envíos</h3>
-                        <div class="stats-row mt-4">
-                            <div class="stat-box">
-                                <span class="stat-label">Envíos activos</span>
-                                <span class="stat-number">13</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-label">Actividad reciente</span>
-                                <span class="stat-number color-primary">23 <span
-                                        class="text-sm text-dim">envíos</span></span>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Primary Navigation -->
+    <div class="navbar-links" id="navbar-links">
+      <a href="index.html" class="navbar-link active" id="nav-home">Home</a>
+      <a href="platform.html" class="navbar-link" id="nav-platform">Platform</a>
 
-                    <!-- Listado Corto -->
-                    <div class="glass-box">
-                        <h3 class="box-title">Tus Envíos <span class="arrow-icon"><i
-                                    class="ph ph-caret-right"></i></span></h3>
-                        <div class="list-container mt-4">
-                            <div class="list-item">
-                                <div class="item-icon"><i class="ph-fill ph-airplane-tilt"></i></div>
-                                <div class="item-info">
-                                    <strong>Envío #22A3</strong>
-                                    <span>Ruta: Lima - Arequipa</span>
-                                </div>
-                                <div class="item-status status-green">En Camino</div>
-                            </div>
-                            <div class="list-item">
-                                <div class="item-icon"><i class="ph-fill ph-airplane-tilt"></i></div>
-                                <div class="item-info">
-                                    <strong>Envío #1103</strong>
-                                    <span>Ruta: Callao - Piura</span>
-                                </div>
-                                <div class="item-status status-green">En Camino</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gráficos Medios -->
-                <div class="grid-layout charts-grid mt-4">
-                    <div class="glass-box box-chart">
-                        <h3 class="box-title">Peso total</h3>
-                        <div class="mock-chart area-chart">
-                            <div class="y-labels"><span>15</span><span>12</span><span>0</span></div>
-                            <div class="chart-content">
-                                <svg viewBox="0 0 100 40" preserveAspectRatio="none">
-                                    <path d="M0,35 C20,30 30,10 50,20 C70,30 80,10 100,5 O100,40 0,40 Z"
-                                        class="svg-area" />
-                                    <path d="M0,35 C20,30 30,10 50,20 C70,30 80,10 100,5" class="svg-line" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="x-labels"><span>12</span><span>72</span><span>165</span><span>200</span></div>
-                    </div>
-
-                    <div class="glass-box box-chart">
-                        <h3 class="box-title">Volumen</h3>
-                        <div class="mock-chart bar-chart">
-                            <div class="y-labels"><span>200</span><span>100</span><span>0</span></div>
-                            <div class="chart-content bars">
-                                <div class="bar" style="height: 40%;"></div>
-                                <div class="bar" style="height: 20%;"></div>
-                                <div class="bar" style="height: 60%;"></div>
-                                <div class="bar" style="height: 30%;"></div>
-                                <div class="bar" style="height: 80%;"></div>
-                                <div class="bar" style="height: 50%;"></div>
-                            </div>
-                        </div>
-                        <div class="x-labels">
-                            <span>M</span><span>S</span><span>M</span><span>S</span><span>F</span><span>D</span></div>
-                    </div>
-                </div>
-
-                <!-- Entregas Diarias -->
-                <div class="glass-box mt-4">
-                    <div class="flex-between">
-                        <h3 class="box-title">Entregas Diarias</h3>
-                        <span class="text-sm text-dim">Ver todas</span>
-                    </div>
-                    <div class="mock-chart big-bar-chart mt-4">
-                        <div class="y-labels"><span>20</span><span>15</span><span>10</span><span>5</span><span>0</span>
-                        </div>
-                        <div class="chart-content bars wide">
-                            <div class="bar" style="height: 30%;"></div>
-                            <div class="bar" style="height: 70%;"></div>
-                            <div class="bar" style="height: 45%;"></div>
-                            <div class="bar" style="height: 60%;"></div>
-                            <div class="bar" style="height: 85%;"></div>
-                            <div class="bar" style="height: 50%;"></div>
-                            <div class="bar" style="height: 75%;"></div>
-                            <div class="bar" style="height: 40%;"></div>
-                            <div class="bar" style="height: 85%;"></div>
-                            <div class="bar" style="height: 35%;"></div>
-                            <div class="bar" style="height: 20%;"></div>
-                        </div>
-                    </div>
-                    <div class="x-labels wide-labels mt-2">
-                        <span>A</span><span>M</span><span>S</span><span>D</span><span>F</span><span>D</span><span>J</span><span>J</span><span>S</span><span>S</span><span>M</span>
-                    </div>
-                </div>
-
-                <!-- Tabla de la Imagen -->
-                <div class="glass-box mt-4 no-pad">
-                    <div class="pad-wrapper flex-between">
-                        <h3 class="box-title m-0">Registro de Actividad</h3>
-                        <span class="text-sm text-dim">Ver mes</span>
-                    </div>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Envío ID</th>
-                                <th>Destino</th>
-                                <th>Estados</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Envío #2109</td>
-                                <td>Ruta: Lima – Trujillo</td>
-                                <td><span class="status-badge status-yellow">En Camino</span></td>
-                            </tr>
-                            <tr>
-                                <td>Envío #2103</td>
-                                <td>Ruta: Callao Cercado</td>
-                                <td><span class="status-badge status-yellow">En Camino</span></td>
-                            </tr>
-                            <tr>
-                                <td>Envío #2565</td>
-                                <td>Ruta: Arequipa Sur</td>
-                                <td><span class="status-badge status-yellow">En Camino</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="pagination">
-                        <i class="ph ph-caret-left"></i> <span>1</span> <span class="active">2</span> <span>3</span> <i
-                            class="ph ph-caret-right"></i>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <button class="fab-btn">
-            <span class="fab-icon"><i class="ph ph-plus"></i></span>
-            <span class="fab-text">Añadir Registro</span>
+      <!-- Solutions with segment dropdown -->
+      <div class="dropdown-trigger" id="nav-solutions-trigger">
+        <button class="navbar-link dropdown-btn" id="nav-solutions"
+                aria-expanded="false" aria-controls="solutions-dropdown"
+                aria-haspopup="true">
+          Solutions
+          <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="4 6 8 10 12 6"></polyline>
+          </svg>
         </button>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <div class="dropdown-panel" id="solutions-dropdown" role="menu">
 
+          <a href="solutions-importers.html" class="dropdown-item" role="menuitem" id="nav-importers">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title">Importers &amp; Wholesalers</div>
+              <div class="dropdown-item-desc">Container tracking, thermal health, bulk inventory.</div>
+            </div>
+          </a>
+
+          <a href="solutions-distributors.html" class="dropdown-item" role="menuitem" id="nav-distributors">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title">Distributors &amp; HORECA</div>
+              <div class="dropdown-item-desc">Last-mile fulfillment, FEFO replenishment, B2B portal.</div>
+            </div>
+          </a>
+
+          <a href="solutions-cold-storage.html" class="dropdown-item" role="menuitem" id="nav-cold-storage">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title">Cold Storage Operators</div>
+              <div class="dropdown-item-desc">Multi-chamber monitoring, telemetry, compliance logs.</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+      <!-- /Solutions -->
+
+      <a href="company.html" class="navbar-link" id="nav-company">Company</a>
+      <a href="faq.html" class="navbar-link" id="nav-faq">FAQ</a>
+    </div>
+
+    <!-- Right Actions -->
+    <div class="navbar-actions">
+      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta">Request a Demo</a>
+    </div>
+
+
+    <!-- Mobile toggle -->
+    <button class="navbar-mobile-toggle" aria-label="Open navigation"
+            aria-expanded="false" aria-controls="navbar-links" id="mobile-menu-toggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Overlay -->
+<div class="navbar-overlay" id="navbar-overlay" aria-hidden="true"></div>
+<!-- /NAVBAR -->
+
+
+<!-- ============================================================
+     SECTION 1: HERO — Job: RELIEF
+     Proof: Atmosphere + grounded stats
+     ============================================================ -->
+<section class="v5-hero" id="hero" aria-labelledby="hero-headline">
+  <div class="v5-hero-bg" aria-hidden="true">
+    <img src="assets/img/hero-warehouse-bg.png" alt="" loading="eager" />
+  </div>
+  <div class="v5-hero-gradient" aria-hidden="true"></div>
+  <div class="container">
+    <div class="v5-hero-content">
+
+      <h1 class="v5-hero-headline" id="hero-headline">
+        Your cold-chain operation,<br>
+        <span class="text-accent">finally visible.</span>
+      </h1>
+
+      <p class="v5-hero-lead">
+        Stop chasing updates on WhatsApp. Nexa gives your team one place to manage orders, inventory, temperature, and deliveries — so nothing gets lost.
+      </p>
+
+      <div class="v5-hero-ctas">
+        <a href="company.html#contact" class="btn btn-primary btn-lg" id="hero-cta-primary">
+          Schedule a Demo
+          <svg class="icon-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="platform.html" class="btn btn-secondary-light btn-lg" id="hero-cta-platform">
+          See How It Works
+        </a>
+      </div>
+
+      <div class="v5-hero-stats">
+        <div class="v5-hero-stat">
+          <span class="v5-hero-stat-value">34%</span>
+          <span class="v5-hero-stat-label">less shrinkage · first-quarter avg.</span>
+        </div>
+        <div class="v5-hero-stat">
+          <span class="v5-hero-stat-value">5 days</span>
+          <span class="v5-hero-stat-label">to first deployment</span>
+        </div>
+        <div class="v5-hero-stat">
+          <span class="v5-hero-stat-value">24/7</span>
+          <span class="v5-hero-stat-label">human support</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /HERO -->
+
+
+<!-- ============================================================
+     SECTION 2: OPERATIONAL FIT — Job: BELONGING
+     Proof: Segment pills + adoption facts
+     ============================================================ -->
+<section class="v5-fit" id="operational-fit" aria-label="Who Nexa is built for">
+  <div class="container">
+
+    <!-- Segment pills -->
+    <div class="v5-fit-segments">
+      <a href="solutions-importers.html" class="v5-fit-pill" id="fit-importers">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        Importers &amp; Wholesalers
+      </a>
+      <a href="solutions-distributors.html" class="v5-fit-pill" id="fit-distributors">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="1" y="3" width="15" height="13"></rect>
+          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+          <circle cx="5.5" cy="18.5" r="2.5"></circle>
+          <circle cx="18.5" cy="18.5" r="2.5"></circle>
+        </svg>
+        Distributors &amp; HORECA
+      </a>
+      <a href="solutions-cold-storage.html" class="v5-fit-pill" id="fit-cold-storage">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path>
+        </svg>
+        Cold Storage Operators
+      </a>
+    </div>
+
+    <!-- Adoption facts -->
+    <div class="v5-fit-facts">
+      <div class="v5-fit-fact">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>First deployment in 5 days</span>
+      </div>
+      <div class="v5-fit-fact">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"></path>
+          <line x1="8" y1="2" x2="8" y2="18"></line>
+          <line x1="16" y1="6" x2="16" y2="22"></line>
+        </svg>
+        <span>Works offline &amp; low-bandwidth</span>
+      </div>
+      <div class="v5-fit-fact">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span>No IT department required</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- /OPERATIONAL FIT -->
+
+
+<!-- ============================================================
+     SECTION 3: WHATSAPP CHAOS — Job: CONTRAST
+     Proof: Documentary side-by-side
+     ============================================================ -->
+<section class="v5-chaos" id="chaos-comparison" aria-labelledby="chaos-headline">
+  <div class="container">
+
+    <h2 class="v5-chaos-headline" id="chaos-headline">Stop managing your operation on WhatsApp</h2>
+
+    <div class="v5-chaos-grid">
+
+      <!-- LEFT: The current reality -->
+      <div class="v5-chaos-card v5-chaos-old">
+        <div class="v5-chaos-label v5-chaos-label-red">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+          The current reality
+        </div>
+        <div class="v5-chaos-body">
+          <div class="v5-wa-header">
+            <span class="v5-wa-group-name">Logística — 14 participantes</span>
+          </div>
+          <div class="v5-wa-msg">
+            <span class="v5-wa-text">"¿Alguien vio el pedido de Farmacia Sol?"</span>
+            <span class="v5-wa-time">09:14</span>
+          </div>
+          <div class="v5-wa-photo">
+            <div class="v5-wa-photo-blur">Foto borrosa de factura...</div>
+            <span class="v5-wa-time">09:22</span>
+          </div>
+          <div class="v5-wa-msg v5-wa-urgent">
+            <span class="v5-wa-urgent-dot" aria-hidden="true"></span>
+            <div>
+              <span class="v5-wa-text">"Se apagó la cámara 4. Ayuda."</span>
+              <span class="v5-wa-seen">Visto hace 3 horas</span>
+            </div>
+          </div>
+          <div class="v5-wa-msg">
+            <span class="v5-wa-text">"No encuentro mi libreta de inventarios…"</span>
+            <span class="v5-wa-time">10:45</span>
+          </div>
+          <div class="v5-wa-typing">
+            <span class="v5-wa-typing-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </span>
+            Carlos está escribiendo...
+          </div>
+        </div>
+        <div class="v5-chaos-bottom">Sound familiar?</div>
+      </div>
+
+      <!-- RIGHT: With Nexa -->
+      <div class="v5-chaos-card v5-chaos-nexa">
+        <div class="v5-chaos-label v5-chaos-label-green">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          With Nexa
+        </div>
+        <div class="v5-chaos-body">
+          <div class="v5-nexa-row">
+            <div class="v5-nexa-row-left">
+              <div class="v5-nexa-row-title">Order #4492 · Farmacia Sol</div>
+              <div class="v5-nexa-row-detail">250 kg · Southern Distributor</div>
+            </div>
+            <span class="v5-nexa-badge v5-nexa-badge-green">Confirmed ✓</span>
+          </div>
+          <div class="v5-nexa-row">
+            <div class="v5-nexa-row-left">
+              <div class="v5-nexa-row-title">Chamber 01 · Temperature</div>
+              <div class="v5-nexa-row-detail">−18.2°C · Last 24h</div>
+            </div>
+            <span class="v5-nexa-badge v5-nexa-badge-blue">Stable</span>
+          </div>
+          <div class="v5-nexa-row v5-nexa-row-alert">
+            <div class="v5-nexa-row-left">
+              <div class="v5-nexa-row-title">Chamber 04 · Offline alert</div>
+              <div class="v5-nexa-row-detail">Team notified automatically</div>
+            </div>
+            <span class="v5-nexa-badge v5-nexa-badge-amber">Resolved · 12s</span>
+          </div>
+          <div class="v5-nexa-row">
+            <div class="v5-nexa-row-left">
+              <div class="v5-nexa-row-title">Inventory · Insulina Humana</div>
+              <div class="v5-nexa-row-detail">450 units · Re-order: Thursday</div>
+            </div>
+            <span class="v5-nexa-badge v5-nexa-badge-blue">Tracked</span>
+          </div>
+        </div>
+        <div class="v5-chaos-bottom v5-chaos-bottom-green">Everything visible. Nothing lost.</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- /CHAOS -->
+
+
+<!-- ============================================================
+     SECTION 4: YOUR DAY WITH NEXA — Job: PROCESS CHANGE
+     Proof: Connected timeline
+     ============================================================ -->
+<section class="v5-timeline" id="day-with-nexa" aria-labelledby="timeline-headline">
+  <div class="container">
+
+    <h2 class="v5-timeline-headline" id="timeline-headline">How your day changes with Nexa</h2>
+
+    <div class="v5-timeline-track">
+
+      <div class="v5-timeline-step reveal">
+        <div class="v5-timeline-number">01</div>
+        <div class="v5-timeline-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="17 1 21 5 17 9"></polyline>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+            <polyline points="7 23 3 19 7 15"></polyline>
+            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+          </svg>
+        </div>
+        <h3>Sync stock</h3>
+        <p>Every SKU across every location, updated in real time. No spreadsheets.</p>
+      </div>
+
+      <div class="v5-timeline-connector" aria-hidden="true"></div>
+
+      <div class="v5-timeline-step reveal reveal-delay-1">
+        <div class="v5-timeline-number">02</div>
+        <div class="v5-timeline-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+        </div>
+        <h3>Receive orders</h3>
+        <p>Clients order through a portal. Temperature requirements validated before dispatch.</p>
+      </div>
+
+      <div class="v5-timeline-connector" aria-hidden="true"></div>
+
+      <div class="v5-timeline-step reveal reveal-delay-2">
+        <div class="v5-timeline-number">03</div>
+        <div class="v5-timeline-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <h3>Route &amp; dispatch</h3>
+        <p>FEFO rotation and smart routing. The right product goes out at the right temperature.</p>
+      </div>
+
+      <div class="v5-timeline-connector" aria-hidden="true"></div>
+
+      <div class="v5-timeline-step reveal reveal-delay-3">
+        <div class="v5-timeline-number">04</div>
+        <div class="v5-timeline-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3>Confirm delivery</h3>
+        <p>Digital signature + photo proof at every stop. Complete chain of custody.</p>
+      </div>
+
+    </div>
+
+    <p class="v5-timeline-summary">From intake to confirmation, every step is visible — to you and your clients.</p>
+
+  </div>
+</section>
+<!-- /TIMELINE -->
+
+
+<!-- ============================================================
+     SECTION 5: WHAT NEXA COVERS — Job: COVERAGE
+     Proof: Bento grid with embedded mini-evidence
+     ============================================================ -->
+<section class="v5-capabilities" id="capabilities" aria-labelledby="cap-headline">
+  <div class="container">
+
+    <h2 class="v5-cap-headline" id="cap-headline">What Nexa covers</h2>
+    <p class="v5-cap-sub">Four operational areas. One system. Every problem that used to slip through the cracks.</p>
+
+    <div class="v5-cap-bento">
+
+      <!-- Inventory — large -->
+      <div class="v5-cap-block v5-cap-block-lg reveal">
+        <div class="v5-cap-block-text">
+          <div class="v5-cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3h18v6H3z"></path>
+              <path d="M3 9h18v6H3z"></path>
+              <path d="M3 15h18v6H3z"></path>
+            </svg>
+          </div>
+          <h3>Inventory Visibility</h3>
+          <p>Know what you have, where it is, and when to reorder — across every location. No spreadsheets, no guessing.</p>
+        </div>
+        <div class="v5-cap-evidence">
+          <div class="v5-cap-forecast">
+            <div class="v5-cap-forecast-head">
+              <span class="v5-cap-forecast-product">Insulina Humana</span>
+              <span class="v5-cap-forecast-tag">+12% demand</span>
+            </div>
+            <div class="v5-cap-forecast-bars" aria-hidden="true">
+              <div class="v5-cap-bar" style="height:40%"></div>
+              <div class="v5-cap-bar" style="height:52%"></div>
+              <div class="v5-cap-bar" style="height:65%"></div>
+              <div class="v5-cap-bar v5-cap-bar-active" style="height:85%"></div>
+              <div class="v5-cap-bar" style="height:58%"></div>
+            </div>
+            <div class="v5-cap-forecast-foot">
+              <span>450 units</span>
+              <span class="v5-cap-forecast-reorder">Re-order: Thursday</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orders -->
+      <div class="v5-cap-block reveal reveal-delay-1">
+        <div class="v5-cap-block-text">
+          <div class="v5-cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+          </div>
+          <h3>Order Coordination</h3>
+          <p>From intake to dispatch — every order tracked. Your clients follow progress without calling you.</p>
+        </div>
+        <div class="v5-cap-evidence">
+          <div class="v5-cap-status-list">
+            <div class="v5-cap-status-item">
+              <span class="v5-cap-status-dot v5-cap-dot-green"></span>
+              <span>Order #882 · dispatched</span>
+            </div>
+            <div class="v5-cap-status-item">
+              <span class="v5-cap-status-dot v5-cap-dot-amber"></span>
+              <span>Order #901 · pending validation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Temperature — large -->
+      <div class="v5-cap-block v5-cap-block-lg v5-cap-block-temp reveal reveal-delay-2">
+        <div class="v5-cap-block-text">
+          <div class="v5-cap-icon v5-cap-icon-teal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+            </svg>
+          </div>
+          <h3>Temperature Awareness</h3>
+          <p>Preventive alerts that save thousands in lost product. Integrate with your existing sensors — instant alerts for any variance.</p>
+          <div class="v5-cap-cert">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            Cold-chain certification ready
+          </div>
+        </div>
+        <div class="v5-cap-evidence">
+          <div class="v5-cap-temp-display">
+            <div class="v5-cap-temp-value">−18.2°C</div>
+            <div class="v5-cap-temp-meta">Stable · Last 24h</div>
+            <div class="v5-cap-temp-chart" aria-hidden="true">
+              <svg viewBox="0 0 200 40" preserveAspectRatio="none">
+                <path d="M0 20 Q25 18 50 21 T100 19 T150 20 T200 18" fill="none" stroke="#059669" stroke-width="2"/>
+                <path d="M0 20 Q25 18 50 21 T100 19 T150 20 T200 18 V40 H0Z" fill="#059669" opacity="0.1"/>
+              </svg>
+            </div>
+            <div class="v5-cap-temp-range">
+              <span class="v5-cap-dot-green"></span>
+              Optimal range (−18°C to −22°C)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery -->
+      <div class="v5-cap-block reveal reveal-delay-3" style="background: var(--c-bg); border-color: var(--c-border-hover); box-shadow: var(--shadow-sm);">
+        <div class="v5-cap-block-text">
+          <div class="v5-cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3>Delivery Confirmation</h3>
+          <p>Digital signature and photo proof at every stop. Complete chain of custody documented.</p>
+        </div>
+        <div class="v5-cap-evidence">
+          <div class="v5-cap-delivery-proof">
+            <span class="v5-cap-delivery-check" aria-hidden="true">✓</span>
+            <div>
+              <div class="v5-cap-delivery-title">Delivered · Signed</div>
+              <div class="v5-cap-delivery-meta">M. Reyes · 14:32 · Photo attached</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- /CAPABILITIES -->
+
+
+<!-- ============================================================
+     SECTION 6: IMPLEMENTATION — Job: ADOPTION EASE
+     Proof: Phased rollout + human support promise
+     ============================================================ -->
+<section class="v5-adopt" id="implementation" aria-labelledby="adopt-headline">
+  <div class="container">
+
+    <div class="v5-adopt-grid">
+
+      <!-- Left: rollout steps -->
+      <div class="v5-adopt-steps reveal">
+        <h2 class="v5-adopt-headline" id="adopt-headline">Deployment measured in days, not quarters</h2>
+        <p class="v5-adopt-sub">No IT overhaul. No downtime. Nexa is integrated into your operations in under two weeks.</p>
+
+        <div class="v5-adopt-list">
+          <div class="v5-adopt-item">
+            <div class="v5-adopt-item-icon" aria-hidden="true" style="color:#059669; background:rgba(5,150,105,0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>48-Hour Hardware Sync</strong>
+              <span>If you use Sensitech or Onset, your API keys are mapped instantly. No new hardware required.</span>
+            </div>
+          </div>
+          <div class="v5-adopt-item">
+            <div class="v5-adopt-item-icon" aria-hidden="true" style="color:#059669; background:rgba(5,150,105,0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>Process Mapping First</strong>
+              <span>We don't force you into a sandbox. We map your current physical workflows into Nexa before Go-Live.</span>
+            </div>
+          </div>
+          <div class="v5-adopt-item">
+            <div class="v5-adopt-item-icon" aria-hidden="true" style="color:#059669; background:rgba(5,150,105,0.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>Guided Warehouse Deployment</strong>
+              <span>Our support team shadows your first dispatches securely. You are never left to figure it out alone.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: support card -->
+      <div class="v5-adopt-support reveal reveal-delay-1">
+        <div class="v5-adopt-support-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+        </div>
+        <h3>24/7 Human Support</h3>
+        <p>When things go wrong on the floor, you need a person who understands your operation — not a chatbot.</p>
+        <a href="company.html#contact" class="v5-adopt-support-cta">Talk to a human →</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- /IMPLEMENTATION -->
+
+
+<!-- ============================================================
+     SECTION 7: FINAL CTA — Job: NEXT STEP CLARITY
+     Proof: "What happens next" sequence
+     ============================================================ -->
+<section class="v5-cta" id="get-started" aria-labelledby="cta-headline">
+  <div class="container">
+    <div class="v5-cta-inner reveal">
+
+      <div class="v5-cta-steps">
+        <div class="v5-cta-step">
+          <span class="v5-cta-step-num">1</span>
+          <div>
+            <strong>Tell us about your operation</strong>
+            <span>Size, locations, biggest pain points.</span>
+          </div>
+        </div>
+        <div class="v5-cta-step-arrow" aria-hidden="true">→</div>
+        <div class="v5-cta-step">
+          <span class="v5-cta-step-num">2</span>
+          <div>
+            <strong>We show you Nexa with your data</strong>
+            <span>Not a generic demo. Your products, your routes.</span>
+          </div>
+        </div>
+        <div class="v5-cta-step-arrow" aria-hidden="true">→</div>
+        <div class="v5-cta-step">
+          <span class="v5-cta-step-num">3</span>
+          <div>
+            <strong>Your team is live within a week</strong>
+            <span>Onboarding, training, and support included.</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="cta-headline">No generic demos.<br>We show you how Nexa fits <span class="text-accent">your operation.</span></h2>
+
+      <div class="v5-cta-buttons">
+        <a href="company.html#contact" class="btn btn-primary btn-lg" id="cta-primary">
+          Schedule a Consultation
+          <svg class="icon-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="company.html#contact" class="btn btn-secondary btn-lg" id="cta-secondary">
+          Send Us a Message
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /FINAL CTA -->
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" style="display: inline-flex;" aria-label="Nexa home">
+          <div class="navbar-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="2 12 6 4 10 9 13 6"></polyline>
+              <circle cx="13" cy="6" r="1.5" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </div>
+          <span class="navbar-logo-text">Nexa</span>
+        </a>
+        <p class="footer-tagline">
+          Less chaos, more control. The operational platform for cold-chain teams who want to stop guessing and start managing.
+        </p>
+      </div>
+
+      <!-- Product Links -->
+      <div>
+        <div class="footer-col-title">Product</div>
+        <ul class="footer-links">
+          <li><a href="platform.html">Platform Overview</a></li>
+          <li><a href="platform.html#catalog">Product Data</a></li>
+          <li><a href="platform.html#inventory">Live Inventory</a></li>
+          <li><a href="platform.html#orders">B2B Orders</a></li>
+          <li><a href="platform.html#traceability">Traceability</a></li>
+        </ul>
+      </div>
+
+      <!-- Company Links -->
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="company.html">About Nexa</a></li>
+          <li><a href="company.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Links -->
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links">
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="faq.html#getting-started">Getting Started</a></li>
+          <li><a href="faq.html#implementation">Implementation</a></li>
+          <li><a href="company.html#contact">Request Demo</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <span class="footer-legal">© 2026 Nexa Technologies, Inc. All rights reserved.</span>
+      <div class="footer-legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+
+<!-- ============================================================
+     DEMO MODAL
+     ============================================================ -->
+<div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <div class="badge" style="display: inline-flex; margin-bottom: 16px;">Product Demo</div>
+    <h3 id="modal-title">See Nexa in Action</h3>
+    <p style="margin-top: 12px; color: var(--c-text-muted); font-size: 15px; line-height: 1.65;">
+      Our team will walk you through a live environment — inventory management, order flow, temperature monitoring, and delivery tracking. Book a session tailored to your operation.
+    </p>
+    <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 12px;">
+      <a href="company.html#contact" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Book a Live Demo</a>
+    </div>
+    <button class="modal-close" aria-label="Close modal">Close</button>
+  </div>
+</div>
+<!-- /MODAL -->
+
+
+<script src="assets/js/interactions.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
 </html>
