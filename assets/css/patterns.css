@@ -1,0 +1,639 @@
+/* ============================================================
+   PATTERNS — Nexa V3
+   Surfaces · Navbar · Footer · Section Header · Cards · Badges
+   ============================================================ */
+
+/* ---- SURFACES ---- */
+
+/* Light elevated card (main card style) */
+.surface-elevated {
+  background: var(--c-white);
+  border: 1px solid var(--c-border-light);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-xl);
+}
+
+/* Standard card on light bg */
+.surface-card {
+  background: var(--c-white);
+  border: 1px solid var(--c-border-mid);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Surface on grey bg */
+.surface-base {
+  background: var(--c-surface);
+  border-radius: var(--radius-lg);
+}
+
+/* Dark surface */
+.surface-dark {
+  background: var(--c-dark-surface);
+  color: var(--c-white);
+  border-radius: var(--radius-lg);
+}
+
+/* Primary blue surface */
+.surface-primary {
+  background: var(--c-primary);
+  color: var(--c-white);
+  border-radius: var(--radius-lg);
+}
+
+/* Glassmorphism — preserved for potential use in app layer, not used in landing navbar */
+.surface-glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 24px -4px rgba(10, 15, 26, 0.08), 0 1px 4px rgba(10, 15, 26, 0.04);
+}
+
+/* ---- NAVBAR — Flat Enterprise Bar ---- */
+/*
+ * Architecture decision: full-width sticky bar, solid white, no blur, no pill.
+ * Structured for future expansion: Use Cases, Resources, FAQ can be added
+ * to .navbar-links without any layout redesign.
+ */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--c-white);
+  border-bottom: 1px solid var(--c-border-light);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  transition: box-shadow var(--transition-base);
+}
+
+.navbar.scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+/* Inner container — respects container-std for consistent alignment with page content */
+.navbar-inner {
+  width: 100%;
+  max-width: var(--container-std);
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  height: 100%;
+  position: relative;
+}
+
+/* Logo — left anchor */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo-mark {
+  width: 32px;
+  height: 32px;
+  background: var(--c-primary);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navbar-logo-mark svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+.navbar-logo-text {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--c-text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Primary nav links — center zone, expansion-ready */
+/* Supports up to 6 items at 1280px container without overflow */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text-secondary);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  line-height: 1.2;
+}
+
+.navbar-link:hover {
+  color: var(--c-text-primary);
+  background: var(--c-surface);
+}
+
+.navbar-link.active {
+  color: var(--c-primary);
+  font-weight: 600;
+  background: var(--c-primary-light);
+}
+
+/* Right action zone — Log In (ghost) + Get Started (primary) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* Ensure consistent height between ghost and primary in navbar context */
+.navbar-actions .btn {
+  height: 40px;
+}
+
+/* Mobile nav toggle */
+.navbar-mobile-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-text-primary);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.navbar-mobile-toggle:hover,
+.navbar-mobile-toggle[aria-expanded="true"] {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-links.mobile-open {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 16px;
+    background: var(--c-white);
+    border: 1px solid var(--c-border-mid);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    z-index: 1002;
+  }
+  .navbar-links.mobile-open .navbar-link {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: var(--radius-md);
+  }
+  .navbar-links.mobile-open .dropdown-trigger {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navbar-links.mobile-open .dropdown-btn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px;
+  }
+  .navbar-links.mobile-open .dropdown-panel {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    transform: none;
+    margin-top: 8px;
+    box-shadow: none;
+    border: 1px solid var(--c-border-light);
+    opacity: 1;
+    pointer-events: auto;
+    display: none;
+  }
+  .navbar-links.mobile-open .dropdown-trigger.open .dropdown-panel {
+    display: block;
+  }
+  .navbar-links.mobile-open .dropdown-item {
+    padding: 12px;
+  }
+  .navbar-mobile-toggle {
+    display: flex;
+  }
+  .navbar-actions a:first-child {
+    display: none; /* Hide Log In on mobile, keep Get Started */
+  }
+}
+
+/* ---- NAVBAR DROPDOWN ---- */
+/*
+ * Dropdown trigger — wraps a nav link button + the panel.
+ * Apple-inspired: subtlely dims the page content below the bar when open.
+ * Effect is restrained: no blur, just a very light opacity wash.
+ */
+.dropdown-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  /* Inherits .navbar-link styles via classes */
+}
+
+.dropdown-chevron {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.dropdown-trigger.open .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  width: 288px;
+  background: var(--c-white);
+  border: 1px solid var(--c-border-mid);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(37, 84, 223, 0.04);
+  padding: var(--space-2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  z-index: 1001;
+}
+
+.dropdown-trigger.open .dropdown-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+
+.dropdown-item:hover {
+  background: var(--c-surface);
+}
+
+.dropdown-item-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--c-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--c-primary);
+  margin-top: 1px;
+}
+
+.dropdown-item-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.dropdown-item-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--c-text-primary);
+  line-height: 1.3;
+}
+
+.dropdown-item-desc {
+  font-size: 12px;
+  color: var(--c-text-muted);
+  line-height: 1.45;
+  margin-top: 2px;
+}
+
+/* Overlay — Apple-inspired restrained dimming */
+/* Extremely light: just enough to signal modal context, no drama */
+.navbar-overlay {
+  position: fixed;
+  inset: 64px 0 0 0;
+  background: rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+  z-index: 998;
+}
+
+.navbar-overlay.visible {
+  opacity: 1;
+}
+
+/* ---- FOOTER ---- */
+/*
+ * Dark navy footer — deep blue that reads as a premium close, coherent with Nexa brand.
+ * CTA section (#E8EDF6 blue-tinted grey) → Footer (#0B1120 deep navy) creates
+ * a strong two-step descent that anchors the page architecturally.
+ */
+.footer {
+  background-color: var(--c-footer-dark);
+  padding: 80px 0 48px;  /* system values: 80 and 48 both in 4pt scale */
+  border-top: none; /* the CTA section border provides visual entry — no double border needed */
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 48px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer-tagline {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+  max-width: 260px;
+}
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9); /* strong on dark — section anchor */
+  margin-bottom: var(--space-4);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-links a {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5); /* mid-legible on dark — clear but recessive */
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: rgba(255, 255, 255, 0.9); /* decisive hover lift on dark bg */
+}
+
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* subtle on dark — correct treatment */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.footer-legal {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.3); /* meta information — intentionally de-emphasized */
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.footer-legal-links a {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Logo adaptation for dark footer */
+/* The .navbar-logo-mark is defined in the navbar section with a solid blue bg.
+ * On the dark footer it needs to invert: white-tinted bg + white icon/text. */
+.footer .navbar-logo-mark {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.footer .navbar-logo-mark svg {
+  color: white;
+}
+
+.footer .navbar-logo-text {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* ---- SECTION HEADER ---- */
+.section-header {
+  text-align: center;
+  max-width: var(--container-narrow);
+  margin: 0 auto clamp(56px, 7vw, 88px);
+}
+
+.section-header-left {
+  max-width: 640px;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+/* ---- BADGE / PILL ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--c-accent);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1px solid rgba(37, 84, 223, 0.1);
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* ---- BENTO CARD ---- */
+.bento-card {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ---- TESTIMONIAL CARD ---- */
+.testimonial-card {
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-quote {
+  font-size: var(--text-base);
+  color: var(--c-text-secondary);
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: var(--space-6);
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1.2;
+}
+
+.testimonial-role {
+  font-size: var(--text-xs);
+  color: var(--c-text-muted);
+  line-height: 1.4;
+}
+
+/* ---- HORIZONTAL SCROLL STRIP ---- */
+.scroll-strip {
+  display: flex;
+  gap: var(--space-6);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-4);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-item {
+  scroll-snap-align: start;
+  min-width: 300px;
+  max-width: 340px;
+  flex-shrink: 0;
+}
+
+/* ---- STATUS INDICATORS ---- */
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.status-dot::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-optimal::before { background: #22C55E; }
+.status-optimal { color: #16A34A; }
+
+.status-alert::before { background: #F59E0B; }
+.status-alert { color: #D97706; }
+
+.status-critical::before { background: #EF4444; }
+.status-critical { color: #DC2626; }
