@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" data-i18n-content="company.meta.description" content="Nexa — A small team in Lima building the operational system that charcuterie, cheese, and dairy logistics have been missing." />
+  <meta name="author" content="Nexa" />
+  <meta property="og:title" data-i18n-content="company.meta.ogTitle" content="Nexa — Who We Are" />
+  <meta property="og:description" data-i18n-content="company.meta.ogDescription" content="A small team of engineers and operators building the system charcuterie and dairy logistics have been missing." />
+  <meta property="og:type" content="website" />
+  <title data-i18n-content="company.meta.title">Nexa — Who We Are</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body data-page="company">
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
+  <div class="navbar-inner">
+
+    <a href="index.html" class="navbar-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+      <img src="nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+      <span class="visually-hidden">Nexa</span>
+    </a>
+
+    <div class="navbar-links" id="navbar-links">
+      <a href="index.html" class="navbar-link" id="nav-home" data-i18n="shared.nav.home">Home</a>
+      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Platform</a>
+
+      <div class="dropdown-trigger" id="nav-solutions-trigger">
+        <button class="navbar-link dropdown-btn" type="button" id="nav-solutions"
+                aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true" data-i18n="shared.nav.solutions">
+          Solutions
+          <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="4 6 8 10 12 6"></polyline>
+          </svg>
+        </button>
+        <div class="dropdown-panel" id="solutions-dropdown" role="menu">
+          <a href="solutions-importers.html" class="dropdown-item" role="menuitem" id="nav-importers">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importers &amp; Wholesalers</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Port intake for cheese, charcuterie, and dairy lots.</div>
+            </div>
+          </a>
+          <a href="solutions-distributors.html" class="dropdown-item" role="menuitem" id="nav-distributors">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distributors</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Last-mile fulfillment, FEFO replenishment, and B2B ordering.</div>
+            </div>
+          </a>
+          <a href="solutions-cold-storage.html" class="dropdown-item" role="menuitem" id="nav-cold-storage">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Cold Storage Operators</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Cheese rooms, dairy chambers, and food-safety logs.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="company.html" class="navbar-link active" id="nav-company" data-i18n="shared.nav.company">Company</a>
+      <a href="faq.html" class="navbar-link navbar-link-mobile-only" id="nav-faq-mobile" data-i18n="shared.nav.faq">FAQ</a>
+
+      <div class="navbar-mobile-actions">
+        <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
+          <button class="lang-switch-btn is-active" type="button" data-lang-option="en">EN</button>
+          <button class="lang-switch-btn" type="button" data-lang-option="es">ES</button>
+        </div>
+        <a href="company.html#contact" class="btn btn-primary btn-sm" data-i18n="shared.nav.requestDemo">Request a Demo</a>
+        <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Log in</button>
+      </div>
+    </div>
+
+    <div class="navbar-actions">
+      <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
+        <button class="lang-switch-btn is-active" type="button" data-lang-option="en">EN</button>
+        <button class="lang-switch-btn" type="button" data-lang-option="es">ES</button>
+      </div>
+      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Request a Demo</a>
+      <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Log in</button>
+      <a href="faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
+    </div>
+
+    <button type="button" class="navbar-mobile-toggle" aria-label="Open navigation" data-i18n-aria-label="shared.nav.mobileToggle"
+            aria-expanded="false" aria-controls="navbar-links" id="mobile-menu-toggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+  </div>
+</nav>
+
+<div class="navbar-overlay" id="navbar-overlay" aria-hidden="true"></div>
+
+
+<!-- ============================================================
+     HERO — Human, short
+     ============================================================ -->
+<header class="page-hero page-hero-editorial" id="company-hero" aria-labelledby="company-headline">
+  <div class="container-wide">
+    <div class="hero-split-layout reveal">
+      <div class="page-hero-copy page-hero-copy-left">
+        <div class="badge mb-4" data-i18n="company.hero.badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          About Nexa
+        </div>
+        <h1 id="company-headline" data-i18n-html="company.hero.title">
+          Built by people who've worked<br>in refrigerated food operations.
+        </h1>
+        <p class="text-lead" data-i18n="company.hero.copy">
+          We’re a small team in Lima. We build the operational system that charcuterie, cheese, and dairy logistics have been missing — because we’ve seen what happens without one.
+        </p>
+      </div>
+      <div class="hero-sidecard" aria-label="Why operators work with Nexa" data-i18n-aria-label="company.hero.sidecardAria">
+        <div class="hero-sidecard-kicker" data-i18n="company.hero.kicker">Operating partner</div>
+        <div class="hero-sidecard-title" data-i18n="company.hero.sidecardTitle">We deploy with operators, not just admins or procurement teams.</div>
+        <div class="hero-kpi-grid">
+          <div class="hero-kpi" data-i18n-html="company.hero.kpi1">
+            <div class="hero-kpi-value">Lima</div>
+            <div class="hero-kpi-label">Deployment team based in the market we serve first.</div>
+          </div>
+          <div class="hero-kpi" data-i18n-html="company.hero.kpi2">
+            <div class="hero-kpi-value is-accent">1 day</div>
+            <div class="hero-kpi-label">Typical turnaround for a concrete reply after first contact.</div>
+          </div>
+          <div class="hero-kpi" data-i18n-html="company.hero.kpi3">
+            <div class="hero-kpi-value">30-day</div>
+            <div class="hero-kpi-label">Go-live support period before we fully step back.</div>
+          </div>
+          <div class="hero-kpi" data-i18n-html="company.hero.kpi4">
+            <div class="hero-kpi-value">Keep gear</div>
+            <div class="hero-kpi-label">We adapt to the hardware and workflows your team already uses.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     ORIGIN — Honest, specific
+     ============================================================ -->
+<section class="section section-tight section-after-hero" id="origin" aria-labelledby="origin-headline">
+  <div class="container-wide">
+    <div class="content-pair is-centered">
+
+      <!-- Left: Origin narrative -->
+      <div class="reveal">
+        <div class="section-header-left section-header-reset">
+          <h2 id="origin-headline" class="section-mini-headline" data-i18n-html="company.origin.title">
+            We built Nexa because no system existed<br>for the way charcuterie and dairy operators actually work.
+          </h2>
+          <p class="origin-callout" data-i18n="company.origin.callout">
+            We spent months inside refrigerated-food operations — importers, distributors, cold storage facilities. The same problems kept appearing: cheese stock tracked in spreadsheets, charcuterie orders coming through WhatsApp, temperature data locked in local loggers that nobody checked until a food-safety audit or a claim.
+          </p>
+          <p class="origin-body" data-i18n="company.origin.body">
+            These weren't careless operators. They were running serious businesses without a system designed for their reality. Generic ERPs didn't cover temperature. Logistics apps didn't cover inventory. Nobody connected the dots from catalog to delivery. So we built Nexa to do exactly that.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Stat cards -->
+      <div class="gap-stats reveal reveal-delay-1">
+        <div class="gap-stat-card" data-i18n-html="company.origin.stat1">
+          <div class="gap-stat-number">40%</div>
+          <div class="gap-stat-label">of perishable food in LatAm is lost before reaching consumers</div>
+        </div>
+        <div class="gap-stat-card" data-i18n-html="company.origin.stat2">
+          <div class="gap-stat-number">12%</div>
+          <div class="gap-stat-label">average revenue lost to temperature excursions</div>
+        </div>
+        <div class="gap-stat-card" data-i18n-html="company.origin.stat3">
+          <div class="gap-stat-number gap-stat-number-accent">34%</div>
+          <div class="gap-stat-label">shrinkage reduction in the first 90 days with Nexa</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     HOW WE SUPPORT YOU — The trust-building section
+     ============================================================ -->
+<section class="section section-tight section-surface" id="support" aria-labelledby="support-headline">
+  <div class="container-wide">
+    <div class="section-header is-left is-tight reveal">
+      <div class="badge mb-4" data-i18n="company.support.badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        How We Support You
+      </div>
+      <h2 id="support-headline" data-i18n="company.support.title">What happens after you say yes.</h2>
+      <p class="text-lead" data-i18n="company.support.copy">We don't hand you a login and disappear. Here's what working with us actually looks like.</p>
+    </div>
+
+    <div class="company-support-grid reveal reveal-delay-1">
+
+      <div class="company-support-card" data-i18n-html="company.support.card1">
+        <div class="company-support-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="m16 11 2 2 4-4"></path>
+          </svg>
+        </div>
+        <h3>A real person handles your onboarding</h3>
+        <p>Not a tutorial and not a handoff email. Someone from our team maps your operation, loads your catalog, connects your sensors, and trains your people directly.</p>
+      </div>
+
+      <div class="company-support-card" data-i18n-html="company.support.card2">
+        <div class="company-support-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 15v-3a8 8 0 0 1 16 0v3"></path>
+            <path d="M18 19a2 2 0 0 0 2-2v-2h-4v4z"></path>
+            <path d="M6 19a2 2 0 0 1-2-2v-2h4v4z"></path>
+            <path d="M10 19h4"></path>
+          </svg>
+        </div>
+        <h3>You talk to humans, not tickets</h3>
+        <p>When something breaks or needs adjusting, you reach our team directly. No chatbot, no ticket queue, and no waiting days for a useful answer.</p>
+      </div>
+
+      <div class="company-support-card" data-i18n-html="company.support.card3">
+        <div class="company-support-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+            <path d="M8 15h4"></path>
+            <path d="M8 18h8"></path>
+          </svg>
+        </div>
+        <h3>We stay for 30 days after go-live</h3>
+        <p>We monitor your first real dispatches, confirm temperature data is syncing correctly, and check that FEFO is working in live operations before we step back.</p>
+      </div>
+
+      <div class="company-support-card" data-i18n-html="company.support.card4">
+        <div class="company-support-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h3>Your data stays yours</h3>
+        <p>You own your inventory data, your routes, your customer relationships, and your temperature logs. We never sell or share your information. You can export everything at any time.</p>
+      </div>
+
+      <div class="company-support-card" data-i18n-html="company.support.card5">
+        <div class="company-support-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+            <rect x="9" y="9" width="6" height="6"></rect>
+            <line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line>
+            <line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line>
+          </svg>
+        </div>
+        <h3>Works with your existing hardware</h3>
+        <p>We don't force you to buy new equipment. If you have sensors, we connect to them. If you don't, we recommend options that fit your budget and setup during onboarding.</p>
+      </div>
+
+      <div class="company-support-card" data-i18n-html="company.support.card6">
+        <div class="company-support-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8.5 16.5a5 5 0 0 1 7 0"></path>
+            <path d="M5 13a10 10 0 0 1 14 0"></path>
+            <path d="M2 9.5a15 15 0 0 1 4.36-3.14"></path>
+            <path d="M22 9.5a15 15 0 0 0-4.36-3.14"></path>
+            <path d="M12 20h.01"></path>
+            <path d="M3 3l18 18"></path>
+          </svg>
+        </div>
+        <h3>Works offline</h3>
+        <p>Drivers in areas with poor signal can still capture temperature, signatures, and GPS. Everything syncs automatically when the connection comes back.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     THE TEAM / OPERATIONAL THESIS
+     ============================================================ -->
+<section class="section section-tight section-divider-top" id="thesis" aria-labelledby="thesis-headline">
+  <div class="container">
+    <div class="company-team-block reveal">
+      <div class="badge mb-6" data-i18n="company.thesis.badge">Built by Operators</div>
+      <h3 id="thesis-headline" class="section-mini-headline" data-i18n="company.thesis.title">We build software because we lived the problem.</h3>
+      <p class="mb-6" data-i18n="company.thesis.body1">
+        Nexa was founded in Lima, Perú by a team of engineers and supply chain operators. We saw firsthand the massive operational leakage that happens when cheese, charcuterie, and dairy distribution relies on disconnected temperature logs, generic ERP tracking, and fragmented WhatsApp communication.
+      </p>
+      <p class="mb-8" data-i18n="company.thesis.body2">
+        We don't sell visionary promises. We deploy hard operational fixes. When you work with us, you are supported directly by the execution team mapping your physical workflows into reliable digital infrastructure.
+      </p>
+      <div>
+        <a href="#contact" class="btn btn-primary btn-md" data-i18n="company.thesis.cta">Talk to the deployment team →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT — Improved with "what happens next"
+     ============================================================ -->
+<section class="section section-tight" id="contact" aria-labelledby="contact-headline">
+  <div class="container">
+    <div class="contact-dark-cta reveal">
+      
+      <!-- Text Side -->
+      <div>
+        <div class="badge contact-dark-badge" data-i18n="company.contact.badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Get in Touch
+        </div>
+        <h2 id="contact-headline" data-i18n="company.contact.title">Tell us about your operation.</h2>
+        <p data-i18n="company.contact.copy">
+          Whether you manage 3 trucks or 30 cold rooms — we'll respond with specifics about how Nexa applies to your setup. No sales scripts.
+        </p>
+
+        <!-- What happens next -->
+        <div class="contact-what-happens">
+          <p class="contact-dark-subtitle" data-i18n="company.contact.stepsTitle">What happens after you write</p>
+          <div class="contact-step">
+            <div class="contact-step-number">1</div>
+            <span data-i18n="company.contact.step1">A real person reads your message — usually within a few hours.</span>
+          </div>
+          <div class="contact-step">
+            <div class="contact-step-number">2</div>
+            <span data-i18n="company.contact.step2">We reply with specific questions about your operation and suggest a short call.</span>
+          </div>
+          <div class="contact-step">
+            <div class="contact-step-number">3</div>
+            <span data-i18n="company.contact.step3">On the call, we walk you through Nexa using your cheeses, charcuterie SKUs, dairy lines, and routes — not a generic slide deck.</span>
+          </div>
+        </div>
+
+        <div class="contact-meta-list">
+          <div class="contact-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            hello@nexa.lat
+          </div>
+          <div class="contact-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            <span data-i18n="company.contact.location">Lima, Perú — serving LatAm</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Side -->
+      <form class="contact-dark-form" id="contact-form" novalidate>
+        <h3 class="contact-form-heading" data-i18n="company.contact.form.heading">Send a direct message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label contact-dark-label" for="contact-name" data-i18n="company.contact.form.nameLabel">Your name</label>
+            <input class="form-input" type="text" id="contact-name" name="name" autocomplete="name" minlength="2" placeholder="Your name" data-i18n-placeholder="company.contact.form.namePlaceholder" aria-describedby="contact-name-error" required />
+            <p class="form-error" id="contact-name-error" hidden></p>
+          </div>
+          <div class="form-group">
+            <label class="form-label contact-dark-label" for="contact-email" data-i18n="company.contact.form.emailLabel">Work email</label>
+            <input class="form-input" type="email" id="contact-email" name="email" autocomplete="email" placeholder="Work email" data-i18n-placeholder="company.contact.form.emailPlaceholder" aria-describedby="contact-email-error" required />
+            <p class="form-error" id="contact-email-error" hidden></p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label contact-dark-label" for="contact-company" data-i18n="company.contact.form.companyLabel">Company</label>
+          <input class="form-input" type="text" id="contact-company" name="company" autocomplete="organization" placeholder="Company name" data-i18n-placeholder="company.contact.form.companyPlaceholder" />
+        </div>
+        <div class="form-group">
+          <label class="form-label contact-dark-label" for="contact-message" data-i18n="company.contact.form.messageLabel">Operation details</label>
+          <textarea class="form-textarea" id="contact-message" name="message" placeholder="What does your operation look like? Cheeses, charcuterie, dairy lines, locations — anything helps." data-i18n-placeholder="company.contact.form.messagePlaceholder" aria-describedby="contact-message-error" minlength="20" rows="4" required></textarea>
+          <p class="form-error" id="contact-message-error" hidden></p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-md contact-form-submit" id="contact-submit">
+          <span class="btn-label" data-i18n="company.contact.form.submit">Send Message</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+        <div class="form-success contact-success-card" id="contact-success" role="status" aria-live="polite" tabindex="-1" hidden>
+          <div class="contact-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#28CA42" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3 data-i18n="company.contact.success.title">Reviewing your operation</h3>
+          <p data-i18n-html="company.contact.success.copy">
+            Your details have been securely routed to our deployment team in Lima. <strong>We will email you within one business day</strong> with concrete integration timelines and our availability for a walkthrough.
+          </p>
+          <div class="contact-success-foot">
+            <p class="contact-success-note" data-i18n="company.contact.success.note">In the meantime</p>
+            <a href="faq.html" class="btn btn-secondary btn-sm" data-i18n="company.contact.success.cta">Read our operational FAQ</a>
+          </div>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-editorial">
+        <a href="index.html" class="navbar-logo footer-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+          <img src="nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+          <span class="visually-hidden">Nexa</span>
+        </a>
+        <p class="footer-kicker" data-i18n="shared.footer.kicker">Keep in touch</p>
+        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Stay close to the team building operational clarity for refrigerated food.</h2>
+        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">
+          Use the same direct line we use during deployment: reach the team, explore the platform, or jump into the FAQ when you need specifics.
+        </p>
+        <div class="footer-editorial-actions">
+          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Talk to the team</a>
+          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">See the platform</a>
+        </div>
+      </div>
+
+      <div class="footer-nav-shell">
+        <div class="footer-nav-grid">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.product">Product</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.productLinks">
+              <li><a href="platform.html">Platform Overview</a></li>
+              <li><a href="platform.html#catalog">Product Data</a></li>
+              <li><a href="platform.html#inventory">Live Inventory</a></li>
+              <li><a href="platform.html#orders">B2B Orders</a></li>
+              <li><a href="platform.html#traceability">Traceability</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.company">Company</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.companyLinks">
+              <li><a href="company.html">About Nexa</a></li>
+              <li><a href="company.html#support">How We Support You</a></li>
+              <li><a href="company.html#contact">Contact</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.resources">Resources</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.resourceLinks">
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="faq.html#getting-started">Getting Started</a></li>
+              <li><a href="faq.html#implementation">Implementation</a></li>
+              <li><a href="company.html#contact">Request Demo</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social-block">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.direct">Direct links</div>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Real routes to write, request a demo, or resolve questions today.</p>
+          </div>
+          <div class="footer-social-row">
+            <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Email Nexa" data-i18n-aria-label="shared.footer.emailAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="M4 8l8 6 8-6"></path>
+              </svg>
+            </a>
+            <a href="company.html#contact" class="footer-social-link" aria-label="Go to Nexa contact" data-i18n-aria-label="shared.footer.contactAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+            <a href="faq.html" class="footer-social-link" aria-label="Open Nexa FAQ" data-i18n-aria-label="shared.footer.faqAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+            </a>
+            <a href="solutions.html" class="footer-social-link" aria-label="View Nexa solutions" data-i18n-aria-label="shared.footer.solutionsAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa Technologies, Inc. All rights reserved.</span>
+      <div class="footer-legal-links">
+        <a href="#" data-i18n="shared.footer.privacy">Privacy Policy</a>
+        <a href="#" data-i18n="shared.footer.terms">Terms of Service</a>
+        <a href="#" data-i18n="shared.footer.cookies">Cookie Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<div class="support-widget">
+  <button type="button" class="support-launcher is-hidden" id="support-launcher" aria-label="Open support panel" data-i18n-aria-label="shared.support.launcherAria" aria-controls="support-panel" aria-expanded="false" data-support-launcher>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      <path d="M8 9h8"></path>
+      <path d="M8 13h5"></path>
+    </svg>
+  </button>
+
+  <div class="support-overlay" hidden data-support-overlay></div>
+
+  <section class="support-panel" id="support-panel" role="dialog" aria-modal="true" aria-labelledby="support-panel-title" hidden data-support-panel>
+    <div class="support-panel-header">
+      <a href="index.html" class="support-brand" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+        <img src="nexa.svg" alt="" class="support-brand-image" width="110" height="34" />
+        <span class="visually-hidden">Nexa</span>
+      </a>
+      <button type="button" class="support-panel-close" aria-label="Close support panel" data-i18n-aria-label="shared.support.closeAria" data-support-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12"></path>
+          <path d="M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="support-panel-hero">
+      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Support</p>
+      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Choose your next step.</h2>
+      <p class="support-panel-copy" data-i18n="shared.support.copy">Reach the team, review the platform, or open the FAQ.</p>
+    </div>
+
+    <div class="support-panel-body">
+      <a href="company.html#contact" class="support-card support-card-primary">
+        <div>
+          <strong data-i18n="shared.support.card1Title">Talk to the team</strong>
+          <span data-i18n="shared.support.card1Copy">Go straight to the deployment team.</span>
+        </div>
+        <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14"></path>
+          <path d="M13 5l7 7-7 7"></path>
+        </svg>
+      </a>
+
+      <div class="support-card-grid">
+        <a href="platform.html" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card2Title">See the platform</strong>
+            <span data-i18n="shared.support.card2Copy">Review how the system works.</span>
+          </div>
+        </a>
+        <a href="faq.html#getting-started" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card3Title">Key questions</strong>
+            <span data-i18n="shared.support.card3Copy">Open the answers people check first.</span>
+          </div>
+        </a>
+        <a href="solutions.html" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card4Title">Choose a solution</strong>
+            <span data-i18n="shared.support.card4Copy">Match Nexa to your operating flow.</span>
+          </div>
+        </a>
+      </div>
+
+      <a href="faq.html" class="support-search">
+        <div>
+          <span class="support-search-label" data-i18n="shared.support.searchLabel">Search the FAQ</span>
+          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Go to structured answers and implementation details.</span>
+        </div>
+        <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+      </a>
+
+      <div class="support-composer">
+        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Start a message</label>
+        <textarea id="support-message" class="support-composer-input" rows="3" disabled data-i18n-placeholder="shared.support.composerPlaceholder" placeholder="Live chat is coming soon. Use the contact form today."></textarea>
+        <p class="support-composer-note" data-i18n-html="shared.support.composerNote">Live chat is coming soon. For now, <a href="company.html#contact" class="support-composer-link">use the direct contact form</a>.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/interactions.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>
