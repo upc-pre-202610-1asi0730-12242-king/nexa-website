@@ -1,7 +1,5 @@
-/* ============================================================
-   MAIN — Nexa V3
-   Import order matters. Tokens → Typography → Layout → Buttons → Patterns → Components
-   ============================================================ */
+/* Archivo principal de estilos - Proyecto Nexa */
+/* Importamos los módulos en orden: tokens, tipografía, layout, etc. */
 
 @import url('./tokens.css');
 @import url('./typography.css');
