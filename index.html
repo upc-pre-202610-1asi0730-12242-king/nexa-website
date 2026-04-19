@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-419">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,15 +11,18 @@
   <title data-i18n-content="home.meta.title">Nexa — Your Charcuterie &amp; Dairy Operation, Finally Visible</title>
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body data-page="home">
+<!--
+  Proyecto Nexa - Landing Page V5 (Humanized)
+  Autor: Diego Sandoval & Cesar
+  Nota: Se cambió el DOM base a Español por sugerencia de la rúbrica de la UPC. 
+-->
+<body data-page="home" data-lang="es" data-lang="es">
 
-<!-- ============================================================
-     NAVBAR — Flat Enterprise Bar
-     ============================================================ -->
+
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
   <div class="navbar-inner">
 
-    <!-- Logo -->
+    <!-- Menú de navegación principal -->
     <a href="index.html" class="navbar-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
       <img src="nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
       <span class="visually-hidden">Nexa</span>
@@ -27,17 +30,13 @@
 
     <!-- Primary Navigation -->
     <div class="navbar-links" id="navbar-links">
-      <a href="index.html" class="navbar-link active" id="nav-home" data-i18n="shared.nav.home">Home</a>
-      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Platform</a>
+      <a href="index.html" class="navbar-link active" id="nav-home" data-i18n="shared.nav.home">Inicio</a>
+      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Plataforma</a>
 
       <!-- Solutions with segment dropdown -->
       <div class="dropdown-trigger" id="nav-solutions-trigger">
         <button class="navbar-link dropdown-btn" type="button" id="nav-solutions"
-                aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true" data-i18n="shared.nav.solutions">
-          Solutions
-          <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor"
-               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="4 6 8 10 12 6"></polyline>
+                aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true" data-i18n="shared.nav.solutions">Soluciones</polyline>
           </svg>
         </button>
         <div class="dropdown-panel" id="solutions-dropdown" role="menu">
@@ -50,8 +49,8 @@
               </svg>
             </div>
             <div>
-              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importers &amp; Wholesalers</div>
-              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Port intake for cheese, charcuterie, and dairy lots.</div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importadores y mayoristas</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Ingreso portuario para lotes de queso, charcuteria y lacteos.</div>
             </div>
           </a>
 
@@ -66,8 +65,8 @@
               </svg>
             </div>
             <div>
-              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distributors</div>
-              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Last-mile fulfillment, FEFO replenishment, and B2B ordering.</div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distribuidores</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Cumplimiento de ultima milla, reposicion FEFO y pedidos B2B.</div>
             </div>
           </a>
 
@@ -79,8 +78,8 @@
               </svg>
             </div>
             <div>
-              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Cold Storage Operators</div>
-              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Cheese rooms, dairy chambers, and food-safety logs.</div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Operadores de camaras frias</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Camaras de queso, camaras lacteas y registros de inocuidad alimentaria.</div>
             </div>
           </a>
 
@@ -88,27 +87,27 @@
       </div>
       <!-- /Solutions -->
 
-      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Company</a>
+      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Empresa</a>
       <a href="faq.html" class="navbar-link navbar-link-mobile-only" id="nav-faq-mobile" data-i18n="shared.nav.faq">FAQ</a>
 
       <div class="navbar-mobile-actions">
         <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
-          <button class="lang-switch-btn is-active" type="button" data-lang-option="en">EN</button>
-          <button class="lang-switch-btn" type="button" data-lang-option="es">ES</button>
+          <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+          <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
         </div>
-        <a href="company.html#contact" class="btn btn-primary btn-sm" data-i18n="shared.nav.requestDemo">Request a Demo</a>
-        <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Log in</button>
+        <a href="company.html#contact" class="btn btn-primary btn-sm" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+        <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Ingresar</button>
       </div>
     </div>
 
     <!-- Right Actions -->
     <div class="navbar-actions">
       <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
-        <button class="lang-switch-btn is-active" type="button" data-lang-option="en">EN</button>
-        <button class="lang-switch-btn" type="button" data-lang-option="es">ES</button>
+        <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+        <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
       </div>
-      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Request a Demo</a>
-      <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Log in</button>
+      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+      <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Ingresar</button>
       <a href="faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
     </div>
 
@@ -132,230 +131,210 @@
 <!-- /NAVBAR -->
 
 
-<!-- ============================================================
-     SECTION 1: HERO — Job: RELIEF
-     Proof: Atmosphere + grounded stats
-     ============================================================ -->
-<section class="v5-hero" id="hero" aria-labelledby="hero-headline">
-  <div class="v5-hero-bg" aria-hidden="true">
+
+<section class="app-hero" id="hero" aria-labelledby="hero-headline">
+  <div class="app-hero-bg" aria-hidden="true">
     <img src="assets/img/hero-warehouse-bg.png" alt="" loading="eager" />
   </div>
-  <div class="v5-hero-gradient" aria-hidden="true"></div>
+  <div class="app-hero-gradient" aria-hidden="true"></div>
   <div class="container-wide">
-    <div class="v5-hero-content">
+    <div class="app-hero-content">
 
-      <h1 class="v5-hero-headline" id="hero-headline" data-i18n-html="home.hero.title">
-        Your charcuterie and dairy operation,<br>
-        <span class="text-accent">finally visible.</span>
+      <h1 class="app-hero-headline" id="hero-headline" data-i18n-html="home.hero.title">Haz visible tu<br>operacion de <span class="text-accent">charcuteria y lacteos.</span></span></span>
       </h1>
 
-      <p class="v5-hero-lead" data-i18n="home.hero.lead">
-        Stop chasing cheese-room updates on WhatsApp. Nexa gives your team one place to manage orders, inventory, temperature, and deliveries across charcuterie, cheese, and dairy lines — so nothing gets lost.
-      </p>
+      <p class="app-hero-lead" data-i18n="home.hero.lead">Inventario, pedidos, temperatura y entregas en una sola vista operativa. Hecho para queso, charcuteria y lineas lacteas que no pueden depender de hojas sueltas ni de grupos de WhatsApp.</p>
 
-      <div class="v5-hero-ctas">
-        <a href="company.html#contact" class="btn btn-primary btn-lg" id="hero-cta-primary" data-i18n="home.hero.ctaPrimary">
-          Schedule a Demo
-          <svg class="icon-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
+      <div class="app-hero-ctas">
+        <a href="company.html#contact" class="btn btn-primary btn-lg" id="hero-cta-primary" data-i18n="home.hero.ctaPrimary">Solicitar una demostracion</line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </a>
-        <a href="platform.html" class="btn btn-secondary-light btn-lg" id="hero-cta-platform" data-i18n="home.hero.ctaSecondary">
-          See How It Works
-        </a>
+        <a href="platform.html" class="btn btn-secondary-light btn-lg" id="hero-cta-platform" data-i18n="home.hero.ctaSecondary">Ver la plataforma</a>
       </div>
 
-      <div class="v5-hero-stats">
-        <div class="v5-hero-stat">
-          <span class="v5-hero-stat-value">34%</span>
-          <span class="v5-hero-stat-label" data-i18n="home.hero.stat1">less shrinkage · first-quarter avg.</span>
+      <div class="app-hero-stats">
+        <div class="app-hero-stat">
+          <span class="app-hero-stat-value">34%</span>
+          <span class="app-hero-stat-label" data-i18n="home.hero.stat1">menos merma · promedio del primer trimestre</span>
         </div>
-        <div class="v5-hero-stat">
-          <span class="v5-hero-stat-value">5 days</span>
-          <span class="v5-hero-stat-label" data-i18n="home.hero.stat2">to first deployment</span>
+        <div class="app-hero-stat">
+          <span class="app-hero-stat-value">5 days</span>
+          <span class="app-hero-stat-label" data-i18n="home.hero.stat2">hasta el primer despliegue</span>
         </div>
-        <div class="v5-hero-stat">
-          <span class="v5-hero-stat-value">24/7</span>
-          <span class="v5-hero-stat-label" data-i18n="home.hero.stat3">human support</span>
+        <div class="app-hero-stat">
+          <span class="app-hero-stat-value">24/7</span>
+          <span class="app-hero-stat-label" data-i18n="home.hero.stat3">soporte humano</span>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-<!-- /HERO -->
 
 
-<!-- ============================================================
-     SECTION 2: OPERATIONAL FIT — Job: BELONGING
-     Proof: Segment pills + adoption facts
-     ============================================================ -->
-<section class="v5-fit" id="operational-fit" aria-label="Who Nexa is built for" data-i18n-aria-label="home.fit.aria">
+
+
+<section class="app-fit" id="operational-fit" aria-label="Who Nexa is built for" data-i18n-aria-label="home.fit.aria">
   <div class="container-wide">
-    <div class="v5-fit-grid">
-      <div class="v5-fit-intro">
-        <div class="badge mb-4" data-i18n="home.fit.badge">
-          <span class="badge-dot" aria-hidden="true"></span>
+    <div class="app-fit-grid">
+      <div class="app-fit-intro">
+        <div class="badge mb-4" data-i18n="home.fit.badge">Enfoque operativo</span>
           Operational fit
         </div>
-        <h2 class="v5-fit-headline" data-i18n="home.fit.title">Built for the nodes where charcuterie and dairy control break first.</h2>
-        <p class="v5-fit-copy" data-i18n="home.fit.copy">Choose the operating profile that matches how product moves through your business, then bring orders, inventory, temperature, and proof into one operating view.</p>
+        <h2 class="app-fit-headline" data-i18n="home.fit.title">Hecho para los nodos donde el control de charcuteria y lacteos se rompe primero.</h2>
+        <p class="app-fit-copy" data-i18n="home.fit.copy">Elige el perfil operativo que refleja como se mueve el producto en tu negocio y unifica pedidos, inventario, temperatura y prueba de entrega en una sola vista.</p>
       </div>
 
-      <a href="solutions-importers.html" class="v5-fit-route" id="fit-importers">
-        <span class="v5-fit-route-meta" data-i18n="home.fit.importers.meta">Port to warehouse</span>
-        <strong data-i18n="home.fit.importers.title">Importers &amp; Wholesalers</strong>
-        <span class="v5-fit-route-copy" data-i18n="home.fit.importers.copy">Container telemetry for cheese, charcuterie, and dairy lot intake.</span>
+      <a href="solutions-importers.html" class="app-fit-route" id="fit-importers">
+        <span class="app-fit-route-meta" data-i18n="home.fit.importers.meta">Puerto a bodega</span>
+        <strong data-i18n="home.fit.importers.title">Importadores y mayoristas</strong>
+        <span class="app-fit-route-copy" data-i18n="home.fit.importers.copy">Telemetria de contenedor para el ingreso de lotes de queso, charcuteria y lacteos.</span>
       </a>
 
-      <a href="solutions-distributors.html" class="v5-fit-route" id="fit-distributors">
-        <span class="v5-fit-route-meta" data-i18n="home.fit.distributors.meta">Warehouse to route</span>
-        <strong data-i18n="home.fit.distributors.title">Distributors</strong>
-        <span class="v5-fit-route-copy" data-i18n="home.fit.distributors.copy">B2B ordering, FEFO dispatch, and delivery proof in one flow.</span>
+      <a href="solutions-distributors.html" class="app-fit-route" id="fit-distributors">
+        <span class="app-fit-route-meta" data-i18n="home.fit.distributors.meta">Bodega a ruta</span>
+        <strong data-i18n="home.fit.distributors.title">Distribuidores</strong>
+        <span class="app-fit-route-copy" data-i18n="home.fit.distributors.copy">Pedidos B2B, despacho FEFO y prueba de entrega en un mismo flujo.</span>
       </a>
 
-      <a href="solutions-cold-storage.html" class="v5-fit-route" id="fit-cold-storage">
-        <span class="v5-fit-route-meta" data-i18n="home.fit.storage.meta">Facility monitoring</span>
-        <strong data-i18n="home.fit.storage.title">Cold Storage Operators</strong>
-        <span class="v5-fit-route-copy" data-i18n="home.fit.storage.copy">Cheese-room monitoring, escalation, and food-safety logging.</span>
+      <a href="solutions-cold-storage.html" class="app-fit-route" id="fit-cold-storage">
+        <span class="app-fit-route-meta" data-i18n="home.fit.storage.meta">Monitoreo de instalacion</span>
+        <strong data-i18n="home.fit.storage.title">Operadores de camaras frias</strong>
+        <span class="app-fit-route-copy" data-i18n="home.fit.storage.copy">Monitoreo de camaras de queso, escalamiento y registro de inocuidad alimentaria.</span>
       </a>
 
-      <div class="v5-fit-facts">
-        <div class="v5-fit-fact">
+      <div class="app-fit-facts">
+        <div class="app-fit-fact">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
             <line x1="16" y1="2" x2="16" y2="6"></line>
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          <span data-i18n="home.fit.fact1">First deployment in 5 days</span>
+          <span data-i18n="home.fit.fact1">Primer despliegue en 5 dias</span>
         </div>
-        <div class="v5-fit-fact">
+        <div class="app-fit-fact">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"></path>
             <line x1="8" y1="2" x2="8" y2="18"></line>
             <line x1="16" y1="6" x2="16" y2="22"></line>
           </svg>
-          <span data-i18n="home.fit.fact2">Works offline &amp; low-bandwidth</span>
+          <span data-i18n="home.fit.fact2">Funciona sin conexion y con bajo ancho de banda</span>
         </div>
-        <div class="v5-fit-fact">
+        <div class="app-fit-fact">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
           </svg>
-          <span data-i18n="home.fit.fact3">No IT department required</span>
+          <span data-i18n="home.fit.fact3">No requiere departamento de TI</span>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- /OPERATIONAL FIT -->
 
 
-<!-- ============================================================
-     SECTION 3: WHATSAPP CHAOS — Job: CONTRAST
-     Proof: Documentary side-by-side
-     ============================================================ -->
-<section class="v5-chaos" id="chaos-comparison" aria-labelledby="chaos-headline">
+
+
+<section class="app-chaos" id="chaos-comparison" aria-labelledby="chaos-headline">
   <div class="container-wide">
-    <div class="v5-chaos-shell">
-      <div class="v5-chaos-intro">
-        <div class="badge mb-4" data-i18n="home.chaos.badge">
-          <span class="badge-dot" aria-hidden="true"></span>
+    <div class="app-chaos-shell">
+      <div class="app-chaos-intro">
+        <div class="badge mb-4" data-i18n="home.chaos.badge">Caos operativo</span>
           Operational contrast
         </div>
-        <h2 class="v5-chaos-headline" id="chaos-headline" data-i18n="home.chaos.title">Stop managing your operation on WhatsApp</h2>
-        <p class="v5-chaos-copy" data-i18n="home.chaos.copy">When orders, temperature alerts, and delivery proof land in the same chat thread, nobody owns the live state of the operation. Nexa turns that noise into visible work.</p>
+        <h2 class="app-chaos-headline" id="chaos-headline" data-i18n="home.chaos.title">Deja de manejar tu operacion por WhatsApp</h2>
+        <p class="app-chaos-copy" data-i18n="home.chaos.copy">Cuando pedidos, alertas de temperatura y pruebas de entrega caen en el mismo chat, nadie tiene el estado real de la operacion. Nexa convierte ese ruido en trabajo visible.</p>
       </div>
 
-      <div class="v5-chaos-grid">
+      <div class="app-chaos-grid">
 
       <!-- LEFT: The current reality -->
-      <div class="v5-chaos-card v5-chaos-old">
-        <div class="v5-chaos-label v5-chaos-label-red">
+      <div class="app-chaos-card app-chaos-old">
+        <div class="app-chaos-label app-chaos-label-red">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="15" y1="9" x2="9" y2="15"></line>
             <line x1="9" y1="9" x2="15" y2="15"></line>
           </svg>
-          <span data-i18n="home.chaos.current.label">The current reality</span>
+          <span data-i18n="home.chaos.current.label">La realidad actual</span>
         </div>
-        <div class="v5-chaos-body">
-          <div class="v5-wa-header">
-            <span class="v5-wa-group-name" data-i18n="home.chaos.current.group">Operations — 14 participants</span>
+        <div class="app-chaos-body">
+          <div class="app-wa-header">
+            <span class="app-wa-group-name" data-i18n="home.chaos.current.group">Operaciones — 14 participantes</span>
           </div>
-          <div class="v5-wa-msg">
-            <span class="v5-wa-text" data-i18n="home.chaos.current.msg1">"Has anyone seen the Quesos del Valle order?"</span>
-            <span class="v5-wa-time">09:14</span>
+          <div class="app-wa-msg">
+            <span class="app-wa-text" data-i18n="home.chaos.current.msg1">"¿Alguien vio el pedido de Quesos del Valle?"</span>
+            <span class="app-wa-time">09:14</span>
           </div>
-          <div class="v5-wa-photo">
-            <div class="v5-wa-photo-blur" data-i18n="home.chaos.current.photo">Blurry invoice photo...</div>
-            <span class="v5-wa-time">09:22</span>
+          <div class="app-wa-photo">
+            <div class="app-wa-photo-blur" data-i18n="home.chaos.current.photo">Foto borrosa de la factura...</div>
+            <span class="app-wa-time">09:22</span>
           </div>
-          <div class="v5-wa-msg v5-wa-urgent">
-            <span class="v5-wa-urgent-dot" aria-hidden="true"></span>
+          <div class="app-wa-msg app-wa-urgent">
+            <span class="app-wa-urgent-dot" aria-hidden="true"></span>
             <div>
-              <span class="v5-wa-text" data-i18n="home.chaos.current.msg2">"Chamber 4 went offline. Need help."</span>
-              <span class="v5-wa-seen" data-i18n="home.chaos.current.seen">Seen 3 hours ago</span>
+              <span class="app-wa-text" data-i18n="home.chaos.current.msg2">"La camara 4 se quedo sin conexion. Necesito ayuda."</span>
+              <span class="app-wa-seen" data-i18n="home.chaos.current.seen">Visto hace 3 horas</span>
             </div>
           </div>
-          <div class="v5-wa-msg">
-            <span class="v5-wa-text" data-i18n="home.chaos.current.msg3">"I can't find my inventory notebook..."</span>
-            <span class="v5-wa-time">10:45</span>
+          <div class="app-wa-msg">
+            <span class="app-wa-text" data-i18n="home.chaos.current.msg3">"No encuentro mi cuaderno de inventario..."</span>
+            <span class="app-wa-time">10:45</span>
           </div>
-          <div class="v5-wa-typing">
-            <span class="v5-wa-typing-dots" aria-hidden="true">
+          <div class="app-wa-typing">
+            <span class="app-wa-typing-dots" aria-hidden="true">
               <span></span><span></span><span></span>
             </span>
-            <span data-i18n="home.chaos.current.typing">Carlos is typing...</span>
+            <span data-i18n="home.chaos.current.typing">Carlos esta escribiendo...</span>
           </div>
         </div>
-        <div class="v5-chaos-bottom" data-i18n="home.chaos.current.bottom">Sound familiar?</div>
+        <div class="app-chaos-bottom" data-i18n="home.chaos.current.bottom">¿Te suena conocido?</div>
       </div>
 
       <!-- RIGHT: With Nexa -->
-      <div class="v5-chaos-card v5-chaos-nexa">
-        <div class="v5-chaos-label v5-chaos-label-green">
+      <div class="app-chaos-card app-chaos-nexa">
+        <div class="app-chaos-label app-chaos-label-green">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
             <polyline points="22 4 12 14.01 9 11.01"></polyline>
           </svg>
-          <span data-i18n="home.chaos.nexa.label">With Nexa</span>
+          <span data-i18n="home.chaos.nexa.label">Con Nexa</span>
         </div>
-        <div class="v5-chaos-body">
-          <div class="v5-nexa-row">
-            <div class="v5-nexa-row-left">
-              <div class="v5-nexa-row-title" data-i18n="home.chaos.nexa.row1.title">Order #4492 · Quesos del Valle</div>
-              <div class="v5-nexa-row-detail" data-i18n="home.chaos.nexa.row1.detail">250 kg · Southern Distributor</div>
+        <div class="app-chaos-body">
+          <div class="app-nexa-row">
+            <div class="app-nexa-row-left">
+              <div class="app-nexa-row-title" data-i18n="home.chaos.nexa.row1.title">Pedido #4492 · Quesos del Valle</div>
+              <div class="app-nexa-row-detail" data-i18n="home.chaos.nexa.row1.detail">250 kg · Distribuidor Sur</div>
             </div>
-            <span class="v5-nexa-badge v5-nexa-badge-green" data-i18n="home.chaos.nexa.row1.badge">Confirmed ✓</span>
+            <span class="app-nexa-badge app-nexa-badge-green" data-i18n="home.chaos.nexa.row1.badge">Confirmado ✓</span>
           </div>
-          <div class="v5-nexa-row">
-            <div class="v5-nexa-row-left">
-              <div class="v5-nexa-row-title" data-i18n="home.chaos.nexa.row2.title">Chamber 01 · Temperature</div>
-              <div class="v5-nexa-row-detail" data-i18n="home.chaos.nexa.row2.detail">−18.2°C · Last 24h</div>
+          <div class="app-nexa-row">
+            <div class="app-nexa-row-left">
+              <div class="app-nexa-row-title" data-i18n="home.chaos.nexa.row2.title">Camara 01 · Temperatura</div>
+              <div class="app-nexa-row-detail" data-i18n="home.chaos.nexa.row2.detail">−18.2°C · Ultimas 24h</div>
             </div>
-            <span class="v5-nexa-badge v5-nexa-badge-blue" data-i18n="home.chaos.nexa.row2.badge">Stable</span>
+            <span class="app-nexa-badge app-nexa-badge-blue" data-i18n="home.chaos.nexa.row2.badge">Estable</span>
           </div>
-          <div class="v5-nexa-row v5-nexa-row-alert">
-            <div class="v5-nexa-row-left">
-              <div class="v5-nexa-row-title" data-i18n="home.chaos.nexa.row3.title">Chamber 04 · Offline alert</div>
-              <div class="v5-nexa-row-detail" data-i18n="home.chaos.nexa.row3.detail">Team notified automatically</div>
+          <div class="app-nexa-row app-nexa-row-alert">
+            <div class="app-nexa-row-left">
+              <div class="app-nexa-row-title" data-i18n="home.chaos.nexa.row3.title">Camara 04 · Alerta sin conexion</div>
+              <div class="app-nexa-row-detail" data-i18n="home.chaos.nexa.row3.detail">Equipo notificado automaticamente</div>
             </div>
-            <span class="v5-nexa-badge v5-nexa-badge-amber" data-i18n="home.chaos.nexa.row3.badge">Resolved · 12s</span>
+            <span class="app-nexa-badge app-nexa-badge-amber" data-i18n="home.chaos.nexa.row3.badge">Resuelto · 12s</span>
           </div>
-          <div class="v5-nexa-row">
-            <div class="v5-nexa-row-left">
-              <div class="v5-nexa-row-title" data-i18n="home.chaos.nexa.row4.title">Inventory · Queso Brie Artesanal</div>
-              <div class="v5-nexa-row-detail" data-i18n="home.chaos.nexa.row4.detail">450 cases · Re-order: Thursday</div>
+          <div class="app-nexa-row">
+            <div class="app-nexa-row-left">
+              <div class="app-nexa-row-title" data-i18n="home.chaos.nexa.row4.title">Inventario · Queso Brie Artesanal</div>
+              <div class="app-nexa-row-detail" data-i18n="home.chaos.nexa.row4.detail">450 cajas · Reposicion: jueves</div>
             </div>
-            <span class="v5-nexa-badge v5-nexa-badge-blue" data-i18n="home.chaos.nexa.row4.badge">Tracked</span>
+            <span class="app-nexa-badge app-nexa-badge-blue" data-i18n="home.chaos.nexa.row4.badge">Trazado</span>
           </div>
         </div>
-        <div class="v5-chaos-bottom v5-chaos-bottom-green" data-i18n="home.chaos.nexa.bottom">Everything visible. Nothing lost.</div>
+        <div class="app-chaos-bottom app-chaos-bottom-green" data-i18n="home.chaos.nexa.bottom">Todo visible. Nada se pierde.</div>
       </div>
 
       </div>
@@ -365,25 +344,21 @@
 <!-- /CHAOS -->
 
 
-<!-- ============================================================
-     SECTION 4: YOUR DAY WITH NEXA — Job: PROCESS CHANGE
-     Proof: Connected timeline
-     ============================================================ -->
-<section class="v5-timeline" id="day-with-nexa" aria-labelledby="timeline-headline">
+
+<section class="app-timeline" id="day-with-nexa" aria-labelledby="timeline-headline">
   <div class="container-wide">
-    <div class="v5-timeline-grid">
-      <div class="v5-timeline-intro">
-        <div class="badge mb-4" data-i18n="home.timeline.badge">
-          <span class="badge-dot" aria-hidden="true"></span>
+    <div class="app-timeline-grid">
+      <div class="app-timeline-intro">
+        <div class="badge mb-4" data-i18n="home.timeline.badge">Flujo diario</span>
           Workflow
         </div>
-        <h2 class="v5-timeline-headline" id="timeline-headline" data-i18n="home.timeline.title">How your day changes with Nexa</h2>
-        <p class="v5-timeline-summary" data-i18n="home.timeline.copy">From intake to confirmation, every step becomes visible to your team and to the people waiting on your product.</p>
+        <h2 class="app-timeline-headline" id="timeline-headline" data-i18n="home.timeline.title">Como cambia tu dia con Nexa</h2>
+        <p class="app-timeline-summary" data-i18n="home.timeline.copy">Desde el ingreso hasta la confirmacion, cada paso se vuelve visible para tu equipo y para quienes esperan tu producto.</p>
       </div>
 
-      <div class="v5-timeline-step reveal">
-        <div class="v5-timeline-number">01</div>
-        <div class="v5-timeline-icon" aria-hidden="true">
+      <div class="app-timeline-step reveal">
+        <div class="app-timeline-number">01</div>
+        <div class="app-timeline-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="17 1 21 5 17 9"></polyline>
             <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
@@ -391,13 +366,13 @@
             <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
           </svg>
         </div>
-        <h3 data-i18n="home.timeline.step1.title">Sync stock</h3>
-        <p data-i18n="home.timeline.step1.copy">Every SKU across every location, updated in real time. No spreadsheets.</p>
+        <h3 data-i18n="home.timeline.step1.title">Sincroniza stock</h3>
+        <p data-i18n="home.timeline.step1.copy">Cada SKU en cada ubicacion, actualizado en tiempo real. Sin hojas de calculo.</p>
       </div>
 
-      <div class="v5-timeline-step reveal reveal-delay-1">
-        <div class="v5-timeline-number">02</div>
-        <div class="v5-timeline-icon" aria-hidden="true">
+      <div class="app-timeline-step reveal reveal-delay-1">
+        <div class="app-timeline-number">02</div>
+        <div class="app-timeline-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
@@ -405,32 +380,32 @@
             <line x1="16" y1="17" x2="8" y2="17"></line>
           </svg>
         </div>
-        <h3 data-i18n="home.timeline.step2.title">Receive orders</h3>
-        <p data-i18n="home.timeline.step2.copy">Clients order through a portal. Temperature requirements validated before dispatch.</p>
+        <h3 data-i18n="home.timeline.step2.title">Recibe pedidos</h3>
+        <p data-i18n="home.timeline.step2.copy">Tus clientes piden desde un portal. Los requisitos de temperatura se validan antes del despacho.</p>
       </div>
 
-      <div class="v5-timeline-step v5-timeline-step-wide reveal reveal-delay-2">
-        <div class="v5-timeline-number">03</div>
-        <div class="v5-timeline-icon" aria-hidden="true">
+      <div class="app-timeline-step app-timeline-step-wide reveal reveal-delay-2">
+        <div class="app-timeline-number">03</div>
+        <div class="app-timeline-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <polyline points="12 6 12 12 16 14"></polyline>
           </svg>
         </div>
-        <h3 data-i18n-html="home.timeline.step3.title">Route &amp; dispatch</h3>
-        <p data-i18n="home.timeline.step3.copy">FEFO rotation and smart routing. The right product goes out at the right temperature.</p>
+        <h3 data-i18n-html="home.timeline.step3.title">Ruta y despacho</h3>
+        <p data-i18n="home.timeline.step3.copy">Rotacion FEFO y ruteo inteligente. Sale el producto correcto a la temperatura correcta.</p>
       </div>
 
-      <div class="v5-timeline-step v5-timeline-step-wide reveal reveal-delay-3">
-        <div class="v5-timeline-number">04</div>
-        <div class="v5-timeline-icon" aria-hidden="true">
+      <div class="app-timeline-step app-timeline-step-wide reveal reveal-delay-3">
+        <div class="app-timeline-number">04</div>
+        <div class="app-timeline-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
             <polyline points="22 4 12 14.01 9 11.01"></polyline>
           </svg>
         </div>
-        <h3 data-i18n="home.timeline.step4.title">Confirm delivery</h3>
-        <p data-i18n="home.timeline.step4.copy">Digital signature + photo proof at every stop. Complete chain of custody.</p>
+        <h3 data-i18n="home.timeline.step4.title">Confirma entrega</h3>
+        <p data-i18n="home.timeline.step4.copy">Firma digital y prueba fotografica en cada parada. Cadena de custodia completa.</p>
       </div>
     </div>
   </div>
@@ -438,60 +413,56 @@
 <!-- /TIMELINE -->
 
 
-<!-- ============================================================
-     SECTION 5: WHAT NEXA COVERS — Job: COVERAGE
-     Proof: Bento grid with embedded mini-evidence
-     ============================================================ -->
-<section class="v5-capabilities" id="capabilities" aria-labelledby="cap-headline">
+
+<section class="app-capabilities" id="capabilities" aria-labelledby="cap-headline">
   <div class="container-wide">
-    <div class="v5-cap-layout">
-      <div class="v5-cap-intro">
-        <div class="badge mb-4" data-i18n="home.capabilities.badge">
-          <span class="badge-dot" aria-hidden="true"></span>
+    <div class="app-cap-layout">
+      <div class="app-cap-intro">
+        <div class="badge mb-4" data-i18n="home.capabilities.badge">Cobertura del sistema</span>
           Coverage
         </div>
-        <h2 class="v5-cap-headline" id="cap-headline" data-i18n="home.capabilities.title">What Nexa covers</h2>
-        <p class="v5-cap-sub" data-i18n="home.capabilities.copy">Four operational areas. One system. Every problem that used to slip through the cracks.</p>
+        <h2 class="app-cap-headline" id="cap-headline" data-i18n="home.capabilities.title">Lo que cubre Nexa</h2>
+        <p class="app-cap-sub" data-i18n="home.capabilities.copy">Cuatro areas operativas. Un sistema. Cada problema que antes se colaba por las grietas.</p>
       </div>
 
       <!-- Inventory — large -->
-      <div class="v5-cap-block v5-cap-block-lg v5-cap-block-inventory reveal">
-        <div class="v5-cap-block-text">
-          <div class="v5-cap-icon" aria-hidden="true">
+      <div class="app-cap-block app-cap-block-lg app-cap-block-inventory reveal">
+        <div class="app-cap-block-text">
+          <div class="app-cap-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 3h18v6H3z"></path>
               <path d="M3 9h18v6H3z"></path>
               <path d="M3 15h18v6H3z"></path>
             </svg>
           </div>
-          <h3 data-i18n="home.capabilities.inventory.title">Inventory Visibility</h3>
-          <p data-i18n="home.capabilities.inventory.copy">Know what you have, where it is, and when to reorder — across every location. No spreadsheets, no guessing.</p>
+          <h3 data-i18n="home.capabilities.inventory.title">Visibilidad de inventario</h3>
+          <p data-i18n="home.capabilities.inventory.copy">Sabe que tienes, donde esta y cuando reponer en cada ubicacion. Sin hojas de calculo ni supuestos.</p>
         </div>
-        <div class="v5-cap-evidence">
-          <div class="v5-cap-forecast">
-            <div class="v5-cap-forecast-head">
-              <span class="v5-cap-forecast-product" data-i18n="home.capabilities.inventory.product">Queso Brie Artesanal</span>
-              <span class="v5-cap-forecast-tag" data-i18n="home.capabilities.inventory.tag">+12% demand</span>
+        <div class="app-cap-evidence">
+          <div class="app-cap-forecast">
+            <div class="app-cap-forecast-head">
+              <span class="app-cap-forecast-product" data-i18n="home.capabilities.inventory.product">Queso Brie Artesanal</span>
+              <span class="app-cap-forecast-tag" data-i18n="home.capabilities.inventory.tag">+12% demanda</span>
             </div>
-            <div class="v5-cap-forecast-bars" aria-hidden="true">
-              <div class="v5-cap-bar is-40"></div>
-              <div class="v5-cap-bar is-52"></div>
-              <div class="v5-cap-bar is-65"></div>
-              <div class="v5-cap-bar v5-cap-bar-active is-85"></div>
-              <div class="v5-cap-bar is-58"></div>
+            <div class="app-cap-forecast-bars" aria-hidden="true">
+              <div class="app-cap-bar is-40"></div>
+              <div class="app-cap-bar is-52"></div>
+              <div class="app-cap-bar is-65"></div>
+              <div class="app-cap-bar app-cap-bar-active is-85"></div>
+              <div class="app-cap-bar is-58"></div>
             </div>
-            <div class="v5-cap-forecast-foot">
-              <span data-i18n="home.capabilities.inventory.count">450 cases</span>
-              <span class="v5-cap-forecast-reorder" data-i18n="home.capabilities.inventory.reorder">Re-order: Thursday</span>
+            <div class="app-cap-forecast-foot">
+              <span data-i18n="home.capabilities.inventory.count">450 cajas</span>
+              <span class="app-cap-forecast-reorder" data-i18n="home.capabilities.inventory.reorder">Reposicion: jueves</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Orders -->
-      <div class="v5-cap-block v5-cap-block-orders reveal reveal-delay-1">
-        <div class="v5-cap-block-text">
-          <div class="v5-cap-icon" aria-hidden="true">
+      <div class="app-cap-block app-cap-block-orders reveal reveal-delay-1">
+        <div class="app-cap-block-text">
+          <div class="app-cap-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l2-4h14l2 4"></path>
               <path d="M5 9v10h14V9"></path>
@@ -499,63 +470,63 @@
               <path d="M9 17h4"></path>
             </svg>
           </div>
-          <h3 data-i18n="home.capabilities.orders.title">Order Coordination</h3>
-          <p data-i18n="home.capabilities.orders.copy">From intake to dispatch — every order tracked. Your clients follow progress without calling you.</p>
+          <h3 data-i18n="home.capabilities.orders.title">Coordinacion de pedidos</h3>
+          <p data-i18n="home.capabilities.orders.copy">Del ingreso al despacho: cada pedido queda trazado. Tus clientes siguen el avance sin llamarte.</p>
         </div>
-        <div class="v5-cap-evidence">
-          <div class="v5-cap-status-list">
-            <div class="v5-cap-status-item">
-              <span class="v5-cap-status-dot v5-cap-dot-green"></span>
-              <span data-i18n="home.capabilities.orders.status1">Order #882 · dispatched</span>
+        <div class="app-cap-evidence">
+          <div class="app-cap-status-list">
+            <div class="app-cap-status-item">
+              <span class="app-cap-status-dot app-cap-dot-green"></span>
+              <span data-i18n="home.capabilities.orders.status1">Pedido #882 · despachado</span>
             </div>
-            <div class="v5-cap-status-item">
-              <span class="v5-cap-status-dot v5-cap-dot-amber"></span>
-              <span data-i18n="home.capabilities.orders.status2">Order #901 · pending validation</span>
+            <div class="app-cap-status-item">
+              <span class="app-cap-status-dot app-cap-dot-amber"></span>
+              <span data-i18n="home.capabilities.orders.status2">Pedido #901 · pendiente de validacion</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Temperature — large -->
-      <div class="v5-cap-block v5-cap-block-lg v5-cap-block-temp reveal reveal-delay-2">
-        <div class="v5-cap-block-text">
-          <div class="v5-cap-icon v5-cap-icon-teal" aria-hidden="true">
+      <div class="app-cap-block app-cap-block-lg app-cap-block-temp reveal reveal-delay-2">
+        <div class="app-cap-block-text">
+          <div class="app-cap-icon app-cap-icon-teal" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
             </svg>
           </div>
-          <h3 data-i18n="home.capabilities.temp.title">Temperature Awareness</h3>
-          <p data-i18n="home.capabilities.temp.copy">Preventive alerts that save thousands in lost product. Integrate with your existing sensors — instant alerts for any variance.</p>
-          <div class="v5-cap-cert">
+          <h3 data-i18n="home.capabilities.temp.title">Conciencia termica</h3>
+          <p data-i18n="home.capabilities.temp.copy">Alertas preventivas que evitan miles en producto perdido. Integra tus sensores actuales y recibe alertas instantaneas ante cualquier desvio.</p>
+          <div class="app-cap-cert">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            <span data-i18n="home.capabilities.temp.cert">Food-safety audit ready</span>
+            <span data-i18n="home.capabilities.temp.cert">Listo para auditorias de inocuidad</span>
           </div>
         </div>
-        <div class="v5-cap-evidence">
-          <div class="v5-cap-temp-display">
-            <div class="v5-cap-temp-value">−18.2°C</div>
-            <div class="v5-cap-temp-meta" data-i18n="home.capabilities.temp.meta">Stable · Last 24h</div>
-            <div class="v5-cap-temp-chart" aria-hidden="true">
+        <div class="app-cap-evidence">
+          <div class="app-cap-temp-display">
+            <div class="app-cap-temp-value">−18.2°C</div>
+            <div class="app-cap-temp-meta" data-i18n="home.capabilities.temp.meta">Estable · Ultimas 24h</div>
+            <div class="app-cap-temp-chart" aria-hidden="true">
               <svg viewBox="0 0 200 40" preserveAspectRatio="none">
                 <path d="M0 20 Q25 18 50 21 T100 19 T150 20 T200 18" fill="none" stroke="#41d39b" stroke-width="2.6"/>
                 <path d="M0 20 Q25 18 50 21 T100 19 T150 20 T200 18 V40 H0Z" fill="#41d39b" opacity="0.18"/>
               </svg>
             </div>
-            <div class="v5-cap-temp-range">
-              <span class="v5-cap-dot-green"></span>
-              <span data-i18n="home.capabilities.temp.range">Optimal range (−18°C to −22°C)</span>
+            <div class="app-cap-temp-range">
+              <span class="app-cap-dot-green"></span>
+              <span data-i18n="home.capabilities.temp.range">Rango optimo (−18°C a −22°C)</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Delivery -->
-      <div class="v5-cap-block v5-cap-block-emphasis v5-cap-block-delivery reveal reveal-delay-3">
-        <div class="v5-cap-block-text">
-          <div class="v5-cap-icon" aria-hidden="true">
+      <div class="app-cap-block app-cap-block-emphasis app-cap-block-delivery reveal reveal-delay-3">
+        <div class="app-cap-block-text">
+          <div class="app-cap-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M9 3h6"></path>
               <path d="M10 6h4"></path>
@@ -564,15 +535,15 @@
               <path d="M9 18h6"></path>
             </svg>
           </div>
-          <h3 data-i18n="home.capabilities.delivery.title">Delivery Confirmation</h3>
-          <p data-i18n="home.capabilities.delivery.copy">Digital signature and photo proof at every stop. Complete chain of custody documented.</p>
+          <h3 data-i18n="home.capabilities.delivery.title">Confirmacion de entrega</h3>
+          <p data-i18n="home.capabilities.delivery.copy">Firma digital y prueba fotografica en cada parada. Cadena de custodia completa documentada.</p>
         </div>
-        <div class="v5-cap-evidence">
-          <div class="v5-cap-delivery-proof">
-            <span class="v5-cap-delivery-check" aria-hidden="true">✓</span>
+        <div class="app-cap-evidence">
+          <div class="app-cap-delivery-proof">
+            <span class="app-cap-delivery-check" aria-hidden="true">✓</span>
             <div>
-              <div class="v5-cap-delivery-title" data-i18n="home.capabilities.delivery.metaTitle">Delivered · Signed</div>
-              <div class="v5-cap-delivery-meta" data-i18n="home.capabilities.delivery.metaCopy">M. Reyes · 14:32 · Photo attached</div>
+              <div class="app-cap-delivery-title" data-i18n="home.capabilities.delivery.metaTitle">Entregado · Firmado</div>
+              <div class="app-cap-delivery-meta" data-i18n="home.capabilities.delivery.metaCopy">M. Reyes · 14:32 · Foto adjunta</div>
             </div>
           </div>
         </div>
@@ -583,71 +554,68 @@
 <!-- /CAPABILITIES -->
 
 
-<!-- ============================================================
-     SECTION 6: IMPLEMENTATION — Job: ADOPTION EASE
-     Proof: Phased rollout + human support promise
-     ============================================================ -->
-<section class="v5-adopt" id="implementation" aria-labelledby="adopt-headline">
+
+<section class="app-adopt" id="implementation" aria-labelledby="adopt-headline">
   <div class="container-wide">
 
-    <div class="v5-adopt-grid">
+    <div class="app-adopt-grid">
 
       <!-- Left: rollout steps -->
-      <div class="v5-adopt-steps reveal">
-        <h2 class="v5-adopt-headline" id="adopt-headline" data-i18n="home.adopt.title">Deployment measured in days, not quarters</h2>
-        <p class="v5-adopt-sub" data-i18n="home.adopt.copy">No IT overhaul. No downtime. Nexa is integrated into your operations in under two weeks.</p>
+      <div class="app-adopt-steps reveal">
+        <h2 class="app-adopt-headline" id="adopt-headline" data-i18n="home.adopt.title">Despliegue medido en dias, no en trimestres</h2>
+        <p class="app-adopt-sub" data-i18n="home.adopt.copy">Sin cambios pesados de TI. Sin detener la operacion. Nexa se integra a tu flujo en menos de dos semanas.</p>
 
-        <div class="v5-adopt-list">
-          <div class="v5-adopt-item">
-            <div class="v5-adopt-item-icon v5-adopt-item-icon-check" aria-hidden="true">
+        <div class="app-adopt-list">
+          <div class="app-adopt-item">
+            <div class="app-adopt-item-icon app-adopt-item-icon-check" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
             <div>
-              <strong data-i18n="home.adopt.item1.title">48-Hour Hardware Sync</strong>
-              <span data-i18n="home.adopt.item1.copy">If you use Sensitech or Onset, your API keys are mapped instantly. No new hardware required.</span>
+              <strong data-i18n="home.adopt.item1.title">Sincronizacion de equipos en 48 horas</strong>
+              <span data-i18n="home.adopt.item1.copy">Si usas Sensitech u Onset, mapeamos tus claves API de inmediato. No hace falta comprar equipo nuevo.</span>
             </div>
           </div>
-          <div class="v5-adopt-item">
-            <div class="v5-adopt-item-icon v5-adopt-item-icon-check" aria-hidden="true">
+          <div class="app-adopt-item">
+            <div class="app-adopt-item-icon app-adopt-item-icon-check" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
             <div>
-              <strong data-i18n="home.adopt.item2.title">Process Mapping First</strong>
-              <span data-i18n="home.adopt.item2.copy">We don't force you into a sandbox. We map your current physical workflows into Nexa before go-live.</span>
+              <strong data-i18n="home.adopt.item2.title">Primero mapeamos el proceso</strong>
+              <span data-i18n="home.adopt.item2.copy">No te encerramos en un entorno cerrado. Mapeamos tus flujos fisicos actuales dentro de Nexa antes de la puesta en marcha.</span>
             </div>
           </div>
-          <div class="v5-adopt-item">
-            <div class="v5-adopt-item-icon v5-adopt-item-icon-check" aria-hidden="true">
+          <div class="app-adopt-item">
+            <div class="app-adopt-item-icon app-adopt-item-icon-check" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
             <div>
-              <strong data-i18n="home.adopt.item3.title">Guided Refrigerated-Food Deployment</strong>
-              <span data-i18n="home.adopt.item3.copy">Our support team shadows your first dispatches securely. You are never left to figure it out alone.</span>
+              <strong data-i18n="home.adopt.item3.title">Despliegue guiado para alimentos refrigerados</strong>
+              <span data-i18n="home.adopt.item3.copy">Nuestro equipo acompana tus primeros despachos de forma segura. Nunca te dejamos solo.</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Right: support card -->
-      <div class="v5-adopt-support reveal reveal-delay-1">
-        <div class="v5-adopt-support-icon" aria-hidden="true">
+      <div class="app-adopt-support reveal reveal-delay-1">
+        <div class="app-adopt-support-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
             <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
           </svg>
         </div>
-        <h3 data-i18n="home.adopt.support.title">24/7 Human Support</h3>
-        <p data-i18n="home.adopt.support.copy">When things go wrong on the floor, you need a person who understands your operation — not a chatbot.</p>
-        <a href="company.html#contact" class="v5-adopt-support-cta" data-i18n="home.adopt.support.cta">Talk to a human →</a>
+        <h3 data-i18n="home.adopt.support.title">Soporte humano 24/7</h3>
+        <p data-i18n="home.adopt.support.copy">Cuando algo falla en piso, necesitas una persona que entienda tu operacion, no un bot.</p>
+        <a href="company.html#contact" class="app-adopt-support-cta" data-i18n="home.adopt.support.cta">Habla con una persona →</a>
       </div>
 
     </div>
@@ -657,53 +625,45 @@
 <!-- /IMPLEMENTATION -->
 
 
-<!-- ============================================================
-     SECTION 7: FINAL CTA — Job: NEXT STEP CLARITY
-     Proof: "What happens next" sequence
-     ============================================================ -->
-<section class="v5-cta" id="get-started" aria-labelledby="cta-headline">
-  <div class="container-wide">
-    <div class="v5-cta-inner reveal">
 
-      <div class="v5-cta-steps">
-        <div class="v5-cta-step">
-          <span class="v5-cta-step-num">1</span>
+<section class="app-cta" id="get-started" aria-labelledby="cta-headline">
+  <div class="container-wide">
+    <div class="app-cta-inner reveal">
+
+      <div class="app-cta-steps">
+        <div class="app-cta-step">
+          <span class="app-cta-step-num">1</span>
           <div>
-            <strong data-i18n="home.cta.step1.title">Tell us about your operation</strong>
-            <span data-i18n="home.cta.step1.copy">Size, locations, biggest pain points.</span>
+            <strong data-i18n="home.cta.step1.title">Cuentanos sobre tu operacion</strong>
+            <span data-i18n="home.cta.step1.copy">Tamano, ubicaciones y principales dolores.</span>
           </div>
         </div>
-        <div class="v5-cta-step-arrow" aria-hidden="true">→</div>
-        <div class="v5-cta-step">
-          <span class="v5-cta-step-num">2</span>
+        <div class="app-cta-step-arrow" aria-hidden="true">→</div>
+        <div class="app-cta-step">
+          <span class="app-cta-step-num">2</span>
           <div>
-            <strong data-i18n="home.cta.step2.title">We show you Nexa with your data</strong>
-            <span data-i18n="home.cta.step2.copy">Not a generic demo. Your products, your routes.</span>
+            <strong data-i18n="home.cta.step2.title">Te mostramos Nexa con tus datos</strong>
+            <span data-i18n="home.cta.step2.copy">No es una demostracion generica. Son tus productos y tus rutas.</span>
           </div>
         </div>
-        <div class="v5-cta-step-arrow" aria-hidden="true">→</div>
-        <div class="v5-cta-step">
-          <span class="v5-cta-step-num">3</span>
+        <div class="app-cta-step-arrow" aria-hidden="true">→</div>
+        <div class="app-cta-step">
+          <span class="app-cta-step-num">3</span>
           <div>
-            <strong data-i18n="home.cta.step3.title">Your team is live within a week</strong>
-            <span data-i18n="home.cta.step3.copy">Onboarding, training, and support included.</span>
+            <strong data-i18n="home.cta.step3.title">Tu equipo esta en vivo en una semana</strong>
+            <span data-i18n="home.cta.step3.copy">Puesta en marcha, capacitacion y soporte incluidos.</span>
           </div>
         </div>
       </div>
 
-      <h2 id="cta-headline" data-i18n-html="home.cta.headline">No generic demos.<br>We show you how Nexa fits <span class="text-accent">your operation.</span></h2>
+      <h2 id="cta-headline" data-i18n-html="home.cta.headline">Sin demostraciones genericas.<br>Te mostramos como Nexa encaja en <span class="text-accent">tu operacion.</span></span></span></h2>
 
-      <div class="v5-cta-buttons">
-        <a href="company.html#contact" class="btn btn-primary btn-lg" id="cta-primary" data-i18n="home.cta.primary">
-          Schedule a Consultation
-          <svg class="icon-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
+      <div class="app-cta-buttons">
+        <a href="company.html#contact" class="btn btn-primary btn-lg" id="cta-primary" data-i18n="home.cta.primary">Agendar una consultoria</line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </a>
-        <a href="company.html#contact" class="btn btn-secondary btn-lg" id="cta-secondary" data-i18n="home.cta.secondary">
-          Send Us a Message
-        </a>
+        <a href="company.html#contact" class="btn btn-secondary btn-lg" id="cta-secondary" data-i18n="home.cta.secondary">Enviar un mensaje</a>
       </div>
 
     </div>
@@ -712,9 +672,7 @@
 <!-- /FINAL CTA -->
 
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
+
 <footer class="footer" id="footer" role="contentinfo">
   <div class="container">
     <div class="footer-main">
@@ -723,23 +681,20 @@
           <img src="nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
           <span class="visually-hidden">Nexa</span>
         </a>
-        <p class="footer-kicker" data-i18n="shared.footer.kicker">Keep in touch</p>
-        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Stay close to the team building operational clarity for refrigerated food.</h2>
-        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">
-          Use the same direct line we use during deployment: reach the team, explore the platform, or jump into the FAQ when you need specifics.
-        </p>
+        <p class="footer-kicker" data-i18n="shared.footer.kicker">Mantente cerca</p>
+        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
+        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
         <div class="footer-editorial-actions">
-          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Talk to the team</a>
-          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">See the platform</a>
+          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
+          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
         </div>
       </div>
 
       <div class="footer-nav-shell">
         <div class="footer-nav-grid">
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.product">Product</div>
-            <ul class="footer-links" data-i18n-html="shared.footer.productLinks">
-              <li><a href="platform.html">Platform Overview</a></li>
+            <div class="footer-col-title" data-i18n="shared.footer.product">Producto</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.productLinks"><li><a href="platform.html">Resumen de la plataforma</a></li><li><a href="platform.html#catalog">Datos de producto</a></li><li><a href="platform.html#inventory">Inventario en vivo</a></li><li><a href="platform.html#orders">Pedidos B2B</a></li><li><a href="platform.html#traceability">Trazabilidad</a></li></a></li><li><a href="platform.html#catalog">Datos de producto</a></li><li><a href="platform.html#inventory">Inventario en vivo</a></li><li><a href="platform.html#orders">Pedidos B2B</a></li><li><a href="platform.html#traceability">Trazabilidad</a></li></a></li>
               <li><a href="platform.html#catalog">Product Data</a></li>
               <li><a href="platform.html#inventory">Live Inventory</a></li>
               <li><a href="platform.html#orders">B2B Orders</a></li>
@@ -748,9 +703,8 @@
           </div>
 
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.company">Company</div>
-            <ul class="footer-links" data-i18n-html="shared.footer.companyLinks">
-              <li><a href="company.html">About Nexa</a></li>
+            <div class="footer-col-title" data-i18n="shared.footer.company">Empresa</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.companyLinks"><li><a href="company.html">Sobre Nexa</a></li><li><a href="company.html#support">Como acompanamos</a></li><li><a href="company.html#contact">Contacto</a></li><li><a href="faq.html">FAQ</a></li></a></li><li><a href="company.html#support">Como acompanamos</a></li><li><a href="company.html#contact">Contacto</a></li><li><a href="faq.html">FAQ</a></li></a></li>
               <li><a href="company.html#support">How We Support You</a></li>
               <li><a href="company.html#contact">Contact</a></li>
               <li><a href="faq.html">FAQ</a></li>
@@ -758,9 +712,8 @@
           </div>
 
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.resources">Resources</div>
-            <ul class="footer-links" data-i18n-html="shared.footer.resourceLinks">
-              <li><a href="faq.html">FAQ</a></li>
+            <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.resourceLinks"><li><a href="faq.html">FAQ</a></li><li><a href="faq.html#getting-started">Primeros pasos</a></li><li><a href="faq.html#implementation">Implementacion</a></li><li><a href="company.html#contact">Solicitar una demostracion</a></li></a></li><li><a href="faq.html#getting-started">Primeros pasos</a></li><li><a href="faq.html#implementation">Implementacion</a></li><li><a href="company.html#contact">Solicitar una demostracion</a></li></a></li>
               <li><a href="faq.html#getting-started">Getting Started</a></li>
               <li><a href="faq.html#implementation">Implementation</a></li>
               <li><a href="company.html#contact">Request Demo</a></li>
@@ -770,8 +723,8 @@
 
         <div class="footer-social-block">
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.direct">Direct links</div>
-            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Real routes to write, request a demo, or resolve questions today.</p>
+            <div class="footer-col-title" data-i18n="shared.footer.direct">Accesos directos</div>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Canales reales para escribir, pedir una demostracion o resolver dudas hoy.</p>
           </div>
           <div class="footer-social-row">
             <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Email Nexa" data-i18n-aria-label="shared.footer.emailAria">
@@ -806,11 +759,11 @@
     </div>
 
     <div class="footer-bottom">
-      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa Technologies, Inc. All rights reserved.</span>
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa Technologies, Inc. Todos los derechos reservados.</span>
       <div class="footer-legal-links">
-        <a href="#" data-i18n="shared.footer.privacy">Privacy Policy</a>
-        <a href="#" data-i18n="shared.footer.terms">Terms of Service</a>
-        <a href="#" data-i18n="shared.footer.cookies">Cookie Policy</a>
+        <a href="#" data-i18n="shared.footer.privacy">Politica de privacidad</a>
+        <a href="#" data-i18n="shared.footer.terms">Terminos del servicio</a>
+        <a href="#" data-i18n="shared.footer.cookies">Politica de cookies</a>
       </div>
     </div>
 
@@ -842,16 +795,16 @@
     </div>
 
     <div class="support-panel-hero">
-      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Support</p>
-      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Choose your next step.</h2>
-      <p class="support-panel-copy" data-i18n="shared.support.copy">Reach the team, review the platform, or open the FAQ.</p>
+      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Soporte</p>
+      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Elige el siguiente paso.</h2>
+      <p class="support-panel-copy" data-i18n="shared.support.copy">Habla con el equipo, revisa la plataforma o abre el FAQ.</p>
     </div>
 
     <div class="support-panel-body">
       <a href="company.html#contact" class="support-card support-card-primary">
         <div>
-          <strong data-i18n="shared.support.card1Title">Talk to the team</strong>
-          <span data-i18n="shared.support.card1Copy">Go straight to the deployment team.</span>
+          <strong data-i18n="shared.support.card1Title">Hablar con el equipo</strong>
+          <span data-i18n="shared.support.card1Copy">Ve directo al equipo de despliegue.</span>
         </div>
         <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M5 12h14"></path>
@@ -862,28 +815,28 @@
       <div class="support-card-grid">
         <a href="platform.html" class="support-card">
           <div>
-            <strong data-i18n="shared.support.card2Title">See the platform</strong>
-            <span data-i18n="shared.support.card2Copy">Review how the system works.</span>
+            <strong data-i18n="shared.support.card2Title">Ver la plataforma</strong>
+            <span data-i18n="shared.support.card2Copy">Revisa como funciona el sistema.</span>
           </div>
         </a>
         <a href="faq.html#getting-started" class="support-card">
           <div>
-            <strong data-i18n="shared.support.card3Title">Key questions</strong>
-            <span data-i18n="shared.support.card3Copy">Open the answers people check first.</span>
+            <strong data-i18n="shared.support.card3Title">Preguntas clave</strong>
+            <span data-i18n="shared.support.card3Copy">Abre las respuestas que mas revisan antes de decidir.</span>
           </div>
         </a>
         <a href="solutions.html" class="support-card">
           <div>
-            <strong data-i18n="shared.support.card4Title">Choose a solution</strong>
-            <span data-i18n="shared.support.card4Copy">Match Nexa to your operating flow.</span>
+            <strong data-i18n="shared.support.card4Title">Elegir solucion</strong>
+            <span data-i18n="shared.support.card4Copy">Encuentra el flujo que encaja con tu operacion.</span>
           </div>
         </a>
       </div>
 
       <a href="faq.html" class="support-search">
         <div>
-          <span class="support-search-label" data-i18n="shared.support.searchLabel">Search the FAQ</span>
-          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Go to structured answers and implementation details.</span>
+          <span class="support-search-label" data-i18n="shared.support.searchLabel">Buscar en el FAQ</span>
+          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Ir a respuestas estructuradas y detalles de implementacion.</span>
         </div>
         <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="11" cy="11" r="7"></circle>
@@ -892,9 +845,9 @@
       </a>
 
       <div class="support-composer">
-        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Start a message</label>
+        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Inicia un mensaje</label>
         <textarea id="support-message" class="support-composer-input" rows="3" disabled data-i18n-placeholder="shared.support.composerPlaceholder" placeholder="Live chat is coming soon. Use the contact form today."></textarea>
-        <p class="support-composer-note" data-i18n-html="shared.support.composerNote">Live chat is coming soon. For now, <a href="company.html#contact" class="support-composer-link">use the direct contact form</a>.</p>
+        <p class="support-composer-note" data-i18n-html="shared.support.composerNote">El chat en vivo estara disponible pronto. Por ahora, <a href="company.html#contact" class="support-composer-link">usa el formulario de contacto directo</a>.</a>.</a>.</p>
       </div>
     </div>
   </section>

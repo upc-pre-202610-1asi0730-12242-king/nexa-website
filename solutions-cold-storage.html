@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-419">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
   <title data-i18n-content="storage.meta.title">Nexa Solutions — Cold Storage Operators</title>
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body data-page="storage">
+<body data-page="solutions-cold-storage" data-lang="es">
 
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
   <div class="navbar-inner">
@@ -22,14 +22,11 @@
     </a>
 
     <div class="navbar-links" id="navbar-links">
-      <a href="index.html" class="navbar-link" id="nav-home" data-i18n="shared.nav.home">Home</a>
-      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Platform</a>
+      <a href="index.html" class="navbar-link" id="nav-home" data-i18n="shared.nav.home">Inicio</a>
+      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Plataforma</a>
 
       <div class="dropdown-trigger" id="nav-solutions-trigger">
-        <button class="navbar-link dropdown-btn active" type="button" id="nav-solutions" aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true" data-i18n="shared.nav.solutions">
-          Solutions
-          <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="4 6 8 10 12 6"></polyline>
+        <button class="navbar-link dropdown-btn active" type="button" id="nav-solutions" aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true" data-i18n="shared.nav.solutions">Soluciones</polyline>
           </svg>
         </button>
         <div class="dropdown-panel" id="solutions-dropdown" role="menu">
@@ -38,8 +35,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
             <div>
-              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importers &amp; Wholesalers</div>
-              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Port intake for cheese, charcuterie, and dairy lots.</div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importadores y mayoristas</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Ingreso portuario para lotes de queso, charcuteria y lacteos.</div>
             </div>
           </a>
           <a href="solutions-distributors.html" class="dropdown-item" role="menuitem">
@@ -47,8 +44,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
             </div>
             <div>
-              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distributors</div>
-              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Last-mile fulfillment, FEFO replenishment, and B2B ordering.</div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distribuidores</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Cumplimiento de ultima milla, reposicion FEFO y pedidos B2B.</div>
             </div>
           </a>
           <a href="solutions-cold-storage.html" class="dropdown-item" role="menuitem">
@@ -56,32 +53,32 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path></svg>
             </div>
             <div>
-              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Cold Storage Operators</div>
-              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Cheese rooms, dairy chambers, and food-safety logs.</div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Operadores de camaras frias</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Camaras de queso, camaras lacteas y registros de inocuidad alimentaria.</div>
             </div>
           </a>
         </div>
       </div>
 
-      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Company</a>
+      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Empresa</a>
       <a href="faq.html" class="navbar-link navbar-link-mobile-only" id="nav-faq-mobile" data-i18n="shared.nav.faq">FAQ</a>
       <div class="navbar-mobile-actions">
         <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
-          <button class="lang-switch-btn is-active" type="button" data-lang-option="en">EN</button>
-          <button class="lang-switch-btn" type="button" data-lang-option="es">ES</button>
+          <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+          <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
         </div>
-        <a href="company.html#contact" class="btn btn-primary btn-sm" data-i18n="shared.nav.requestDemo">Request a Demo</a>
-        <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Log in</button>
+        <a href="company.html#contact" class="btn btn-primary btn-sm" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+        <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Ingresar</button>
       </div>
     </div>
 
     <div class="navbar-actions">
       <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
-        <button class="lang-switch-btn is-active" type="button" data-lang-option="en">EN</button>
-        <button class="lang-switch-btn" type="button" data-lang-option="es">ES</button>
+        <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+        <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
       </div>
-      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Request a Demo</a>
-      <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Log in</button>
+      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+      <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Ingresar</button>
       <a href="faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
     </div>
 
@@ -96,45 +93,34 @@
 </nav>
 <div class="navbar-overlay" id="navbar-overlay" aria-hidden="true"></div>
 
-<!-- ============================================================
-     HERO — Cold Storage Segment
-     ============================================================ -->
+
 <header class="page-hero page-hero-proof" id="cold-storage-hero" aria-labelledby="cold-storage-headline">
   <div class="container-wide">
     <div class="hero-split-layout reveal">
       <div class="page-hero-copy page-hero-copy-left">
-        <div class="page-hero-breadcrumb" data-i18n-html="storage.hero.breadcrumb">
-          <a href="solutions.html">Solutions</a>
+        <div class="page-hero-breadcrumb" data-i18n-html="storage.hero.breadcrumb"><a href="solutions.html">Soluciones</a><span class="page-hero-breadcrumb-sep">/</span><span class="page-hero-breadcrumb-current">Operadores de camaras frias</span></a>
           <span class="page-hero-breadcrumb-sep">/</span>
           <span class="page-hero-breadcrumb-current">Cold Storage Operators</span>
         </div>
 
-        <h1 id="cold-storage-headline" data-i18n="storage.hero.title">
-          Your cheese-room compliance log shouldn't be a spreadsheet someone forgot to update.
-        </h1>
-        <p class="text-lead" data-i18n="storage.hero.copy">
-          Multi-chamber facilities for cheese, charcuterie, and dairy require industrial-grade monitoring. Nexa unifies all your temperature sensors into a single dashboard, generating audit-ready food-safety logs instantly.
-        </p>
+        <h1 id="cold-storage-headline" data-i18n="storage.hero.title">Tu registro de cumplimiento en camaras de queso no deberia ser una hoja que alguien olvido actualizar.</h1>
+        <p class="text-lead" data-i18n="storage.hero.copy">Las instalaciones multicamara para queso, charcuteria y lacteos necesitan monitoreo serio. Nexa unifica todos tus sensores en un solo tablero y genera registros listos para auditoria al instante.</p>
       </div>
 
       <div class="hero-sidecard" aria-label="Cold storage proof points" data-i18n-aria-label="storage.hero.sidecardAria">
-        <div class="hero-sidecard-kicker" data-i18n="storage.hero.kicker">Cheese-room heartbeat</div>
-        <div class="hero-sidecard-title" data-i18n="storage.hero.sidecardTitle">A chamber network should read like live infrastructure, not like a weekly admin task.</div>
+        <div class="hero-sidecard-kicker" data-i18n="storage.hero.kicker">Pulso de la camara de queso</div>
+        <div class="hero-sidecard-title" data-i18n="storage.hero.sidecardTitle">Una red de camaras debe leerse como infraestructura viva, no como una tarea administrativa semanal.</div>
         <div class="hero-kpi-grid">
-          <div class="hero-kpi" data-i18n-html="storage.hero.kpi1">
-            <div class="hero-kpi-value is-accent">99.99%</div>
+          <div class="hero-kpi" data-i18n-html="storage.hero.kpi1"><div class="hero-kpi-value is-accent">99.99%</div><div class="hero-kpi-label">de disponibilidad en monitoreo continuo y entrega de alertas.</div></div>
             <div class="hero-kpi-label">Uptime across continuous monitoring and alert delivery.</div>
           </div>
-          <div class="hero-kpi" data-i18n-html="storage.hero.kpi2">
-            <div class="hero-kpi-value">5 min</div>
+          <div class="hero-kpi" data-i18n-html="storage.hero.kpi2"><div class="hero-kpi-value">5 min</div><div class="hero-kpi-label">de cadencia de polling para redes activas de sensores.</div></div>
             <div class="hero-kpi-label">Polling cadence for active sensor networks.</div>
           </div>
-          <div class="hero-kpi" data-i18n-html="storage.hero.kpi3">
-            <div class="hero-kpi-value">4/4</div>
+          <div class="hero-kpi" data-i18n-html="storage.hero.kpi3"><div class="hero-kpi-value">4/4</div><div class="hero-kpi-label">estado de camaras visible desde una sola pantalla.</div></div>
             <div class="hero-kpi-label">Example chamber status visible from one screen.</div>
           </div>
-          <div class="hero-kpi" data-i18n-html="storage.hero.kpi4">
-            <div class="hero-kpi-value">Auto</div>
+          <div class="hero-kpi" data-i18n-html="storage.hero.kpi4"><div class="hero-kpi-value">Auto</div><div class="hero-kpi-label">registros de inocuidad generados sin formato manual.</div></div>
             <div class="hero-kpi-label">Food-safety logs generated without manual formatting.</div>
           </div>
         </div>
@@ -145,28 +131,23 @@
 </header>
 
 
-<!-- ============================================================
-     THE PAIN POINT
-     ============================================================ -->
+
 <section class="section section-after-hero">
   <div class="container-wide">
     <div class="reveal">
-      <div class="badge badge-muted-dot mb-4" data-i18n="storage.problem.badge">
-        <span class="badge-dot" aria-hidden="true"></span>
+      <div class="badge badge-muted-dot mb-4" data-i18n="storage.problem.badge">El problema</span>
         The Problem
       </div>
 
       <div class="storage-pain-panel">
-        <h2 class="storage-pain-title" data-i18n="storage.problem.title">Siloed sensors lead to reactive responses.</h2>
+        <h2 class="storage-pain-title" data-i18n="storage.problem.title">Sensores aislados generan respuestas reactivas.</h2>
 
         <div class="storage-pain-grid">
-          <div class="storage-pain-stat" data-i18n-html="storage.problem.stat1">
-            <div class="storage-pain-value">Delayed Action</div>
+          <div class="storage-pain-stat" data-i18n-html="storage.problem.stat1"><div class="storage-pain-value">Accion tardia</div><p class="storage-pain-copy">Te enteras de que fallo un compresor porque alguien entro a la camara, no porque el sistema de alertas hizo su trabajo.</p></div>
             <p class="storage-pain-copy">You find out a compressor failed because an operator walked into the chamber, not because the alert system fired properly.</p>
           </div>
 
-          <div class="storage-pain-stat" data-i18n-html="storage.problem.stat2">
-            <div class="storage-pain-value">3 Days</div>
+          <div class="storage-pain-stat" data-i18n-html="storage.problem.stat2"><div class="storage-pain-value">3 dias</div><p class="storage-pain-copy">de preparacion promedio para auditorias, juntando datos fragmentados en USB y dando formato manual a hojas.</p></div>
             <p class="storage-pain-copy">Average time preparing for food-safety inspections by collecting fragmented USB data and manually formatting spreadsheets.</p>
           </div>
         </div>
@@ -177,19 +158,14 @@
 </section>
 
 
-<!-- ============================================================
-     HOW NEXA RESPONDS
-     ============================================================ -->
+
 <section class="section section-tight section-band">
   <div class="container-wide">
     <div class="content-pair is-centered">
       
       <!-- Mockup -->
       <div class="reveal">
-        <div class="segment-mockup-card" role="img" aria-label="Cold storage operations preview" data-i18n-html="storage.response.mockup">
-          <div class="segment-mockup-topbar">
-            <div class="segment-mockup-dots">
-              <div class="segment-mockup-dot browser-dot is-red"></div>
+        <div class="segment-mockup-card" role="img" aria-label="Cold storage operations preview" data-i18n-html="storage.response.mockup"><div class="segment-mockup-topbar"><div class="segment-mockup-dots"><div class="segment-mockup-dot browser-dot is-red"></div><div class="segment-mockup-dot browser-dot is-yellow"></div><div class="segment-mockup-dot browser-dot is-green"></div></div><div class="segment-mockup-label">nexa — instalacion: hub sur lima</div><div class="segment-mockup-status">● 4/4 Online</div></div><div class="segment-mockup-body"><div class="segment-metric-row"><div class="segment-metric-label">Camara 01</div><div class="segment-metric-value">−18.1°C</div><div class="segment-metric-tag tag-ok">Optimo</div></div><div class="segment-metric-row"><div class="segment-metric-label">Camara 02</div><div class="segment-metric-value">−16.4°C</div><div class="segment-metric-tag tag-warn">Alerta de desvio</div></div><div class="segment-metric-row"><div class="segment-metric-label">Camara 03</div><div class="segment-metric-value">+2.1°C</div><div class="segment-metric-tag tag-ok">Optimo</div></div><div class="segment-metric-row"><div class="segment-metric-label">Camara 04</div><div class="segment-metric-value">−22.0°C</div><div class="segment-metric-tag tag-ok">Optimo</div></div><div class="segment-metric-row"><div class="segment-metric-label">Log de cumplimiento</div><div class="segment-metric-value">Autoactualizado · ahora</div><div class="segment-metric-tag tag-info">Listo para auditoria</div></div><div class="segment-metric-row"><div class="segment-metric-label">Alertas activas</div><div class="segment-metric-value">1 — Tecnico despachado</div><div class="segment-metric-tag tag-warn">Escalada</div></div></div></div>
               <div class="segment-mockup-dot browser-dot is-yellow"></div>
               <div class="segment-mockup-dot browser-dot is-green"></div>
             </div>
@@ -233,11 +209,9 @@
 
       <!-- Benefits -->
       <div class="reveal reveal-delay-1">
-        <h2 class="section-mini-headline" data-i18n="storage.response.title">Infrastructure you can actually trust</h2>
+        <h2 class="section-mini-headline" data-i18n="storage.response.title">Infraestructura en la que realmente puedes confiar</h2>
         
-        <div class="benefit-item" data-i18n-html="storage.response.item1">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+        <div class="benefit-item" data-i18n-html="storage.response.item1"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg><div class="benefit-item-content"><div class="benefit-item-title">Centro de comando multicamara</div><div class="benefit-item-desc">Ve el estado termico en vivo de cada camara en todas tus instalaciones desde una sola pantalla.</div></div></path>
           </svg>
           <div class="benefit-item-content">
             <div class="benefit-item-title">Multi-Chamber Command Center</div>
@@ -245,9 +219,7 @@
           </div>
         </div>
 
-        <div class="benefit-item" data-i18n-html="storage.response.item2">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <div class="benefit-item" data-i18n-html="storage.response.item2"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg><div class="benefit-item-content"><div class="benefit-item-title">Cumplimiento listo para auditoria</div><div class="benefit-item-desc">Nexa compila y formatea historicos de temperatura en logs continuos que cumplen con requisitos de inocuidad y autoridad sanitaria.</div></div></path>
             <polyline points="14 2 14 8 20 8"></polyline>
             <line x1="16" y1="13" x2="8" y2="13"></line>
             <line x1="16" y1="17" x2="8" y2="17"></line>
@@ -259,9 +231,7 @@
           </div>
         </div>
 
-        <div class="benefit-item" data-i18n-html="storage.response.item3">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+        <div class="benefit-item" data-i18n-html="storage.response.item3"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg><div class="benefit-item-content"><div class="benefit-item-title">Sistema de alertas escalables</div><div class="benefit-item-desc">Configura umbrales que escalan por rol. Si el responsable de piso no confirma una alerta temprana, el gerente de instalacion recibe el aviso automaticamente.</div></div></path>
             <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
           </svg>
           <div class="benefit-item-content">
@@ -276,31 +246,25 @@
 </section>
 
 
-<!-- ============================================================
-     FIT SIGNALS & KEY RESULTS
-     ============================================================ -->
+
 <section class="section">
   <div class="container-wide">
     <div class="fit-proof-grid">
       <div class="fit-proof-copy reveal">
-        <h3 data-i18n="storage.fit.title">This module works if your operation handles:</h3>
+        <h3 data-i18n="storage.fit.title">Este modulo funciona si tu operacion maneja:</h3>
         <div class="fit-proof-list">
-          <div class="trust-fit-pill" data-i18n="storage.fit.pill1">» Multi-chamber freezing & cooling facilities</div>
-          <div class="trust-fit-pill" data-i18n="storage.fit.pill2">» Contract storage providers (3PL)</div>
-          <div class="trust-fit-pill" data-i18n="storage.fit.pill3">» Cheese aging and charcuterie storage operations</div>
+          <div class="trust-fit-pill" data-i18n="storage.fit.pill1">» Instalaciones de enfriamiento y congelacion multicamara</div>
+          <div class="trust-fit-pill" data-i18n="storage.fit.pill2">» Operadores de almacenamiento tercerizado (3PL)</div>
+          <div class="trust-fit-pill" data-i18n="storage.fit.pill3">» Operaciones de maduracion de queso y resguardo de charcuteria</div>
         </div>
-        <p class="fit-proof-note" data-i18n="storage.fit.note">
-          Compatible with existing Onset, Sensitech, or LoRaWAN sensor networks out-of-the-box.
-        </p>
+        <p class="fit-proof-note" data-i18n="storage.fit.note">Compatible desde el inicio con redes Onset, Sensitech o LoRaWAN.</p>
       </div>
 
       <div class="fit-proof-panel reveal reveal-delay-1">
-        <div class="fit-proof-metric" data-i18n-html="storage.fit.metric1">
-          <div class="fit-proof-value">100%</div>
+        <div class="fit-proof-metric" data-i18n-html="storage.fit.metric1"><div class="fit-proof-value">100%</div><p class="fit-proof-text">de las operaciones con Nexa pasan auditorias de inocuidad y cumplimiento sin formateo manual de data.</p></div>
           <p class="fit-proof-text">Of operations using Nexa pass food-safety and compliance audits without manual data formatting.</p>
         </div>
-        <div class="fit-proof-metric" data-i18n-html="storage.fit.metric2">
-          <div class="fit-proof-value is-accent">9 mins</div>
+        <div class="fit-proof-metric" data-i18n-html="storage.fit.metric2"><div class="fit-proof-value is-accent">9 min</div><p class="fit-proof-text">de tiempo promedio desde la deteccion de anomalia hasta el escalamiento y despacho tecnico.</p></div>
           <p class="fit-proof-text">Average time from anomaly detection to escalation and technical dispatch.</p>
         </div>
       </div>
@@ -309,28 +273,23 @@
 </section>
 
 
-<!-- ============================================================
-     CTA
-     ============================================================ -->
+
 <section class="final-cta">
   <div class="container">
     <div class="closing-cta reveal">
       <div class="closing-cta-copy">
-        <div class="badge mb-4" data-i18n="storage.cta.badge">
-          <span class="badge-dot" aria-hidden="true"></span>
+        <div class="badge mb-4" data-i18n="storage.cta.badge">Cierre para camaras frias</span>
           Cold-storage close
         </div>
-        <h2 data-i18n="storage.cta.title">Stop failing food-safety temperature audits.</h2>
-        <p class="text-lead" data-i18n="storage.cta.copy">
-          We don’t do generic pitch decks. Share your chamber layouts and current sensor hardware, and our team will map out exactly how Nexa handles your excursion escalations and continuous data logging.
-        </p>
+        <h2 data-i18n="storage.cta.title">Deja de fallar auditorias de temperatura.</h2>
+        <p class="text-lead" data-i18n="storage.cta.copy">No hacemos presentaciones de venta genericas. Comparte la distribucion de tus camaras y tu equipo actual y te mostramos exactamente como Nexa centraliza alertas, logs y reportes sin agregar mas trabajo manual.</p>
       </div>
       <div class="closing-cta-actions">
-        <div class="closing-cta-note" data-i18n="storage.cta.note">Next step</div>
-        <p class="closing-cta-meta" data-i18n="storage.cta.meta">Best for operators that need monitoring, escalation, and audit output to work as one system instead of three separate chores.</p>
+        <div class="closing-cta-note" data-i18n="storage.cta.note">Siguiente paso</div>
+        <p class="closing-cta-meta" data-i18n="storage.cta.meta">Ideal para operadores que necesitan monitoreo, escalamiento y salida de auditoria dentro de la misma capa operativa.</p>
         <div class="cta-btn-row">
-          <a href="company.html#contact" class="btn btn-primary btn-lg" data-i18n="storage.cta.primary">Discuss your facility setup</a>
-          <a href="faq.html" class="btn btn-secondary btn-lg" data-i18n="storage.cta.secondary">Review the Security FAQ →</a>
+          <a href="company.html#contact" class="btn btn-primary btn-lg" data-i18n="storage.cta.primary">Conversar sobre tu instalacion</a>
+          <a href="faq.html" class="btn btn-secondary btn-lg" data-i18n="storage.cta.secondary">Revisar la FAQ de seguridad →</a>
         </div>
       </div>
     </div>
@@ -346,23 +305,20 @@
           <img src="nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
           <span class="visually-hidden">Nexa</span>
         </a>
-        <p class="footer-kicker" data-i18n="shared.footer.kicker">Keep in touch</p>
-        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Stay close to the team building operational clarity for refrigerated food.</h2>
-        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">
-          Use the same direct line we use during deployment: reach the team, explore the platform, or jump into the FAQ when you need specifics.
-        </p>
+        <p class="footer-kicker" data-i18n="shared.footer.kicker">Mantente cerca</p>
+        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
+        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
         <div class="footer-editorial-actions">
-          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Talk to the team</a>
-          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">See the platform</a>
+          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
+          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
         </div>
       </div>
 
       <div class="footer-nav-shell">
         <div class="footer-nav-grid">
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.product">Product</div>
-            <ul class="footer-links" data-i18n-html="shared.footer.productLinks">
-              <li><a href="platform.html">Platform Overview</a></li>
+            <div class="footer-col-title" data-i18n="shared.footer.product">Producto</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.productLinks"><li><a href="platform.html">Resumen de la plataforma</a></li><li><a href="platform.html#catalog">Datos de producto</a></li><li><a href="platform.html#inventory">Inventario en vivo</a></li><li><a href="platform.html#orders">Pedidos B2B</a></li><li><a href="platform.html#traceability">Trazabilidad</a></li></a></li>
               <li><a href="platform.html#catalog">Product Data</a></li>
               <li><a href="platform.html#inventory">Live Inventory</a></li>
               <li><a href="platform.html#orders">B2B Orders</a></li>
@@ -371,9 +327,8 @@
           </div>
 
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.company">Company</div>
-            <ul class="footer-links" data-i18n-html="shared.footer.companyLinks">
-              <li><a href="company.html">About Nexa</a></li>
+            <div class="footer-col-title" data-i18n="shared.footer.company">Empresa</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.companyLinks"><li><a href="company.html">Sobre Nexa</a></li><li><a href="company.html#support">Como acompanamos</a></li><li><a href="company.html#contact">Contacto</a></li><li><a href="faq.html">FAQ</a></li></a></li>
               <li><a href="company.html#support">How We Support You</a></li>
               <li><a href="company.html#contact">Contact</a></li>
               <li><a href="faq.html">FAQ</a></li>
@@ -381,9 +336,8 @@
           </div>
 
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.resources">Resources</div>
-            <ul class="footer-links" data-i18n-html="shared.footer.resourceLinks">
-              <li><a href="faq.html">FAQ</a></li>
+            <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.resourceLinks"><li><a href="faq.html">FAQ</a></li><li><a href="faq.html#getting-started">Primeros pasos</a></li><li><a href="faq.html#implementation">Implementacion</a></li><li><a href="company.html#contact">Solicitar una demostracion</a></li></a></li>
               <li><a href="faq.html#getting-started">Getting Started</a></li>
               <li><a href="faq.html#implementation">Implementation</a></li>
               <li><a href="company.html#contact">Request Demo</a></li>
@@ -393,8 +347,8 @@
 
         <div class="footer-social-block">
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.direct">Direct links</div>
-            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Real routes to write, request a demo, or resolve questions today.</p>
+            <div class="footer-col-title" data-i18n="shared.footer.direct">Accesos directos</div>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Canales reales para escribir, pedir una demostracion o resolver dudas hoy.</p>
           </div>
           <div class="footer-social-row">
             <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Email Nexa" data-i18n-aria-label="shared.footer.emailAria">
@@ -429,11 +383,11 @@
     </div>
 
     <div class="footer-bottom">
-      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa Technologies, Inc. All rights reserved.</span>
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa Technologies, Inc. Todos los derechos reservados.</span>
       <div class="footer-legal-links">
-        <a href="#" data-i18n="shared.footer.privacy">Privacy Policy</a>
-        <a href="#" data-i18n="shared.footer.terms">Terms of Service</a>
-        <a href="#" data-i18n="shared.footer.cookies">Cookie Policy</a>
+        <a href="#" data-i18n="shared.footer.privacy">Politica de privacidad</a>
+        <a href="#" data-i18n="shared.footer.terms">Terminos del servicio</a>
+        <a href="#" data-i18n="shared.footer.cookies">Politica de cookies</a>
       </div>
     </div>
 
@@ -465,16 +419,16 @@
     </div>
 
     <div class="support-panel-hero">
-      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Support</p>
-      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Choose your next step.</h2>
-      <p class="support-panel-copy" data-i18n="shared.support.copy">Reach the team, review the platform, or open the FAQ.</p>
+      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Soporte</p>
+      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Elige el siguiente paso.</h2>
+      <p class="support-panel-copy" data-i18n="shared.support.copy">Habla con el equipo, revisa la plataforma o abre el FAQ.</p>
     </div>
 
     <div class="support-panel-body">
       <a href="company.html#contact" class="support-card support-card-primary">
         <div>
-          <strong data-i18n="shared.support.card1Title">Talk to the team</strong>
-          <span data-i18n="shared.support.card1Copy">Go straight to the deployment team.</span>
+          <strong data-i18n="shared.support.card1Title">Hablar con el equipo</strong>
+          <span data-i18n="shared.support.card1Copy">Ve directo al equipo de despliegue.</span>
         </div>
         <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M5 12h14"></path>
@@ -485,28 +439,28 @@
       <div class="support-card-grid">
         <a href="platform.html" class="support-card">
           <div>
-            <strong data-i18n="shared.support.card2Title">See the platform</strong>
-            <span data-i18n="shared.support.card2Copy">Review how the system works.</span>
+            <strong data-i18n="shared.support.card2Title">Ver la plataforma</strong>
+            <span data-i18n="shared.support.card2Copy">Revisa como funciona el sistema.</span>
           </div>
         </a>
         <a href="faq.html#getting-started" class="support-card">
           <div>
-            <strong data-i18n="shared.support.card3Title">Key questions</strong>
-            <span data-i18n="shared.support.card3Copy">Open the answers people check first.</span>
+            <strong data-i18n="shared.support.card3Title">Preguntas clave</strong>
+            <span data-i18n="shared.support.card3Copy">Abre las respuestas que mas revisan antes de decidir.</span>
           </div>
         </a>
         <a href="solutions.html" class="support-card">
           <div>
-            <strong data-i18n="shared.support.card4Title">Choose a solution</strong>
-            <span data-i18n="shared.support.card4Copy">Match Nexa to your operating flow.</span>
+            <strong data-i18n="shared.support.card4Title">Elegir solucion</strong>
+            <span data-i18n="shared.support.card4Copy">Encuentra el flujo que encaja con tu operacion.</span>
           </div>
         </a>
       </div>
 
       <a href="faq.html" class="support-search">
         <div>
-          <span class="support-search-label" data-i18n="shared.support.searchLabel">Search the FAQ</span>
-          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Go to structured answers and implementation details.</span>
+          <span class="support-search-label" data-i18n="shared.support.searchLabel">Buscar en el FAQ</span>
+          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Ir a respuestas estructuradas y detalles de implementacion.</span>
         </div>
         <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="11" cy="11" r="7"></circle>
@@ -515,9 +469,9 @@
       </a>
 
       <div class="support-composer">
-        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Start a message</label>
+        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Inicia un mensaje</label>
         <textarea id="support-message" class="support-composer-input" rows="3" disabled data-i18n-placeholder="shared.support.composerPlaceholder" placeholder="Live chat is coming soon. Use the contact form today."></textarea>
-        <p class="support-composer-note" data-i18n-html="shared.support.composerNote">Live chat is coming soon. For now, <a href="company.html#contact" class="support-composer-link">use the direct contact form</a>.</p>
+        <p class="support-composer-note" data-i18n-html="shared.support.composerNote">El chat en vivo estara disponible pronto. Por ahora, <a href="company.html#contact" class="support-composer-link">usa el formulario de contacto directo</a>.</a>.</p>
       </div>
     </div>
   </section>
