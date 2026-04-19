@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" data-i18n-content="importers.meta.description" content="Nexa Solutions — Importers & Wholesalers of charcuterie, cheese, and dairy. Container tracking, temperature integrity, and bulk inventory mapping." />
+  <meta name="author" content="Nexa" />
+  <meta property="og:title" data-i18n-content="importers.meta.ogTitle" content="Nexa Solutions — Importers & Wholesalers" />
+  <meta property="og:description" data-i18n-content="importers.meta.ogDescription" content="Track container condition, protect cheese and dairy intake, and map wholesale lots before compromised product reaches inventory." />
+  <meta property="og:type" content="website" />
+  <title data-i18n-content="importers.meta.title">Nexa Solutions — Importers & Wholesalers</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body data-page="importers">
+
+<!-- NAVBAR (Identical to other pages) -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
+  <div class="navbar-inner">
+
+    <a href="index.html" class="navbar-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+      <img src="nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+      <span class="visually-hidden">Nexa</span>
+    </a>
+
+    <div class="navbar-links" id="navbar-links">
+      <a href="index.html" class="navbar-link" id="nav-home" data-i18n="shared.nav.home">Home</a>
+      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Platform</a>
+
+      <div class="dropdown-trigger" id="nav-solutions-trigger">
+        <button class="navbar-link dropdown-btn active" type="button" id="nav-solutions"
+                aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true" data-i18n="shared.nav.solutions">
+          Solutions
+          <svg class="dropdown-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="4 6 8 10 12 6"></polyline>
+          </svg>
+        </button>
+        <div class="dropdown-panel" id="solutions-dropdown" role="menu">
+          <a href="solutions-importers.html" class="dropdown-item" role="menuitem" id="nav-importers">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importers &amp; Wholesalers</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Port intake for cheese, charcuterie, and dairy lots.</div>
+            </div>
+          </a>
+          <a href="solutions-distributors.html" class="dropdown-item" role="menuitem" id="nav-distributors">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distributors</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Last-mile fulfillment, FEFO replenishment, and B2B ordering.</div>
+            </div>
+          </a>
+          <a href="solutions-cold-storage.html" class="dropdown-item" role="menuitem" id="nav-cold-storage">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Cold Storage Operators</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Cheese rooms, dairy chambers, and food-safety logs.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Company</a>
+      <a href="faq.html" class="navbar-link navbar-link-mobile-only" id="nav-faq-mobile" data-i18n="shared.nav.faq">FAQ</a>
+      <div class="navbar-mobile-actions">
+        <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
+          <button class="lang-switch-btn is-active" type="button" data-lang-option="en">EN</button>
+          <button class="lang-switch-btn" type="button" data-lang-option="es">ES</button>
+        </div>
+        <a href="company.html#contact" class="btn btn-primary btn-sm" data-i18n="shared.nav.requestDemo">Request a Demo</a>
+        <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Log in</button>
+      </div>
+    </div>
+
+    <div class="navbar-actions">
+      <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
+        <button class="lang-switch-btn is-active" type="button" data-lang-option="en">EN</button>
+        <button class="lang-switch-btn" type="button" data-lang-option="es">ES</button>
+      </div>
+      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Request a Demo</a>
+      <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Log in</button>
+      <a href="faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
+    </div>
+
+    <button type="button" class="navbar-mobile-toggle" aria-label="Open navigation" data-i18n-aria-label="shared.nav.mobileToggle" aria-expanded="false" aria-controls="navbar-links" id="mobile-menu-toggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+  </div>
+</nav>
+
+<div class="navbar-overlay" id="navbar-overlay" aria-hidden="true"></div>
+
+<!-- ============================================================
+     HERO — Importers Segment
+     ============================================================ -->
+<header class="page-hero page-hero-split" id="importers-hero" aria-labelledby="importers-headline">
+  <div class="container-wide">
+    <div class="hero-split-layout reveal">
+      <div class="page-hero-copy page-hero-copy-left">
+        <div class="page-hero-breadcrumb" data-i18n-html="importers.hero.breadcrumb">
+          <a href="solutions.html">Solutions</a>
+          <span class="page-hero-breadcrumb-sep">/</span>
+          <span class="page-hero-breadcrumb-current">Importers &amp; Wholesalers</span>
+        </div>
+
+        <h1 id="importers-headline" data-i18n="importers.hero.title">
+          12,000 km in transit. Stop treating cheese and dairy arrival temperature as a surprise.
+        </h1>
+        <p class="text-lead" data-i18n="importers.hero.copy">
+          Nexa connects container telemetry directly to your cheese, charcuterie, and dairy inventory records. Know the temperature condition of your cargo before the doors open.
+        </p>
+      </div>
+
+      <div class="page-hero-figure" aria-hidden="true" data-i18n-html="importers.hero.figure">
+        <div class="page-hero-pipeline">
+          <div class="page-hero-pipeline-node">
+            <div class="page-hero-pipeline-dot page-hero-pipeline-dot-origin"></div>
+            <span class="page-hero-pipeline-label">Origin</span>
+          </div>
+          <div class="page-hero-pipeline-track page-hero-pipeline-track-dashed"></div>
+          <div class="page-hero-pipeline-node">
+            <div class="page-hero-pipeline-dot page-hero-pipeline-dot-transit"></div>
+            <span class="page-hero-pipeline-label page-hero-pipeline-label-current">Transit</span>
+          </div>
+          <div class="page-hero-pipeline-track page-hero-pipeline-track-solid"></div>
+          <div class="page-hero-pipeline-node">
+            <div class="page-hero-pipeline-dot page-hero-pipeline-dot-end"></div>
+            <span class="page-hero-pipeline-label page-hero-pipeline-label-end">Reception</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     THE PAIN POINT
+     ============================================================ -->
+<section class="section section-after-hero">
+  <div class="container-wide">
+    <div class="reveal">
+      <div class="badge badge-muted-dot mb-4" data-i18n="importers.problem.badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        The Problem
+      </div>
+      <h2 class="section-mini-headline" data-i18n="importers.problem.title">The reality of import operations</h2>
+      <p class="text-small" data-i18n="importers.problem.copy">A blind spot from port arrival until the warehouse door opens.</p>
+      
+      <div class="horizontal-pain-grid">
+        <div class="horizontal-pain-card" data-i18n-html="importers.problem.card1">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="24" height="24">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          <h3 class="benefit-item-title">Post-Mortem Discovery</h3>
+          <p class="benefit-item-desc">Containers are opened and excursions are discovered only at unloading. Accountability is impossible to assign.</p>
+        </div>
+        
+        <div class="horizontal-pain-card" data-i18n-html="importers.problem.card2">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="24" height="24">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <h3 class="benefit-item-title">Customs Blindspots</h3>
+          <p class="benefit-item-desc">Customs delays cause massive thermal stress, but inventory systems still assume every cheese and charcuterie lot is pristine.</p>
+        </div>
+
+        <div class="horizontal-pain-card" data-i18n-html="importers.problem.card3">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="24" height="24">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          <h3 class="benefit-item-title">Data Disconnect</h3>
+          <p class="benefit-item-desc">Temperature logs arrive by email days later. The warehouse has already mixed compromised lots with saleable cheese and dairy inventory.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     HOW NEXA RESPONDS
+     ============================================================ -->
+<section class="section section-tight section-band">
+  <div class="container-wide">
+    <div class="content-pair is-centered">
+      
+      <!-- Mockup -->
+      <div class="reveal">
+        <div class="segment-mockup-card" role="img" aria-label="Importer dashboard preview" data-i18n-html="importers.response.mockup">
+          <div class="segment-mockup-topbar">
+            <div class="segment-mockup-dots">
+              <div class="segment-mockup-dot browser-dot is-red"></div>
+              <div class="segment-mockup-dot browser-dot is-yellow"></div>
+              <div class="segment-mockup-dot browser-dot is-green"></div>
+            </div>
+            <div class="segment-mockup-label">nexa — container #NX-2901-Z</div>
+            <div class="segment-mockup-status">● Transit</div>
+          </div>
+          <div class="segment-mockup-body">
+            <div class="segment-metric-row">
+              <div class="segment-metric-label">Container ID</div>
+              <div class="segment-metric-value">NX-2901-Z</div>
+              <div class="segment-metric-tag tag-ok">Optimal</div>
+            </div>
+            <div class="segment-metric-row">
+              <div class="segment-metric-label">Origin Port</div>
+              <div class="segment-metric-value">Callao, Lima</div>
+              <div class="segment-metric-tag tag-info">Customs Clear</div>
+            </div>
+            <div class="segment-metric-row">
+              <div class="segment-metric-label">Live Temperature</div>
+              <div class="segment-metric-value">−18.3°C</div>
+              <div class="segment-metric-tag tag-ok">In Range</div>
+            </div>
+            <div class="segment-metric-row">
+              <div class="segment-metric-label">Cargo (IQF)</div>
+              <div class="segment-metric-value">12,400 kg assigned</div>
+              <div class="segment-metric-tag tag-ok">Verified</div>
+            </div>
+            <div class="segment-metric-row">
+              <div class="segment-metric-label">Excursions</div>
+              <div class="segment-metric-value">0 recorded</div>
+              <div class="segment-metric-tag tag-ok">None</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <div class="reveal reveal-delay-1">
+        <h2 class="section-mini-headline" data-i18n="importers.response.title">Visibility that changes execution</h2>
+        
+        <div class="benefit-item" data-i18n-html="importers.response.item1">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          <div class="benefit-item-content">
+            <div class="benefit-item-title">Pre-Arrival Verification</div>
+            <div class="benefit-item-desc">Know the exact thermal graph of a container while it's still at port, allowing you to reject compromised cargo before accepting responsibility.</div>
+          </div>
+        </div>
+
+        <div class="benefit-item" data-i18n-html="importers.response.item2">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="9" y1="21" x2="9" y2="9"></line>
+          </svg>
+          <div class="benefit-item-content">
+            <div class="benefit-item-title">Automated Bulk Lot Creation</div>
+            <div class="benefit-item-desc">Upon successful reception, Nexa auto-generates bulk inventory records with enforced FEFO timelines tied to the specific maritime journey.</div>
+          </div>
+        </div>
+
+        <div class="benefit-item" data-i18n-html="importers.response.item3">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <div class="benefit-item-content">
+            <div class="benefit-item-title">Claim-Ready Documentation</div>
+            <div class="benefit-item-desc">If temperature breaches occur, generate a sealed PDF audit log showing exactly where and when the excursion happened for immediate insurance claims.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FIT SIGNALS & KEY RESULTS
+     ============================================================ -->
+<section class="section">
+  <div class="container-wide">
+    <div class="fit-proof-grid">
+      <div class="fit-proof-copy reveal">
+        <h3 data-i18n="importers.fit.title">This module works if your operation handles:</h3>
+        <div class="fit-proof-list">
+          <div class="trust-fit-pill" data-i18n="importers.fit.pill1">» Maritime container imports (FCL/LCL)</div>
+          <div class="trust-fit-pill" data-i18n="importers.fit.pill2">» High-volume bulk wholesale breaking</div>
+          <div class="trust-fit-pill" data-i18n="importers.fit.pill3">» Strict shelf-life products (Cheese, Dairy, Charcuterie)</div>
+        </div>
+        <p class="fit-proof-note" data-i18n="importers.fit.note">
+          Integrates out-of-the-box with Sensitech monitors and standard EDI customs manifests.
+        </p>
+      </div>
+
+      <div class="fit-proof-panel reveal reveal-delay-1">
+        <div class="fit-proof-metric" data-i18n-html="importers.fit.metric1">
+          <div class="fit-proof-value">&lt; 4 hours</div>
+          <p class="fit-proof-text">Average time to resolve insurance claims with Nexa's audit logs, down from 3 weeks.</p>
+        </div>
+        <div class="fit-proof-metric" data-i18n-html="importers.fit.metric2">
+          <div class="fit-proof-value is-accent">0</div>
+          <p class="fit-proof-text">Compromised containers accidentally mixed into saleable wholesale cheese and dairy inventory.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section class="final-cta">
+  <div class="container">
+    <div class="closing-cta reveal">
+      <div class="closing-cta-copy">
+        <div class="badge mb-4" data-i18n="importers.cta.badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Importer close
+        </div>
+        <h2 data-i18n="importers.cta.title">Stop losing margins at the dock door.</h2>
+        <p class="text-lead" data-i18n="importers.cta.copy">
+          We don’t do generic demos. Walk us through a recent container excursion, and we’ll show you exactly how Nexa’s audit logs and bulk inventory mapping would have caught it before unloading.
+        </p>
+      </div>
+      <div class="closing-cta-actions">
+        <div class="closing-cta-note" data-i18n="importers.cta.note">Next step</div>
+        <p class="closing-cta-meta" data-i18n="importers.cta.meta">Best for teams that need to connect port telemetry, customs delays, and warehouse acceptance in one workflow.</p>
+        <div class="cta-btn-row">
+          <a href="company.html#contact" class="btn btn-primary btn-lg" data-i18n="importers.cta.primary">Talk to our deployment team</a>
+          <a href="faq.html" class="btn btn-secondary btn-lg" data-i18n="importers.cta.secondary">Review the Implementation FAQ →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer" id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-editorial">
+        <a href="index.html" class="navbar-logo footer-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+          <img src="nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+          <span class="visually-hidden">Nexa</span>
+        </a>
+        <p class="footer-kicker" data-i18n="shared.footer.kicker">Keep in touch</p>
+        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Stay close to the team building operational clarity for refrigerated food.</h2>
+        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">
+          Use the same direct line we use during deployment: reach the team, explore the platform, or jump into the FAQ when you need specifics.
+        </p>
+        <div class="footer-editorial-actions">
+          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Talk to the team</a>
+          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">See the platform</a>
+        </div>
+      </div>
+
+      <div class="footer-nav-shell">
+        <div class="footer-nav-grid">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.product">Product</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.productLinks">
+              <li><a href="platform.html">Platform Overview</a></li>
+              <li><a href="platform.html#catalog">Product Data</a></li>
+              <li><a href="platform.html#inventory">Live Inventory</a></li>
+              <li><a href="platform.html#orders">B2B Orders</a></li>
+              <li><a href="platform.html#traceability">Traceability</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.company">Company</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.companyLinks">
+              <li><a href="company.html">About Nexa</a></li>
+              <li><a href="company.html#support">How We Support You</a></li>
+              <li><a href="company.html#contact">Contact</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.resources">Resources</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.resourceLinks">
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="faq.html#getting-started">Getting Started</a></li>
+              <li><a href="faq.html#implementation">Implementation</a></li>
+              <li><a href="company.html#contact">Request Demo</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social-block">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.direct">Direct links</div>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Real routes to write, request a demo, or resolve questions today.</p>
+          </div>
+          <div class="footer-social-row">
+            <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Email Nexa" data-i18n-aria-label="shared.footer.emailAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="M4 8l8 6 8-6"></path>
+              </svg>
+            </a>
+            <a href="company.html#contact" class="footer-social-link" aria-label="Go to Nexa contact" data-i18n-aria-label="shared.footer.contactAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+            <a href="faq.html" class="footer-social-link" aria-label="Open Nexa FAQ" data-i18n-aria-label="shared.footer.faqAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+            </a>
+            <a href="solutions.html" class="footer-social-link" aria-label="View Nexa solutions" data-i18n-aria-label="shared.footer.solutionsAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa Technologies, Inc. All rights reserved.</span>
+      <div class="footer-legal-links">
+        <a href="#" data-i18n="shared.footer.privacy">Privacy Policy</a>
+        <a href="#" data-i18n="shared.footer.terms">Terms of Service</a>
+        <a href="#" data-i18n="shared.footer.cookies">Cookie Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<div class="support-widget">
+  <button type="button" class="support-launcher is-hidden" id="support-launcher" aria-label="Open support panel" data-i18n-aria-label="shared.support.launcherAria" aria-controls="support-panel" aria-expanded="false" data-support-launcher>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      <path d="M8 9h8"></path>
+      <path d="M8 13h5"></path>
+    </svg>
+  </button>
+
+  <div class="support-overlay" hidden data-support-overlay></div>
+
+  <section class="support-panel" id="support-panel" role="dialog" aria-modal="true" aria-labelledby="support-panel-title" hidden data-support-panel>
+    <div class="support-panel-header">
+      <a href="index.html" class="support-brand" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+        <img src="nexa.svg" alt="" class="support-brand-image" width="110" height="34" />
+        <span class="visually-hidden">Nexa</span>
+      </a>
+      <button type="button" class="support-panel-close" aria-label="Close support panel" data-i18n-aria-label="shared.support.closeAria" data-support-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12"></path>
+          <path d="M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="support-panel-hero">
+      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Support</p>
+      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Choose your next step.</h2>
+      <p class="support-panel-copy" data-i18n="shared.support.copy">Reach the team, review the platform, or open the FAQ.</p>
+    </div>
+
+    <div class="support-panel-body">
+      <a href="company.html#contact" class="support-card support-card-primary">
+        <div>
+          <strong data-i18n="shared.support.card1Title">Talk to the team</strong>
+          <span data-i18n="shared.support.card1Copy">Go straight to the deployment team.</span>
+        </div>
+        <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14"></path>
+          <path d="M13 5l7 7-7 7"></path>
+        </svg>
+      </a>
+
+      <div class="support-card-grid">
+        <a href="platform.html" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card2Title">See the platform</strong>
+            <span data-i18n="shared.support.card2Copy">Review how the system works.</span>
+          </div>
+        </a>
+        <a href="faq.html#getting-started" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card3Title">Key questions</strong>
+            <span data-i18n="shared.support.card3Copy">Open the answers people check first.</span>
+          </div>
+        </a>
+        <a href="solutions.html" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card4Title">Choose a solution</strong>
+            <span data-i18n="shared.support.card4Copy">Match Nexa to your operating flow.</span>
+          </div>
+        </a>
+      </div>
+
+      <a href="faq.html" class="support-search">
+        <div>
+          <span class="support-search-label" data-i18n="shared.support.searchLabel">Search the FAQ</span>
+          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Go to structured answers and implementation details.</span>
+        </div>
+        <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+      </a>
+
+      <div class="support-composer">
+        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Start a message</label>
+        <textarea id="support-message" class="support-composer-input" rows="3" disabled data-i18n-placeholder="shared.support.composerPlaceholder" placeholder="Live chat is coming soon. Use the contact form today."></textarea>
+        <p class="support-composer-note" data-i18n-html="shared.support.composerNote">Live chat is coming soon. For now, <a href="company.html#contact" class="support-composer-link">use the direct contact form</a>.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/interactions.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+/* ============================================================
+   BUTTONS — Nexa V3
+   Base + Sizes + Variants
+   ============================================================ */
+
+/* Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    transform var(--transition-base),
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    opacity var(--transition-base);
+  border: 1px solid transparent;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  min-height: var(--control-height-md);
+  height: var(--control-height-md);
+  padding: 0 24px;
+  border-radius: var(--control-radius-md);
+  line-height: 1.1;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Sizes */
+.btn-lg {
+  height: var(--control-height-lg);
+  min-height: var(--control-height-lg);
+  padding: 0 32px;
+  font-size: 16px;
+  border-radius: var(--control-radius-md);
+}
+
+.btn-md {
+  height: var(--control-height-md);
+  min-height: var(--control-height-md);
+  padding: 0 24px;
+  font-size: 15px;
+  border-radius: var(--control-radius-md);
+}
+
+.btn-sm {
+  height: var(--control-height-sm);
+  min-height: var(--control-height-sm);
+  padding: 0 20px;
+  font-size: 14px;
+  border-radius: var(--control-radius-sm);
+}
+
+.btn svg {
+  flex-shrink: 0;
+}
+
+/* Primary */
+.btn-primary {
+  background-color: var(--c-primary);
+  color: var(--c-text-on-primary);
+  box-shadow: var(--shadow-blue);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: -120% auto -120% -40%;
+  width: 42%;
+  background: linear-gradient(90deg, transparent 0%, hsl(0 0% 100% / 0.34) 48%, transparent 100%);
+  transform: translateX(-190%) rotate(16deg);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--c-primary-hover);
+  box-shadow: var(--shadow-blue-hover);
+  transform: translateY(-1px);
+}
+
+.btn-primary:hover::after {
+  transform: translateX(360%) rotate(16deg);
+}
+
+.btn-primary:active {
+  background-color: var(--c-primary-dark);
+  transform: translateY(0);
+}
+
+/* Secondary */
+.btn-secondary {
+  background-color: var(--c-white);
+  color: var(--c-text-primary);
+  border: 1px solid var(--c-border-mid);
+  box-shadow: var(--control-shadow-rest);
+}
+
+.btn-secondary:hover {
+  background-color: var(--c-base);
+  border-color: var(--c-border-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--control-shadow-hover);
+}
+
+.btn-secondary:active {
+  background-color: var(--c-surface);
+  transform: translateY(0);
+}
+
+/* Dark-surface secondary */
+.btn-secondary-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-color: var(--c-border-mid);
+  color: var(--c-text-primary);
+  box-shadow: var(--control-shadow-rest);
+}
+
+.btn-secondary-light:hover {
+  background: var(--c-white);
+  border-color: var(--c-border-hover);
+  box-shadow: var(--control-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-light:active {
+  background: rgba(255, 255, 255, 0.88);
+  transform: translateY(0);
+}
+
+/* Ghost / Nav Link */
+.btn-ghost {
+  min-height: var(--control-height-sm);
+  height: var(--control-height-sm);
+  color: var(--c-text-secondary);
+  padding: 0 16px;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: var(--control-radius-sm);
+}
+
+.btn-ghost:hover {
+  background-color: hsl(221 24% 88% / 0.26);
+  color: var(--c-text-primary);
+  transform: translateY(-1px);
+}
+
+.btn-ghost:active {
+  transform: translateY(0);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"],
+.btn.is-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-secondary:disabled,
+.btn-secondary[aria-disabled="true"],
+.btn-secondary.is-disabled,
+.btn-secondary-light:disabled,
+.btn-secondary-light[aria-disabled="true"],
+.btn-secondary-light.is-disabled {
+  background: hsl(221 44% 98%);
+  border-color: hsl(221 28% 82% / 0.42);
+  color: var(--c-text-label);
+}
+
+/* Icon Button (circular) */
+.btn-icon {
+  width: var(--control-height-md);
+  height: var(--control-height-md);
+  padding: 0;
+  border-radius: var(--radius-full);
+  background-color: var(--c-white);
+  border: 1px solid var(--c-border-mid);
+  color: var(--c-text-secondary);
+  box-shadow: var(--control-shadow-rest);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform var(--transition-base),
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.btn-icon:hover {
+  background-color: var(--c-white);
+  border-color: var(--c-border-hover);
+  color: var(--c-primary);
+  box-shadow: var(--control-shadow-hover);
+  transform: translateY(-1px);
+}
+
+.btn-icon:disabled {
+  opacity: 0.4;
+  background-color: var(--c-surface);
+  color: var(--c-text-muted);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Icon helpers inside buttons */
+.btn svg.icon-right {
+  margin-left: 8px;
+}
+
+.btn svg.icon-left {
+  margin-right: 8px;
+}
+
+.btn-label {
+  transition: opacity var(--transition-fast);
+}
+
+.btn-spinner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.84);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  pointer-events: none;
+}
+
+.btn.is-loading {
+  pointer-events: none;
+}
+
+.btn.is-loading .btn-label,
+.btn.is-loading .icon-left,
+.btn.is-loading .icon-right {
+  opacity: 0;
+}
+
+.btn.is-loading .btn-spinner {
+  opacity: 1;
+  transform: scale(1);
+  animation: btnSpin 0.72s linear infinite;
+}
+
+@keyframes btnSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
