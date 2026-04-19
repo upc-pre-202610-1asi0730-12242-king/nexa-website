@@ -27,8 +27,8 @@
     <div class="container site-nav__inner">
       <a href="#" class="brand" aria-label="Nexa">
         <svg viewBox="0 0 96 28" class="brand__logo" aria-hidden="true">
-          <text x="0" y="22" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="24" fill="currentColor" letter-spacing="-0.02em">Nexa</text>
-          <circle cx="78" cy="14" r="4" fill="var(--blue-600)"></circle>
+          <text x="0" y="22" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="24" fill="#f0ede8" letter-spacing="-0.02em">Nexa</text>
+          <circle cx="78" cy="14" r="4" fill="#2a67d9"></circle>
         </svg>
       </a>
 
@@ -50,7 +50,7 @@
           <span class="lang-toggle__sep" aria-hidden="true">·</span>
           <button type="button" class="lang-toggle__btn" data-set-lang="en" aria-pressed="false">EN</button>
         </div>
-        <a class="btn btn--sm btn--ghost-on-dark" href="#contacto"
+        <a class="btn btn--sm btn--primary" href="#contacto"
            ><span data-lang="es">Hablemos</span
            ><span data-lang="en" hidden>Talk to us</span></a>
       </div>
@@ -61,24 +61,28 @@
 
     <!-- ════════════════════════ BAND 1 · DARK · HERO ════════════════════════ -->
     <section class="band band--hero" data-band="dark" aria-labelledby="hero-title">
+      <div class="hero-bg-wrapper">
+        <img src="./assets/hero-bg.png" alt="" class="hero-bg-img" aria-hidden="true" />
+        <div class="hero-bg-overlay"></div>
+      </div>
       <div class="container band__inner band--hero__grid">
 
-        <div class="band--hero__text">
-          <span class="eyebrow eyebrow--on-dark" data-enter
+        <div class="band--hero__text" data-enter>
+          <span class="eyebrow eyebrow--on-dark"
                 ><span data-lang="es">SaaS B2B · Productos refrigerados · Perú</span
                 ><span data-lang="en" hidden>B2B SaaS · Refrigerated products · Peru</span></span>
 
-          <h1 id="hero-title" class="t-display" data-enter>
+          <h1 id="hero-title" class="t-display">
             <span data-lang="es">Catálogo, pedidos y visibilidad operativa — en una sola plataforma.</span>
             <span data-lang="en" hidden>Catalog, orders, and operational visibility — in one platform.</span>
           </h1>
 
-          <p class="t-body-lg band--hero__sub" data-enter>
+          <p class="t-body-lg band--hero__sub">
             <span data-lang="es">Nexa estructura el flujo B2B de distribuidoras de queso, lácteos, embutidos y HORECA. Menos audios sueltos. Menos ruptura de stock. Cadena de frío trazada de extremo a extremo.</span>
             <span data-lang="en" hidden>Nexa structures the B2B flow for cheese, dairy, charcuterie, and HORECA distributors. Fewer scattered voice notes. Fewer stockouts. Cold chain traced end-to-end.</span>
           </p>
 
-          <div class="band--hero__ctas" data-enter>
+          <div class="band--hero__ctas">
             <a class="btn btn--lg btn--primary" href="#modulos"
                ><span data-lang="es">Ver cómo funciona</span
                ><span data-lang="en" hidden>See how it works</span></a>
@@ -88,81 +92,45 @@
           </div>
         </div>
 
-        <!-- 4-step flow diagram (motion-spec §3 Band 1) -->
-        <figure class="flow-diagram" data-flow-diagram aria-label="Flujo: del pedido informal a la visibilidad operativa">
-          <ol class="flow-diagram__steps">
-
-            <li class="flow-step" data-flow-step="1">
-              <div class="flow-step__index" aria-hidden="true">01</div>
-              <div class="flow-step__body">
-                <h3 class="flow-step__title"
-                    ><span data-lang="es">Pedido informal</span
-                    ><span data-lang="en" hidden>Informal order</span></h3>
-                <p class="flow-step__desc"
-                   ><span data-lang="es">Audios, mensajes sueltos, llamadas.</span
-                   ><span data-lang="en" hidden>Voice notes, scattered messages, calls.</span></p>
-              </div>
-            </li>
-
-            <li class="flow-step__connector" aria-hidden="true">
-              <svg viewBox="0 0 64 12" class="flow-step__arrow"><path d="M0 6 H56 M50 1 L58 6 L50 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" /></svg>
-            </li>
-
-            <li class="flow-step" data-flow-step="2">
-              <div class="flow-step__index" aria-hidden="true">02</div>
-              <div class="flow-step__body">
-                <h3 class="flow-step__title"
-                    ><span data-lang="es">Captura estructurada</span
-                    ><span data-lang="en" hidden>Structured capture</span></h3>
-                <p class="flow-step__desc"
-                   ><span data-lang="es">Formulario con catálogo y atributos de frío.</span
-                   ><span data-lang="en" hidden>Form with catalog and cold-chain attributes.</span></p>
-              </div>
-            </li>
-
-            <li class="flow-step__connector" aria-hidden="true">
-              <svg viewBox="0 0 64 12" class="flow-step__arrow"><path d="M0 6 H56 M50 1 L58 6 L50 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" /></svg>
-            </li>
-
-            <li class="flow-step" data-flow-step="3">
-              <div class="flow-step__index" aria-hidden="true">03</div>
-              <div class="flow-step__body">
-                <h3 class="flow-step__title"
-                    ><span data-lang="es">Visibilidad operativa</span
-                    ><span data-lang="en" hidden>Operational visibility</span></h3>
-                <p class="flow-step__desc"
-                   ><span data-lang="es">Stock, FEFO y despacho en una sola vista.</span
-                   ><span data-lang="en" hidden>Stock, FEFO and dispatch on a single view.</span></p>
-              </div>
-            </li>
-
-            <li class="flow-step__connector" aria-hidden="true">
-              <svg viewBox="0 0 64 12" class="flow-step__arrow"><path d="M0 6 H56 M50 1 L58 6 L50 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" /></svg>
-            </li>
-
-            <li class="flow-step" data-flow-step="4">
-              <div class="flow-step__index" aria-hidden="true">04</div>
-              <div class="flow-step__body">
-                <h3 class="flow-step__title"
-                    ><span data-lang="es">Seguimiento del cliente</span
-                    ><span data-lang="en" hidden>Customer tracking</span></h3>
-                <p class="flow-step__desc"
-                   ><span data-lang="es">Portal B2B autoservicio, sin esperar al vendedor.</span
-                   ><span data-lang="en" hidden>Self-service B2B portal, no waiting on a rep.</span></p>
-              </div>
-            </li>
-
-          </ol>
-        </figure>
+        <!-- Hero product image -->
+        <div class="band--hero__visual" data-enter>
+          <div class="hero-product-frame">
+            <img src="./assets/hero-dashboard.png" alt="Vista del catálogo Nexa con productos refrigerados, lotes y alertas FEFO" class="hero-product-img" loading="eager" />
+          </div>
+        </div>
 
       </div>
     </section>
+
+    <!-- ══════════ BAND 2 · TRANSITION STRIP ══════════ -->
+    <div class="band-transition" aria-hidden="true">
+      <div class="container">
+        <div class="band-transition__stats">
+          <div class="stat" data-enter>
+            <span class="stat__number">4</span>
+            <span class="stat__label"><span data-lang="es">Módulos integrados</span><span data-lang="en" hidden>Integrated modules</span></span>
+          </div>
+          <div class="stat" data-enter>
+            <span class="stat__number">2-8°C</span>
+            <span class="stat__label"><span data-lang="es">Rango cadena de frío</span><span data-lang="en" hidden>Cold chain range</span></span>
+          </div>
+          <div class="stat" data-enter>
+            <span class="stat__number">FEFO</span>
+            <span class="stat__label"><span data-lang="es">First Expired, First Out</span><span data-lang="en" hidden>First Expired, First Out</span></span>
+          </div>
+          <div class="stat" data-enter>
+            <span class="stat__number">B2B</span>
+            <span class="stat__label"><span data-lang="es">Portal de autoservicio</span><span data-lang="en" hidden>Self-service portal</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ════════════════════════ BAND 2 UPPER · WHITE · TABS ════════════════════════ -->
     <section id="modulos" class="band band--modules" data-band="light" aria-labelledby="modules-title">
       <div class="container band__inner">
 
-        <header class="band__header" data-enter>
+        <header class="band__header band__header--centered" data-enter>
           <span class="eyebrow"
                 ><span data-lang="es">Cuatro módulos · Un mismo flujo</span
                 ><span data-lang="en" hidden>Four modules · One flow</span></span>
@@ -180,17 +148,17 @@
 
           <div class="tabs__list" role="tablist" aria-label="Módulos de Nexa">
             <button type="button" role="tab" id="tab-catalogo" aria-controls="panel-catalogo" aria-selected="true" tabindex="0" class="tabs__tab"
-                    ><span data-lang="es">Catálogo</span
-                    ><span data-lang="en" hidden>Catalog</span></button>
+                    ><span data-lang="es">📦 Catálogo</span
+                    ><span data-lang="en" hidden>📦 Catalog</span></button>
             <button type="button" role="tab" id="tab-pedidos" aria-controls="panel-pedidos" aria-selected="false" tabindex="-1" class="tabs__tab"
-                    ><span data-lang="es">Pedidos</span
-                    ><span data-lang="en" hidden>Orders</span></button>
+                    ><span data-lang="es">📋 Pedidos</span
+                    ><span data-lang="en" hidden>📋 Orders</span></button>
             <button type="button" role="tab" id="tab-inventario" aria-controls="panel-inventario" aria-selected="false" tabindex="-1" class="tabs__tab"
-                    ><span data-lang="es">Inventario FEFO</span
-                    ><span data-lang="en" hidden>FEFO inventory</span></button>
+                    ><span data-lang="es">🧊 Inventario FEFO</span
+                    ><span data-lang="en" hidden>🧊 FEFO inventory</span></button>
             <button type="button" role="tab" id="tab-seguimiento" aria-controls="panel-seguimiento" aria-selected="false" tabindex="-1" class="tabs__tab"
-                    ><span data-lang="es">Seguimiento</span
-                    ><span data-lang="en" hidden>Tracking</span></button>
+                    ><span data-lang="es">📍 Seguimiento</span
+                    ><span data-lang="en" hidden>📍 Tracking</span></button>
 
             <span class="tabs__indicator" aria-hidden="true"></span>
           </div>
@@ -199,16 +167,17 @@
           <div role="tabpanel" id="panel-catalogo" aria-labelledby="tab-catalogo" tabindex="0" class="tabs__panel">
             <div class="panel-grid">
               <div class="panel-grid__mock">
-                <img src="./assets/mock-catalogo.svg" alt="" loading="lazy" />
-                <p class="panel-grid__annotation"
-                   ><span data-lang="es">Vista catálogo · cada SKU muestra temperatura, lote, vencimiento y estado de ruptura antes de que el pedido se confirme.</span
-                   ><span data-lang="en" hidden>Catalog view · each SKU shows temperature, batch, expiry, and stockout status before the order is confirmed.</span></p>
+                <img src="./assets/hero-dashboard.png" alt="Vista del catálogo Nexa" loading="lazy" />
               </div>
               <div class="panel-grid__copy">
                 <h3 class="t-h2">
                   <span data-lang="es">Atributos de frío en cada producto</span>
                   <span data-lang="en" hidden>Cold-chain attributes on every product</span>
                 </h3>
+                <p class="t-body-lg band__sub">
+                  <span data-lang="es">Cada SKU lleva su temperatura, lote y vencimiento. Sin datos sueltos en hojas de cálculo.</span>
+                  <span data-lang="en" hidden>Each SKU carries its temperature, batch, and expiry. No loose data in spreadsheets.</span>
+                </p>
                 <ul class="bullet-list">
                   <li><span data-lang="es">Temperatura mínima y máxima por SKU</span><span data-lang="en" hidden>Min and max temperature per SKU</span></li>
                   <li><span data-lang="es">Lote activo, vencimiento y estado de ruptura</span><span data-lang="en" hidden>Active batch, expiry, and stockout status</span></li>
@@ -226,16 +195,17 @@
           <div role="tabpanel" id="panel-pedidos" aria-labelledby="tab-pedidos" tabindex="0" class="tabs__panel" hidden>
             <div class="panel-grid">
               <div class="panel-grid__mock">
-                <img src="./assets/mock-pedidos.svg" alt="" loading="lazy" />
-                <p class="panel-grid__annotation"
-                   ><span data-lang="es">Captura del pedido contra el catálogo activo. Validación de stock antes de confirmar — sin texto libre.</span
-                   ><span data-lang="en" hidden>Order capture against the active catalog. Stock validation before confirming — no free text.</span></p>
+                <img src="./assets/dashboard-orders.png" alt="Vista de pedidos Nexa" loading="lazy" />
               </div>
               <div class="panel-grid__copy">
                 <h3 class="t-h2">
                   <span data-lang="es">Captura estructurada — sin transcribir audios</span>
                   <span data-lang="en" hidden>Structured capture — no audio transcription</span>
                 </h3>
+                <p class="t-body-lg band__sub">
+                  <span data-lang="es">Olvídate de los audios de WhatsApp. Cada pedido se registra contra el catálogo activo.</span>
+                  <span data-lang="en" hidden>Forget WhatsApp audios. Each order is logged against the active catalog.</span>
+                </p>
                 <ul class="bullet-list">
                   <li><span data-lang="es">Selección desde el catálogo activo, no texto libre</span><span data-lang="en" hidden>Selection from the active catalog, not free text</span></li>
                   <li><span data-lang="es">Validación contra stock antes de confirmar</span><span data-lang="en" hidden>Validation against stock before confirming</span></li>
@@ -253,16 +223,17 @@
           <div role="tabpanel" id="panel-inventario" aria-labelledby="tab-inventario" tabindex="0" class="tabs__panel" hidden>
             <div class="panel-grid">
               <div class="panel-grid__mock">
-                <img src="./assets/mock-inventario.svg" alt="" loading="lazy" />
-                <p class="panel-grid__annotation"
-                   ><span data-lang="es">Vista FEFO · señales de vencimiento por lote y proyección de ruptura con días de anticipación.</span
-                   ><span data-lang="en" hidden>FEFO view · expiry signals per batch and stockout projection with days of lead time.</span></p>
+                <img src="./assets/mock-inventario.svg" alt="Vista FEFO Nexa" loading="lazy" />
               </div>
               <div class="panel-grid__copy">
                 <h3 class="t-h2">
                   <span data-lang="es">First Expired, First Out — señales antes del problema</span>
                   <span data-lang="en" hidden>First Expired, First Out — signals before the problem</span>
                 </h3>
+                <p class="t-body-lg band__sub">
+                  <span data-lang="es">Nexa anticipa las rupturas de stock y vencimientos antes de que afecten tu operación.</span>
+                  <span data-lang="en" hidden>Nexa anticipates stockouts and expiries before they affect your operation.</span>
+                </p>
                 <ul class="bullet-list">
                   <li><span data-lang="es">Alertas de vencimiento por lote y SKU</span><span data-lang="en" hidden>Expiry alerts per batch and SKU</span></li>
                   <li><span data-lang="es">Ruptura de stock proyectada con días de anticipación</span><span data-lang="en" hidden>Projected stockout with days of lead time</span></li>
@@ -280,16 +251,17 @@
           <div role="tabpanel" id="panel-seguimiento" aria-labelledby="tab-seguimiento" tabindex="0" class="tabs__panel" hidden>
             <div class="panel-grid">
               <div class="panel-grid__mock">
-                <img src="./assets/mock-seguimiento.svg" alt="" loading="lazy" />
-                <p class="panel-grid__annotation"
-                   ><span data-lang="es">Portal B2B · el cliente comercial consulta estado del pedido y descarga histórico sin llamar al vendedor.</span
-                   ><span data-lang="en" hidden>B2B portal · the commercial customer checks order status and downloads history without calling a rep.</span></p>
+                <img src="./assets/mock-seguimiento.svg" alt="Portal B2B Nexa" loading="lazy" />
               </div>
               <div class="panel-grid__copy">
                 <h3 class="t-h2">
                   <span data-lang="es">Portal B2B para el cliente comercial</span>
                   <span data-lang="en" hidden>B2B portal for the commercial customer</span>
                 </h3>
+                <p class="t-body-lg band__sub">
+                  <span data-lang="es">Tus clientes ven el estado de sus pedidos sin llamarte. Autonomía que ahorra horas.</span>
+                  <span data-lang="en" hidden>Your customers see their order status without calling you. Autonomy that saves hours.</span>
+                </p>
                 <ul class="bullet-list">
                   <li><span data-lang="es">Estado del pedido en tiempo real</span><span data-lang="en" hidden>Order status in real time</span></li>
                   <li><span data-lang="es">Histórico descargable por bodega o local</span><span data-lang="en" hidden>Downloadable history per warehouse or location</span></li>
@@ -311,7 +283,7 @@
     <section id="segmentos" class="band band--segments" data-band="cream" aria-labelledby="segments-title">
       <div class="container band__inner">
 
-        <header class="band__header" data-enter>
+        <header class="band__header band__header--centered" data-enter>
           <span class="eyebrow"
                 ><span data-lang="es">Tres segmentos · Un mismo dato</span
                 ><span data-lang="en" hidden>Three segments · One source of truth</span></span>
@@ -324,6 +296,7 @@
         <div class="segment-grid">
 
           <article class="segment-card" data-enter>
+            <span class="segment-card__icon">👤</span>
             <span class="eyebrow segment-card__tag"
                   ><span data-lang="es">S1 · Mercaderistas</span
                   ><span data-lang="en" hidden>S1 · Field reps</span></span>
@@ -331,23 +304,26 @@
               <span data-lang="es">Captura el pedido sin retipear</span>
               <span data-lang="en" hidden>Capture the order without retyping</span>
             </h3>
-            <p class="segment-card__before">
-              <span class="segment-card__label"
-                    ><span data-lang="es">Antes</span
-                    ><span data-lang="en" hidden>Before</span></span>
-              <span data-lang="es">Audio de WhatsApp, transcripción manual al sistema.</span>
-              <span data-lang="en" hidden>WhatsApp audio, manual transcription into the system.</span>
-            </p>
-            <p class="segment-card__after">
-              <span class="segment-card__label segment-card__label--accent"
-                    ><span data-lang="es">Con Nexa</span
-                    ><span data-lang="en" hidden>With Nexa</span></span>
-              <span data-lang="es">Formulario con catálogo activo, validación inmediata.</span>
-              <span data-lang="en" hidden>Form against the active catalog, immediate validation.</span>
-            </p>
+            <div class="segment-card__comparison">
+              <p class="segment-card__before">
+                <span class="segment-card__label"
+                      ><span data-lang="es">Antes</span
+                      ><span data-lang="en" hidden>Before</span></span>
+                <span data-lang="es">Audio de WhatsApp, transcripción manual al sistema.</span>
+                <span data-lang="en" hidden>WhatsApp audio, manual transcription into the system.</span>
+              </p>
+              <p class="segment-card__after">
+                <span class="segment-card__label segment-card__label--accent"
+                      ><span data-lang="es">Con Nexa</span
+                      ><span data-lang="en" hidden>With Nexa</span></span>
+                <span data-lang="es">Formulario con catálogo activo, validación inmediata.</span>
+                <span data-lang="en" hidden>Form against the active catalog, immediate validation.</span>
+              </p>
+            </div>
           </article>
 
           <article class="segment-card" data-enter>
+            <span class="segment-card__icon">📊</span>
             <span class="eyebrow segment-card__tag"
                   ><span data-lang="es">S2 · Logística</span
                   ><span data-lang="en" hidden>S2 · Logistics</span></span>
@@ -355,49 +331,54 @@
               <span data-lang="es">Decide el despacho con visibilidad real</span>
               <span data-lang="en" hidden>Decide dispatch with real visibility</span>
             </h3>
-            <p class="segment-card__before">
-              <span class="segment-card__label"
-                    ><span data-lang="es">Antes</span
-                    ><span data-lang="en" hidden>Before</span></span>
-              <span data-lang="es">Hojas de cálculo paralelas para stock y vencimientos.</span>
-              <span data-lang="en" hidden>Parallel spreadsheets for stock and expiry.</span>
-            </p>
-            <p class="segment-card__after">
-              <span class="segment-card__label segment-card__label--accent"
-                    ><span data-lang="es">Con Nexa</span
-                    ><span data-lang="en" hidden>With Nexa</span></span>
-              <span data-lang="es">Stock + FEFO + pedidos pendientes en una sola vista.</span>
-              <span data-lang="en" hidden>Stock + FEFO + open orders on one view.</span>
-            </p>
+            <div class="segment-card__comparison">
+              <p class="segment-card__before">
+                <span class="segment-card__label"
+                      ><span data-lang="es">Antes</span
+                      ><span data-lang="en" hidden>Before</span></span>
+                <span data-lang="es">Hojas de cálculo paralelas para stock y vencimientos.</span>
+                <span data-lang="en" hidden>Parallel spreadsheets for stock and expiry.</span>
+              </p>
+              <p class="segment-card__after">
+                <span class="segment-card__label segment-card__label--accent"
+                      ><span data-lang="es">Con Nexa</span
+                      ><span data-lang="en" hidden>With Nexa</span></span>
+                <span data-lang="es">Stock + FEFO + pedidos pendientes en una sola vista.</span>
+                <span data-lang="en" hidden>Stock + FEFO + open orders on one view.</span>
+              </p>
+            </div>
           </article>
 
           <article class="segment-card" data-enter>
+            <span class="segment-card__icon">🏪</span>
             <span class="eyebrow segment-card__tag"
-                  ><span data-lang="es">S3 · Bodegas, minimarkets, HORECA</span
-                  ><span data-lang="en" hidden>S3 · Bodegas, mini-markets, HORECA</span></span>
+                  ><span data-lang="es">S3 · Bodegas y HORECA</span
+                  ><span data-lang="en" hidden>S3 · Bodegas & HORECA</span></span>
             <h3 class="t-h3">
               <span data-lang="es">Pide y rastrea sin llamar al vendedor</span>
               <span data-lang="en" hidden>Order and track without calling a rep</span>
             </h3>
-            <p class="segment-card__before">
-              <span class="segment-card__label"
-                    ><span data-lang="es">Antes</span
-                    ><span data-lang="en" hidden>Before</span></span>
-              <span data-lang="es">Llamadas y mensajes sueltos para confirmar despachos.</span>
-              <span data-lang="en" hidden>Calls and scattered messages to confirm dispatch.</span>
-            </p>
-            <p class="segment-card__after">
-              <span class="segment-card__label segment-card__label--accent"
-                    ><span data-lang="es">Con Nexa</span
-                    ><span data-lang="en" hidden>With Nexa</span></span>
-              <span data-lang="es">Portal de autoservicio, estado del pedido en línea.</span>
-              <span data-lang="en" hidden>Self-service portal, order status online.</span>
-            </p>
+            <div class="segment-card__comparison">
+              <p class="segment-card__before">
+                <span class="segment-card__label"
+                      ><span data-lang="es">Antes</span
+                      ><span data-lang="en" hidden>Before</span></span>
+                <span data-lang="es">Llamadas y mensajes sueltos para confirmar despachos.</span>
+                <span data-lang="en" hidden>Calls and scattered messages to confirm dispatch.</span>
+              </p>
+              <p class="segment-card__after">
+                <span class="segment-card__label segment-card__label--accent"
+                      ><span data-lang="es">Con Nexa</span
+                      ><span data-lang="en" hidden>With Nexa</span></span>
+                <span data-lang="es">Portal de autoservicio, estado del pedido en línea.</span>
+                <span data-lang="en" hidden>Self-service portal, order status online.</span>
+              </p>
+            </div>
           </article>
 
         </div>
 
-        <div class="band__cta-row" data-enter>
+        <div class="band__cta-row band__cta-row--centered" data-enter>
           <a class="btn btn--lg btn--primary" href="#contacto"
              ><span data-lang="es">Solicitar demostración</span
              ><span data-lang="en" hidden>Request a demo</span></a>
@@ -433,6 +414,10 @@
         </div>
 
         <form class="contact-form" data-enter novalidate>
+          <h3 class="contact-form__title">
+            <span data-lang="es">¿Distribuyes productos refrigerados?</span>
+            <span data-lang="en" hidden>Do you distribute refrigerated products?</span>
+          </h3>
           <div class="field">
             <label for="f-name" class="field__label"
                    ><span data-lang="es">Nombre y apellido</span
@@ -482,15 +467,19 @@
   <footer class="site-footer" data-band="dark" role="contentinfo">
     <div class="container site-footer__inner">
       <p class="site-footer__copy">
-        <span data-lang="es">Nexa · Proyecto académico UPC · Aplicaciones Web 1ASI0730 · 2026</span>
-        <span data-lang="en" hidden>Nexa · UPC academic project · Web Applications 1ASI0730 · 2026</span>
+        <span data-lang="es">© 2026 Nexa · Proyecto académico UPC · Aplicaciones Web 1ASI0730</span>
+        <span data-lang="en" hidden>© 2026 Nexa · UPC academic project · Web Applications 1ASI0730</span>
       </p>
       <p class="site-footer__meta">
-        <a href="https://github.com/" rel="noopener" target="_blank">GitHub</a>
+        <a href="https://github.com/upc-pre-202610-1asi0730-12242-king" rel="noopener" target="_blank">GitHub</a>
+        <span aria-hidden="true">·</span>
+        <a href="#modulos"
+           ><span data-lang="es">Módulos</span
+           ><span data-lang="en" hidden>Modules</span></a>
         <span aria-hidden="true">·</span>
         <a href="#contenido"
-           ><span data-lang="es">Volver arriba</span
-           ><span data-lang="en" hidden>Back to top</span></a>
+           ><span data-lang="es">Volver arriba ↑</span
+           ><span data-lang="en" hidden>Back to top ↑</span></a>
       </p>
     </div>
   </footer>
