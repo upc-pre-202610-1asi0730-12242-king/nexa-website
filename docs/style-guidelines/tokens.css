@@ -1,0 +1,399 @@
+/*
+ * Nexa Design Tokens — v1.1.0 FROZEN (iter-2)
+ * Generated: 2026-04-18
+ * Owner: Visual System Agent
+ * Source of truth: referenced by all Nexa front-end surfaces.
+ * Do not override with inline values. All styling references var() tokens only.
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * KEY DECISIONS (§A/§C anchored)
+ * ─────────────────────────────────────────────────────────────────────────────
+ *
+ * (a) TYPE PAIR — Fraunces (variable serif, opsz 9–144) + DM Sans (geometric
+ *     sans body). Fraunces was selected over Lora in iter-2: it carries the
+ *     same text-credible serif warmth but with a distinctive Cooper-influenced
+ *     character — wedge terminals, swelling stems, optical-size axis that
+ *     adapts the serif weight from caption (opsz 9) to display (opsz 144).
+ *     It does not read as the default "escape from Inter" choice. Lora is
+ *     fine but recognizable; Fraunces signals deliberate type direction, which
+ *     matters for a B2B product whose first credibility signal is craft.
+ *     DM Sans is a low-contrast geometric sans with tight default tracking;
+ *     it covers es_419 diacritics + en-dashes natively and stays legible at
+ *     14px on operational data tables (§A.5, §C.3). Both faces are Google
+ *     Fonts under SIL OFL (academic constraint cleared, §A.5).
+ *
+ * (b) ACCENT HUE — #2a67d9 (baseline logo blue, unchanged from v1.0)
+ *     The Nexa logo SVG encodes rgb(42,103,217). On the deepened cream
+ *     surface (--n-100 = #efe7d6) #2a67d9 drops below AA (4.26:1), so the
+ *     [data-band="cream"] scope overrides --action to --blue-700 (#1f52b8,
+ *     5.67:1). The logo blue stays canonical for white-band CTAs and brand
+ *     identity; cream-band actions step one shade darker. This is the
+ *     architectural cost of pushing cream warmer to deliver §C.2 surface
+ *     cadence. No purple tints, no cobalt drift (docs/claude.md §Anti-Slop).
+ *
+ * (c) SURFACE CADENCE — dark(--band-dark-bg) → white(--n-0) → cream(--n-100
+ *     #efe7d6) → dark(--band-dark-bg). v1.0 cream was #f5f2ee — only ~5
+ *     lightness points from white, which made the §C.2 surface step too
+ *     subtle to read. Iter-2 deepens to #efe7d6 (~12 lightness points
+ *     below white). Trade-off documented above in (b).
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+
+:root {
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * COLOR — NEUTRAL SCALE (9 steps, warm-biased)
+   * Base hue: 38° (warm tan), low chroma. Separates bands without cold gray.
+   * §C.2 surface temperature cadence + anti-slop (no cold-medical surfaces).
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --n-0:   #ffffff;   /* pure white — Band 2 top surface, tab panels */
+  --n-50:  #faf8f5;   /* near-white with warmth — elevated cards on cream */
+  --n-100: #efe7d6;   /* cream base — Band 2 lower surface, deepened in v1.1 (was #f5f2ee, only 5L from white) — see decision (c) */
+  --n-200: #e8e3db;   /* warm separator — horizontal rules, tab underlines */
+  --n-300: #cec7bb;   /* muted border — card borders, input strokes */
+  --n-400: #aba098;   /* placeholder text floor — disabled states */
+  --n-500: #6b6259;   /* muted body — captions, meta, secondary labels (darkened from #857c72 to clear AA on cream — contrast 5.28:1) */
+  --n-600: #5c554c;   /* secondary text — body supporting copy */
+  --n-700: #3a342c;   /* primary body text on light surfaces */
+  --n-800: #252118;   /* strong ink — headlines on light surfaces */
+  --n-900: #100e0a;   /* maximum depth — rarely used, icon fills only */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * COLOR — PRIMARY BLUE (5 shades, anchored to logo #2a67d9)
+   * Logo SVG baseline: rgb(42, 103, 217) = #2a67d9. Ramp built outward.
+   * §C.3 "one accent, product-serious, not Instagram-bright".
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --blue-50:  #eef3fd;   /* tint — hover backgrounds, focus rings, quiet badges */
+  --blue-300: #7aaae8;   /* light — dark-band text links, decorative accents only */
+  --blue-600: #2a67d9;   /* primary brand — CTA fills, active tab indicator, links */
+  --blue-700: #1f52b8;   /* hover — CTA hover state, pressed buttons */
+  --blue-800: #163a82;   /* dark press — active/pressed state, focus ring on blue */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * COLOR — DARK BAND SURFACES
+   * Cool deep neutral, NOT black. Gives weight without cold-gray sterility.
+   * §C.1 Band 1 + Band 3 surface; §C.2 surface cadence.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --band-dark-bg:       #1a1f2e;   /* dark band fill — Band 1 hero, Band 3 footer */
+  --band-dark-surface:  #232938;   /* elevated surface inside dark band — cards, callouts */
+  --band-dark-border:   #353c52;   /* strokes inside dark band — dividers, card edges */
+  --band-dark-ink:      #f0ede8;   /* primary text on dark band — headlines */
+  --band-dark-ink-2:    #b5b0a6;   /* secondary text on dark — body, supporting copy */
+  --band-dark-ink-3:    #908b85;   /* muted text on dark — captions, meta labels (lightened from #7a7670 to clear AA on band-dark-bg — contrast 4.89:1) */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * COLOR — SEMANTIC SURFACE ALIASES (light mode default)
+   * Named by role, not by shade. Components reference these, not raw steps.
+   * §A.5 WCAG AA; §C.3 "operational clarity beats decorative theatrics".
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --surface-base:        var(--n-100);   /* default page background — cream warm */
+  --surface-white:       var(--n-0);     /* white sections, panels, dialogs */
+  --surface-raised:      var(--n-50);    /* cards elevated above cream */
+  --ink-primary:         var(--n-800);   /* body + headline text on light */
+  --ink-secondary:       var(--n-600);   /* supporting copy, labels on light */
+  --ink-muted:           var(--n-500);   /* captions, meta, timestamps on light */
+  --ink-placeholder:     var(--n-400);   /* form placeholder text */
+  --border-subtle:       var(--n-200);   /* dividers, section lines */
+  --border-ui:           var(--n-300);   /* card borders, input strokes */
+  --accent:              var(--blue-600); /* primary interactive color */
+  --accent-hover:        var(--blue-700); /* interactive hover */
+  --accent-quiet:        var(--blue-50);  /* tinted background for badge/tag */
+  --accent-ink:          var(--n-0);      /* text on accent fill (CTA label) */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * COLOR — SEMANTIC STATUS (4 colors max)
+   * Warm tones to avoid clinical/pharma read. §A.0 contamination guardrail.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --success:      #2d7d4f;   /* FEFO on-time, stock OK — earthy green, not medical */
+  --success-bg:   #eaf5ee;   /* background for success badge/alert */
+  --warning:      #b06a00;   /* ruptura de stock signal, expiry caution — amber */
+  --warning-bg:   #fef3e2;   /* background for warning badge/alert */
+  --danger:       #c0312b;   /* cadena fría breach, order error — firm red */
+  --danger-bg:    #fdecea;   /* background for danger badge/alert */
+  --info:         var(--blue-600); /* informational — reuses accent for coherence */
+  --info-bg:      var(--blue-50);  /* informational badge background */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * TYPOGRAPHY — FAMILIES
+   * Fraunces: variable serif (opsz 9–144, wght 100–900). Distinctive Cooper-
+   *   influenced character. Optical-size axis adapts cap-style serifs by size.
+   * DM Sans: low-contrast geometric, supports es_419 diacritics + en-dashes.
+   * §C.3; §A.5 bilingual requirement. Neither face is Inter alone.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  /* Fraunces — distinctive variable serif for headlines; opsz axis active at scale */
+
+  --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  /* DM Sans — geometric clarity for UI, labels, body text at small sizes */
+
+  --font-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
+  /* optional — for code fragments, token display, operational data IDs */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * TYPOGRAPHY — TYPE SCALE
+   * 8px base unit. Modular scale ratio ≈ 1.25 (Major Third).
+   * Fraunces used for display/h1/h2; DM Sans for h3 down through micro.
+   * Weight ladder: display 700 → h1 600 → h2 600 (size + ls steps differentiate
+   * h1/h2; weight collapse at midpoint clamp resolved in iter-2).
+   * §C.3 one dominant element per band; §A.5 bilingual readable at all sizes.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  /* Display — Band 1 hero primary statement */
+  --text-display-size:    clamp(2.5rem, 5vw + 1rem, 4rem);   /* 40px → 64px fluid */
+  --text-display-lh:      1.1;
+  --text-display-ls:      -0.035em;
+  --text-display-weight:  700;
+  --text-display-family:  var(--font-display);
+
+  /* H1 — section headline, band-level label
+     Iter-2: weight 700→600 to break the display/h1 collapse at midpoint clamp. */
+  --text-h1-size:    clamp(2rem, 3.5vw + 0.75rem, 3rem);   /* 32px → 48px fluid */
+  --text-h1-lh:      1.2;
+  --text-h1-ls:      -0.025em;
+  --text-h1-weight:  600;
+  --text-h1-family:  var(--font-display);
+
+  /* H2 — subsection headline, tab panel title.
+     Same weight as H1 (600); size + ls steps carry the hierarchy. */
+  --text-h2-size:    clamp(1.5rem, 2.5vw + 0.5rem, 2.25rem);   /* 24px → 36px */
+  --text-h2-lh:      1.28;
+  --text-h2-ls:      -0.02em;
+  --text-h2-weight:  600;
+  --text-h2-family:  var(--font-display);
+
+  /* H3 — card headline, callout title, eyebrow label companion */
+  --text-h3-size:    clamp(1.125rem, 1.5vw + 0.25rem, 1.5rem);   /* 18px → 24px */
+  --text-h3-lh:      1.35;
+  --text-h3-ls:      -0.01em;
+  --text-h3-weight:  600;
+  --text-h3-family:  var(--font-body);
+
+  /* Body Large — lead paragraph, band sub-headline */
+  --text-body-lg-size:    1.125rem;   /* 18px */
+  --text-body-lg-lh:      1.65;
+  --text-body-lg-ls:      0em;
+  --text-body-lg-weight:  400;
+  --text-body-lg-family:  var(--font-body);
+
+  /* Body — standard paragraph, tab content, form labels */
+  --text-body-size:    1rem;   /* 16px */
+  --text-body-lh:      1.6;
+  --text-body-ls:      0em;
+  --text-body-weight:  400;
+  --text-body-family:  var(--font-body);
+
+  /* Body Small — secondary paragraph, callout copy */
+  --text-body-sm-size:    0.875rem;   /* 14px */
+  --text-body-sm-lh:      1.55;
+  --text-body-sm-ls:      0em;
+  --text-body-sm-weight:  400;
+  --text-body-sm-family:  var(--font-body);
+
+  /* Caption — meta, timestamps, field hints, module labels */
+  --text-caption-size:    0.8125rem;   /* 13px */
+  --text-caption-lh:      1.5;
+  --text-caption-ls:      0.01em;
+  --text-caption-weight:  500;
+  --text-caption-family:  var(--font-body);
+
+  /* Micro — badges, status pills, legal footnotes */
+  --text-micro-size:    0.6875rem;   /* 11px */
+  --text-micro-lh:      1.45;
+  --text-micro-ls:      0.04em;
+  --text-micro-weight:  600;
+  --text-micro-family:  var(--font-body);
+
+  /* Eyebrow — operational vocabulary pill label (SaaS B2B · Perú) */
+  --text-eyebrow-size:    0.75rem;   /* 12px */
+  --text-eyebrow-lh:      1;
+  --text-eyebrow-ls:      0.08em;
+  --text-eyebrow-weight:  600;
+  --text-eyebrow-family:  var(--font-body);
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * SPACING — 8px base unit, modular scale
+   * §C.3 "8px base, consistent rhythm across bands; generous inter-band padding".
+   * Step names match gap utility naming for readability in markup.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --space-0:    0px;
+  --space-1:    4px;    /* hairline — icon-text gaps, badge padding */
+  --space-2:    8px;    /* base unit — smallest named gap */
+  --space-3:    12px;   /* tight — inline label gaps */
+  --space-4:    16px;   /* standard — button padding H, form field padding */
+  --space-5:    20px;   /* medium — card internal padding unit */
+  --space-6:    24px;   /* comfortable — card padding, section label gap */
+  --space-8:    32px;   /* relaxed — between heading and body text */
+  --space-10:   40px;   /* section internal spacing */
+  --space-12:   48px;   /* sub-band vertical rhythm */
+  --space-16:   64px;   /* band internal top/bottom padding (mobile) */
+  --space-20:   80px;   /* band internal top/bottom padding (tablet) */
+  --space-24:   96px;   /* band internal top/bottom padding (desktop) */
+  --space-32:   128px;  /* inter-band separation baseline */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * RADIUS — single scale, one primary value
+   * §C.3 "single radius scale, not mixed". --r-md is the canonical radius.
+   * Pill and full reserved for eyebrow tags and toggle switches only.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --r-sm:   4px;      /* tight radius — form inputs, small badges */
+  --r-md:   8px;      /* PRIMARY — cards, modals, tab panels, CTAs */
+  --r-lg:   12px;     /* larger containers — info callout blocks */
+  --r-full: 9999px;   /* pills only — eyebrow labels, toggle switches */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * SHADOW — one soft elevation tier only
+   * §C.3 "flat surfaces + one soft shadow tier. No glassmorphism, no blur-spam."
+   * Warm-biased shadow color (not cold gray) maintains surface temperature.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --shadow-1: 0 2px 8px 0 rgba(30, 22, 10, 0.08);
+  /* warm-tinted shadow — cards elevated on light surface; the single allowed tier */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * BUTTON SIZING — added in iter-2 (was an implicit per-component value).
+   * Sized in 8px multiples to lock to the spacing grid. Used by primary CTA,
+   * secondary outline, and form submit. Pad-x is enough to clear long es_419
+   * labels ("Solicitar una demostración") at body-sm without truncation.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --btn-h-sm:    32px;             /* compact button — secondary toolbar action */
+  --btn-h-md:    40px;             /* PRIMARY — landing CTAs, form submit */
+  --btn-h-lg:    48px;             /* hero-band primary action only */
+  --btn-px-md:   var(--space-6);   /* 24px horizontal padding for h-md */
+  --btn-px-lg:   var(--space-8);   /* 32px horizontal padding for h-lg */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * SCRIM / OVERLAY — added in iter-2 for modal + drawer surface dimming.
+   * Tinted with --band-dark-bg base for surface-temperature continuity rather
+   * than a black wash (which reads cold-medical against warm neutrals).
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --surface-overlay: rgba(26, 31, 46, 0.62);
+  /* matches --band-dark-bg base; 62% feels heavy enough to focus modal,
+   * light enough to retain page context underneath. */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * MOTION — 3 durations, 2 easings
+   * §C.4 band-level entrance only; Band 1 flow diagram ≤ 1.2s total.
+   * All motion respects prefers-reduced-motion (see media query below).
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --duration-fast:   150ms;   /* hover states, tab indicator slide, focus ring */
+  --duration-base:   250ms;   /* band entrance fade+translate, CTA hover */
+  --duration-slow:   400ms;   /* hero entrance, Band 1 flow diagram per-step max */
+  --duration-band:   300ms;   /* band-level ScrollTrigger entrance default */
+  --duration-seq-total: 1200ms; /* Band 1 flow diagram total budget ceiling — §C.4 */
+
+  --ease-standard:   cubic-bezier(0.2, 0.0, 0.0, 1.0);
+  /* out-biased — exits fast, decelerates into place; hover, band entrances, hero */
+
+  /* Iter-2: --ease-emphasized removed. v1.0 declared two tokens with the same
+   * cubic-bezier — a no-op alias. The system runs on a single out-biased curve
+   * by design (motion-spec §2). If a distinct in-out ever becomes necessary
+   * (e.g. closing drawer), introduce it here AND document in motion-spec §2. */
+
+  /* Note: for GSAP, use Power2.easeOut (≈ ease-standard).
+   * Tab switching uses --duration-fast with no translate — opacity only. */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * BREAKPOINTS (reference values — CSS media queries cannot read vars)
+   * §A.5 responsive: mobile ≤640, tablet 641–1024, desktop ≥1025.
+   * Listed here for documentation; use literal px in actual @media rules.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --bp-mobile:  640px;    /* ≤640 — mobile breakpoint ceiling */
+  --bp-tablet:  1024px;   /* 641–1024 — tablet range ceiling */
+  --bp-desktop: 1025px;   /* ≥1025 — desktop floor */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * CONTAINER WIDTHS
+   * Wide content area. §C layout reference: "container-wide preserves" from
+   * grid findings. No inner double-wrappers — one container, one constraint.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --container-mobile:  100%;    /* full bleed on mobile — no horizontal margin waste */
+  --container-tablet:  736px;   /* 641px + comfortable inset at tablet */
+  --container-desktop: 1120px;  /* generous but not ultrawide — B2B density works here */
+  --container-px:      var(--space-6); /* horizontal padding inside container */
+
+  /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   * Z-INDEX — small semantic scale
+   * Navigation must always sit above page content; modal above nav only when
+   * open; toast above modal. No arbitrary z-index values elsewhere.
+   * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+  --z-base:    0;
+  --z-raised:  10;     /* in-band elevated cards, sticky tab bar */
+  --z-nav:     100;    /* top navigation, lang toggle */
+  --z-modal:   200;    /* modal dialogs, drawers */
+  --z-toast:   300;    /* toast notifications — always above everything */
+
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ * REDUCED MOTION — disables all entrance animation, keeps instant visibility
+ * §C.4 + §A.5 accessibility requirement. GSAP timelines should check this
+ * flag at runtime and set duration to 0 / autoAlpha to 1 immediately.
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast:      0ms;
+    --duration-base:      0ms;
+    --duration-slow:      0ms;
+    --duration-band:      0ms;
+    --duration-seq-total: 0ms;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ * BAND SCOPES — apply on <section> elements to flip text/action defaults
+ * without per-component conditionals. §C.2 surface cadence implementation.
+ * Usage: <section data-band="dark">…</section>
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+[data-band="dark"] {
+  background-color: var(--band-dark-bg);
+  color: var(--band-dark-ink-2);
+  --text-strong: var(--band-dark-ink);
+  --text-body:   var(--band-dark-ink-2);
+  --text-muted:  var(--band-dark-ink-3);
+  --action:        var(--blue-300);
+  --action-hover:  #95bbef;
+  --border-current: var(--band-dark-border);
+}
+
+[data-band="light"] {
+  background-color: var(--n-0);
+  color: var(--ink-primary);
+  --text-strong: var(--ink-primary);
+  --text-body:   var(--ink-primary);
+  --text-muted:  var(--ink-muted);
+  --action:        var(--blue-600);
+  --action-hover:  var(--blue-700);
+  --border-current: var(--border-subtle);
+}
+
+[data-band="cream"] {
+  background-color: var(--n-100);
+  color: var(--ink-primary);
+  --text-strong: var(--ink-primary);
+  --text-body:   var(--ink-primary);
+  --text-muted:  var(--ink-muted);
+  /* Iter-2: cream deepened to #efe7d6 drops --blue-600 to 4.26:1, below AA.
+   * Cream-band actions step one shade darker to --blue-700 (5.67:1).
+   * Logo blue (--blue-600) remains canonical on white-band CTAs and identity. */
+  --action:         var(--blue-700);
+  --action-hover:   var(--blue-800);
+  /* Hairline divider on cream uses --border-ui (--n-300) — the lighter
+   * --border-subtle (--n-200) drops below 1.2:1 against the deeper cream. */
+  --border-current: var(--border-ui);
+}

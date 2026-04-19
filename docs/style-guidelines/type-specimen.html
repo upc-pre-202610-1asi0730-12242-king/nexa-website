@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexa — Espécimen tipográfico v1.1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./tokens.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--n-100);
+      color: var(--ink-primary);
+      line-height: 1.6;
+    }
+
+    /* ── Layout helpers ────────────────────────────────────────────── */
+    .specimen-header {
+      background: var(--band-dark-bg);
+      color: var(--band-dark-ink);
+      padding: var(--space-8) var(--space-6);
+      border-bottom: 1px solid var(--band-dark-border);
+    }
+
+    .specimen-header h1 {
+      font-family: var(--font-body);
+      font-size: var(--text-caption-size);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--band-dark-ink-2);
+      margin-bottom: var(--space-2);
+    }
+
+    .specimen-header p {
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm-size);
+      color: var(--band-dark-ink-2);
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 var(--space-6);
+    }
+
+    .section {
+      padding: var(--space-16) 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: var(--text-micro-size);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: var(--space-8);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .specimen-row {
+      display: flex;
+      gap: var(--space-8);
+      align-items: baseline;
+      padding: var(--space-6) 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .specimen-row:last-child { border-bottom: none; }
+
+    .specimen-meta {
+      width: 160px;
+      flex-shrink: 0;
+    }
+
+    .meta-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .meta-detail {
+      font-family: var(--font-mono, monospace);
+      font-size: 10px;
+      color: var(--n-400);
+      display: block;
+      line-height: 1.6;
+    }
+
+    .specimen-text { flex: 1; }
+
+    /* ── Eyebrow pill ────────────────────────────────────────────────── */
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-1) var(--space-3);
+      background: var(--blue-50);
+      border: 1px solid rgba(42, 103, 217, 0.2);
+      border-radius: var(--r-full);
+      font-family: var(--font-body);
+      font-size: var(--text-eyebrow-size);
+      font-weight: var(--text-eyebrow-weight);
+      letter-spacing: var(--text-eyebrow-ls);
+      text-transform: uppercase;
+      color: var(--blue-700);
+    }
+
+    .eyebrow-pill--dark {
+      background: rgba(42, 103, 217, 0.15);
+      border-color: rgba(122, 170, 232, 0.3);
+      color: var(--blue-300);
+    }
+
+    /* ── Surface demos ───────────────────────────────────────────────── */
+    .surface-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+      margin-top: var(--space-8);
+    }
+
+    @media (max-width: 640px) {
+      .surface-grid { grid-template-columns: 1fr; }
+    }
+
+    .surface-demo {
+      border-radius: var(--r-md);
+      padding: var(--space-8);
+      overflow: hidden;
+    }
+
+    .surface-demo--light {
+      background: var(--n-0);
+      border: 1px solid var(--border-ui);
+    }
+
+    .surface-demo--cream {
+      background: var(--n-100);
+      border: 1px solid var(--border-ui);
+    }
+
+    .surface-demo--dark {
+      background: var(--band-dark-bg);
+    }
+
+    .surface-demo-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-4);
+    }
+
+    .surface-demo--light .surface-demo-label,
+    .surface-demo--cream .surface-demo-label {
+      color: var(--ink-muted);
+    }
+
+    .surface-demo--dark .surface-demo-label {
+      color: var(--band-dark-ink-3);
+    }
+
+    .surface-demo h3 {
+      margin-bottom: var(--space-2);
+    }
+
+    .surface-demo--light h3,
+    .surface-demo--cream h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+    }
+
+    .surface-demo--dark h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--band-dark-ink);
+    }
+
+    .surface-demo p {
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm-size);
+      line-height: var(--text-body-sm-lh);
+    }
+
+    .surface-demo--light p,
+    .surface-demo--cream p {
+      color: var(--ink-secondary);
+    }
+
+    .surface-demo--dark p {
+      color: var(--band-dark-ink-2);
+    }
+
+    /* ── Bilingual specimen ───────────────────────────────────────────── */
+    .bilingual-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+      margin-top: var(--space-6);
+    }
+
+    @media (max-width: 640px) {
+      .bilingual-block { grid-template-columns: 1fr; }
+    }
+
+    .bilingual-entry {
+      padding: var(--space-4);
+      background: var(--n-50);
+      border-radius: var(--r-md);
+      border-left: 3px solid var(--accent);
+    }
+
+    .lang-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+
+    /* ── Annotated mock callout ──────────────────────────────────────── */
+    .callout-demo {
+      background: var(--n-0);
+      border: 1px solid var(--border-ui);
+      border-radius: var(--r-md);
+      padding: var(--space-6);
+      margin-top: var(--space-6);
+      box-shadow: var(--shadow-1);
+      position: relative;
+    }
+
+    .callout-demo-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .callout-label-group { display: flex; flex-direction: column; gap: 2px; }
+
+    .callout-status {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: 2px var(--space-2);
+      border-radius: var(--r-sm);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .callout-status--warning {
+      background: var(--warning-bg);
+      color: var(--warning);
+    }
+
+    .callout-status--success {
+      background: var(--success-bg);
+      color: var(--success);
+    }
+
+    .callout-annotation {
+      font-family: var(--font-body);
+      font-size: 11px;
+      color: var(--ink-muted);
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .callout-annotation::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--border-ui);
+      flex-shrink: 0;
+    }
+
+    .data-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: var(--space-4);
+      align-items: center;
+      padding: var(--space-3) 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: var(--text-body-sm-size);
+    }
+
+    .data-row:last-child { border-bottom: none; }
+
+    .data-label { color: var(--ink-secondary); font-weight: 500; }
+    .data-value { color: var(--ink-primary); font-weight: 600; font-family: var(--font-mono, monospace); font-size: 12px; }
+
+  </style>
+</head>
+<body>
+
+  <!-- ── Specimen header ─────────────────────────────────────────────── -->
+  <header class="specimen-header">
+    <div class="container">
+      <h1>Nexa · Espécimen tipográfico</h1>
+      <p>Fraunces (display serif, opsz 9–144) + DM Sans (body sans) · v1.1.0 FROZEN · 2026-04-18</p>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 1 — DISPLAY + HEADLINE SCALE (Lora)
+       ══════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">01 — Display + headlines · Fraunces serif (opsz axis)</div>
+
+      <!-- Display -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">Display</span>
+          <span class="meta-detail">clamp(40–64px)<br>lh 1.10 · ls −0.035em<br>wt 700 · Fraunces opsz 96</span>
+        </div>
+        <div class="specimen-text">
+          <span style="
+            font-family: var(--font-display);
+            font-size: var(--text-display-size);
+            font-weight: var(--text-display-weight);
+            line-height: var(--text-display-lh);
+            letter-spacing: var(--text-display-ls);
+            color: var(--ink-primary);
+            display: block;
+          ">
+            Catálogo, pedidos y visibilidad operativa — en una sola plataforma.
+          </span>
+        </div>
+      </div>
+
+      <!-- H1 -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">H1</span>
+          <span class="meta-detail">clamp(32–48px)<br>lh 1.20 · ls −0.025em<br>wt 600 · Fraunces opsz 36</span>
+        </div>
+        <div class="specimen-text">
+          <span style="
+            font-family: var(--font-display);
+            font-size: var(--text-h1-size);
+            font-weight: var(--text-h1-weight);
+            line-height: var(--text-h1-lh);
+            letter-spacing: var(--text-h1-ls);
+            color: var(--ink-primary);
+            display: block;
+          ">
+            Cómo funciona la gestión de pedidos refrigerados
+          </span>
+        </div>
+      </div>
+
+      <!-- H2 -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">H2</span>
+          <span class="meta-detail">clamp(24–36px)<br>lh 1.28 · ls −0.02em<br>wt 600 · Fraunces opsz 24</span>
+        </div>
+        <div class="specimen-text">
+          <span style="
+            font-family: var(--font-display);
+            font-size: var(--text-h2-size);
+            font-weight: var(--text-h2-weight);
+            line-height: var(--text-h2-lh);
+            letter-spacing: var(--text-h2-ls);
+            color: var(--ink-primary);
+            display: block;
+          ">
+            Catálogo especializado con atributos de refrigeración y rotación FEFO
+          </span>
+        </div>
+      </div>
+
+      <!-- H3 (DM Sans) -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">H3</span>
+          <span class="meta-detail">clamp(18–24px)<br>lh 1.35 · ls −0.01em<br>wt 600 · DM Sans</span>
+        </div>
+        <div class="specimen-text">
+          <span style="
+            font-family: var(--font-body);
+            font-size: var(--text-h3-size);
+            font-weight: var(--text-h3-weight);
+            line-height: var(--text-h3-lh);
+            letter-spacing: var(--text-h3-ls);
+            color: var(--ink-primary);
+            display: block;
+          ">
+            Registro de pedidos · Inventario + FEFO · Seguimiento B2B
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 2 — BODY SCALE (DM Sans)
+       ══════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">02 — Texto de cuerpo · DM Sans</div>
+
+      <!-- Body Large -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">Body Large</span>
+          <span class="meta-detail">18px · lh 1.65<br>wt 400 · DM Sans</span>
+        </div>
+        <div class="specimen-text">
+          <p style="
+            font-family: var(--font-body);
+            font-size: var(--text-body-lg-size);
+            font-weight: var(--text-body-lg-weight);
+            line-height: var(--text-body-lg-lh);
+            color: var(--ink-secondary);
+          ">
+            Nexa digitaliza el flujo de pedidos B2B de productos refrigerados — queso, lácteos, embutidos — ordenando la coordinación entre distribuidoras y sus clientes comerciales: bodegas, minimarkets y HORECA.
+          </p>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">Body</span>
+          <span class="meta-detail">16px · lh 1.60<br>wt 400 · DM Sans</span>
+        </div>
+        <div class="specimen-text">
+          <p style="
+            font-family: var(--font-body);
+            font-size: var(--text-body-size);
+            font-weight: var(--text-body-weight);
+            line-height: var(--text-body-lh);
+            color: var(--ink-primary);
+          ">
+            El pedido informal — capturado por audio de WhatsApp, mensaje de texto libre o llamada — produce retrabajo, errores de interpretación y quiebres de stock. La plataforma estructura ese flujo desde la primera interacción: catálogo con atributos de frío, formulario de pedido, visibilidad de inventario con señales FEFO y seguimiento en tiempo real para el cliente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Body Small -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">Body Small</span>
+          <span class="meta-detail">14px · lh 1.55<br>wt 400 · DM Sans</span>
+        </div>
+        <div class="specimen-text">
+          <p style="
+            font-family: var(--font-body);
+            font-size: var(--text-body-sm-size);
+            font-weight: var(--text-body-sm-weight);
+            line-height: var(--text-body-sm-lh);
+            color: var(--ink-secondary);
+          ">
+            El módulo de inventario aplica rotación FEFO — First Expired, First Out — sobre el catálogo activo. Cada producto registra temperatura mínima y máxima, presentación, fecha de vencimiento y estado de ruptura. El sistema emite señales de alerta antes de que el stock llegue a cero o supere la fecha crítica.
+          </p>
+        </div>
+      </div>
+
+      <!-- Caption -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">Caption</span>
+          <span class="meta-detail">13px · lh 1.50<br>wt 500 · ls +0.01em</span>
+        </div>
+        <div class="specimen-text">
+          <p style="
+            font-family: var(--font-body);
+            font-size: var(--text-caption-size);
+            font-weight: var(--text-caption-weight);
+            line-height: var(--text-caption-lh);
+            letter-spacing: var(--text-caption-ls);
+            color: var(--ink-muted);
+          ">
+            Pedido #2847 · Queso Gouda 500 g · Lote 2026-06 · Solicitado: 24 und. · Estado: EN PREPARACIÓN
+          </p>
+        </div>
+      </div>
+
+      <!-- Micro -->
+      <div class="specimen-row">
+        <div class="specimen-meta">
+          <span class="meta-label">Micro</span>
+          <span class="meta-detail">11px · lh 1.45<br>wt 600 · ls +0.04em</span>
+        </div>
+        <div class="specimen-text">
+          <p style="
+            font-family: var(--font-body);
+            font-size: var(--text-micro-size);
+            font-weight: var(--text-micro-weight);
+            line-height: var(--text-micro-lh);
+            letter-spacing: var(--text-micro-ls);
+            text-transform: uppercase;
+            color: var(--ink-muted);
+          ">
+            RUPTURA DE STOCK · VENCE EN 3 DÍAS · DESPACHO PENDIENTE · FEFO ACTIVO
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 3 — EYEBROW PILL
+       ══════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">03 — Eyebrow pill · Vocabulario operacional</div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-6);">
+        <span class="eyebrow-pill">SaaS B2B · Productos refrigerados · Perú</span>
+        <span class="eyebrow-pill">Catálogo especializado</span>
+        <span class="eyebrow-pill">FEFO · Rotación de inventario</span>
+        <span class="eyebrow-pill">Portal B2B autoservicio</span>
+        <span class="eyebrow-pill">Cadena de frío operacional</span>
+      </div>
+
+      <div style="margin-top: var(--space-4); padding: var(--space-4); background: var(--band-dark-bg); border-radius: var(--r-md); display: flex; flex-wrap: wrap; gap: var(--space-3);">
+        <span class="eyebrow-pill eyebrow-pill--dark">SaaS B2B · Productos refrigerados · Perú</span>
+        <span class="eyebrow-pill eyebrow-pill--dark">Validando con distribuidores piloto</span>
+        <span class="eyebrow-pill eyebrow-pill--dark">Despacho · Pedido · Stock</span>
+      </div>
+
+      <p style="margin-top: var(--space-3); font-size: 11px; color: var(--ink-muted); font-style: italic;">
+        Arriba: pills sobre fondo claro (Band 2). Abajo: pills sobre fondo oscuro (Band 1/3).
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 4 — BILINGUAL SPECIMEN
+       ══════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">04 — Espécimen bilingüe · es_419 + en_US · Diacríticos y guiones</div>
+
+      <div class="bilingual-block">
+        <div class="bilingual-entry">
+          <span class="lang-tag">es_419</span>
+          <p style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; line-height: 1.3; color: var(--ink-primary); margin-bottom: var(--space-3);">
+            Gestión de pedidos refrigerados — sin retrabajo, sin pérdidas.
+          </p>
+          <p style="font-size: var(--text-body-sm-size); color: var(--ink-secondary); line-height: 1.6;">
+            Catálogo con atributos de frío: temperatura mínima/máxima, lote, vencimiento y estado de ruptura. Señales FEFO — Primero en Vencer, Primero en Salir — activas en cada pedido.
+          </p>
+        </div>
+
+        <div class="bilingual-entry">
+          <span class="lang-tag">en_US</span>
+          <p style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; line-height: 1.3; color: var(--ink-primary); margin-bottom: var(--space-3);">
+            Refrigerated order management — no rework, no loss.
+          </p>
+          <p style="font-size: var(--text-body-sm-size); color: var(--ink-secondary); line-height: 1.6;">
+            A catalog with cold-chain attributes — min/max temperature, batch, expiry date, and breach status. FEFO rotation signals — First Expired, First Out — active on every order.
+          </p>
+        </div>
+      </div>
+
+      <!-- Diacritic stress test -->
+      <div style="margin-top: var(--space-6); padding: var(--space-4); background: var(--n-50); border-radius: var(--r-md); border: 1px solid var(--border-subtle);">
+        <span class="meta-label" style="color: var(--ink-muted); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: var(--space-3);">Prueba de diacríticos y caracteres especiales</span>
+        <p style="font-family: var(--font-body); font-size: var(--text-body-size); color: var(--ink-primary); line-height: 1.6;">
+          Á É Í Ó Ú · á é í ó ú · Ñ ñ · ¿ ¡ · ü Ü · «» · — – · © ® · %  ° ·
+          <em style="color: var(--ink-secondary);">temperaturas entre −2 °C y +4 °C · código de lote: PR-2026-06-A · rotación FEFO activa</em>
+        </p>
+        <p style="font-family: var(--font-display); font-size: var(--text-h2-size); font-weight: 700; color: var(--ink-primary); margin-top: var(--space-4); line-height: 1.3;">
+          Distribución refrigerada — Perú · Queso, lácteos, embutidos, HORECA
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 5 — SURFACE TEMPERATURE DEMONSTRATION
+       ══════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">05 — Cadencia de superficies · Band 1 dark → Band 2 white/cream → Band 3 dark</div>
+
+      <div class="surface-grid">
+        <!-- Dark band demo -->
+        <div class="surface-demo surface-demo--dark">
+          <div class="surface-demo-label" style="color: var(--band-dark-ink-3);">Band 1 + 3 · Superficie oscura</div>
+          <div style="margin-bottom: var(--space-3);">
+            <span class="eyebrow-pill eyebrow-pill--dark">SaaS B2B · Productos refrigerados</span>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--band-dark-ink); line-height: 1.3; margin-bottom: var(--space-3);">
+            Del audio de WhatsApp al flujo estructurado de pedidos
+          </h3>
+          <p style="font-size: var(--text-body-sm-size); color: var(--band-dark-ink-2); line-height: 1.6; margin-bottom: var(--space-4);">
+            Mercaderistas, logística y clientes B2B en una sola plataforma de visibilidad operativa.
+          </p>
+          <button style="
+            background: var(--blue-600);
+            color: var(--n-0);
+            border: none;
+            border-radius: var(--r-md);
+            padding: var(--space-3) var(--space-6);
+            font-family: var(--font-body);
+            font-size: var(--text-body-sm-size);
+            font-weight: 600;
+            cursor: pointer;
+          ">Ver cómo funciona</button>
+        </div>
+
+        <!-- White band demo -->
+        <div class="surface-demo surface-demo--light">
+          <div class="surface-demo-label">Band 2 · Superficie blanca</div>
+          <div style="margin-bottom: var(--space-3);">
+            <span class="eyebrow-pill">Catálogo especializado</span>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--ink-primary); line-height: 1.3; margin-bottom: var(--space-3);">
+            Atributos de frío en cada producto del catálogo
+          </h3>
+          <p style="font-size: var(--text-body-sm-size); color: var(--ink-secondary); line-height: 1.6; margin-bottom: var(--space-4);">
+            Temperatura mínima, temperatura máxima, estado de ruptura, lote activo y fecha de vencimiento visibles antes de confirmar el pedido.
+          </p>
+          <button style="
+            background: transparent;
+            color: var(--blue-600);
+            border: 1.5px solid var(--blue-600);
+            border-radius: var(--r-md);
+            padding: var(--space-3) var(--space-6);
+            font-family: var(--font-body);
+            font-size: var(--text-body-sm-size);
+            font-weight: 600;
+            cursor: pointer;
+          ">Pedir demo</button>
+        </div>
+
+        <!-- Cream band demo -->
+        <div class="surface-demo surface-demo--cream" style="grid-column: span 2;">
+          <div class="surface-demo-label">Band 2 inferior · Superficie crema</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-4);">
+            <div>
+              <p style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: var(--space-2);">S1 · Mercaderistas</p>
+              <p style="font-size: var(--text-body-sm-size); color: var(--ink-secondary); line-height: 1.55;">Registro estructurado de pedidos — menos retrabajo, sin ambigüedad en la captura.</p>
+            </div>
+            <div>
+              <p style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: var(--space-2);">S2 · Logística</p>
+              <p style="font-size: var(--text-body-sm-size); color: var(--ink-secondary); line-height: 1.55;">Visión integrada pedido + stock + despacho. Señales FEFO para decisiones de prioridad.</p>
+            </div>
+            <div>
+              <p style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: var(--space-2);">S3 · Clientes B2B</p>
+              <p style="font-size: var(--text-body-sm-size); color: var(--ink-secondary); line-height: 1.55;">Portal de autoservicio — catálogo, pedido y seguimiento sin depender de un vendedor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SECTION 6 — ANNOTATED MOCK (Flecto-discipline callout demo)
+       ══════════════════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">06 — Callout anotado · Disciplina Flecto · Vocabulario operacional visible</div>
+
+      <div class="callout-demo">
+        <div class="callout-demo-header">
+          <div class="callout-label-group">
+            <span style="font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted);">Pedido #2847</span>
+            <span style="font-family: var(--font-body); font-size: var(--text-body-sm-size); font-weight: 600; color: var(--ink-primary);">Distribuidora Andina S.A.C. — Bodega El Progreso</span>
+          </div>
+          <span class="callout-status callout-status--warning">⚠ EN PREPARACIÓN</span>
+        </div>
+
+        <div class="data-row">
+          <span class="data-label">Producto</span>
+          <span class="data-value">Queso Gouda 500 g · Lote PR-2026-06</span>
+          <span class="callout-annotation">FEFO activo — vence en 8 días</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Cantidad solicitada</span>
+          <span class="data-value">24 und.</span>
+          <span class="callout-status callout-status--success">Stock disponible</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Temperatura de despacho</span>
+          <span class="data-value">+2 °C / +4 °C</span>
+          <span class="callout-annotation">Rango requerido — cadena de frío</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Canal de captura original</span>
+          <span class="data-value">Formulario Nexa</span>
+          <span class="callout-annotation">Antes: audio WhatsApp → transcripción manual</span>
+        </div>
+
+        <div style="margin-top: var(--space-4); padding: var(--space-3); background: var(--warning-bg); border-radius: var(--r-sm); display: flex; align-items: center; gap: var(--space-3);">
+          <span style="font-size: var(--text-caption-size); color: var(--warning); font-weight: 600;">RUPTURA DE STOCK PROYECTADA EN 2 DÍAS — Queso Brie 200 g · Lote PR-2026-05</span>
+        </div>
+      </div>
+
+      <p style="margin-top: var(--space-3); font-size: 11px; color: var(--ink-muted); font-style: italic;">
+        Vocabulario visible: DESPACHO, FEFO, RUPTURA DE STOCK, cadena de frío, lote, temperatura. Sin lorem, sin nombres inventados de empresa.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Footer note ─────────────────────────────────────────────────── -->
+  <footer style="background: var(--band-dark-bg); padding: var(--space-8) var(--space-6); margin-top: var(--space-8);">
+    <div class="container">
+      <p style="font-family: var(--font-body); font-size: var(--text-body-sm-size); color: var(--band-dark-ink-2);">
+        Nexa · Espécimen tipográfico · v1.1.0 · Fuentes: Fraunces + DM Sans (Google Fonts, SIL OFL) · Tokens: docs/style-guidelines/tokens.css
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
