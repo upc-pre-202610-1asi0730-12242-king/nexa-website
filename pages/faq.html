@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" data-i18n-content="faq.meta.description" content="Nexa FAQ — Answers to the most common questions about the platform, implementation, integrations, security, and pricing. Clear, practical, decision-oriented." />
+  <meta property="og:title" data-i18n-content="faq.meta.ogTitle" content="Nexa FAQ — Everything You Need to Know Before You Decide" />
+  <meta property="og:description" data-i18n-content="faq.meta.ogDescription" content="How long does activation take? Does Nexa replace my ERP? What hardware do I need? Answered directly." />
+  <meta property="og:type" content="website" />
+  <title data-i18n-content="faq.meta.title">Nexa FAQ — Everything You Need to Know Before You Decide</title>
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body data-page="faq" data-lang="es">
+
+
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
+  <div class="navbar-inner">
+
+    <a href="../index.html" class="navbar-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+      <img src="../nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+      <span class="visually-hidden">Nexa</span>
+    </a>
+
+    <div class="navbar-links" id="navbar-links">
+      <a href="../index.html" class="navbar-link" id="nav-home" data-i18n="shared.nav.home">Inicio</a>
+      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Plataforma</a>
+
+      <div class="dropdown-trigger" id="nav-solutions-trigger">
+        <button class="navbar-link dropdown-btn" type="button" id="nav-solutions"
+                aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true"
+                data-i18n="shared.nav.solutions">
+          Soluciones
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="dropdown-panel" id="solutions-dropdown" role="menu">
+          <a href="solutions/importers.html" class="dropdown-item" role="menuitem" id="nav-importers">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importadores y mayoristas</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Ingreso portuario para lotes de queso, charcuteria y lacteos.</div>
+            </div>
+          </a>
+          <a href="solutions/distributors.html" class="dropdown-item" role="menuitem" id="nav-distributors">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distribuidores</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Cumplimiento de ultima milla, reposicion FEFO y pedidos B2B.</div>
+            </div>
+          </a>
+          <a href="solutions/cold-storage.html" class="dropdown-item" role="menuitem" id="nav-cold-storage">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Operadores de camaras frias</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Camaras de queso, camaras lacteas y registros de inocuidad alimentaria.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Empresa</a>
+      <a href="faq.html" class="navbar-link navbar-link-mobile-only active" id="nav-faq-mobile" data-i18n="shared.nav.faq">FAQ</a>
+
+      <div class="navbar-mobile-actions">
+        <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
+          <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+          <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
+        </div>
+        <a href="company.html#contact" class="btn btn-primary btn-sm" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+        <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Ingresar</button>
+      </div>
+    </div>
+
+    <div class="navbar-actions">
+      <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria-label="shared.nav.languageAria">
+        <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+        <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
+      </div>
+      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+      <button type="button" class="btn btn-secondary btn-sm navbar-login-btn" data-login-placeholder data-i18n="shared.nav.login">Ingresar</button>
+      <a href="faq.html" class="navbar-link navbar-link-action active" data-i18n="shared.nav.faq">FAQ</a>
+    </div>
+
+    <button type="button" class="navbar-mobile-toggle" aria-label="Open navigation" data-i18n-aria-label="shared.nav.mobileToggle"
+            aria-expanded="false" aria-controls="navbar-links" id="mobile-menu-toggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+  </div>
+</nav>
+
+<div class="navbar-overlay" id="navbar-overlay" aria-hidden="true"></div>
+
+
+
+<header class="faq-page-hero" id="faq-hero" aria-labelledby="faq-headline">
+  <div class="container-wide">
+    <div class="faq-hero-layout">
+      <div class="faq-page-hero-content reveal">
+        <div class="badge" data-i18n="faq.hero.badge">Preguntas frecuentes</div>
+        <h1 id="faq-headline" data-i18n-html="faq.hero.title">Todo lo que necesitas saber<br>antes de decidir.</h1>
+        <p data-i18n="faq.hero.copy">Respuestas cortas y directas a las preguntas que mas hacen los operadores cuando evaluan Nexa. No necesitas una demostracion para entender como funciona.</p>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+
+<div class="container-wide" id="faq-content-wrapper">
+  <div class="faq-layout">
+
+    <!-- Sticky sidebar (desktop) -->
+    <aside class="faq-sidebar" aria-label="FAQ navigation" data-i18n-aria-label="faq.sidebar.aria">
+      <a href="#getting-started" class="faq-sidebar-link" id="sidebar-getting-started" data-i18n="faq.sidebar.start">Primeros pasos</a>
+      <a href="#the-platform" class="faq-sidebar-link" id="sidebar-platform" data-i18n="faq.sidebar.platform">La plataforma</a>
+      <a href="#implementation" class="faq-sidebar-link" id="sidebar-implementation" data-i18n="faq.sidebar.implementation">Implementacion</a>
+      <a href="#security-data" class="faq-sidebar-link" id="sidebar-security" data-i18n="faq.sidebar.security">Seguridad y datos</a>
+      <a href="#pricing-access" class="faq-sidebar-link" id="sidebar-pricing" data-i18n="faq.sidebar.pricing">Precios y acceso</a>
+    </aside>
+
+    <!-- FAQ groups -->
+    <main class="faq-content" id="faq-main">
+
+      <!-- GROUP 1: Getting Started -->
+      <section class="faq-group" id="getting-started" aria-labelledby="group-getting-started">
+        <div class="faq-group-title" id="group-getting-started" data-i18n="faq.sidebar.start">Primeros pasos</div>
+
+        <div class="faq-item" id="faq-what-is-nexa">
+          <button class="faq-question" type="button" id="faq-button-what-is-nexa" aria-expanded="false" aria-controls="answer-what-is-nexa" data-i18n="faq.q1.q">¿Que es exactamente Nexa?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-what-is-nexa" role="region" aria-labelledby="faq-button-what-is-nexa" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q1.a"><p>Nexa es el sistema operativo central que reemplaza hojas de calculo y mensajes de WhatsApp en flujos de charcuteria, quesos y lacteos.</p><p>En vez de herramientas fragmentadas, le da a tu equipo una sola pantalla confiable para manejar inventario, monitorear temperatura y coordinar despacho sin adivinar.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-who-is-it-for">
+          <button class="faq-question" type="button" id="faq-button-who-is-it-for" aria-expanded="false" aria-controls="answer-who-is-it-for" data-i18n="faq.q2.q">¿Para que tipo de empresa esta diseñado Nexa?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-who-is-it-for" role="region" aria-labelledby="faq-button-who-is-it-for" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q2.a"><p>Nexa esta construido para tres tipos de operadores:</p><p><strong>Importadores y mayoristas</strong> — manejan grandes volumenes de queso, charcuteria y lacteos con monitoreo termico a nivel contenedor y asignacion de inventario a granel.</p><p><strong>Distribuidores</strong> — operan ultima milla para pedidos especializados con portal B2B, despacho con FEFO y prueba digital de entrega.</p><p><strong>Operadores de camaras frias</strong> — manejan instalaciones multicamara, cuartos de maduracion y stock lacteo con monitoreo en tiempo real, alertas automaticas y registros de inocuidad.</p><p>Si gestionas alimentos refrigerados a escala comercial, Nexa aplica a tu operacion.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-does-nexa-replace-erp">
+          <button class="faq-question" type="button" id="faq-button-does-nexa-replace-erp" aria-expanded="false" aria-controls="answer-does-nexa-replace-erp" data-i18n="faq.q3.q">¿Nexa reemplaza mi ERP?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-does-nexa-replace-erp" role="region" aria-labelledby="faq-button-does-nexa-replace-erp" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q3.a"><p><strong>No: Nexa no es un ERP.</strong> Opera junto a tu ERP existente, no en su lugar.</p><p>Piensa en Nexa como la capa de ejecucion operativa: maneja catalogo, visibilidad de inventario, procesamiento de pedidos y monitoreo termico en tiempo real. Tu ERP sigue llevando finanzas, contabilidad y compras.</p><p>Nexa se conecta con SAP, Oracle y cualquier ERP con API REST publicada. La data fluye en ambos sentidos; no necesitas reingresar nada.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-what-do-i-need">
+          <button class="faq-question" type="button" id="faq-button-what-do-i-need" aria-expanded="false" aria-controls="answer-what-do-i-need" data-i18n="faq.q4.q">¿Que necesito tener listo antes de empezar?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-what-do-i-need" role="region" aria-labelledby="faq-button-what-do-i-need" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q4.a"><p>Muy poco. No necesitas una infraestructura digital sofisticada para comenzar con Nexa.</p><p>Lo minimo es: una lista de tus SKUs, una idea basica de tus nodos de distribucion o camaras, y acceso a los dispositivos que tu equipo ya usa.</p><p>Si ya tienes sensores IoT, revisamos compatibilidad. Si todavia no, te recomendamos equipo compatible durante la puesta en marcha.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GROUP 2: The Platform -->
+      <section class="faq-group" id="the-platform" aria-labelledby="group-the-platform">
+        <div class="faq-group-title" id="group-the-platform" data-i18n="faq.sidebar.platform">La plataforma</div>
+
+        <div class="faq-item" id="faq-five-modules">
+          <button class="faq-question" type="button" id="faq-button-five-modules" aria-expanded="false" aria-controls="answer-five-modules" data-i18n="faq.q5.q">¿Cuales son los cinco modulos y que hace cada uno?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-five-modules" role="region" aria-labelledby="faq-button-five-modules" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q5.a"><p><strong>Datos de producto</strong> — tu lista completa de productos con codigos SKU, rangos de temperatura, ventanas de vida util y precios.</p><p><strong>Inventario en vivo</strong> — niveles de stock en tiempo real en todos los nodos. FEFO se aplica automaticamente y dispara alertas cuando algo baja de umbral.</p><p><strong>Portal B2B</strong> — una interfaz de autoservicio para distribuidores, retailers y equipos compradores. Ven stock disponible, hacen pedidos y siguen el despacho sin llamar.</p><p><strong>Telemetria movil</strong> — tus choferes capturan firma digital y temperatura al momento de la entrega. Toda la evidencia queda sellada en tiempo y registro.</p><p><strong>Trazabilidad</strong> — cada movimiento de lote desde origen hasta la entrega final, con cadena de custodia e historial termico completos.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-modules-separately">
+          <button class="faq-question" type="button" id="faq-button-modules-separately" aria-expanded="false" aria-controls="answer-modules-separately" data-i18n="faq.q6.q">¿Puedo usar algunos modulos sin activar los cinco?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-modules-separately" role="region" aria-labelledby="faq-button-modules-separately" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q6.a"><p>Si. Los modulos se pueden activar de forma progresiva. Muchas operaciones comienzan con catalogo e inventario, luego suman el portal B2B y finalmente telemetria movil.</p><p>Los cinco modulos comparten una sola capa de datos, asi que agregar uno nuevo no exige migraciones ni reconfiguraciones pesadas.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-how-fefo-works">
+          <button class="faq-question" type="button" id="faq-button-how-fefo-works" aria-expanded="false" aria-controls="answer-how-fefo-works" data-i18n="faq.q7.q">¿Como funciona FEFO (First Expired, First Out) en la practica?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-how-fefo-works" role="region" aria-labelledby="faq-button-how-fefo-works" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q7.a"><p>Cuando entra un pedido B2B, Nexa asigna automaticamente stock del lote con vencimiento mas cercano, no del lote mas nuevo. Tu equipo de despacho no decide; el sistema decide por ellos.</p><p>Esto evita que el stock viejo se quede al fondo de la camara esperando al ultimo cliente. Cada pedido toma el lote correcto sin margen para error humano.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-traceability-detail">
+          <button class="faq-question" type="button" id="faq-button-traceability-detail" aria-expanded="false" aria-controls="answer-traceability-detail" data-i18n="faq.q8.q">¿Que nivel de detalle captura el modulo de trazabilidad?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-traceability-detail" role="region" aria-labelledby="faq-button-traceability-detail" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q8.a"><p>Cada lote recibe un registro completo de cadena de custodia: origen, productor, fecha de produccion, transferencias en transito, almacenamiento, asignacion de camara y entrega final con firma digital, temperatura y sello GPS.</p><p>Los documentos de cumplimiento se generan automaticamente en PDF y quedan disponibles para auditorias o reclamos.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GROUP 3: Implementation -->
+      <section class="faq-group" id="implementation" aria-labelledby="group-implementation">
+        <div class="faq-group-title" id="group-implementation" data-i18n="faq.sidebar.implementation">Implementacion</div>
+
+        <div class="faq-item" id="faq-how-long">
+          <button class="faq-question" type="button" id="faq-button-how-long" aria-expanded="false" aria-controls="answer-how-long" data-i18n="faq.q9.q">¿Cuanto tiempo tarda salir en vivo?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-how-long" role="region" aria-labelledby="faq-button-how-long" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q9.a"><p><strong>Tu catalogo y la visibilidad de inventario pueden estar activos en pocos dias despues de firmar.</strong> La implementacion completa, incluyendo calibracion de sensores, integracion ERP y entrenamiento, se despliega dentro de una linea de 12 semanas.</p><p>Esas 12 semanas no son espera pasiva: son despliegue activo. Tu equipo usa los modulos base desde las primeras dos semanas mientras terminamos pruebas, configuraciones especiales y acompanamiento posterior.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-hardware">
+          <button class="faq-question" type="button" id="faq-button-hardware" aria-expanded="false" aria-controls="answer-hardware" data-i18n="faq.q10.q">¿Que equipo es compatible con Nexa?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-hardware" role="region" aria-labelledby="faq-button-hardware" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q10.a"><p>Nexa es agnostico al equipo. Se integra con sensores o dispositivos de monitoreo de temperatura que entreguen salida de datos, incluyendo Onset, Sensitech, Controlant y cualquier marca con interfaz REST o MQTT.</p><p>No necesitas reemplazar el equipo existente. Si ya registras datos, nos conectamos a ese feed. Si aun no tienes sensores, te recomendamos opciones compatibles.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-does-team-need-training">
+          <button class="faq-question" type="button" id="faq-button-does-team-need-training" aria-expanded="false" aria-controls="answer-does-team-need-training" data-i18n="faq.q11.q">¿Mi equipo necesita entrenamiento tecnico para usar Nexa?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-does-team-need-training" role="region" aria-labelledby="faq-button-does-team-need-training" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q11.a"><p><strong>No.</strong> La interfaz fue pensada para jefes de bodega, choferes y equipos de despacho, no para areas de TI. Los choferes usan su propio telefono: abren un enlace, toman una foto, registran una temperatura y tocan "entregar".</p><p>La capacitacion practica esta incluida. Entrenamos al equipo antes de la puesta en marcha, no despues.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-multi-facility">
+          <button class="faq-question" type="button" id="faq-button-multi-facility" aria-expanded="false" aria-controls="answer-multi-facility" data-i18n="faq.q12.q">¿Nexa soporta operaciones multinodo o multiinstalacion?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-multi-facility" role="region" aria-labelledby="faq-button-multi-facility" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q12.a"><p>Si. Nexa esta hecho para operaciones con varios nodos. Puedes manejar varias bodegas, hubs de distribucion y camaras frias desde una sola cuenta, con cada nodo visible por separado en el tablero.</p><p>El stock se controla de forma independiente por nodo, pero todo se consolida en una sola vista de inventario. Las alertas termicas se mantienen segmentadas por camara o instalacion.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GROUP 4: Security & Data -->
+      <section class="faq-group" id="security-data" aria-labelledby="group-security-data">
+        <div class="faq-group-title" id="group-security-data" data-i18n="faq.sidebar.security">Seguridad y datos</div>
+
+        <div class="faq-item" id="faq-data-ownership">
+          <button class="faq-question" type="button" id="faq-button-data-ownership" aria-expanded="false" aria-controls="answer-data-ownership" data-i18n="faq.q13.q">¿Quien es dueño de mis datos operativos?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-data-ownership" role="region" aria-labelledby="faq-button-data-ownership" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q13.a"><p><strong>Tu organizacion.</strong> Tu inventario, tus relaciones con clientes, tu historico de pedidos y tus logs de temperatura le pertenecen a tu operacion. Nexa los procesa solo para hacer funcionar la plataforma.</p><p>Puedes exportar todo en formatos estandar cuando quieras. Si dejas de usar Nexa, la data sale contigo.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-data-security">
+          <button class="faq-question" type="button" id="faq-button-data-security" aria-expanded="false" aria-controls="answer-data-security" data-i18n="faq.q14.q">¿Como se protege mi data?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-data-security" role="region" aria-labelledby="faq-button-data-security" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q14.a"><p><strong>Tu data se respalda de forma constante y permanece separada de la de otros clientes.</strong> Todo viaja cifrado para que solo tus responsables autorizados puedan ver inventario y ordenes.</p><p>Para equipos tecnicos y de cumplimiento: mantenemos logs inmutables de 7 anos y una infraestructura redundante para que una falla fisica localizada no corte tu capacidad de despacho.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-uptime">
+          <button class="faq-question" type="button" id="faq-button-uptime" aria-expanded="false" aria-controls="answer-uptime" data-i18n="faq.q15.q">¿Que pasa si Nexa se cae?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-uptime" role="region" aria-labelledby="faq-button-uptime" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q15.a"><p>Nexa opera con un SLA de disponibilidad del 99.9%. La plataforma esta diseñada para degradarse con elegancia: si falla una red, la telemetria movil sigue registrando localmente y sincroniza cuando vuelve la conectividad.</p><p>Las operaciones criticas, como la confirmacion de entrega, siguen funcionando sin conexion. El tablero muestra datos en cache e indica con claridad cualquier retraso de sincronizacion.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GROUP 5: Pricing & Access -->
+      <section class="faq-group" id="pricing-access" aria-labelledby="group-pricing-access">
+        <div class="faq-group-title" id="group-pricing-access" data-i18n="faq.sidebar.pricing">Precios y acceso</div>
+
+        <div class="faq-item" id="faq-how-is-nexa-priced">
+          <button class="faq-question" type="button" id="faq-button-how-is-nexa-priced" aria-expanded="false" aria-controls="answer-how-is-nexa-priced" data-i18n="faq.q16.q">¿Como se cobra Nexa?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-how-is-nexa-priced" role="region" aria-labelledby="faq-button-how-is-nexa-priced" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q16.a"><p><strong>Cotizamos segun tu volumen operativo</strong>: medimos numero de nodos y escala de implementacion. No cobramos por asiento ni por chofer, asi que no tienes que restringir accesos para ahorrar.</p><p>Cuando nos explicas tu operacion, enviamos una propuesta cerrada en dos dias habiles. Sin costos sorpresa ni integraciones ocultas.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-demo">
+          <button class="faq-question" type="button" id="faq-button-demo" aria-expanded="false" aria-controls="answer-demo" data-i18n="faq.q17.q">¿Puedo ver una demostracion antes de comprometerme?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-demo" role="region" aria-labelledby="faq-button-demo" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q17.a"><p>Si. Hacemos recorridos guiados en vivo adaptados a tu operacion, no una demostracion generica. Cuentanos que manejas y te mostraremos especificamente como Nexa resuelve ese flujo.</p><p><a href="company.html#contact">Usa el formulario de contacto</a> para pedir una sesion. Respondemos dentro de un dia habil.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-first-30-days">
+          <button class="faq-question" type="button" id="faq-button-first-30-days" aria-expanded="false" aria-controls="answer-first-30-days" data-i18n="faq.q18.q">¿Que incluye los primeros 30 dias despues de la puesta en marcha?<span class="faq-question-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+          </button>
+          <div class="faq-answer" id="answer-first-30-days" role="region" aria-labelledby="faq-button-first-30-days" hidden>
+            <div class="faq-answer-inner" data-i18n-html="faq.q18.a"><p><strong>Tienes una linea directa con nuestro equipo, no un sistema de tickets.</strong> Monitoreamos los primeros despachos reales, revisamos que la data termica sincronice bien, confirmamos que FEFO este funcionando y corregimos problemas de configuracion que aparezcan en operacion.</p><p>Despues de 30 dias, tu equipo opera con autonomia. El soporte no desaparece: sigues llegando a una persona real por correo o telefono.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <div class="faq-cta-block" id="faq-cta">
+        <div class="closing-cta">
+          <div class="closing-cta-copy">
+            <div class="badge mb-4" data-i18n="faq.cta.badge">¿Aun tienes dudas?</div>
+            <h2 data-i18n="faq.cta.title">Te respondemos directo.</h2>
+            <p class="text-lead" data-i18n="faq.cta.copy">Cuentanos sobre tu operacion y responderemos con especificidad. Sin guion de ventas, sin presion.</p>
+          </div>
+          <div class="closing-cta-actions">
+            <div class="closing-cta-note" data-i18n="faq.cta.note">Siguiente paso</div>
+            <p class="closing-cta-meta" data-i18n="faq.cta.meta">Usa el canal de contacto si necesitas una respuesta directa en vez de otra pagina de producto.</p>
+            <div class="faq-cta-row">
+              <a href="company.html#contact" class="btn btn-primary btn-lg" id="faq-cta-contact" data-i18n="faq.cta.primary">Contactanos</a>
+              <a href="platform.html" class="btn btn-secondary btn-lg" id="faq-cta-platform" data-i18n="faq.cta.secondary">Explorar la plataforma</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+
+
+<footer class="footer" id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-editorial">
+        <a href="../index.html" class="navbar-logo footer-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+          <img src="../nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+          <span class="visually-hidden">Nexa</span>
+        </a>
+        <p class="footer-kicker" data-i18n="shared.footer.kicker">Mantente cerca</p>
+        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
+        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
+        <div class="footer-editorial-actions">
+          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
+          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
+        </div>
+      </div>
+
+      <div class="footer-nav-shell">
+        <div class="footer-nav-grid">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.product">Producto</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.productLinks"><li><a href="platform.html">Resumen de la plataforma</a></li><li><a href="platform.html#catalog">Datos de producto</a></li><li><a href="platform.html#inventory">Inventario en vivo</a></li><li><a href="platform.html#orders">Pedidos B2B</a></li><li><a href="platform.html#traceability">Trazabilidad</a></li></ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.company">Empresa</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.companyLinks"><li><a href="company.html">Sobre Nexa</a></li><li><a href="company.html#support">Como acompanamos</a></li><li><a href="company.html#contact">Contacto</a></li><li><a href="faq.html">FAQ</a></li></ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
+            <ul class="footer-links" data-i18n-html="shared.footer.resourceLinks"><li><a href="faq.html">FAQ</a></li><li><a href="faq.html#getting-started">Primeros pasos</a></li><li><a href="faq.html#implementation">Implementacion</a></li><li><a href="company.html#contact">Solicitar una demostracion</a></li></ul>
+          </div>
+        </div>
+
+        <div class="footer-social-block">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.direct">Accesos directos</div>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Canales reales para escribir, pedir una demostracion o resolver dudas hoy.</p>
+          </div>
+          <div class="footer-social-row">
+            <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Email Nexa" data-i18n-aria-label="shared.footer.emailAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="M4 8l8 6 8-6"></path>
+              </svg>
+            </a>
+            <a href="company.html#contact" class="footer-social-link" aria-label="Go to Nexa contact" data-i18n-aria-label="shared.footer.contactAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+            <a href="faq.html" class="footer-social-link" aria-label="Open Nexa FAQ" data-i18n-aria-label="shared.footer.faqAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+            </a>
+            <a href="solutions/index.html" class="footer-social-link" aria-label="View Nexa solutions" data-i18n-aria-label="shared.footer.solutionsAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa Technologies, Inc. Todos los derechos reservados.</span>
+      <div class="footer-legal-links">
+        <a href="#" data-i18n="shared.footer.privacy">Politica de privacidad</a>
+        <a href="#" data-i18n="shared.footer.terms">Terminos del servicio</a>
+        <a href="#" data-i18n="shared.footer.cookies">Politica de cookies</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<div class="support-widget">
+  <button type="button" class="support-launcher is-hidden" id="support-launcher" aria-label="Open support panel" data-i18n-aria-label="shared.support.launcherAria" aria-controls="support-panel" aria-expanded="false" data-support-launcher>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      <path d="M8 9h8"></path>
+      <path d="M8 13h5"></path>
+    </svg>
+  </button>
+
+  <div class="support-overlay" hidden data-support-overlay></div>
+
+  <section class="support-panel" id="support-panel" role="dialog" aria-modal="true" aria-labelledby="support-panel-title" hidden data-support-panel>
+    <div class="support-panel-header">
+      <a href="../index.html" class="support-brand" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+        <img src="../nexa.svg" alt="" class="support-brand-image" width="110" height="34" />
+        <span class="visually-hidden">Nexa</span>
+      </a>
+      <button type="button" class="support-panel-close" aria-label="Close support panel" data-i18n-aria-label="shared.support.closeAria" data-support-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12"></path>
+          <path d="M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="support-panel-hero">
+      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Soporte</p>
+      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Elige el siguiente paso.</h2>
+      <p class="support-panel-copy" data-i18n="shared.support.copy">Habla con el equipo, revisa la plataforma o abre el FAQ.</p>
+    </div>
+
+    <div class="support-panel-body">
+      <a href="company.html#contact" class="support-card support-card-primary">
+        <div>
+          <strong data-i18n="shared.support.card1Title">Hablar con el equipo</strong>
+          <span data-i18n="shared.support.card1Copy">Ve directo al equipo de despliegue.</span>
+        </div>
+        <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14"></path>
+          <path d="M13 5l7 7-7 7"></path>
+        </svg>
+      </a>
+
+      <div class="support-card-grid">
+        <a href="platform.html" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card2Title">Ver la plataforma</strong>
+            <span data-i18n="shared.support.card2Copy">Revisa como funciona el sistema.</span>
+          </div>
+        </a>
+        <a href="faq.html#getting-started" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card3Title">Preguntas clave</strong>
+            <span data-i18n="shared.support.card3Copy">Abre las respuestas que mas revisan antes de decidir.</span>
+          </div>
+        </a>
+        <a href="solutions/index.html" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card4Title">Elegir solucion</strong>
+            <span data-i18n="shared.support.card4Copy">Encuentra el flujo que encaja con tu operacion.</span>
+          </div>
+        </a>
+      </div>
+
+      <a href="faq.html" class="support-search">
+        <div>
+          <span class="support-search-label" data-i18n="shared.support.searchLabel">Buscar en el FAQ</span>
+          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Ir a respuestas estructuradas y detalles de implementacion.</span>
+        </div>
+        <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+      </a>
+
+      <div class="support-composer">
+        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Inicia un mensaje</label>
+        <textarea id="support-message" class="support-composer-input" rows="3" disabled data-i18n-placeholder="shared.support.composerPlaceholder" placeholder="Live chat is coming soon. Use the contact form today."></textarea>
+        <p class="support-composer-note" data-i18n-html="shared.support.composerNote">El chat en vivo estara disponible pronto. Por ahora, <a href="company.html#contact" class="support-composer-link">usa el formulario de contacto directo</a>.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/interactions.js"></script>
+<script src="../assets/js/animations.js"></script>
+</body>
+</html>
