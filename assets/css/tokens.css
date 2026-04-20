@@ -78,7 +78,7 @@
   --control-radius-md: 14px;
 
   /* Controls */
-  --focus-ring: hsl(221 72% 45% / 0.34);
+  --focus-ring: hsl(221 72% 45%);
   --control-height-sm: 40px;
   --control-height-md: 48px;
   --control-height-lg: 56px;
@@ -105,8 +105,16 @@
   --container-std: 1400px;
   --container-narrow: 860px;
 
+  /* Semantic status tokens */
+  --c-success: hsl(160 80% 32%);
+  --c-success-bg: hsl(156 56% 95%);
+  --c-warning: hsl(38 92% 50%);
+  --c-warning-bg: hsl(48 96% 95%);
+  --c-danger: hsl(2 70% 49%);
+  --c-danger-bg: hsl(2 72% 97%);
+
   /* Transitions */
   --transition-fast: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --transition-base: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --transition-slow: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-base: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
