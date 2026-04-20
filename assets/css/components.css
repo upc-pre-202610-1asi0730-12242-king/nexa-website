@@ -19,7 +19,7 @@
   min-height: max(768px, calc(100svh - 64px));
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow: clip;
   isolation: isolate;
   background: linear-gradient(180deg, hsl(221 100% 98%) 0%, var(--c-base) 100%);
 }
@@ -7389,5 +7389,150 @@ body[data-page="home"] .app-cta-buttons .btn {
   body[data-page="home"] .app-cta-buttons .btn {
     width: 100%;
     min-width: 0;
+  }
+}
+
+
+/* --- VIEWPORT-HEIGHT RESPONSIVE: Ensure hero sections fit on laptop screens --- */
+@media (max-height: 960px) and (min-width: 769px) {
+
+  /* Home Hero: Scale down to fit MacBook / 1080p viewports */
+  .app-hero {
+    min-height: auto;
+    align-items: flex-start;
+  }
+
+  .app-hero > .container,
+  .app-hero > .container-wide {
+    padding-top: clamp(20px, 3vh, 36px);
+    padding-bottom: clamp(20px, 3vh, 36px);
+  }
+
+  .app-hero-content {
+    padding: clamp(24px, 3vh, 36px) clamp(24px, 3vw, 40px);
+  }
+
+  .app-hero-headline {
+    font-size: clamp(44px, 5vw, 72px);
+    margin-bottom: 16px;
+  }
+
+  .app-hero-lead {
+    font-size: clamp(17px, 1.5vw, 20px);
+    margin-bottom: 20px;
+  }
+
+  .app-hero-ctas {
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+
+  .app-hero-stats {
+    gap: 12px;
+  }
+
+  .app-hero-stat {
+    padding: 14px 14px 12px;
+  }
+
+  .app-hero-stat-value {
+    font-size: clamp(28px, 2.2vw, 36px);
+  }
+
+  .app-hero-stat-label {
+    font-size: 14px;
+  }
+
+  /* Inner Page Heroes: Ensure they fit without scrolling */
+  .page-hero {
+    min-height: auto;
+    padding: clamp(80px, 8vh, 100px) 0 clamp(36px, 4vh, 56px);
+  }
+
+  .page-hero-content h1,
+  .page-hero-copy-left h1 {
+    font-size: clamp(36px, 4.5vw, 64px);
+  }
+
+  .page-hero-content .text-lead {
+    font-size: clamp(17px, 1.6vw, 21px);
+  }
+
+  .hero-sidecard {
+    padding: 22px;
+  }
+
+  .hero-kpi-grid {
+    gap: 12px;
+  }
+
+  .hero-kpi-value {
+    font-size: clamp(20px, 2vw, 28px);
+  }
+
+  .hero-kpi-label {
+    font-size: 13px;
+  }
+
+  #faq-hero {
+    padding: clamp(80px, 8vh, 100px) 0 24px;
+  }
+
+  .faq-hero-sidecard {
+    padding: 18px;
+  }
+
+  .faq-hero-topic {
+    padding: 10px 14px;
+  }
+}
+
+/* Extra compact for very short screens (11-13" laptops, landscape tablets) */
+@media (max-height: 820px) and (min-width: 769px) {
+
+  .app-hero > .container,
+  .app-hero > .container-wide {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .app-hero-content {
+    padding: 20px 22px;
+  }
+
+  .app-hero-headline {
+    font-size: clamp(40px, 4.6vw, 60px);
+    margin-bottom: 12px;
+  }
+
+  .app-hero-lead {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .app-hero-ctas {
+    margin-bottom: 18px;
+  }
+
+  .app-hero-stat {
+    padding: 12px 12px 10px;
+  }
+
+  .app-hero-stat-value {
+    font-size: clamp(24px, 2vw, 32px);
+  }
+
+  .page-hero {
+    padding: 76px 0 32px;
+  }
+
+  .page-hero-content h1,
+  .page-hero-copy-left h1 {
+    font-size: clamp(32px, 4vw, 52px);
+  }
+
+  .hero-split-layout,
+  .split-hero-50 {
+    gap: 20px;
   }
 }
