@@ -2,28 +2,31 @@
 
 <br/>
 
-<img src="docs/contenido-para-nexa-v2.1/08-notas-tecnicas/nexa-logo.svg" alt="Nexa Logo" width="220"/>
+<img src="nexa.svg" alt="Nexa" width="200"/>
 
 <br/><br/>
 
 # Nexa — Landing Page
 
-**Plataforma B2B para distribuidores de productos refrigerados y congelados en Perú**
+**B2B web platform for refrigerated and frozen food distributors in Peru**
 
 <br/>
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black)
 
 <br/>
 
-![Course](https://img.shields.io/badge/Curso-1ASI0730%20Aplicaciones%20Web-0a2540?style=flat-square)
-![Cycle](https://img.shields.io/badge/Ciclo-2026--10-0a2540?style=flat-square)
-![University](https://img.shields.io/badge/Universidad-UPC-0a2540?style=flat-square)
-![Team](https://img.shields.io/badge/Equipo-King-2a67d9?style=flat-square)
-![Status](https://img.shields.io/badge/Estado-En%20desarrollo-f59e0b?style=flat-square)
+![Course](https://img.shields.io/badge/Course-1ASI0730%20Aplicaciones%20Web-0a2540?style=flat-square)
+![Cycle](https://img.shields.io/badge/Cycle-2026--10-0a2540?style=flat-square)
+![University](https://img.shields.io/badge/University-UPC-0a2540?style=flat-square)
+![Team](https://img.shields.io/badge/Team-King-2a67d9?style=flat-square)
+![Status](https://img.shields.io/badge/Status-In%20Development-f59e0b?style=flat-square)
+
+<br/>
+
+🌐 **[View live →](https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/)**
 
 <br/>
 
@@ -31,72 +34,65 @@
 
 ---
 
-## ¿Qué es Nexa?
+## What is Nexa?
 
-Nexa es una plataforma web B2B para distribuidores de productos refrigerados y congelados. El problema que atacamos es bastante concreto: hoy en día, la mayoría de pedidos entre distribuidores y sus compradores (bodegas, minimarkets, HORECA) se coordinan por WhatsApp, llamadas y planillas manuales. Eso genera errores, pérdidas y cero trazabilidad.
+Nexa is a B2B web platform for refrigerated and frozen food distributors. Most orders between distributors and their buyers (bodegas, minimarkets, HORECA) are still handled through WhatsApp voice notes and manual spreadsheets — which leads to errors, waste, and zero traceability.
 
-Con Nexa, el flujo de pedidos pasa a ser estructurado y digital:
+Nexa replaces that with a structured digital order flow:
 
 ```
-Sin Nexa:
-  Comprador → WhatsApp audio → Staff lo interpreta → Planilla manual → Despacho con errores
+Without Nexa:
+  Buyer → WhatsApp audio → Staff transcribes manually → Spreadsheet → Errors at dispatch
 
-Con Nexa:
-  Comprador → Portal B2B → Pedido estructurado → Visibilidad para todos → Despacho limpio
+With Nexa:
+  Buyer → B2B portal → Structured order → Shared visibility → Clean dispatch
 ```
 
 ---
 
-## Stack
+## Tech stack
 
-| Capa | Tecnología |
+| Layer | Technology |
 |---|---|
-| Markup | HTML5 semántico |
-| Estilos | CSS3 con tokens propios (sin frameworks) |
-| Comportamiento | JavaScript vanilla |
-| Animaciones | GSAP + ScrollTrigger |
-| Internacionalización | i18n propio (es_419 / en_US) |
-| Despliegue | GitHub Pages |
-
-La web app (repositorio separado, fase siguiente) usará Vue.js + ASP.NET Core.
+| Markup | Semantic HTML5 |
+| Styles | CSS3 with custom design tokens (no frameworks) |
+| Behavior | Vanilla JavaScript |
+| i18n | Custom i18n module (es_419 / en_US) |
+| Deployment | GitHub Pages |
 
 ---
 
-## Estructura del repo
+## Repository structure
 
 ```
 nexa-website/
 │
-├── index.html          # Landing principal
+├── index.html          # Main landing page
 ├── assets/
-│   ├── css/            # Tokens, tipografía, layout, botones, componentes
-│   ├── js/             # Animaciones, interacciones, i18n
-│   └── img/            # Assets visuales
+│   ├── css/            # Tokens, typography, layout, buttons, components
+│   ├── js/             # Animations, interactions, i18n
+│   └── img/            # Visual assets
 │
-├── pages/              # Páginas adicionales
-└── docs/               # Documentación del proyecto (no se despliega)
+└── pages/              # Additional pages
 ```
 
 ---
 
-## Cómo correrlo localmente
+## Related repositories
 
-```bash
-git clone https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-website.git
-cd nexa-website
-python3 -m http.server 8080
-# Abre http://localhost:8080
-```
-
-También funciona con Live Server de VS Code.
+| Repository | Description |
+|---|---|
+| [nexa-report](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-report) | Academic report — requirements, user stories, architecture docs |
+| [nexa-webapp](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-webapp) | Main web application (Vue.js) |
+| [nexa-platform](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform) | Backend API (ASP.NET Core) |
 
 ---
 
-## Equipo
+## Team
 
-**Organización:** [upc-pre-202610-1asi0730-12242-king](https://github.com/upc-pre-202610-1asi0730-12242-king)
+**Organization:** [upc-pre-202610-1asi0730-12242-king](https://github.com/upc-pre-202610-1asi0730-12242-king)
 
-| Código | Integrante | Rol |
+| Code | Member | Role |
 |---|---|---|
 | U202323040 | Yucra Sandoval, Diego Sebastian | Team Leader |
 | U202411937 | Marín Cueva, César Fernando | Team Member |
