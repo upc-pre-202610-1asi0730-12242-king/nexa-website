@@ -541,7 +541,7 @@ Object.assign(TRANSLATIONS.es, {
   "storage.cta.secondary": "Revisar la FAQ de seguridad →"
 });
 
-/* ---- ENGLISH TRANSLATIONS ---- */
+/* --- Traducciones al Ingles --- */
 
 Object.assign(TRANSLATIONS.en, {
   "shared.nav.aria": "Main navigation",
@@ -1083,7 +1083,7 @@ Object.assign(TRANSLATIONS.en, {
   "storage.cta.secondary": "Review security FAQ →"
 });
 
-/* ---- END ENGLISH TRANSLATIONS ---- */
+/* --- Fin Traducciones --- */
 
 function getStoredLang() {
   const saved = window.localStorage.getItem(STORAGE_KEY);

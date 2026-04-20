@@ -1,8 +1,3 @@
-/**
- * interactions.js — Nexa V5
- * Navbar scroll state + Mobile menu + Shared FAQ + Shared contact form
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   const getLang = () => (document.documentElement.lang === 'es' ? 'es' : 'en');
 
@@ -27,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const t = (key) => copy[getLang()][key] || copy.en[key];
 
-  /* ---- NAVBAR SCROLL STATE ---- */
+  /* --- Interaccion del Menu (Scroll) --- */
   const navbar = document.getElementById('navbar');
 
   if (navbar) {
@@ -39,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
-  /* ---- MOBILE NAVIGATION + DROPDOWN ---- */
+  /* --- Menu Movil y Desplegable --- */
   const mobileToggle = document.querySelector('.navbar-mobile-toggle');
   const navbarLinks = document.querySelector('.navbar-links');
   const dropdownTrigger = document.getElementById('nav-solutions-trigger');
@@ -296,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dropdownBtn) dropdownBtn.blur();
   });
 
-  /* ---- FAQ ACCORDION ---- */
+  /* --- Acordeon de Preguntas --- */
   const faqItems = Array.from(document.querySelectorAll('.faq-item'));
   const faqTimers = new WeakMap();
 
@@ -401,7 +396,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('nexa:languagechange', syncOpenFaqHeights);
   }
 
-  /* ---- CONTACT FORM ---- */
+  /* --- Formulario de Contacto --- */
   const contactForm = document.getElementById('contact-form');
   const contactSuccess = document.getElementById('contact-success');
   const contactSubmit = document.getElementById('contact-submit');
@@ -513,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('nexa:languagechange', syncTranslatedErrors);
   }
 
-  /* ---- LOGIN PLACEHOLDER ---- */
+  /* --- Simulador de Inicio de Sesion --- */
   document.querySelectorAll('[data-login-placeholder]').forEach((button) => {
     button.addEventListener('click', (event) => {
       event.preventDefault();

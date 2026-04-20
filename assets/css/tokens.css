@@ -1,20 +1,17 @@
 :root {
-  /* Brand root — Deep Operational Blue */
-  --brand-h: 221;
+    --brand-h: 221;
   --brand-s: 72%;
   --brand-l: 45%;
   --grid-gap: clamp(18px, 2vw, 28px);
 
-  /* Core tonal system */
-  --c-primary: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
+    --c-primary: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
   --c-primary-hover: hsl(var(--brand-h) var(--brand-s) 39%);
   --c-primary-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l) / 0.08);
   --c-accent: hsl(var(--brand-h) var(--brand-s) var(--brand-l) / 0.06);
   --c-gradient-primary: linear-gradient(135deg, hsl(221 75% 39%) 0%, hsl(221 72% 45%) 52%, hsl(221 78% 54%) 100%);
   --c-cta-bg: hsl(221 40% 93%);
 
-  /* V4 Home redesign — warmer operational palette */
-  --c-chaos-red: hsl(2 70% 49%);
+    --c-chaos-red: hsl(2 70% 49%);
   --c-chaos-red-light: hsl(2 70% 49% / 0.06);
   --c-chaos-bg: hsl(2 72% 97%);
   --c-nexa-green: hsl(160 80% 32%);
@@ -26,20 +23,17 @@
   --c-section-warm: hsl(221 38% 97%);
   --c-hero-overlay: linear-gradient(135deg, hsl(221 72% 45% / 0.05) 0%, hsl(221 72% 45% / 0) 60%);
 
-  /* Footer backgrounds */
-  --c-footer-bg: hsl(221 34% 11%);
+    --c-footer-bg: hsl(221 34% 11%);
   --c-footer-dark: hsl(221 42% 9%);
 
 
-  /* Backgrounds & Surfaces */
-  --c-base: hsl(221 72% 99%);
+    --c-base: hsl(221 72% 99%);
   --c-surface: hsl(221 55% 95%);
   --c-white: hsl(0 0% 100%);
   --c-dark-base: hsl(221 44% 10%);
   --c-dark-surface: hsl(221 55% 22%);
 
-  /* Text Colors */
-  --c-text-primary: hsl(221 32% 12%);
+    --c-text-primary: hsl(221 32% 12%);
   --c-text-secondary: hsl(221 24% 23%);
   --c-text-muted: hsl(221 18% 29%);
   --c-text-label: hsl(221 16% 35%);
@@ -48,28 +42,24 @@
   --c-text-inverse-secondary: hsl(221 42% 92%);
   --c-text-inverse-muted: hsl(221 26% 82%);
 
-  /* Borders */
-  --c-border-light: hsl(221 28% 82% / 0.4);
+    --c-border-light: hsl(221 28% 82% / 0.4);
   --c-border-mid: hsl(221 28% 82% / 0.78);
   --c-border-dark: hsl(221 24% 88% / 0.14);
   --c-border: hsl(221 28% 82% / 0.6);
   --c-border-hover: hsl(221 72% 45% / 0.28);
 
-  /* Additional surfaces used by internal-page components */
-  --c-surface-hover: hsl(221 45% 92%);
+    --c-surface-hover: hsl(221 45% 92%);
   --c-bg: hsl(0 0% 100%);
   --c-bg-dark: hsl(221 35% 14%);
   --c-primary-dark: hsl(var(--brand-h) var(--brand-s) 39%);
 
-  /* Box Shadows */
-  --shadow-sm: 0 16px 32px -24px hsl(221 38% 22% / 0.24), 0 2px 6px hsl(221 26% 16% / 0.05);
+    --shadow-sm: 0 16px 32px -24px hsl(221 38% 22% / 0.24), 0 2px 6px hsl(221 26% 16% / 0.05);
   --shadow-md: 0 28px 56px -32px hsl(221 38% 20% / 0.28), 0 10px 22px hsl(221 34% 18% / 0.08);
   --shadow-lg: 0 40px 84px -44px hsl(221 42% 18% / 0.34), 0 14px 30px hsl(221 32% 18% / 0.1);
   --shadow-blue: 0 14px 30px -18px hsl(221 72% 45% / 0.54);
   --shadow-blue-hover: 0 18px 38px -20px hsl(221 72% 45% / 0.62);
 
-  /* Radius */
-  --radius-sm: 10px;
+    --radius-sm: 10px;
   --radius-md: 14px;
   --radius-lg: 18px;
   --radius-xl: 28px;
@@ -77,16 +67,14 @@
   --control-radius-sm: 10px;
   --control-radius-md: 14px;
 
-  /* Controls */
-  --focus-ring: hsl(221 72% 45%);
+    --focus-ring: hsl(221 72% 45%);
   --control-height-sm: 40px;
   --control-height-md: 48px;
   --control-height-lg: 56px;
   --control-shadow-rest: var(--shadow-sm);
   --control-shadow-hover: var(--shadow-md);
 
-  /* Spacing Scale — strict 4px grid */
-  --space-1: 4px;
+    --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
@@ -100,21 +88,18 @@
   --spacing-6: var(--space-6);
   --spacing-8: var(--space-8);
 
-  /* Containers */
-  --container-mega: 1560px;
+    --container-mega: 1560px;
   --container-std: 1400px;
   --container-narrow: 860px;
 
-  /* Semantic status tokens */
-  --c-success: hsl(160 80% 32%);
+    --c-success: hsl(160 80% 32%);
   --c-success-bg: hsl(156 56% 95%);
   --c-warning: hsl(38 92% 50%);
   --c-warning-bg: hsl(48 96% 95%);
   --c-danger: hsl(2 70% 49%);
   --c-danger-bg: hsl(2 72% 97%);
 
-  /* Transitions */
-  --transition-fast: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-fast: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-base: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-slow: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }

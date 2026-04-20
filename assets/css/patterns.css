@@ -1,13 +1,7 @@
-/* ============================================================
-   PATTERNS — Nexa V5
-   Surfaces · Navbar · Footer · Section Header · Cards · Badges
-   ============================================================ */
-
 [hidden] { display: none !important; }
 
-/* ---- SURFACES ---- */
+/* --- Superficies y Fondos --- */
 
-/* Light elevated card (main card style) */
 .surface-elevated {
   background: var(--c-white);
   border: 1px solid var(--c-border-light);
@@ -15,7 +9,6 @@
   border-radius: var(--radius-xl);
 }
 
-/* Standard card on light bg */
 .surface-card {
   background: var(--c-white);
   border: 1px solid var(--c-border-mid);
@@ -23,27 +16,23 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* Surface on grey bg */
 .surface-base {
   background: var(--c-surface);
   border-radius: var(--radius-lg);
 }
 
-/* Dark surface */
 .surface-dark {
   background: var(--c-dark-surface);
   color: var(--c-white);
   border-radius: var(--radius-lg);
 }
 
-/* Primary blue surface */
 .surface-primary {
   background: var(--c-primary);
   color: var(--c-white);
   border-radius: var(--radius-lg);
 }
 
-/* Glassmorphism — preserved for potential use in app layer, not used in landing navbar */
 .surface-glass {
   background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(20px);
@@ -52,12 +41,7 @@
   box-shadow: 0 4px 24px -4px rgba(10, 15, 26, 0.08), 0 1px 4px rgba(10, 15, 26, 0.04);
 }
 
-/* ---- NAVBAR — Flat Enterprise Bar ---- */
-/*
- * Architecture decision: full-width sticky bar, solid white, no blur, no pill.
- * Structured for future expansion: Use Cases, Resources, FAQ can be added
- * to .navbar-links without any layout redesign.
- */
+/* --- Navegacion --- */
 .navbar {
   position: sticky;
   top: 0;
@@ -76,7 +60,6 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* Inner container — respects container-std for consistent alignment with page content */
 .navbar-inner {
   width: 100%;
   max-width: var(--container-std);
@@ -90,7 +73,6 @@
   position: relative;
 }
 
-/* Logo — left anchor */
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -106,8 +88,6 @@
   max-width: none;
 }
 
-/* Primary nav links — center zone, expansion-ready */
-/* Supports up to 6 items at 1280px container without overflow */
 .navbar-links {
   display: flex;
   align-items: center;
@@ -167,7 +147,6 @@
   outline-offset: 3px;
 }
 
-/* Right action zone — Log In (ghost) + Get Started (primary) */
 .navbar-actions {
   display: flex;
   align-items: center;
@@ -175,7 +154,6 @@
   flex-shrink: 0;
 }
 
-/* Ensure consistent height between actions in navbar context */
 .navbar-actions .btn,
 .navbar-actions .navbar-link-action {
   height: 40px;
@@ -239,7 +217,6 @@
   display: none;
 }
 
-/* Mobile nav toggle */
 .navbar-mobile-toggle {
   display: none;
   cursor: pointer;
@@ -263,12 +240,7 @@
 }
 
 
-/* ---- NAVBAR DROPDOWN ---- */
-/*
- * Dropdown trigger — wraps a nav link button + the panel.
- * Apple-inspired: subtlely dims the page content below the bar when open.
- * Effect is restrained: no blur, just a very light opacity wash.
- */
+/* --- Navegacion --- */
 .dropdown-trigger {
   position: relative;
   display: flex;
@@ -284,8 +256,7 @@
   cursor: pointer;
   font-family: var(--font-body);
   color: inherit;
-  /* Inherits .navbar-link styles via classes */
-}
+  }
 
 .dropdown-chevron {
   width: 14px;
@@ -367,8 +338,6 @@
   margin-top: 2px;
 }
 
-/* Overlay — Apple-inspired restrained dimming */
-/* Extremely light: just enough to signal modal context, no drama */
 .navbar-overlay {
   position: fixed;
   inset: 64px 0 0 0;
@@ -383,12 +352,7 @@
   opacity: 1;
 }
 
-/* ---- FOOTER ---- */
-/*
- * Dark navy footer — deep blue that reads as a premium close, coherent with Nexa brand.
- * CTA section (#E8EDF6 blue-tinted grey) → Footer (#0B1120 deep navy) creates
- * a strong two-step descent that anchors the page architecturally.
- */
+/* --- Pie de Pagina --- */
 .footer {
   background:
     radial-gradient(circle at top left, hsl(221 72% 45% / 0.16) 0%, transparent 28%),
@@ -931,7 +895,7 @@
 
 }
 
-/* ---- SECTION HEADER ---- */
+/* --- Cabeceras de Seccion --- */
 .section-header {
   text-align: center;
   max-width: var(--container-narrow);
@@ -943,7 +907,7 @@
   margin-bottom: clamp(40px, 5vw, 64px);
 }
 
-/* ---- BADGE / PILL ---- */
+/* --- Insignias (Badges) --- */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -979,7 +943,7 @@
   flex-shrink: 0;
 }
 
-/* ---- BENTO CARD ---- */
+/* --- Tarjetas de Contenido --- */
 .bento-card {
   padding: var(--space-8);
   display: flex;
@@ -987,7 +951,7 @@
   overflow: hidden;
 }
 
-/* ---- TESTIMONIAL CARD ---- */
+/* --- Testimonios --- */
 .testimonial-card {
   padding: var(--space-8);
   position: relative;
@@ -1037,7 +1001,7 @@
   line-height: 1.4;
 }
 
-/* ---- HORIZONTAL SCROLL STRIP ---- */
+/* --- Listas Scroll --- */
 .scroll-strip {
   display: flex;
   gap: var(--space-6);
@@ -1059,7 +1023,7 @@
   flex-shrink: 0;
 }
 
-/* ---- STATUS INDICATORS ---- */
+/* --- Indicadores de Estado --- */
 .status-dot {
   display: inline-flex;
   align-items: center;

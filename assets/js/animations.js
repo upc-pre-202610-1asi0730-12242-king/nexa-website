@@ -1,8 +1,3 @@
-/**
- * animations.js — Nexa V5
- * Smooth scroll reveal without first-load flicker.
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   const revealElements = Array.from(document.querySelectorAll('.reveal'));
 
