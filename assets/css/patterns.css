@@ -1,7 +1,9 @@
 /* ============================================================
-   PATTERNS — Nexa V3
+   PATTERNS — Nexa V5
    Surfaces · Navbar · Footer · Section Header · Cards · Badges
    ============================================================ */
+
+[hidden] { display: none !important; }
 
 /* ---- SURFACES ---- */
 

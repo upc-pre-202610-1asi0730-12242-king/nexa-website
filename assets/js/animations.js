@@ -1,5 +1,5 @@
 /**
- * animations.js — Nexa V3
+ * animations.js — Nexa V5
  * Smooth scroll reveal without first-load flicker.
  */
 
