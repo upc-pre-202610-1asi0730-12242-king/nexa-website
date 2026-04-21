@@ -96,7 +96,7 @@ nexa-website/
 |---|---|---|
 | U202323040 | Yucra Sandoval, Diego Sebastian | Team Leader |
 | U202411937 | Marín Cueva, César Fernando | Team Member |
-| — | Verde Bueno, Joaquín Francisco | Team Member |
+| U20241A054 | Verde Bueno, Joaquín Francisco | Team Member |
 | — | Torrejón De Los Santos, Gino Rodrigo | Team Member |
 | U202413142 | Rojas Mancilla, Gerard Gianpier | Team Member |
 
