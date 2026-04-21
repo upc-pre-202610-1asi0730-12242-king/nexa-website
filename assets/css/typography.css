@@ -149,3 +149,22 @@ a {
   white-space: nowrap;
   border: 0;
 }
+
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--c-primary, #2554df);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  transition: top 0.15s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
