@@ -1,45 +1,49 @@
-/* ============================================================
-   LAYOUT — Nexa V3
-   Containers · Section Rhythm · Grids · Flex Utilities
-   ============================================================ */
-
-/* Containers */
 .container {
   width: 100%;
   max-width: var(--container-std);
   margin: 0 auto;
-  padding: 0 clamp(24px, 4vw, 48px);
+  padding: 0 clamp(24px, 2.8vw, 40px);
 }
 
 .container-wide {
   width: 100%;
   max-width: var(--container-mega);
   margin: 0 auto;
-  padding: 0 clamp(24px, 4vw, 80px);
+  padding: 0 clamp(24px, 3vw, 56px);
 }
 
 .container-narrow {
   width: 100%;
   max-width: var(--container-narrow);
   margin: 0 auto;
-  padding: 0 clamp(24px, 4vw, 48px);
+  padding: 0 clamp(24px, 2.8vw, 40px);
 }
 
-/* Section Rhythm */
 .section {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: clamp(84px, 7vw, 112px);
+  padding-bottom: clamp(84px, 7vw, 112px);
 }
 
 .section-sm {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: clamp(56px, 5vw, 72px);
+  padding-bottom: clamp(56px, 5vw, 72px);
 }
 
-/* Hero Grid (2-column, optical balance centered)
- * 1fr / 1.08fr: mockup is slightly wider to account for the visual mass
- * of shadowed card vs. text block. align-items: center for vertical centering.
- */
+.section-after-hero {
+  padding-top: clamp(var(--space-12), 5vw, var(--space-16));
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.span-1 { grid-column: span 1; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: 1 / -1; }
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
@@ -47,7 +51,6 @@
   align-items: center;
 }
 
-/* Bento Grid (3-column for Ecosystem) */
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -55,14 +58,12 @@
   gap: var(--space-6);
 }
 
-/* 2-Column Grid (equal) */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
 }
 
-/* 2-Column Grid (asymmetric: 55/45) */
 .grid-2-asym {
   display: grid;
   grid-template-columns: 1fr 0.85fr;
@@ -70,18 +71,15 @@
   align-items: center;
 }
 
-/* 3-Column Grid */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
 }
 
-/* Span helpers */
 .col-span-2 { grid-column: span 2; }
 .row-span-2 { grid-row: span 2; }
 
-/* Responsive */
 @media (max-width: 1280px) {
   .hero-grid {
     gap: 60px;
@@ -92,6 +90,15 @@
 }
 
 @media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .span-3,
+  .span-4 {
+    grid-column: span 2;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -112,6 +119,16 @@
 }
 
 @media (max-width: 768px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2,
+  .span-3,
+  .span-4 {
+    grid-column: span 1;
+  }
+
   .bento-grid {
     grid-template-columns: 1fr;
   }
@@ -121,9 +138,11 @@
   .grid-3 {
     grid-template-columns: 1fr;
   }
+  .section-after-hero {
+    padding-top: var(--space-12);
+  }
 }
 
-/* Flex Utilities */
 .d-flex { display: flex; }
 .flex-col { flex-direction: column; }
 .align-center { align-items: center; }
@@ -135,7 +154,6 @@
 .flex-wrap { flex-wrap: wrap; }
 .flex-1 { flex: 1; }
 
-/* Gap Scale */
 .gap-1 { gap: var(--space-1); }
 .gap-2 { gap: var(--space-2); }
 .gap-3 { gap: var(--space-3); }
@@ -144,7 +162,6 @@
 .gap-8 { gap: var(--space-8); }
 .gap-12 { gap: var(--space-12); }
 
-/* Margin / Padding helpers */
 .mt-auto { margin-top: auto; }
 .mb-4 { margin-bottom: var(--space-4); }
 .mb-6 { margin-bottom: var(--space-6); }
