@@ -2,6 +2,18 @@
 
 This changelog summarizes the reconstructed GitFlow releases for the Nexa website.
 
+## v1.0.0 - First official landing page delivery
+
+Release date: 2026-04-25
+
+### Highlights
+- Delivered the first official landing page structure.
+- Moved the main pages into the final `pages/` organization.
+
+### Validation
+- Opened the static pages locally during reconstruction.
+- Checked route and asset consistency for the release scope.
+
 ## v0.2.0 - Early brand, layout, and content sections
 
 Release date: 2026-04-14
