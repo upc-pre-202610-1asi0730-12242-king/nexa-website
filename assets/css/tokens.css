@@ -9,7 +9,7 @@
   --c-primary-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l) / 0.08);
   --c-accent: hsl(var(--brand-h) var(--brand-s) var(--brand-l) / 0.06);
   --c-gradient-primary: linear-gradient(135deg, hsl(221 75% 39%) 0%, hsl(221 72% 45%) 52%, hsl(221 78% 54%) 100%);
-  --c-cta-bg: hsl(221 40% 93%);
+  --c-cta-bg: hsl(35 14% 95%);
 
     --c-chaos-red: hsl(2 70% 49%);
   --c-chaos-red-light: hsl(2 70% 49% / 0.06);
@@ -19,8 +19,8 @@
   --c-nexa-green-bg: hsl(156 56% 95%);
   --c-outcome-green: hsl(160 80% 32%);
   --c-outcome-green-bg: hsl(156 56% 95%);
-  --c-outcome-blue-bg: hsl(221 72% 97%);
-  --c-section-warm: hsl(221 38% 97%);
+  --c-outcome-blue-bg: hsl(35 14% 97%);
+  --c-section-warm: hsl(35 14% 96%);
   --c-hero-overlay: linear-gradient(135deg, hsl(221 72% 45% / 0.05) 0%, hsl(221 72% 45% / 0) 60%);
 
     --c-footer-bg: hsl(221 34% 11%);
@@ -33,22 +33,22 @@
   --c-dark-base: hsl(221 44% 10%);
   --c-dark-surface: hsl(221 55% 22%);
 
-    --c-text-primary: hsl(221 32% 12%);
-  --c-text-secondary: hsl(221 24% 23%);
-  --c-text-muted: hsl(221 18% 29%);
-  --c-text-label: hsl(221 16% 35%);
+    --c-text-primary: hsl(220 13% 9%);
+  --c-text-secondary: hsl(215 14% 30%);
+  --c-text-muted: hsl(215 10% 42%);
+  --c-text-label: hsl(215 9% 46%);
   --c-text-on-primary: hsl(0 0% 100%);
   --c-text-inverse: hsl(0 0% 100%);
   --c-text-inverse-secondary: hsl(221 42% 92%);
   --c-text-inverse-muted: hsl(221 26% 82%);
 
-    --c-border-light: hsl(221 28% 82% / 0.4);
-  --c-border-mid: hsl(221 28% 82% / 0.78);
-  --c-border-dark: hsl(221 24% 88% / 0.14);
-  --c-border: hsl(221 28% 82% / 0.6);
+    --c-border-light: hsl(220 13% 91% / 0.6);
+  --c-border-mid: hsl(220 13% 91% / 0.9);
+  --c-border-dark: hsl(220 13% 91% / 0.18);
+  --c-border: hsl(220 13% 91% / 0.75);
   --c-border-hover: hsl(221 72% 45% / 0.28);
 
-    --c-surface-hover: hsl(221 45% 92%);
+    --c-surface-hover: hsl(35 10% 93%);
   --c-bg: hsl(0 0% 100%);
   --c-bg-dark: hsl(221 35% 14%);
   --c-primary-dark: hsl(var(--brand-h) var(--brand-s) 39%);
@@ -99,7 +99,7 @@
   --c-danger: hsl(2 70% 49%);
   --c-danger-bg: hsl(2 72% 97%);
 
-    --transition-fast: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --transition-base: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --transition-slow: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
