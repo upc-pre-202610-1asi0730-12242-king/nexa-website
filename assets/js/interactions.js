@@ -508,13 +508,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('nexa:languagechange', syncTranslatedErrors);
   }
 
-  /* --- Simulador de Inicio de Sesion --- */
+  /* --- Acceso a la Aplicacion --- */
   document.querySelectorAll('[data-login-placeholder]').forEach((button) => {
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      if (typeof window.showToast === 'function') {
-        window.showToast(getLang());
-      }
+      window.location.href = 'https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-webapp/';
     });
   });
 
