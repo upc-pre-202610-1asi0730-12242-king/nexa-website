@@ -27,8 +27,8 @@
   --c-footer-dark: hsl(221 42% 9%);
 
 
-    --c-base: hsl(221 72% 99%);
-  --c-surface: hsl(221 55% 95%);
+    --c-base: hsl(35 14% 97%);
+  --c-surface: hsl(35 10% 92%);
   --c-white: hsl(0 0% 100%);
   --c-dark-base: hsl(221 44% 10%);
   --c-dark-surface: hsl(221 55% 22%);
@@ -59,13 +59,13 @@
   --shadow-blue: 0 14px 30px -18px hsl(221 72% 45% / 0.54);
   --shadow-blue-hover: 0 18px 38px -20px hsl(221 72% 45% / 0.62);
 
-    --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 18px;
-  --radius-xl: 28px;
+    --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
   --radius-full: 9999px;
-  --control-radius-sm: 10px;
-  --control-radius-md: 14px;
+  --control-radius-sm: 8px;
+  --control-radius-md: 10px;
 
     --focus-ring: hsl(221 72% 45%);
   --control-height-sm: 40px;
