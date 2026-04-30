@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const getLang = () => (document.documentElement.lang === 'es' ? 'es' : 'en');
+  const WEBAPP_BASE = 'https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-webapp';
+  const getLang = () => (document.documentElement.lang.startsWith('es') ? 'es' : 'en');
 
   const copy = {
     en: {
@@ -512,7 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-login-placeholder]').forEach((button) => {
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      window.location.href = 'https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-webapp/';
+      window.location.href = `${WEBAPP_BASE}/auth/login`;
     });
   });
 
