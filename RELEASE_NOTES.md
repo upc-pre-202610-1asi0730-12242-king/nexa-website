@@ -2,6 +2,30 @@
 
 This changelog summarizes the reconstructed GitFlow releases for the Nexa website.
 
+## v1.1.0 - Content and navigation improvements
+
+Release date: 2026-04-29
+
+### Highlights
+- Improved deployment checks and bilingual content mappings.
+- Aligned navigation text across home and inner pages.
+
+### Validation
+- Opened the static pages locally during reconstruction.
+- Checked route and asset consistency for the release scope.
+
+## v1.0.1 - Patch fixes after first delivery
+
+Release date: 2026-04-26
+
+### Highlights
+- Corrected navigation fallback links after the first delivery.
+- Kept the first release stable without adding new sections.
+
+### Validation
+- Opened the static pages locally during reconstruction.
+- Checked route and asset consistency for the release scope.
+
 ## v1.0.0 - First official landing page delivery
 
 Release date: 2026-04-25
