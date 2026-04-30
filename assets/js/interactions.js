@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const getLang = () => (document.documentElement.lang === 'es' ? 'es' : 'en');
+  const WEBAPP_BASE = 'https://nexa-2f1bb.web.app';
+  const getLang = () => (document.documentElement.lang.startsWith('es') ? 'es' : 'en');
 
   const copy = {
     en: {
@@ -508,13 +509,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('nexa:languagechange', syncTranslatedErrors);
   }
 
-  /* --- Simulador de Inicio de Sesion --- */
+  /* --- Acceso a la Aplicacion --- */
   document.querySelectorAll('[data-login-placeholder]').forEach((button) => {
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      if (typeof window.showToast === 'function') {
-        window.showToast(getLang());
-      }
+      window.location.href = `${WEBAPP_BASE}/#/auth/login`;
     });
   });
 
