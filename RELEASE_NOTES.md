@@ -2,6 +2,18 @@
 
 This changelog summarizes the reconstructed GitFlow releases for the Nexa website.
 
+## v1.2.0 - Responsive and interaction refinements
+
+Release date: 2026-05-01
+
+### Highlights
+- Refined responsive behavior and interaction scripts.
+- Improved menu, support, and page behavior for static hosting.
+
+### Validation
+- Opened the static pages locally during reconstruction.
+- Checked route and asset consistency for the release scope.
+
 ## v1.1.0 - Content and navigation improvements
 
 Release date: 2026-04-29
