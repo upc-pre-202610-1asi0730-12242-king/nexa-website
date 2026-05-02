@@ -513,7 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-login-placeholder]').forEach((button) => {
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      window.location.href = `${WEBAPP_BASE}/auth/login`;
+      window.location.href = `${WEBAPP_BASE}/#/auth/login`;
     });
   });
 
