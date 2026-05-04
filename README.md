@@ -22,7 +22,7 @@
 ![Cycle](https://img.shields.io/badge/Cycle-2026--10-0a2540?style=flat-square)
 ![University](https://img.shields.io/badge/University-UPC-0a2540?style=flat-square)
 ![Team](https://img.shields.io/badge/Team-King-2a67d9?style=flat-square)
-![Status](https://img.shields.io/badge/Status-In%20Development-f59e0b?style=flat-square)
+![Status](https://img.shields.io/badge/Status-TB1%20Active-22c55e?style=flat-square)
 
 <br/>
 
@@ -40,7 +40,7 @@ Nexa is a B2B web platform for refrigerated and frozen food distributors. Most o
 
 Nexa replaces that with a structured digital order flow:
 
-```
+```text
 Without Nexa:
   Buyer → WhatsApp audio → Staff transcribes manually → Spreadsheet → Errors at dispatch
 
@@ -64,7 +64,7 @@ With Nexa:
 
 ## Repository structure
 
-```
+```text
 nexa-website/
 │
 ├── index.html          # Main landing page
@@ -78,13 +78,26 @@ nexa-website/
 
 ---
 
+## Branching strategy
+
+| Branch | Purpose |
+|---|---|
+| `main` | Stable deliverable version |
+| `develop` | Integration branch |
+| `feature/*` | New features |
+| `fix/*` | Bug fixes |
+
+All commits follow [Conventional Commits 1.0.0](https://www.conventionalcommits.org/): `type(scope): description`.
+
+---
+
 ## Related repositories
 
 | Repository | Description |
 |---|---|
 | [nexa-report](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-report) | Academic report — requirements, user stories, architecture docs |
-| [nexa-webapp](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-webapp) | Main web application (Vue.js) |
-| [nexa-platform](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform) | Backend API (ASP.NET Core) |
+| [nexa-webapp](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-webapp) | Main web application (Vue.js) — [live](https://nexa-2f1bb.web.app) |
+| [nexa-platform](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform) | Backend service layer (ASP.NET Core, planned for next milestone) |
 
 ---
 
@@ -97,7 +110,7 @@ nexa-website/
 | U202323040 | Yucra Sandoval, Diego Sebastian | Team Leader |
 | U202411937 | Marín Cueva, César Fernando | Team Member |
 | U20241A054 | Verde Bueno, Joaquín Francisco | Team Member |
-| — | Torrejón De Los Santos, Gino Rodrigo | Team Member |
+| U202416289 | Torrejón De Los Santos, Gino Rodrigo | Team Member |
 | U202413142 | Rojas Mancilla, Gerard Gianpier | Team Member |
 
 ---
