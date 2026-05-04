@@ -1,56 +1,90 @@
+<div align="center">
+
+<br/>
+
+<img src="nexa.svg" alt="Nexa" width="200"/>
+
+<br/><br/>
+
 # Nexa — Landing Page
 
-Public website for Nexa, a B2B web platform for refrigerated and frozen product distribution in Peru.
+**B2B web platform for refrigerated and frozen food distributors in Peru**
+
+<br/>
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+<br/>
+
+![Course](https://img.shields.io/badge/Course-1ASI0730%20Aplicaciones%20Web-0a2540?style=flat-square)
+![Cycle](https://img.shields.io/badge/Cycle-2026--10-0a2540?style=flat-square)
+![University](https://img.shields.io/badge/University-UPC-0a2540?style=flat-square)
+![Team](https://img.shields.io/badge/Team-King-2a67d9?style=flat-square)
+![Status](https://img.shields.io/badge/Status-TB1%20Active-22c55e?style=flat-square)
+
+<br/>
+
+🌐 **[View live →](https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/)**
+
+<br/>
+
+</div>
 
 ---
 
-## Project scope
+## What is Nexa?
 
-| Field | Value |
+Nexa is a B2B web platform for refrigerated and frozen food distributors. Most orders between distributors and their buyers (bodegas, minimarkets, HORECA) are still handled through WhatsApp voice notes and manual spreadsheets — which leads to errors, waste, and zero traceability.
+
+Nexa replaces that with a structured digital order flow:
+
+```text
+Without Nexa:
+  Buyer → WhatsApp audio → Staff transcribes manually → Spreadsheet → Errors at dispatch
+
+With Nexa:
+  Buyer → B2B portal → Structured order → Shared visibility → Clean dispatch
+```
+
+---
+
+## Tech stack
+
+| Layer | Technology |
 |---|---|
-| Startup / Team | King |
-| Product | Nexa |
-| Course | 1ASI0730 Aplicaciones Web |
-| Cycle | 2026-10 |
-| Delivery | TB1 |
-| University | Universidad Peruana de Ciencias Aplicadas (UPC) |
+| Markup | Semantic HTML5 |
+| Styles | CSS3 with custom design tokens (no frameworks) |
+| Behavior | Vanilla JavaScript |
+| i18n | Custom i18n module (es_419 / en_US) |
+| Deployment | GitHub Pages |
 
 ---
 
-## Repository purpose
-
-This repository contains only the static landing page for Nexa. It communicates the product value proposition, target segments, and platform modules to potential clients and evaluators. It does not include the main web application or the academic report.
-
----
-
-## Structure
+## Repository structure
 
 ```text
 nexa-website/
-├── index.html
+│
+├── index.html          # Main landing page
 ├── assets/
-│   ├── css/
-│   ├── js/
-│   └── img/
-├── pages/
-└── .github/workflows/
+│   ├── css/            # Tokens, typography, layout, buttons, components
+│   ├── js/             # Animations, interactions, i18n
+│   └── img/            # Visual assets
+│
+└── pages/              # Additional pages
 ```
 
 ---
 
-## Live site
+## Related repositories
 
-[https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/](https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/)
-
----
-
-## Local preview
-
-```bash
-python3 -m http.server 5173
-```
-
-Then open `http://localhost:5173` in your browser.
+| Repository | Description |
+|---|---|
+| [nexa-report](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-report) | Academic report — requirements, user stories, architecture docs |
+| [nexa-webapp](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-webapp) | Main web application (Vue.js) |
+| [nexa-platform](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform) | Planned service layer (future milestone) |
 
 ---
 
@@ -68,6 +102,14 @@ Then open `http://localhost:5173` in your browser.
 
 ---
 
+<div align="center">
+
+<br/>
+
 **Nexa** · Universidad Peruana de Ciencias Aplicadas · 2026-10
 
 *1ASI0730 — Aplicaciones Web · Ingeniería de Software*
+
+<br/>
+
+</div>
