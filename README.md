@@ -40,7 +40,7 @@ Nexa is a B2B web platform for refrigerated and frozen food distributors. Most o
 
 Nexa replaces that with a structured digital order flow:
 
-```
+```text
 Without Nexa:
   Buyer → WhatsApp audio → Staff transcribes manually → Spreadsheet → Errors at dispatch
 
@@ -64,7 +64,7 @@ With Nexa:
 
 ## Repository structure
 
-```
+```text
 nexa-website/
 │
 ├── index.html          # Main landing page
@@ -84,7 +84,7 @@ nexa-website/
 |---|---|
 | [nexa-report](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-report) | Academic report — requirements, user stories, architecture docs |
 | [nexa-webapp](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-webapp) | Main web application (Vue.js) |
-| [nexa-platform](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform) | Backend API (ASP.NET Core) |
+| [nexa-platform](https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform) | Planned service layer (future milestone) |
 
 ---
 
