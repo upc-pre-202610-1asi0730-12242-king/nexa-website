@@ -2,6 +2,18 @@
 
 This changelog summarizes the reconstructed GitFlow releases for the Nexa website.
 
+## v2.0.0 - Second website delivery with new pages
+
+Release date: 2026-05-03
+
+### Highlights
+- Added the second delivery page set and legal route structure.
+- Stabilized footer links and page consistency for review.
+
+### Validation
+- Opened the static pages locally during reconstruction.
+- Checked route and asset consistency for the release scope.
+
 ## v1.2.0 - Responsive and interaction refinements
 
 Release date: 2026-05-01
