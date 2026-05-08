@@ -2,6 +2,30 @@
 
 This changelog summarizes the reconstructed GitFlow releases for the Nexa website.
 
+## v2.1.0 - Pricing, FAQ, and solution page polish
+
+Release date: 2026-05-07
+
+### Highlights
+- Added the pricing page, pricing CSS, pricing script, and root redirect.
+- Aligned pricing content with the website navigation.
+
+### Validation
+- Opened the static pages locally during reconstruction.
+- Checked route and asset consistency for the release scope.
+
+## v2.0.1 - Patch fixes for redirects and navigation
+
+Release date: 2026-05-04
+
+### Highlights
+- Added a pricing route fallback while the full pricing page was prepared.
+- Reduced broken-link risk from direct pricing URLs.
+
+### Validation
+- Opened the static pages locally during reconstruction.
+- Checked route and asset consistency for the release scope.
+
 ## v2.0.0 - Second website delivery with new pages
 
 Release date: 2026-05-03
