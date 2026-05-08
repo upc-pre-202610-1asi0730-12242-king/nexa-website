@@ -1043,8 +1043,8 @@
 .status-optimal::before { background: #22C55E; }
 .status-optimal { color: #16A34A; }
 
-.status-alert::before { background: #F59E0B; }
-.status-alert { color: #D97706; }
+.status-alert::before { background: var(--c-cyan); }
+.status-alert { color: #0369a1; }
 
 .status-critical::before { background: #EF4444; }
 .status-critical { color: #DC2626; }

@@ -517,5 +517,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* --- Cookie Consent Banner --- */
+  const cookieBanner = document.getElementById('cookie-banner');
+  const cookieAcceptBtn = document.getElementById('cookie-accept-btn');
+
+  if (cookieBanner && cookieAcceptBtn) {
+    const hasConsented = localStorage.getItem('nexa-cookie-consent') === 'accepted';
+    if (!hasConsented) {
+      cookieBanner.removeAttribute('hidden');
+      window.setTimeout(() => {
+        cookieBanner.classList.add('is-visible');
+      }, 500);
+    }
+
+    cookieAcceptBtn.addEventListener('click', () => {
+      localStorage.setItem('nexa-cookie-consent', 'accepted');
+      cookieBanner.classList.remove('is-visible');
+      window.setTimeout(() => {
+        cookieBanner.setAttribute('hidden', 'true');
+      }, 400);
+    });
+  }
+
   syncShellState();
 });
