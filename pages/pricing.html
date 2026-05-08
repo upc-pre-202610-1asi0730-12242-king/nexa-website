@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2f5bea" />
+  <meta name="description" data-i18n-content="pricing.meta.description" content="Nexa pricing plans for buyer visibility, commercial validation, operations control, billing previews and dedicated integrations." />
+  <meta name="keywords" content="Nexa pricing, cold-chain SaaS, buyer portal, billing demo, operations workspace" />
+  <meta name="author" content="Nexa" />
+  <meta property="og:title" data-i18n-content="pricing.meta.ogTitle" content="Nexa - Pricing" />
+  <meta property="og:description" data-i18n-content="pricing.meta.ogDescription" content="Plans for operational maturity across buyer visibility, commercial validation, dispatch control and billing previews." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/pages/pricing.html" />
+  <meta property="og:site_name" content="Nexa" />
+  <link rel="canonical" href="https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/pages/pricing.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title data-i18n-content="pricing.meta.title">Nexa - Pricing</title>
+  <link rel="icon" type="image/svg+xml" href="../nexa.svg" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/pricing.css" />
+</head>
+<body data-page="pricing" data-lang="en">
+<a href="#pricing-main" class="skip-to-content">Skip to content</a>
+
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
+  <div class="navbar-inner">
+    <a href="../index.html" class="navbar-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+      <img src="../nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+      <span class="visually-hidden">Nexa</span>
+    </a>
+
+    <div class="navbar-links" id="navbar-links">
+      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Plataforma</a>
+
+      <div class="dropdown-trigger" id="nav-solutions-trigger">
+        <button class="navbar-link dropdown-btn" type="button" id="nav-solutions"
+                aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true"
+                data-i18n="shared.nav.solutions">
+          Soluciones
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="dropdown-panel" id="solutions-dropdown" role="menu">
+          <a href="solutions/importers.html" class="dropdown-item" role="menuitem" id="nav-importers">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importadores y mayoristas</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Ingreso portuario para lotes de queso, charcuteria y lacteos.</div>
+            </div>
+          </a>
+          <a href="solutions/distributors.html" class="dropdown-item" role="menuitem" id="nav-distributors">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distribuidores</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Cumplimiento de ultima milla, reposicion FEFO y pedidos B2B.</div>
+            </div>
+          </a>
+          <a href="solutions/cold-storage.html" class="dropdown-item" role="menuitem" id="nav-cold-storage">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Operadores de camaras frias</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Camaras de queso, camaras lacteas y registros de inocuidad alimentaria.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Empresa</a>
+      <a href="pricing.html" class="navbar-link active" id="nav-pricing" aria-current="page" data-i18n="shared.nav.pricing">Pricing</a>
+      <a href="faq.html" class="navbar-link navbar-link-mobile-only" id="nav-faq-mobile" data-i18n="shared.nav.faq">FAQ</a>
+
+      <div class="navbar-mobile-actions">
+        <div class="lang-switch" role="group" aria-label="Selector de idioma" data-i18n-aria-label="shared.nav.languageAria">
+          <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+          <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+        <a href="https://nexa-2f1bb.web.app" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      </div>
+    </div>
+
+    <div class="navbar-actions">
+      <div class="lang-switch" role="group" aria-label="Selector de idioma" data-i18n-aria-label="shared.nav.languageAria">
+        <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+        <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+      <a href="https://nexa-2f1bb.web.app" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      <a href="faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
+    </div>
+
+    <button type="button" class="navbar-mobile-toggle" aria-label="Abrir navegacion" data-i18n-aria-label="shared.nav.mobileToggle"
+            aria-expanded="false" aria-controls="navbar-links" id="mobile-menu-toggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<div class="navbar-overlay" id="navbar-overlay" aria-hidden="true"></div>
+
+<main id="pricing-main">
+  <header class="pricing-hero" aria-labelledby="pricing-title">
+    <div class="pricing-hero-grid" aria-hidden="true"></div>
+    <div class="pricing-hero-glow" aria-hidden="true"></div>
+    <div class="container-wide">
+      <div class="pricing-hero-layout reveal">
+        <div class="pricing-hero-copy">
+          <div class="badge mb-4" data-i18n="pricing.hero.badge">Pricing</div>
+          <h1 id="pricing-title" data-i18n="pricing.hero.title">Pricing built for operational maturity.</h1>
+          <p data-i18n="pricing.hero.copy">Start with buyer visibility, scale into commercial validation, dispatch control, billing and dedicated integrations as your cold-chain operation grows.</p>
+          <div class="pricing-hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg" data-i18n="shared.nav.contactUs">Contact Us</a>
+            <a href="https://nexa-2f1bb.web.app" class="btn btn-secondary-light btn-lg" data-i18n="shared.nav.login">Login</a>
+          </div>
+        </div>
+
+        <div class="pricing-hero-panel" aria-label="Operational maturity preview" data-i18n-aria-label="pricing.hero.panelAria">
+          <div class="mock-window-head">
+            <span></span><span></span><span></span>
+            <strong data-i18n="pricing.hero.panelTitle">Nexa workspace</strong>
+          </div>
+          <div class="hero-flow-card">
+            <span class="hero-flow-kicker" data-i18n="pricing.hero.panelPlan">Standard plan</span>
+            <strong data-i18n="pricing.hero.panelPlanTitle">Commercial + Operations + Buyer Portal</strong>
+            <p data-i18n="pricing.hero.panelPlanDesc">Validation, stock, dispatch, documents and billing preview in one demo-ready flow.</p>
+          </div>
+          <div class="hero-flow-list">
+            <span data-i18n="pricing.hero.panelStep1">Purchase request received</span>
+            <span data-i18n="pricing.hero.panelStep2">Inventory validated</span>
+            <span data-i18n="pricing.hero.panelStep3">Payment method selected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="pricing-section" id="plans" aria-labelledby="plans-title">
+    <div class="container-wide">
+      <div class="pricing-section-head reveal">
+        <div>
+          <div class="badge mb-4" data-i18n="pricing.plans.badge">Plans</div>
+          <h2 id="plans-title" data-i18n="pricing.plans.title">Choose the operating layer you need now.</h2>
+        </div>
+        <p data-i18n="pricing.plans.copy">Plan names and feature gates are aligned to the current WebApp subscription model. Standard is the recommended academic demo baseline.</p>
+      </div>
+
+      <div class="plan-card-grid reveal reveal-delay-1" role="list">
+        <button class="plan-card" type="button" data-plan="starter" aria-pressed="false" role="listitem">
+          <span class="plan-card-eyebrow" data-i18n="pricing.plans.starter.kicker">Entry visibility</span>
+          <strong data-i18n="pricing.plans.starter.title">Starter</strong>
+          <span class="plan-price" data-i18n-html="pricing.plans.starter.price">USD 199<span>/month</span></span>
+          <span class="plan-card-purpose" data-i18n="pricing.plans.starter.purpose">Buyer visibility and basic order tracking.</span>
+          <span class="plan-card-link" data-i18n="pricing.plans.viewDetails">View Plan Details</span>
+        </button>
+
+        <button class="plan-card is-active" type="button" data-plan="standard" aria-pressed="true" role="listitem">
+          <span class="plan-recommended" data-i18n="pricing.plans.recommended">Recommended</span>
+          <span class="plan-card-eyebrow" data-i18n="pricing.plans.standard.kicker">Core operations</span>
+          <strong data-i18n="pricing.plans.standard.title">Standard</strong>
+          <span class="plan-price" data-i18n-html="pricing.plans.standard.price">USD 349<span>/month</span></span>
+          <span class="plan-card-purpose" data-i18n="pricing.plans.standard.purpose">Importer-distributor workspace with billing demo.</span>
+          <span class="plan-card-link" data-i18n="pricing.plans.viewDetails">View Plan Details</span>
+        </button>
+
+        <button class="plan-card" type="button" data-plan="premium" aria-pressed="false" role="listitem">
+          <span class="plan-card-eyebrow" data-i18n="pricing.plans.premium.kicker">Decision support</span>
+          <strong data-i18n="pricing.plans.premium.title">Premium</strong>
+          <span class="plan-price" data-i18n-html="pricing.plans.premium.price">USD 799<span>/month</span></span>
+          <span class="plan-card-purpose" data-i18n="pricing.plans.premium.purpose">Advanced catalog, analytics and AI preview expansion.</span>
+          <span class="plan-card-link" data-i18n="pricing.plans.viewDetails">View Plan Details</span>
+        </button>
+
+        <button class="plan-card" type="button" data-plan="enterprise" aria-pressed="false" role="listitem">
+          <span class="plan-card-eyebrow" data-i18n="pricing.plans.enterprise.kicker">Dedicated rollout</span>
+          <strong data-i18n="pricing.plans.enterprise.title">Enterprise / Dedicated</strong>
+          <span class="plan-price" data-i18n="pricing.plans.enterprise.price">Custom</span>
+          <span class="plan-card-purpose" data-i18n="pricing.plans.enterprise.purpose">Dedicated integration roadmap and enterprise controls.</span>
+          <span class="plan-card-link" data-i18n="pricing.plans.viewDetails">View Plan Details</span>
+        </button>
+      </div>
+
+      <article class="plan-detail-panel reveal reveal-delay-2" id="plan-detail" aria-live="polite">
+        <div class="plan-detail-main">
+          <span class="plan-detail-kicker" id="plan-detail-kicker">Core operations</span>
+          <h3 id="plan-detail-title">Standard</h3>
+          <p id="plan-detail-purpose">The core recommended plan for importer-distributors.</p>
+        </div>
+        <ul class="plan-detail-features" id="plan-detail-features"></ul>
+        <button type="button" class="btn btn-primary btn-md" id="select-plan-btn" data-i18n="pricing.plans.select">Select Plan</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="pricing-section pricing-section-surface" id="comparison" aria-labelledby="comparison-title">
+    <div class="container-wide">
+      <div class="pricing-section-head reveal">
+        <div>
+          <div class="badge mb-4" data-i18n="pricing.matrix.badge">Comparison</div>
+          <h2 id="comparison-title" data-i18n="pricing.matrix.title">Feature matrix by operational layer.</h2>
+        </div>
+        <p data-i18n="pricing.matrix.copy">The matrix groups the WebApp concepts into buyer, commercial, operations, billing and enterprise integration coverage.</p>
+      </div>
+
+      <div class="feature-matrix reveal reveal-delay-1" role="table" aria-label="Pricing feature comparison" data-i18n-aria-label="pricing.matrix.tableAria">
+        <div class="feature-row feature-row-head" role="row">
+          <span role="columnheader" data-i18n="pricing.matrix.h1">Feature group</span>
+          <span role="columnheader">Starter</span>
+          <span role="columnheader">Standard</span>
+          <span role="columnheader">Premium</span>
+          <span role="columnheader">Enterprise</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row1.header">Buyer Portal</span>
+          <span data-i18n="pricing.matrix.row1.col1">Basic access</span>
+          <span data-i18n="pricing.matrix.row1.col2">Full S3 flow</span>
+          <span data-i18n="pricing.matrix.row1.col3">Premium catalog</span>
+          <span data-i18n="pricing.matrix.row1.col4">Dedicated portal options</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row2.header">Commercial Workspace</span>
+          <span data-i18n="pricing.matrix.row2.col1">Limited</span>
+          <span data-i18n="pricing.matrix.row2.col2">S1 validation</span>
+          <span data-i18n="pricing.matrix.row2.col3">Advanced discounts</span>
+          <span data-i18n="pricing.matrix.row2.col4">Custom rules</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row3.header">Operations Workspace</span>
+          <span data-i18n="pricing.matrix.row3.col1">Not included</span>
+          <span data-i18n="pricing.matrix.row3.col2">S2 inventory and dispatch</span>
+          <span data-i18n="pricing.matrix.row3.col3">Optimization preview</span>
+          <span data-i18n="pricing.matrix.row3.col4">Custom APIs</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row4.header">Billing & Payments</span>
+          <span data-i18n="pricing.matrix.row4.col1">Not included</span>
+          <span data-i18n="pricing.matrix.row4.col2">Simulated checkout</span>
+          <span data-i18n="pricing.matrix.row4.col3">Advanced billing insight</span>
+          <span data-i18n="pricing.matrix.row4.col4">Provider roadmap</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row5.header">Documents</span>
+          <span data-i18n="pricing.matrix.row5.col1">Manual checklist</span>
+          <span data-i18n="pricing.matrix.row5.col2">Business documents</span>
+          <span data-i18n="pricing.matrix.row5.col3">Export previews</span>
+          <span data-i18n="pricing.matrix.row5.col4">Provider integration roadmap</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row6.header">External Customer Portals</span>
+          <span data-i18n="pricing.matrix.row6.col1">Checklist</span>
+          <span data-i18n="pricing.matrix.row6.col2">Requirements tracking</span>
+          <span data-i18n="pricing.matrix.row6.col3">Advanced tracking preview</span>
+          <span data-i18n="pricing.matrix.row6.col4">Real integration roadmap</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row7.header">Analytics</span>
+          <span data-i18n="pricing.matrix.row7.col1">Basic notifications</span>
+          <span data-i18n="pricing.matrix.row7.col2">Operational analytics</span>
+          <span data-i18n="pricing.matrix.row7.col3">Analytics exports</span>
+          <span data-i18n="pricing.matrix.row7.col4">Custom reporting</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row8.header">AI / Automation</span>
+          <span data-i18n="pricing.matrix.row8.col1">Not included</span>
+          <span data-i18n="pricing.matrix.row8.col2">Not active in v1</span>
+          <span data-i18n="pricing.matrix.row8.col3">AI assistant preview</span>
+          <span data-i18n="pricing.matrix.row8.col4">Dedicated automation roadmap</span>
+        </div>
+        <div class="feature-row" role="row">
+          <span role="rowheader" data-i18n="pricing.matrix.row9.header">Support</span>
+          <span data-i18n="pricing.matrix.row9.col1">Limited team access</span>
+          <span data-i18n="pricing.matrix.row9.col2">Team access</span>
+          <span data-i18n="pricing.matrix.row9.col3">Priority support</span>
+          <span data-i18n="pricing.matrix.row9.col4">Dedicated support agreement</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="product-preview" aria-labelledby="preview-title">
+    <div class="container-wide">
+      <div class="pricing-section-head reveal">
+        <div>
+          <div class="badge mb-4" data-i18n="pricing.preview.badge">WebApp alignment</div>
+          <h2 id="preview-title" data-i18n="pricing.preview.title">Mockups aligned to current WebApp concepts.</h2>
+        </div>
+        <p data-i18n="pricing.preview.copy">These handcrafted previews reflect the buyer portal, dispatch board and billing checkout concepts without inserting screenshots or changing the WebApp.</p>
+      </div>
+
+      <div class="pricing-mockup-grid reveal reveal-delay-1">
+        <article class="pricing-mockup">
+          <div class="mock-window-head">
+            <span></span><span></span><span></span>
+            <strong data-i18n="pricing.preview.panel1.title">Buyer Portal</strong>
+          </div>
+          <div class="mock-sidebar-layout">
+            <aside>
+              <b data-i18n="pricing.preview.panel1.sidebar.title">Portal</b>
+              <span data-i18n="pricing.preview.panel1.sidebar.item1">Catalog</span>
+              <span data-i18n="pricing.preview.panel1.sidebar.item2">Requests</span>
+              <span data-i18n="pricing.preview.panel1.sidebar.item3">Orders</span>
+              <span data-i18n="pricing.preview.panel1.sidebar.item4">Billing</span>
+            </aside>
+            <div class="mock-content">
+              <div class="mock-toolbar"><strong data-i18n="pricing.preview.panel1.contentTitle">Product Catalog</strong><span class="mock-chip">S3</span></div>
+              <div class="mock-row"><span data-i18n="pricing.preview.panel1.row1">Premium raclette slices</span><b>S/ 44.90</b></div>
+              <div class="mock-row"><span data-i18n="pricing.preview.panel1.row2">French unsalted butter</span><b>S/ 68.90</b></div>
+              <div class="mock-row"><span data-i18n="pricing.preview.panel1.row3">Spanish cured chorizo</span><b>S/ 28.90</b></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pricing-mockup">
+          <div class="mock-window-head">
+            <span></span><span></span><span></span>
+            <strong data-i18n="pricing.preview.panel2.title">Dispatch Orders</strong>
+          </div>
+          <div class="mock-kanban">
+            <div>
+              <b data-i18n="pricing.preview.panel2.col1">Ready</b>
+              <span>ORD-2026-0411</span>
+              <small data-i18n="pricing.preview.panel2.col1.desc">Documents 4/4</small>
+            </div>
+            <div>
+              <b data-i18n="pricing.preview.panel2.col2">In route</b>
+              <span>DSP-2026-0089</span>
+              <small data-i18n="pricing.preview.panel2.col2.desc">North Lima route</small>
+            </div>
+            <div>
+              <b data-i18n="pricing.preview.panel2.col3">Delivered</b>
+              <span data-i18n="pricing.preview.panel2.col3.item">POD signed</span>
+              <small data-i18n="pricing.preview.panel2.col3.desc">Evidence attached</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="pricing-mockup pricing-mockup-billing">
+          <div class="mock-window-head">
+            <span></span><span></span><span></span>
+            <strong data-i18n="pricing.preview.panel3.title">Billing Checkout</strong>
+          </div>
+          <div class="billing-preview">
+            <div class="billing-preview-line"><span data-i18n="pricing.preview.panel3.subtotal">Subtotal</span><b>S/ 1,123.00</b></div>
+            <div class="billing-preview-line"><span data-i18n="pricing.preview.panel3.discounts">Discounts</span><b>- S/ 89.84</b></div>
+            <div class="billing-preview-line"><span data-i18n="pricing.preview.panel3.tax">IGV 18%</span><b>S/ 189.21</b></div>
+            <div class="billing-preview-total"><span data-i18n="pricing.preview.panel3.total">Total</span><b>S/ 1,240.37</b></div>
+            <div class="payment-method-strip">
+              <span>Visa</span><span>Yape</span><span data-i18n="pricing.preview.panel3.credit">Credit line</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section pricing-section-surface" id="billing" aria-labelledby="billing-title">
+    <div class="container-wide">
+      <div class="billing-grid reveal">
+        <div>
+          <div class="badge mb-4" data-i18n="pricing.clarity.badge">Billing clarity</div>
+          <h2 id="billing-title" data-i18n="pricing.clarity.title">Payment methods shown in the Standard demo.</h2>
+          <p data-i18n="pricing.clarity.copy">Billing and payment flows are simulated in the academic frontend demo. They demonstrate checkout, taxes, shipping, payment method selection and payment confirmation without processing real payments.</p>
+        </div>
+        <div class="payment-method-grid" aria-label="Demo payment methods" data-i18n-aria-label="pricing.clarity.methodsAria">
+          <span>Visa</span>
+          <span>Mastercard</span>
+          <span>Apple Pay</span>
+          <span>Google Pay</span>
+          <span>PayPal</span>
+          <span>Yape</span>
+          <span>Plin</span>
+          <span data-i18n="pricing.clarity.method.transfer">Bank Transfer</span>
+          <span data-i18n="pricing.clarity.method.credit">B2B Credit Line</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="pricing-contact-shell reveal">
+        <div class="pricing-contact-copy">
+          <div class="badge contact-dark-badge" data-i18n="shared.nav.contactUs">Contact Us</div>
+          <h2 id="contact-title" data-i18n="pricing.contact.title">Tell us which operating layer you want to validate.</h2>
+          <p data-i18n="pricing.contact.copy">The form is static in this academic website. It shows the intended questionnaire and confirmation state without sending data to a real CRM or backend.</p>
+          <div class="selected-plan-badge" id="selected-plan-badge" data-i18n="pricing.contact.selectedPlanPrefix">Selected plan: Standard</div>
+        </div>
+
+        <form class="pricing-contact-form" id="pricing-contact-form" novalidate>
+          <input type="hidden" id="pricing-selected-plan-hidden" name="selectedPlan" value="Standard" />
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="pricing-name" data-i18n="pricing.contact.form.name">Full name</label>
+              <input class="form-input" type="text" id="pricing-name" name="name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pricing-email" data-i18n="pricing.contact.form.email">Work email</label>
+              <input class="form-input" type="email" id="pricing-email" name="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="pricing-company" data-i18n="pricing.contact.form.company">Company name</label>
+              <input class="form-input" type="text" id="pricing-company" name="company" autocomplete="organization" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pricing-tax-id" data-i18n="pricing.contact.form.taxId">Company RUC / Tax ID</label>
+              <input class="form-input" type="text" id="pricing-tax-id" name="taxId" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="pricing-role" data-i18n="pricing.contact.form.role">Role</label>
+              <select class="form-select" id="pricing-role" name="role" required>
+                <option value="" data-i18n="pricing.contact.form.role.placeholder">Select role</option>
+                <option data-i18n="pricing.contact.form.role.opt1">Commercial coordination</option>
+                <option data-i18n="pricing.contact.form.role.opt2">Operations / logistics</option>
+                <option data-i18n="pricing.contact.form.role.opt3">Company owner</option>
+                <option data-i18n="pricing.contact.form.role.opt4">Technology / IT</option>
+                <option data-i18n="pricing.contact.form.role.opt5">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pricing-selected-plan" data-i18n="pricing.contact.form.selectedPlan">Selected plan</label>
+              <input class="form-input" type="text" id="pricing-selected-plan" value="Standard" readonly />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="pricing-volume" data-i18n="pricing.contact.form.volume">Monthly order volume</label>
+              <input class="form-input" type="text" id="pricing-volume" name="monthlyVolume" placeholder="Example: 800 purchase orders/month" data-i18n-placeholder="pricing.contact.form.volumePlaceholder" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pricing-pain" data-i18n="pricing.contact.form.pain">Main operation pain point</label>
+              <select class="form-select" id="pricing-pain" name="painPoint" required>
+                <option value="" data-i18n="pricing.contact.form.pain.placeholder">Select pain point</option>
+                <option data-i18n="pricing.contact.form.pain.opt1">WhatsApp order chaos</option>
+                <option data-i18n="pricing.contact.form.pain.opt2">Manual stock validation</option>
+                <option data-i18n="pricing.contact.form.pain.opt3">External customer portals</option>
+                <option data-i18n="pricing.contact.form.pain.opt4">Business documents</option>
+                <option data-i18n="pricing.contact.form.pain.opt5">Dispatch tracking</option>
+                <option data-i18n="pricing.contact.form.pain.opt6">Billing and payment visibility</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pricing-message" data-i18n="pricing.contact.form.message">Message</label>
+            <textarea class="form-textarea" id="pricing-message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-md" data-i18n="shared.nav.contactUs">Contact Us</button>
+          <p class="pricing-form-status" id="pricing-form-status" role="status" aria-live="polite" data-i18n="pricing.contact.success" hidden>Thanks. The Nexa team will review your request.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section pricing-faq-section" id="faq" aria-labelledby="pricing-faq-title">
+    <div class="container">
+      <div class="pricing-section-head reveal">
+        <div>
+          <div class="badge mb-4" data-i18n="pricing.faq.badge">FAQ</div>
+          <h2 id="pricing-faq-title" data-i18n="pricing.faq.title">Pricing questions operators ask first.</h2>
+        </div>
+      </div>
+
+      <div class="pricing-faq-list reveal reveal-delay-1">
+        <article class="pricing-faq-item">
+          <button type="button" class="pricing-faq-question" aria-expanded="false" aria-controls="pricing-faq-a1" data-i18n="pricing.faq.q1">Is Nexa production-ready?</button>
+          <div class="pricing-faq-answer" id="pricing-faq-a1" hidden>
+            <p data-i18n="pricing.faq.a1">Nexa v1 is an academic frontend demo. It validates product direction and workflows, but it does not include a production backend or service commitment.</p>
+          </div>
+        </article>
+        <article class="pricing-faq-item">
+          <button type="button" class="pricing-faq-question" aria-expanded="false" aria-controls="pricing-faq-a2" data-i18n="pricing.faq.q2">Does Standard include billing?</button>
+          <div class="pricing-faq-answer" id="pricing-faq-a2" hidden>
+            <p data-i18n="pricing.faq.a2">Standard includes the simulated billing and payment demo: checkout, taxes, shipping summary, method selection and payment confirmation without real processing.</p>
+          </div>
+        </article>
+        <article class="pricing-faq-item">
+          <button type="button" class="pricing-faq-question" aria-expanded="false" aria-controls="pricing-faq-a3" data-i18n="pricing.faq.q3">What does Premium add?</button>
+          <div class="pricing-faq-answer" id="pricing-faq-a3" hidden>
+            <p data-i18n="pricing.faq.a3">Premium adds advanced catalog experience, customer-specific discounts, AI preview expansion, predictive demand recommendations and analytics exports.</p>
+          </div>
+        </article>
+        <article class="pricing-faq-item">
+          <button type="button" class="pricing-faq-question" aria-expanded="false" aria-controls="pricing-faq-a4" data-i18n="pricing.faq.q4">What requires Enterprise?</button>
+          <div class="pricing-faq-answer" id="pricing-faq-a4" hidden>
+            <p data-i18n="pricing.faq.a4">Real external customer portal integration, SUNAT or document-provider integration, GPS or IoT provider integration, SSO, custom APIs and dedicated infrastructure belong in Enterprise planning.</p>
+          </div>
+        </article>
+        <article class="pricing-faq-item">
+          <button type="button" class="pricing-faq-question" aria-expanded="false" aria-controls="pricing-faq-a5" data-i18n="pricing.faq.q5">Are payments real in the academic demo?</button>
+          <div class="pricing-faq-answer" id="pricing-faq-a5" hidden>
+            <p data-i18n="pricing.faq.a5">No. Payment methods and billing states are simulated for frontend validation. Nexa v1 does not process real payments or store card data.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-editorial">
+        <a href="../index.html" class="navbar-logo footer-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+          <img src="../nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+          <span class="visually-hidden">Nexa</span>
+        </a>
+        <p class="footer-kicker" data-i18n="shared.footer.kicker">Mantente cerca</p>
+        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
+        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
+        <div class="footer-editorial-actions">
+          <a href="#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
+          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
+        </div>
+      </div>
+
+      <div class="footer-nav-shell">
+        <div class="footer-nav-grid">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.product">Producto</div>
+            <ul class="footer-links">
+              <li><a href="platform.html" data-i18n="shared.nav.platform">Product</a></li>
+              <li><a href="company.html" data-i18n="shared.nav.company">Company</a></li>
+              <li><a href="pricing.html" data-i18n="shared.nav.pricing">Pricing</a></li>
+              <li><a href="faq.html" data-i18n="shared.nav.faq">FAQ</a></li>
+              <li><a href="https://nexa-2f1bb.web.app" data-i18n="shared.nav.login">Login</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.legalColumn">Legal</div>
+            <ul class="footer-links">
+              <li><a href="legal/terms.html" data-i18n="shared.footer.terms">Terms & Conditions</a></li>
+              <li><a href="legal/privacy.html" data-i18n="shared.footer.privacy">Privacy & Policy</a></li>
+              <li><a href="legal/cookies.html" data-i18n="shared.footer.cookies">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social-block">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.direct">Accesos directos</div>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Real channels to write, review pricing, or ask a concrete question today.</p>
+          </div>
+          <div class="footer-social-row">
+            <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Enviar correo a Nexa" data-i18n-aria-label="shared.footer.emailAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="M4 8l8 6 8-6"></path>
+              </svg>
+            </a>
+            <a href="#contact" class="footer-social-link" aria-label="Ir al contacto de Nexa" data-i18n-aria-label="shared.footer.contactAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+            <a href="faq.html" class="footer-social-link" aria-label="Abrir el FAQ de Nexa" data-i18n-aria-label="shared.footer.faqAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+            </a>
+            <a href="solutions/index.html" class="footer-social-link" aria-label="Ver soluciones de Nexa" data-i18n-aria-label="shared.footer.solutionsAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa · King / VulturesDevs · Academic frontend demo.</span>
+      <div class="footer-legal-links">
+        <a href="legal/terms.html" data-i18n="shared.footer.terms">Terms & Conditions</a>
+        <a href="legal/privacy.html" data-i18n="shared.footer.privacy">Privacy & Policy</a>
+        <a href="legal/cookies.html" data-i18n="shared.footer.cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/interactions.js"></script>
+<script src="../assets/js/animations.js"></script>
+<script src="../assets/js/pricing.js"></script>
+</body>
+</html>
