@@ -2,6 +2,18 @@
 
 This changelog summarizes the reconstructed GitFlow releases for the Nexa website.
 
+## v2.2.0 - Legal pages and cookie consent
+
+Release date: 2026-05-09
+
+### Highlights
+- Added cookie notice behavior and legal page refinements.
+- Connected footer legal links with the final static pages.
+
+### Validation
+- Opened the static pages locally during reconstruction.
+- Checked route and asset consistency for the release scope.
+
 ## v2.1.0 - Pricing, FAQ, and solution page polish
 
 Release date: 2026-05-07
