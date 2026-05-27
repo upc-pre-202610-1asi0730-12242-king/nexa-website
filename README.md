@@ -2,11 +2,11 @@
 
 <br/>
 
-<img src="nexa.svg" alt="Nexa" width="200"/>
+<img src="assets/img/nexa.svg" alt="Nexa" width="200"/>
 
 <br/><br/>
 
-# Nexa — Landing Page
+# Nexa — Website
 
 **B2B web platform for refrigerated and frozen food distributors in Peru**
 
@@ -22,7 +22,7 @@
 ![Cycle](https://img.shields.io/badge/Cycle-2026--10-0a2540?style=flat-square)
 ![University](https://img.shields.io/badge/University-UPC-0a2540?style=flat-square)
 ![Team](https://img.shields.io/badge/Team-King-2a67d9?style=flat-square)
-![Status](https://img.shields.io/badge/Status-TB1%20Active-22c55e?style=flat-square)
+![Status](https://img.shields.io/badge/Status-TB2%20Current%20Iteration-22c55e?style=flat-square)
 
 <br/>
 
@@ -67,14 +67,58 @@ With Nexa:
 ```text
 nexa-website/
 │
-├── index.html          # Main landing page
+├── index.html
 ├── assets/
-│   ├── css/            # Tokens, typography, layout, buttons, components
-│   ├── js/             # Animations, interactions, i18n
-│   └── img/            # Visual assets
+│   ├── css/
+│   │   ├── typography.css
+│   │   ├── tokens.css
+│   │   ├── main.css
+│   │   ├── layout.css
+│   │   ├── buttons.css
+│   │   ├── components.css
+│   │   ├── pricing.css
+│   │   └── patterns.css
+│   ├── js/
+│   │   ├── animations.js
+│   │   ├── interactions.js
+│   │   ├── i18n.js
+│   │   └── pricing.js
+│   └── img/
+│       ├── hero-warehouse-bg.png
+│       └── nexa.svg
 │
-└── pages/              # Additional pages
+└── pages/
+    ├── platform.html
+    ├── company.html
+    ├── faq.html
+    ├── pricing.html
+    ├── solutions/
+    │   ├── index.html
+    │   ├── importers.html
+    │   ├── distributors.html
+    │   └── cold-storage.html
+    └── legal/
+        ├── terms.html
+        ├── privacy.html
+        └── cookies.html
 ```
+
+The Nexa logo lives in `assets/img/nexa.svg` so it is versioned with the rest of the website visual assets and referenced consistently from root, page, solution, and legal routes.
+
+## Current pages
+
+- `index.html`
+- `pages/platform.html`
+- `pages/company.html`
+- `pages/faq.html`
+- `pages/pricing.html`
+- `pages/solutions/index.html`
+- `pages/solutions/importers.html`
+- `pages/solutions/distributors.html`
+- `pages/solutions/cold-storage.html`
+- `pages/legal/terms.html`
+- `pages/legal/privacy.html`
+- `pages/legal/cookies.html`
 
 ---
 
@@ -84,10 +128,13 @@ nexa-website/
 |---|---|
 | `main` | Stable deliverable version |
 | `develop` | Integration branch |
-| `feature/*` | New features |
-| `fix/*` | Bug fixes |
+| `feature/*` | Temporary branches for screens, sections, and technical capabilities |
+| `release/*` | Temporary branches for SemVer release preparation |
+| `hotfix/*` | Temporary branches for urgent fixes from `main` |
 
 All commits follow [Conventional Commits 1.0.0](https://www.conventionalcommits.org/): `type(scope): description`.
+
+Merged `feature/*`, `release/*`, and `hotfix/*` branches are deleted from the remote after integration so the active GitFlow surface stays focused on `main` and `develop`.
 
 ---
 
