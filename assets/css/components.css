@@ -7980,3 +7980,112 @@ body[data-page^="legal"] {
   }
 }
 
+/* --- TEAM PIXEL PERFECT & VIDEO SECTION STYLES --- */
+.section-dark-team {
+  background-color: var(--c-white);
+  color: var(--c-text-primary);
+  padding: 90px 0;
+  position: relative;
+  border-top: 1px solid var(--c-border);
+}
+
+.team-pixel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.team-pixel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.team-pixel-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--c-surface);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid var(--c-border);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.team-pixel-image-wrapper:hover {
+  transform: translateY(-6px);
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.14);
+}
+
+.team-pixel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-pixel-image-wrapper:hover .team-pixel-img {
+  transform: scale(1.03);
+}
+
+.team-pixel-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--c-text-primary);
+  margin-bottom: 5px;
+}
+
+.team-pixel-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.team-pixel-title {
+  font-size: 0.85rem;
+  color: var(--c-text-secondary);
+}
+
+/* Premium Video Section Styling */
+.video-showcase-section {
+  padding: 90px 0;
+  background-color: var(--c-base);
+}
+
+.section-dark-team-video {
+  padding: 90px 0;
+  background-color: var(--c-white);
+  border-top: 1px solid var(--c-border);
+}
+
+.video-player-wrapper {
+  max-width: 860px;
+  margin: 40px auto 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--c-border);
+  background-color: var(--c-surface);
+  aspect-ratio: 16 / 9;
+}
+
+.section-dark-team-video .video-player-wrapper {
+  border: 1px solid var(--c-border);
+}
+
+.video-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
