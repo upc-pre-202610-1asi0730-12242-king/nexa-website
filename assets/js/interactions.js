@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const WEBAPP_BASE = 'https://nexa-2f1bb.web.app';
+  const WEBAPP_BASE = 'https://nexa-webapp.onrender.com';
   const getLang = () => (document.documentElement.lang.startsWith('es') ? 'es' : 'en');
 
   const copy = {
