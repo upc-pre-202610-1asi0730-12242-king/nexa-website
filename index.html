@@ -16,7 +16,7 @@
   <link rel="canonical" href="https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/" />
   <meta name="twitter:card" content="summary_large_image" />
   <title data-i18n-content="home.meta.title">Nexa — Tu operacion de charcuteria y lacteos, por fin visible</title>
-  <link rel="icon" type="image/svg+xml" href="assets/img/nexa.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/main-nexa-small-icon.svg" />
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body data-page="home" data-lang="es-419">
@@ -95,7 +95,7 @@
           <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
         </div>
         <a href="pages/pricing.html#contact" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
-        <a href="https://nexa-2f1bb.web.app" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+        <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
       </div>
     </div>
 
@@ -105,7 +105,7 @@
         <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
       </div>
       <a href="pages/pricing.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
-      <a href="https://nexa-2f1bb.web.app" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
       <a href="pages/faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
     </div>
 
@@ -536,16 +536,13 @@
         <div class="badge mb-4" data-i18n="home.product.badge">About the Product</div>
         <h2 id="product-headline" data-i18n="home.product.title">A focused operating layer for B2B cold-chain work.</h2>
         <p data-i18n="home.product.copy">Nexa brings buyer requests, commercial validation, inventory visibility, dispatch coordination and buyer-facing tracking into one shared workspace for importer-distributors.</p>
-        <div class="app-product-scope" aria-label="Academic prototype scope" data-i18n-aria-label="home.product.scopeAria">
-          <strong data-i18n="home.product.scopeTitle">Academic v1 scope</strong>
-          <span data-i18n="home.product.scopeDesc">Frontend academic demo with Fake API data. No production backend, real payments, SUNAT integration, GPS/IoT telemetry or live AI service is active in v1.</span>
-        </div>
+
       </div>
 
       <div class="app-product-grid" aria-label="Nexa product modules" data-i18n-aria-label="home.product.gridAria">
         <article class="app-product-card">
           <h3 data-i18n="home.product.card1.title">Buyer Portal</h3>
-          <p data-i18n="home.product.card1.copy">Buyer requests, catalog visibility and tracking in one controlled demo flow.</p>
+          <p data-i18n="home.product.card1.copy">Buyer requests, catalog visibility and real-time tracking in one shared workspace.</p>
         </article>
         <article class="app-product-card">
           <h3 data-i18n="home.product.card2.title">Commercial Validation</h3>
@@ -708,22 +705,31 @@
           <div>
             <div class="footer-col-title" data-i18n="shared.footer.product">Producto</div>
             <ul class="footer-links">
-              <li><a href="pages/platform.html" data-i18n="shared.nav.platform">Product</a></li>
               <li><a href="pages/about-the-product.html" data-i18n="shared.nav.aboutProduct">Sobre el producto</a></li>
-              <li><a href="pages/company.html" data-i18n="shared.nav.company">Company</a></li>
-              <li><a href="pages/about-the-team.html" data-i18n="shared.nav.aboutTeam">Sobre el equipo</a></li>
-              <li><a href="pages/pricing.html" data-i18n="shared.nav.pricing">Pricing</a></li>
-              <li><a href="pages/faq.html" data-i18n="shared.nav.faq">FAQ</a></li>
-              <li><a href="https://nexa-2f1bb.web.app" data-i18n="shared.nav.login">Login</a></li>
+              <li><a href="pages/platform.html" data-i18n="shared.footer.platformOverview">Resumen de la plataforma</a></li>
+              <li><a href="pages/platform.html#catalog" data-i18n="shared.footer.productData">Datos de producto</a></li>
+              <li><a href="pages/platform.html#inventory" data-i18n="shared.footer.operationalInventory">Inventario operativo</a></li>
+              <li><a href="pages/platform.html#traceability" data-i18n="shared.footer.traceability">Trazabilidad</a></li>
             </ul>
           </div>
 
           <div>
-            <div class="footer-col-title" data-i18n="shared.footer.legalColumn">Legal</div>
+            <div class="footer-col-title" data-i18n="shared.footer.company">Empresa</div>
             <ul class="footer-links">
-              <li><a href="pages/legal/terms.html" data-i18n="shared.footer.terms">Terms & Conditions</a></li>
-              <li><a href="pages/legal/privacy.html" data-i18n="shared.footer.privacy">Privacy & Policy</a></li>
-              <li><a href="pages/legal/cookies.html" data-i18n="shared.footer.cookies">Cookies</a></li>
+              <li><a href="pages/about-the-team.html" data-i18n="shared.nav.aboutTeam">Sobre el equipo</a></li>
+              <li><a href="pages/company.html" data-i18n="shared.nav.company">Sobre Nexa</a></li>
+              <li><a href="pages/company.html#support" data-i18n="shared.footer.howWeSupport">Como acompanamos</a></li>
+              <li><a href="pages/company.html#contact" data-i18n="shared.footer.contact">Contacto</a></li>
+              <li><a href="pages/faq.html" data-i18n="shared.nav.faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
+            <ul class="footer-links">
+              <li><a href="pages/pricing.html" data-i18n="shared.nav.pricing">Pricing</a></li>
+              <li><a href="https://nexa-webapp.onrender.com/#/auth/login" data-i18n="shared.nav.login">Login</a></li>
+              <li><a href="pages/pricing.html#contact" data-i18n="shared.footer.requestDemo">Solicitar una demostracion</a></li>
             </ul>
           </div>
         </div>
@@ -766,7 +772,7 @@
     </div>
 
     <div class="footer-bottom">
-      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa · King / VulturesDevs · Academic frontend demo.</span>
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa · King / VulturesDevs · Nexa Platform Showcase.</span>
       <div class="footer-legal-links">
         <a href="pages/legal/terms.html" data-i18n="shared.footer.terms">Terms & Conditions</a>
         <a href="pages/legal/privacy.html" data-i18n="shared.footer.privacy">Privacy & Policy</a>
@@ -862,8 +868,8 @@
         <textarea id="support-message" class="support-composer-input" rows="3" disabled
                   data-i18n-placeholder="shared.support.composerPlaceholder"
                   placeholder="El chat en vivo estara disponible pronto. Usa hoy el formulario de contacto."></textarea>
-        <p class="support-composer-note" data-i18n-html="shared.support.composerNote">
-          El chat en vivo estara disponible pronto. Por ahora, <a href="pages/company.html#contact" class="support-composer-link">usa el formulario de contacto directo</a>.
+        <p class="support-composer-note">
+          <span data-i18n="shared.support.composerNoteText">El chat en vivo estara disponible pronto. Por ahora, </span><a href="pages/company.html#contact" class="support-composer-link" data-i18n="shared.support.composerNoteLink">usa el formulario de contacto directo</a>.
         </p>
       </div>
     </div>
@@ -875,7 +881,7 @@
 <div class="cookie-banner" id="cookie-banner" hidden>
   <div class="cookie-banner-inner">
     <p class="cookie-banner-text" data-i18n="shared.cookies.bannerText">
-      Usa cookies para asegurar la mejor experiencia en nuestro demo academico.
+      Usa cookies para asegurar la mejor experiencia de navegación y rendimiento.
     </p>
     <div class="cookie-banner-actions">
       <a href="pages/legal/cookies.html" class="cookie-banner-link" data-i18n="shared.cookies.bannerLearnMore">Aprender mas</a>
