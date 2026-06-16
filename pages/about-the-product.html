@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-419">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,30 +14,101 @@
   <meta property="og:site_name" content="Nexa" />
   <link rel="canonical" href="https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/pages/about-the-product.html" />
   <title>Nexa - About the Product</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/img/nexa.svg" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/main-nexa-small-icon.svg" />
   <link rel="stylesheet" href="../assets/css/main.css" />
 </head>
 <body data-page="about-product" data-lang="en">
 <a href="#about-the-product" class="skip-to-content">Skip to content</a>
 
-<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
   <div class="navbar-inner">
-    <a href="../index.html" class="navbar-logo" aria-label="Nexa home">
+
+    <a href="../index.html" class="navbar-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
       <img src="../assets/img/nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
       <span class="visually-hidden">Nexa</span>
     </a>
+
     <div class="navbar-links" id="navbar-links">
-      <a href="platform.html" class="navbar-link">Platform</a>
-      <a href="company.html" class="navbar-link">Company</a>
-      <a href="pricing.html" class="navbar-link">Pricing</a>
-      <a href="faq.html" class="navbar-link">FAQ</a>
+      <a href="platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Plataforma</a>
+
+      <div class="dropdown-trigger" id="nav-solutions-trigger">
+        <button class="navbar-link dropdown-btn" type="button" id="nav-solutions"
+                aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true"
+                data-i18n="shared.nav.solutions">
+          Soluciones
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="dropdown-panel" id="solutions-dropdown" role="menu">
+          <a href="solutions/importers.html" class="dropdown-item" role="menuitem" id="nav-importers">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importadores y mayoristas</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Ingreso portuario para lotes de queso, charcuteria y lacteos.</div>
+            </div>
+          </a>
+          <a href="solutions/distributors.html" class="dropdown-item" role="menuitem" id="nav-distributors">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distribuidores</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Cumplimiento de ultima milla, reposicion FEFO y pedidos B2B.</div>
+            </div>
+          </a>
+          <a href="solutions/cold-storage.html" class="dropdown-item" role="menuitem" id="nav-cold-storage">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Operadores de camaras frias</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Camaras de queso, camaras lacteas y registros de inocuidad alimentaria.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Empresa</a>
+      <a href="pricing.html" class="navbar-link" id="nav-pricing" data-i18n="shared.nav.pricing">Pricing</a>
+      <a href="faq.html" class="navbar-link navbar-link-mobile-only" id="nav-faq-mobile" data-i18n="shared.nav.faq">FAQ</a>
+
+      <div class="navbar-mobile-actions">
+        <div class="lang-switch" role="group" aria-label="Selector de idioma" data-i18n-aria-label="shared.nav.languageAria">
+          <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+          <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
+        </div>
+        <a href="pricing.html#contact" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+        <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      </div>
     </div>
+
     <div class="navbar-actions">
-      <a href="pricing.html#contact" class="btn btn-primary btn-sm">Contact Us</a>
-      <a href="https://nexa-2f1bb.web.app" class="btn btn-secondary btn-sm navbar-login-btn">Login</a>
+      <div class="lang-switch" role="group" aria-label="Selector de idioma" data-i18n-aria-label="shared.nav.languageAria">
+        <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+        <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
+      </div>
+      <a href="pricing.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
+      <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      <a href="faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
     </div>
-    <button type="button" class="navbar-mobile-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navbar-links" id="mobile-menu-toggle">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+
+    <button type="button" class="navbar-mobile-toggle" aria-label="Abrir navegacion" data-i18n-aria-label="shared.nav.mobileToggle"
+            aria-expanded="false" aria-controls="navbar-links" id="mobile-menu-toggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" aria-hidden="true">
         <line x1="3" y1="6" x2="21" y2="6"></line>
         <line x1="3" y1="12" x2="21" y2="12"></line>
         <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -105,20 +176,212 @@
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container-wide">
+<footer class="footer" id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-editorial">
+        <a href="../index.html" class="navbar-logo footer-logo" aria-label="Inicio de Nexa" data-i18n-aria-label="shared.nav.logoAria">
+          <img src="../assets/img/nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+          <span class="visually-hidden">Nexa</span>
+        </a>
+        <p class="footer-kicker" data-i18n="shared.footer.kicker">Mantente cerca</p>
+        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
+        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
+        <div class="footer-editorial-actions">
+          <a href="pricing.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
+          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
+        </div>
+      </div>
+
+      <div class="footer-nav-shell">
+        <div class="footer-nav-grid">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.product">Producto</div>
+            <ul class="footer-links">
+              <li><a href="about-the-product.html" data-i18n="shared.nav.aboutProduct">Sobre el producto</a></li>
+              <li><a href="platform.html" data-i18n="shared.footer.platformOverview">Resumen de la plataforma</a></li>
+              <li><a href="platform.html#catalog" data-i18n="shared.footer.productData">Datos de producto</a></li>
+              <li><a href="platform.html#inventory" data-i18n="shared.footer.operationalInventory">Inventario operativo</a></li>
+              <li><a href="platform.html#traceability" data-i18n="shared.footer.traceability">Trazabilidad</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.company">Empresa</div>
+            <ul class="footer-links">
+              <li><a href="about-the-team.html" data-i18n="shared.nav.aboutTeam">Sobre el equipo</a></li>
+              <li><a href="company.html" data-i18n="shared.nav.company">Sobre Nexa</a></li>
+              <li><a href="company.html#support" data-i18n="shared.footer.howWeSupport">Como acompanamos</a></li>
+              <li><a href="company.html#contact" data-i18n="shared.footer.contact">Contacto</a></li>
+              <li><a href="faq.html" data-i18n="shared.nav.faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
+            <ul class="footer-links">
+              <li><a href="pricing.html" data-i18n="shared.nav.pricing">Pricing</a></li>
+              <li><a href="https://nexa-webapp.onrender.com/#/auth/login" data-i18n="shared.nav.login">Login</a></li>
+              <li><a href="pricing.html#contact" data-i18n="shared.footer.requestDemo">Solicitar una demostracion</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social-block">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.direct">Accesos directos</div>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Canales reales para escribir, pedir una demostracion o resolver dudas hoy.</p>
+          </div>
+          <div class="footer-social-row">
+            <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Enviar correo a Nexa" data-i18n-aria-label="shared.footer.emailAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="M4 8l8 6 8-6"></path>
+              </svg>
+            </a>
+            <a href="pricing.html#contact" class="footer-social-link" aria-label="Ir al contacto de Nexa" data-i18n-aria-label="shared.footer.contactAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+            <a href="faq.html" class="footer-social-link" aria-label="Abrir el FAQ de Nexa" data-i18n-aria-label="shared.footer.faqAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+            </a>
+            <a href="solutions/index.html" class="footer-social-link" aria-label="Ver soluciones de Nexa" data-i18n-aria-label="shared.footer.solutionsAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      <span class="footer-legal">© 2026 Nexa Technologies, Inc. All rights reserved.</span>
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa · King / VulturesDevs · Nexa Platform Showcase.</span>
       <div class="footer-legal-links">
-        <a href="about-the-product.html">About the Product</a>
-        <a href="about-the-team.html">About the Team</a>
-        <a href="legal/terms.html">Terms & Conditions</a>
-        <a href="legal/privacy.html">Privacy Policy</a>
-        <a href="legal/cookies.html">Cookies Policy</a>
+        <a href="legal/terms.html" data-i18n="shared.footer.terms">Terms & Conditions</a>
+        <a href="legal/privacy.html" data-i18n="shared.footer.privacy">Privacy & Policy</a>
+        <a href="legal/cookies.html" data-i18n="shared.footer.cookies">Cookies</a>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- Widget de Soporte -->
+<div class="support-widget">
+  <button type="button" class="support-launcher is-hidden" id="support-launcher"
+          aria-label="Abrir panel de soporte" data-i18n-aria-label="shared.support.launcherAria"
+          aria-controls="support-panel" aria-expanded="false" data-support-launcher>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      <path d="M8 9h8"></path>
+      <path d="M8 13h5"></path>
+    </svg>
+  </button>
+
+  <div class="support-overlay" hidden data-support-overlay></div>
+
+  <section class="support-panel" id="support-panel" role="dialog" aria-modal="true"
+           aria-labelledby="support-panel-title" hidden data-support-panel>
+    <div class="support-panel-header">
+      <a href="../index.html" class="support-brand" aria-label="Inicio de Nexa" data-i18n-aria-label="shared.nav.logoAria">
+        <img src="../assets/img/nexa.svg" alt="" class="support-brand-image" width="110" height="34" />
+        <span class="visually-hidden">Nexa</span>
+      </a>
+      <button type="button" class="support-panel-close"
+              aria-label="Cerrar panel de soporte" data-i18n-aria-label="shared.support.closeAria"
+              data-support-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12"></path>
+          <path d="M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="support-panel-hero">
+      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Soporte</p>
+      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Elige el siguiente paso.</h2>
+      <p class="support-panel-copy" data-i18n="shared.support.copy">Habla con el equipo, revisa la plataforma o abre el FAQ.</p>
+    </div>
+
+    <div class="support-panel-body">
+      <a href="pricing.html#contact" class="support-card support-card-primary">
+        <div>
+          <strong data-i18n="shared.support.card1Title">Hablar con el equipo</strong>
+          <span data-i18n="shared.support.card1Copy">Ve directo al equipo de despliegue.</span>
+        </div>
+        <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14"></path>
+          <path d="M13 5l7 7-7 7"></path>
+        </svg>
+      </a>
+
+      <div class="support-card-grid">
+        <a href="platform.html" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card2Title">Ver la plataforma</strong>
+            <span data-i18n="shared.support.card2Copy">Revisa como funciona el sistema.</span>
+          </div>
+        </a>
+        <a href="faq.html#getting-started" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card3Title">Preguntas clave</strong>
+            <span data-i18n="shared.support.card3Copy">Abre las respuestas que mas revisan antes de decidir.</span>
+          </div>
+        </a>
+        <a href="solutions/index.html" class="support-card">
+          <div>
+            <strong data-i18n="shared.support.card4Title">Elegir solucion</strong>
+            <span data-i18n="shared.support.card4Copy">Encuentra el flujo que encaja con tu operacion.</span>
+          </div>
+        </a>
+      </div>
+
+      <a href="faq.html" class="support-search">
+        <div>
+          <span class="support-search-label" data-i18n="shared.support.searchLabel">Buscar en el FAQ</span>
+          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Ir a respuestas estructuradas y detalles de implementacion.</span>
+        </div>
+        <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+      </a>
+
+      <div class="support-composer">
+        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Inicia un mensaje</label>
+        <textarea id="support-message" class="support-composer-input" rows="3" disabled
+                  data-i18n-placeholder="shared.support.composerPlaceholder"
+                  placeholder="El chat en vivo estara disponible pronto. Usa hoy el formulario de contacto."></textarea>
+        <p class="support-composer-note">
+          <span data-i18n="shared.support.composerNoteText">El chat en vivo estara disponible pronto. Por ahora, </span><a href="company.html#contact" class="support-composer-link" data-i18n="shared.support.composerNoteLink">usa el formulario de contacto directo</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- /Widget de Soporte -->
+
+<!-- Banner de Cookies -->
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <div class="cookie-banner-inner">
+    <p class="cookie-banner-text" data-i18n="shared.cookies.bannerText">
+      Usa cookies para asegurar la mejor experiencia de navegación y rendimiento.
+    </p>
+    <div class="cookie-banner-actions">
+      <a href="legal/cookies.html" class="cookie-banner-link" data-i18n="shared.cookies.bannerLearnMore">Aprender mas</a>
+      <button type="button" class="btn btn-primary btn-sm cookie-banner-btn" id="cookie-accept-btn" data-i18n="shared.cookies.bannerAccept">Aceptar</button>
+    </div>
+  </div>
+</div>
 
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/interactions.js"></script>
