@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: nexa-website
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
