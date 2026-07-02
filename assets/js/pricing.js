@@ -242,4 +242,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateSelectedPlan(selectedPlanKey);
 });
-
