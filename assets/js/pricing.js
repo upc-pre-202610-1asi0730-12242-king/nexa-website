@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const FALLBACK_WEBAPP_BASE = 'http://localhost:5173';
+  const FALLBACK_WEBAPP_BASE = 'https://nexa-webapp.onrender.com';
   const configuredWebappBase =
     document.documentElement.dataset.webappBase ||
     window.NEXA_WEBAPP_BASE ||
     localStorage.getItem('nexa-webapp-base') ||
     FALLBACK_WEBAPP_BASE;
-  const REGISTER_WORKSPACE_URL = `${configuredWebappBase.replace(/\/$/, '')}/#/tenant-management/register-organization`;
+  const REGISTER_WORKSPACE_URL = `${configuredWebappBase.replace(/\/$/, '')}/tenant-management/register-organization`;
   const plans = {
     en: {
       starter: {

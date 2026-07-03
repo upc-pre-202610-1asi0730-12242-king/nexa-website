@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const FALLBACK_WEBAPP_BASE = 'http://localhost:5173';
+  const FALLBACK_WEBAPP_BASE = 'https://nexa-webapp.onrender.com';
   const configuredWebappBase =
     document.documentElement.dataset.webappBase ||
     window.NEXA_WEBAPP_BASE ||
     localStorage.getItem('nexa-webapp-base') ||
     FALLBACK_WEBAPP_BASE;
   const webappBase = configuredWebappBase.replace(/\/$/, '');
-  const webappUrl = (path) => `${webappBase}/${path.startsWith('#') ? path : `#/${path.replace(/^\//, '')}`}`;
+  const webappUrl = (path) => `${webappBase}/${path.replace(/^\#?\/?/, '')}`;
   const getLang = () => (document.documentElement.lang.startsWith('es') ? 'es' : 'en');
 
   const copy = {
