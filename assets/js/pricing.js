@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const FALLBACK_WEBAPP_BASE = 'http://localhost:5173';
+  const configuredWebappBase =
+    document.documentElement.dataset.webappBase ||
+    window.NEXA_WEBAPP_BASE ||
+    localStorage.getItem('nexa-webapp-base') ||
+    FALLBACK_WEBAPP_BASE;
+  const REGISTER_WORKSPACE_URL = `${configuredWebappBase.replace(/\/$/, '')}/#/tenant-management/register-organization`;
   const plans = {
     en: {
       starter: {
@@ -34,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'Dispatch Orders',
           'Proof of Delivery',
           'Buyer Tracking',
-          'Billing/payment demo',
+          'Billing and payment management',
           'Shipping/tax/payment summary',
           'Visa, Mastercard, Apple Pay, Google Pay, PayPal, Yape, Plin, Bank Transfer and B2B Credit Line',
           'Basic promotions',
@@ -44,13 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
           'Operational Analytics'
         ]
       },
-      premium: {
-        title: 'Premium',
+      professional: {
+        title: 'Professional',
         kicker: 'Decision support',
         purpose: 'Advanced customer experience and decision support.',
         features: [
           'Everything in Standard',
-          'Premium Buyer Catalog experience',
+          'Professional Buyer Catalog experience',
           'Advanced customer-specific discounts',
           'Advanced promotions',
           'AI assistant expansion',
@@ -67,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         kicker: 'Dedicated rollout',
         purpose: 'Dedicated integration and enterprise-grade operations.',
         features: [
-          'Everything in Premium',
+          'Everything in Professional',
           'Real external customer portal integration roadmap',
           'SUNAT/document provider integration roadmap',
           'GPS/IoT provider integration roadmap',
@@ -114,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'Órdenes de despacho',
           'Prueba de entrega (POD)',
           'Seguimiento para el comprador',
-          'Demostración de facturación/pago',
+          'Gestión de facturación y pagos',
           'Resumen de envío, impuestos y pago',
           'Visa, Mastercard, Apple Pay, Google Pay, PayPal, Yape, Plin, Transferencia bancaria y Línea de crédito B2B',
           'Promociones básicas',
@@ -124,13 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
           'Analítica operativa'
         ]
       },
-      premium: {
-        title: 'Premium',
+      professional: {
+        title: 'Professional',
         kicker: 'Soporte de decisiones',
         purpose: 'Experiencia avanzada del cliente y soporte en la toma de decisiones.',
         features: [
           'Todo lo incluido en Standard',
-          'Experiencia de catálogo premium para compradores',
+          'Experiencia de catálogo professional para compradores',
           'Descuentos avanzados específicos por cliente',
           'Promociones avanzadas',
           'Expansión del asistente de IA',
@@ -147,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         kicker: 'Despliegue dedicado',
         purpose: 'Integración dedicada y operaciones a escala empresarial.',
         features: [
-          'Todo lo incluido en Premium',
+          'Todo lo incluido en Professional',
           'Hoja de ruta real de integración de portal de clientes externos',
           'Hoja de ruta de integración con SUNAT o proveedor de documentos',
           'Hoja de ruta de integración con proveedor GPS o IoT',
@@ -168,10 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const detailPurpose = document.getElementById('plan-detail-purpose');
   const detailFeatures = document.getElementById('plan-detail-features');
   const selectPlanButton = document.getElementById('select-plan-btn');
-  const contactSection = document.getElementById('contact');
-  const selectedPlanInput = document.getElementById('pricing-selected-plan');
-  const selectedPlanHidden = document.getElementById('pricing-selected-plan-hidden');
-  const selectedPlanBadge = document.getElementById('selected-plan-badge');
   let selectedPlanKey = 'standard';
 
   function updateSelectedPlan(planKey) {
@@ -198,13 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    if (selectedPlanInput) selectedPlanInput.value = plan.title;
-    if (selectedPlanHidden) selectedPlanHidden.value = plan.title;
-
-    if (selectedPlanBadge) {
-      const prefix = lang === 'es' ? 'Plan seleccionado: ' : 'Selected plan: ';
-      selectedPlanBadge.textContent = `${prefix}${plan.title}`;
-    }
   }
 
   planCards.forEach((card) => {
@@ -213,32 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  if (selectPlanButton && contactSection) {
+  if (selectPlanButton) {
     selectPlanButton.addEventListener('click', () => {
-      updateSelectedPlan(selectedPlanKey);
-      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.setTimeout(() => {
-        const firstField = document.getElementById('pricing-name');
-        if (firstField) firstField.focus({ preventScroll: true });
-      }, 420);
-    });
-  }
-
-  const pricingForm = document.getElementById('pricing-contact-form');
-  const pricingFormStatus = document.getElementById('pricing-form-status');
-
-  if (pricingForm && pricingFormStatus) {
-    pricingForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      if (!pricingForm.checkValidity()) {
-        pricingForm.reportValidity();
-        return;
-      }
-
-      pricingForm.classList.add('is-success');
-      pricingFormStatus.hidden = false;
-      pricingFormStatus.focus?.();
+      window.location.href = REGISTER_WORKSPACE_URL;
     });
   }
 

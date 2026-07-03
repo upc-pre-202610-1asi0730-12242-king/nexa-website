@@ -34,6 +34,7 @@
 
     <div class="navbar-links" id="navbar-links">
       <a href="platform.html" class="navbar-link active" id="nav-platform" aria-current="page" data-i18n="shared.nav.platform">Plataforma</a>
+      <a href="buyer-portal.html" class="navbar-link" id="nav-buyer-portal" data-i18n="shared.nav.buyerPortal">Buyer Portal</a>
 
       <div class="dropdown-trigger" id="nav-solutions-trigger">
         <button class="navbar-link dropdown-btn" type="button" id="nav-solutions"
@@ -94,8 +95,8 @@
           <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
           <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
         </div>
-        <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
-        <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+        <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+        <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
       </div>
     </div>
 
@@ -104,8 +105,8 @@
         <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
         <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
       </div>
-      <a href="company.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
-      <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+      <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
       <a href="faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
     </div>
 
@@ -133,6 +134,10 @@
         <div class="badge mb-4" data-i18n="platform.hero.badge">La plataforma</div>
         <h1 id="platform-headline" data-i18n-html="platform.hero.title">Un solo sistema para todo lo que maneja<br>tu equipo de charcuteria y lacteos.</h1>
         <p class="text-lead" data-i18n="platform.hero.copy">Catalogo, inventario, pedidos, temperatura y entrega para lineas de charcuteria, quesos y lacteos en un solo lugar. Sin hojas de calculo, sin grupos de WhatsApp, sin conciliacion manual.</p>
+        <div class="hero-cta-row">
+          <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-lg" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+          <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-lg" data-i18n="shared.nav.login">Ingresar</a>
+        </div>
       </div>
 
       <div class="hero-sidecard" aria-label="Platform operating footprint" data-i18n-aria-label="platform.hero.sidecardAria">
@@ -141,13 +146,39 @@
         <div class="hero-pill-grid">
           <div class="page-hero-trust-pill" data-i18n="platform.hero.pill1">5 areas operativas</div>
           <div class="page-hero-trust-pill" data-i18n="platform.hero.pill2">Funciona sin conexion</div>
-          <div class="page-hero-trust-pill" data-i18n="platform.hero.pill3">Demo funcional TB1</div>
+          <div class="page-hero-trust-pill" data-i18n="platform.hero.pill3">Monitoreo en tiempo real</div>
           <div class="page-hero-trust-pill" data-i18n="platform.hero.pill4">Soporte dedicado incluido</div>
         </div>
       </div>
     </div>
   </div>
 </header>
+
+
+<section class="section section-tight section-surface" id="webapp-screens" aria-labelledby="webapp-screens-headline">
+  <div class="container-wide">
+    <div class="section-header is-left is-tight reveal">
+      <div class="badge mb-4">WebApp actualizada</div>
+      <h2 id="webapp-screens-headline">Diseños reales del workspace Nexa.</h2>
+      <p class="text-lead">La plataforma vende software operativo: portal comprador, inventario y despacho conectados dentro del mismo tenant.</p>
+    </div>
+
+    <div class="webapp-screenshot-grid reveal reveal-delay-1">
+      <figure class="webapp-screenshot-card">
+        <img src="../assets/img/webapp/buyer-request-builder.png" alt="Buyer Request Builder actualizado en Nexa WebApp" width="1440" height="960" loading="lazy" />
+        <figcaption>Buyer Portal: solicitudes B2B con catalogo, cantidades y direccion estructurada.</figcaption>
+      </figure>
+      <figure class="webapp-screenshot-card">
+        <img src="../assets/img/webapp/inventory-control.png" alt="Inventory Control actualizado en Nexa WebApp" width="1440" height="960" loading="lazy" />
+        <figcaption>Inventory Control: stock por producto, lote automatico y riesgo visible.</figcaption>
+      </figure>
+      <figure class="webapp-screenshot-card">
+        <img src="../assets/img/webapp/dispatch-board.png" alt="Dispatch Board actualizado en Nexa WebApp" width="1440" height="960" loading="lazy" />
+        <figcaption>Dispatch Orders: filtros, ordenamiento y avance de despacho.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 
 
@@ -227,7 +258,7 @@
           </svg>
         </div>
         <h3 data-i18n="platform.modules.orders.title">Pedidos B2B</h3>
-        <p data-i18n="platform.modules.orders.copy">Tus retailers, mostradores deli y equipos compradores hacen pedidos desde un portal con catalogo demo, precios definidos y stock visible. Sin llamadas para confirmar disponibilidad. Sin hilos interminables de correo.</p>
+        <p data-i18n="platform.modules.orders.copy">Tus retailers, mostradores deli y equipos compradores hacen pedidos desde un portal con catalogo de productos, precios definidos y stock visible. Sin llamadas para confirmar disponibilidad. Sin hilos interminables de correo.</p>
       </div>
 <div class="module-card reveal" id="telemetry">
         <div class="module-card-number">04</div>
@@ -237,7 +268,7 @@
           </svg>
         </div>
         <h3 data-i18n-html="platform.modules.telemetry.title">Temperatura y entrega</h3>
-        <p data-i18n="platform.modules.telemetry.copy">Tus choferes registran evidencia de entrega en el flujo demo. Temperatura, GPS y automatizaciones quedan separados como integraciones posteriores.</p>
+        <p data-i18n="platform.modules.telemetry.copy">Tus choferes registran evidencia de entrega de forma digital. Temperatura IoT, GPS y automatizaciones quedan separados como integraciones posteriores.</p>
       </div>
 <div class="module-card reveal reveal-delay-1" id="traceability">
         <div class="module-card-number">05</div>
@@ -247,7 +278,7 @@
           </svg>
         </div>
         <h3 data-i18n="platform.modules.traceability.title">Trazabilidad completa</h3>
-        <p data-i18n="platform.modules.traceability.copy">Cada producto queda modelado con origen, bodegas, condiciones termicas y recepcion. Los expedientes de inocuidad y trazabilidad quedan preparados para backend posterior.</p>
+        <p data-i18n="platform.modules.traceability.copy">Cada producto queda modelado con origen, bodegas, condiciones termicas y recepcion. Los expedientes de inocuidad y trazabilidad quedan preparados para integraciones operativas posteriores.</p>
       </div>
 
     </div>
@@ -333,7 +364,7 @@
       <div class="platform-workflow-step">
         <div class="platform-workflow-number">03</div>
         <h3 data-i18n="platform.workflow.step3.title">Tus clientes usan el portal B2B</h3>
-        <p data-i18n="platform.workflow.step3.copy">Tus distribuidores, tiendas especializadas y equipos compradores ingresan, ven catalogo demo con stock y precios, y piden directamente.</p>
+        <p data-i18n="platform.workflow.step3.copy">Tus distribuidores, tiendas especializadas y equipos compradores ingresan, ven catalogo de productos con stock y precios, y piden directamente.</p>
       </div>
       <div class="platform-workflow-step">
         <div class="platform-workflow-number">04</div>
@@ -352,7 +383,7 @@
   <div class="container-wide">
     <div class="section-header is-left is-tight reveal">
       <div class="badge mb-4" data-i18n="platform.phases.badge">Puesta en marcha</div>
-      <h2 id="phases-headline" data-i18n="platform.phases.title">Demo funcional ahora. Integraciones por roadmap.</h2>
+      <h2 id="phases-headline" data-i18n="platform.phases.title">Flujo de trabajo funcional desde el primer dia. Integraciones por roadmap.</h2>
       <p class="text-lead" data-i18n="platform.phases.copy">Configuramos el alcance por fases mientras tu equipo sigue operando. Sin prometer integraciones fuera del MVP TB1.</p>
     </div>
 
@@ -392,7 +423,7 @@
       <div class="phase-card reveal reveal-delay-1">
         <div class="phase-number">02</div>
         <div class="phase-title" data-i18n="platform.phases.step2.title">Lo configuramos</div>
-        <p class="phase-desc" data-i18n="platform.phases.step2.copy">Cargamos catalogo demo y capacitamos al equipo. Sensores e integraciones quedan planificados para fases posteriores.</p>
+        <p class="phase-desc" data-i18n="platform.phases.step2.copy">Cargamos el catalogo de productos y capacitamos al equipo. Sensores e integraciones quedan planificados para fases posteriores.</p>
         <ul class="phase-checklist">
           <li>
             <div class="phase-check" aria-hidden="true">
@@ -400,7 +431,7 @@
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
             </div>
-            <span data-i18n="platform.phases.step2.item1">Catalogo e inventario demo cargados</span>
+            <span data-i18n="platform.phases.step2.item1">Catalogo e inventario inicial listos</span>
           </li>
           <li>
             <div class="phase-check" aria-hidden="true">
@@ -423,8 +454,8 @@
 
       <div class="phase-card reveal reveal-delay-2">
         <div class="phase-number">03</div>
-        <div class="phase-title" data-i18n="platform.phases.step3.title">Pruebas el demo y planificamos fases</div>
-        <p class="phase-desc" data-i18n="platform.phases.step3.copy">Tu equipo prueba Nexa en un entorno controlado. Integraciones reales se activan cuando el backend y servicios planificados esten listos.</p>
+        <div class="phase-title" data-i18n="platform.phases.step3.title">Validacion operativa y planificacion de fases</div>
+        <p class="phase-desc" data-i18n="platform.phases.step3.copy">Tu equipo valida Nexa en un entorno controlado. Las integraciones adicionales se activan cuando los servicios planificados estan listos.</p>
         <ul class="phase-checklist">
           <li>
             <div class="phase-check" aria-hidden="true">
@@ -432,7 +463,7 @@
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
             </div>
-            <span data-i18n="platform.phases.step3.item1">Operacion demo desde el dia uno</span>
+            <span data-i18n="platform.phases.step3.item1">Operacion integrada desde el dia uno</span>
           </li>
           <li>
             <div class="phase-check" aria-hidden="true">
@@ -475,15 +506,15 @@
     <div class="closing-cta reveal">
       <div class="closing-cta-copy">
         <div class="badge mb-4" data-i18n="platform.cta.badge">Cierre de plataforma</div>
-        <h2 id="platform-cta-headline" data-i18n-html="platform.cta.title">Si tu operacion mueve <span class="text-accent">queso, charcuteria o lacteos</span>, el flujo ya puede revisarse hoy.</h2>
-        <p class="text-lead" data-i18n="platform.cta.copy">Cuentanos como se mueve tu producto y te mostraremos que modulos activar primero, que integraciones quedan en roadmap y cual es el alcance realista.</p>
+        <h2 id="platform-cta-headline" data-i18n-html="platform.cta.title">Registra un workspace y empieza a vender software operativo con Nexa.</h2>
+        <p class="text-lead" data-i18n="platform.cta.copy">Activa un tenant, configura catalogo, stock, pedidos, despacho y portal B2B. Las integraciones externas quedan separadas como roadmap.</p>
       </div>
       <div class="closing-cta-actions">
         <div class="closing-cta-note" data-i18n="platform.cta.note">Siguiente paso</div>
-        <p class="closing-cta-meta" data-i18n="platform.cta.meta">Respondemos con un recorrido guiado ajustado a tu operacion y con fases claras para despliegue, API e integraciones.</p>
+        <p class="closing-cta-meta" data-i18n="platform.cta.meta">CTA directo: registrar workspace o ingresar. La app concentra el flujo comercial y logistico.</p>
         <div class="cta-btn-row">
-          <a href="company.html#contact" class="btn btn-primary btn-lg" id="platform-cta-primary" data-i18n="platform.cta.primary">Solicitar un recorrido guiado</a>
-          <a href="faq.html" class="btn btn-secondary btn-lg" id="platform-cta-faq" data-i18n="platform.cta.secondary">Leer las FAQ</a>
+          <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-lg" id="platform-cta-primary" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+          <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-lg" id="platform-cta-faq" data-i18n="platform.cta.secondary">Ingresar</a>
         </div>
       </div>
     </div>
@@ -504,7 +535,7 @@
         <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
         <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
         <div class="footer-editorial-actions">
-          <a href="pricing.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
+          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
           <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
         </div>
       </div>
@@ -537,8 +568,8 @@
             <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
             <ul class="footer-links">
               <li><a href="pricing.html" data-i18n="shared.nav.pricing">Pricing</a></li>
-              <li><a href="https://nexa-webapp.onrender.com/#/auth/login" data-i18n="shared.nav.login">Login</a></li>
-              <li><a href="pricing.html#contact" data-i18n="shared.footer.requestDemo">Solicitar una demostracion</a></li>
+              <li><a href="#/auth/login" data-webapp-path="#/auth/login" data-i18n="shared.nav.login">Login</a></li>
+              <li><a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a></li>
             </ul>
           </div>
         </div>
@@ -546,7 +577,7 @@
         <div class="footer-social-block">
           <div>
             <div class="footer-col-title" data-i18n="shared.footer.direct">Accesos directos</div>
-            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Canales reales para escribir, pedir una demostracion o resolver dudas hoy.</p>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Accesos directos para registrar tu workspace, ingresar o resolver dudas hoy.</p>
           </div>
           <div class="footer-social-row">
             <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Enviar correo a Nexa" data-i18n-aria-label="shared.footer.emailAria">
@@ -590,91 +621,6 @@
     </div>
   </div>
 </footer>
-<div class="support-widget">
-  <button type="button" class="support-launcher is-hidden" id="support-launcher" aria-label="Open support panel" data-i18n-aria-label="shared.support.launcherAria" aria-controls="support-panel" aria-expanded="false" data-support-launcher>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-      <path d="M8 9h8"></path>
-      <path d="M8 13h5"></path>
-    </svg>
-  </button>
-
-  <div class="support-overlay" hidden data-support-overlay></div>
-
-  <section class="support-panel" id="support-panel" role="dialog" aria-modal="true" aria-labelledby="support-panel-title" hidden data-support-panel>
-    <div class="support-panel-header">
-      <a href="../index.html" class="support-brand" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
-        <img src="../assets/img/nexa.svg" alt="" class="support-brand-image" width="110" height="34" />
-        <span class="visually-hidden">Nexa</span>
-      </a>
-      <button type="button" class="support-panel-close" aria-label="Close support panel" data-i18n-aria-label="shared.support.closeAria" data-support-close>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-          <path d="M6 6l12 12"></path>
-          <path d="M18 6L6 18"></path>
-        </svg>
-      </button>
-    </div>
-
-    <div class="support-panel-hero">
-      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Soporte</p>
-      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Elige el siguiente paso.</h2>
-      <p class="support-panel-copy" data-i18n="shared.support.copy">Habla con el equipo, revisa la plataforma o abre el FAQ.</p>
-    </div>
-
-    <div class="support-panel-body">
-      <a href="company.html#contact" class="support-card support-card-primary">
-        <div>
-          <strong data-i18n="shared.support.card1Title">Hablar con el equipo</strong>
-          <span data-i18n="shared.support.card1Copy">Ve directo al equipo de despliegue.</span>
-        </div>
-        <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 12h14"></path>
-          <path d="M13 5l7 7-7 7"></path>
-        </svg>
-      </a>
-
-      <div class="support-card-grid">
-        <a href="platform.html" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card2Title">Ver la plataforma</strong>
-            <span data-i18n="shared.support.card2Copy">Revisa como funciona el sistema.</span>
-          </div>
-        </a>
-        <a href="faq.html#getting-started" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card3Title">Preguntas clave</strong>
-            <span data-i18n="shared.support.card3Copy">Abre las respuestas que mas revisan antes de decidir.</span>
-          </div>
-        </a>
-        <a href="solutions/index.html" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card4Title">Elegir solucion</strong>
-            <span data-i18n="shared.support.card4Copy">Encuentra el flujo que encaja con tu operacion.</span>
-          </div>
-        </a>
-      </div>
-
-      <a href="faq.html" class="support-search">
-        <div>
-          <span class="support-search-label" data-i18n="shared.support.searchLabel">Buscar en el FAQ</span>
-          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Ir a respuestas estructuradas y detalles de implementacion.</span>
-        </div>
-        <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="7"></circle>
-          <path d="M20 20l-3.5-3.5"></path>
-        </svg>
-      </a>
-
-      <div class="support-composer">
-        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Inicia un mensaje</label>
-        <textarea id="support-message" class="support-composer-input" rows="3" disabled data-i18n-placeholder="shared.support.composerPlaceholder" placeholder="Live chat is coming soon. Use the contact form today."></textarea>
-        <p class="support-composer-note">
-          <span data-i18n="shared.support.composerNoteText">El chat en vivo estara disponible pronto. Por ahora, </span><a href="company.html#contact" class="support-composer-link" data-i18n="shared.support.composerNoteLink">usa el formulario de contacto directo</a>.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
 
 <!-- Banner de Cookies -->
 <div class="cookie-banner" id="cookie-banner" hidden>

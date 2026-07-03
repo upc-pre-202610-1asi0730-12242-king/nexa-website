@@ -167,3 +167,85 @@
 .mb-6 { margin-bottom: var(--space-6); }
 .mb-8 { margin-bottom: var(--space-8); }
 .mb-12 { margin-bottom: var(--space-12); }
+
+/* Custom Dropdown Panel Alignment */
+.dropdown-panel.dropdown-panel-right {
+  left: auto;
+  right: 0;
+  transform: translateY(-6px);
+}
+.dropdown-trigger.open .dropdown-panel.dropdown-panel-right {
+  transform: translateY(0);
+}
+
+/* Section targets for psychological personas */
+.persona-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+.persona-card {
+  background: var(--c-white);
+  border: 1px solid var(--c-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+.persona-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--c-border-hover);
+}
+.persona-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+.persona-badge.racional {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+}
+.persona-badge.emocional {
+  background: var(--c-chaos-red-light);
+  color: var(--c-chaos-red);
+}
+.persona-badge.recurrente {
+  background: var(--c-nexa-green-light);
+  color: var(--c-nexa-green);
+}
+.persona-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--c-text-primary);
+  margin-bottom: var(--space-2);
+}
+.persona-desc {
+  font-size: 13.5px;
+  color: var(--c-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .persona-cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+/* Global safeguard: Hide all contact and demo references */
+a[href*="#contact"], 
+[data-i18n="shared.footer.contact"],
+[data-i18n="shared.footer.editorialPrimary"] {
+  display: none !important;
+}
+

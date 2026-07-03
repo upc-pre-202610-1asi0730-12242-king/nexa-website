@@ -21,7 +21,7 @@
 </head>
 <body data-page="solutions-importers" data-lang="es-419">
 
-<a href="#support-panel" class="skip-to-content">Skip to content</a><!-- Menu de Navegacion -->
+<a href="#importers-hero" class="skip-to-content">Skip to content</a><!-- Menu de Navegacion -->
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
   <div class="navbar-inner">
 
@@ -32,6 +32,7 @@
 
     <div class="navbar-links" id="navbar-links">
       <a href="../platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Plataforma</a>
+      <a href="../buyer-portal.html" class="navbar-link" id="nav-buyer-portal" data-i18n="shared.nav.buyerPortal">Buyer Portal</a>
 
       <div class="dropdown-trigger" id="nav-solutions-trigger">
         <button class="navbar-link dropdown-btn active" type="button" id="nav-solutions"
@@ -92,8 +93,8 @@
           <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
           <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
         </div>
-        <a href="../pricing.html#contact" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
-        <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+        <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+        <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
       </div>
     </div>
 
@@ -102,8 +103,8 @@
         <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
         <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
       </div>
-      <a href="../pricing.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
-      <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+      <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
       <a href="../faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
     </div>
 
@@ -129,6 +130,10 @@
 
         <h1 id="importers-headline" data-i18n="importers.hero.title">12,000 km en transito. Deja de tratar la temperatura de llegada de queso y lacteos como una sorpresa.</h1>
         <p class="text-lead" data-i18n="importers.hero.copy">Nexa modela la condicion del contenedor junto con tus registros de inventario de queso, charcuteria y lacteos. La telemetria real queda como integracion planificada.</p>
+        <div class="hero-cta-row">
+          <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-lg" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+          <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-lg" data-i18n="shared.nav.login">Ingresar</a>
+        </div>
       </div>
 
       <div class="page-hero-figure" aria-hidden="true" data-i18n-html="importers.hero.figure">
@@ -211,13 +216,13 @@
               <div class="segment-mockup-dot browser-dot is-green"></div>
             </div>
             <div class="segment-mockup-label">nexa — contenedor #NX-2901-Z</div>
-            <div class="segment-mockup-status">● Demo</div>
+            <div class="segment-mockup-status">● Activo</div>
           </div>
           <div class="segment-mockup-body">
             <div class="segment-metric-row">
               <div class="segment-metric-label">ID de contenedor</div>
               <div class="segment-metric-value">NX-2901-Z</div>
-              <div class="segment-metric-tag tag-ok">Demo</div>
+              <div class="segment-metric-tag tag-ok">Review</div>
             </div>
             <div class="segment-metric-row">
               <div class="segment-metric-label">Puerto de origen</div>
@@ -232,12 +237,12 @@
             <div class="segment-metric-row">
               <div class="segment-metric-label">Carga (IQF)</div>
               <div class="segment-metric-value">12,400 kg asignados</div>
-              <div class="segment-metric-tag tag-ok">Demo</div>
+              <div class="segment-metric-tag tag-ok">Review</div>
             </div>
             <div class="segment-metric-row">
               <div class="segment-metric-label">Excursiones</div>
               <div class="segment-metric-value">0 registradas</div>
-              <div class="segment-metric-tag tag-ok">Simulado</div>
+              <div class="segment-metric-tag tag-ok">Referencial</div>
             </div>
           </div>
         </div>
@@ -264,7 +269,7 @@
           </svg>
           <div class="benefit-item-content">
             <div class="benefit-item-title">Creacion de lotes a granel</div>
-            <div class="benefit-item-desc">Cuando la recepcion es valida, el demo crea registros de inventario mayorista con FEFO asociado al viaje maritimo.</div>
+            <div class="benefit-item-desc">Cuando la recepcion es valida, el sistema crea registros de inventario mayorista con FEFO asociado al viaje maritimo.</div>
           </div>
         </div>
 
@@ -300,7 +305,7 @@
 
       <div class="fit-proof-panel reveal reveal-delay-1">
         <div class="fit-proof-metric" data-i18n-html="importers.fit.metric1">
-          <div class="fit-proof-value">Demo</div>
+          <div class="fit-proof-value">Review</div>
           <p class="fit-proof-text">flujo para revisar reclamos con evidencia modelada sin prometer resolucion automatica en TB1.</p>
         </div>
         <div class="fit-proof-metric" data-i18n-html="importers.fit.metric2">
@@ -320,13 +325,13 @@
       <div class="closing-cta-copy">
         <div class="badge mb-4" data-i18n="importers.cta.badge">Cierre para importadores</div>
         <h2 data-i18n="importers.cta.title">Deja de perder margen en la puerta de muelle.</h2>
-        <p class="text-lead" data-i18n="importers.cta.copy">No hacemos demostraciones genericas. Cuentanos una excursion reciente y te mostramos exactamente como los logs de auditoria y el mapeo de inventario habrian detectado el problema antes de descargar.</p>
+        <p class="text-lead" data-i18n="importers.cta.copy">Registra tu workspace para organizar la recepcion, los logs de auditoria y el mapeo de inventario antes de descargar.</p>
       </div>
       <div class="closing-cta-actions">
         <div class="closing-cta-note" data-i18n="importers.cta.note">Siguiente paso</div>
         <p class="closing-cta-meta" data-i18n="importers.cta.meta">Ideal para equipos que necesitan unir telemetria portuaria, demoras aduaneras y recepcion de bodega en un solo flujo.</p>
         <div class="cta-btn-row">
-          <a href="../company.html#contact" class="btn btn-primary btn-lg" data-i18n="importers.cta.primary">Hablar con nuestro equipo de despliegue</a>
+          <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-lg" data-i18n="shared.nav.registerWorkspace">Hablar con nuestro equipo de despliegue</a>
           <a href="../faq.html" class="btn btn-secondary btn-lg" data-i18n="importers.cta.secondary">Revisar la FAQ de implementacion →</a>
         </div>
       </div>
@@ -348,7 +353,7 @@
         <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
         <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
         <div class="footer-editorial-actions">
-          <a href="../pricing.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
+          <a href="../company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
           <a href="../platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
         </div>
       </div>
@@ -381,8 +386,8 @@
             <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
             <ul class="footer-links">
               <li><a href="../pricing.html" data-i18n="shared.nav.pricing">Pricing</a></li>
-              <li><a href="https://nexa-webapp.onrender.com/#/auth/login" data-i18n="shared.nav.login">Login</a></li>
-              <li><a href="../pricing.html#contact" data-i18n="shared.footer.requestDemo">Solicitar una demostracion</a></li>
+              <li><a href="#/auth/login" data-webapp-path="#/auth/login" data-i18n="shared.nav.login">Login</a></li>
+              <li><a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a></li>
             </ul>
           </div>
         </div>
@@ -390,7 +395,7 @@
         <div class="footer-social-block">
           <div>
             <div class="footer-col-title" data-i18n="shared.footer.direct">Accesos directos</div>
-            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Canales reales para escribir, pedir una demostracion o resolver dudas hoy.</p>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Accesos directos para registrar tu workspace, ingresar o resolver dudas hoy.</p>
           </div>
           <div class="footer-social-row">
             <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Enviar correo a Nexa" data-i18n-aria-label="shared.footer.emailAria">
@@ -435,91 +440,6 @@
   </div>
 </footer>
 
-<div class="support-widget">
-  <button type="button" class="support-launcher is-hidden" id="support-launcher" aria-label="Open support panel" data-i18n-aria-label="shared.support.launcherAria" aria-controls="support-panel" aria-expanded="false" data-support-launcher>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-      <path d="M8 9h8"></path>
-      <path d="M8 13h5"></path>
-    </svg>
-  </button>
-
-  <div class="support-overlay" hidden data-support-overlay></div>
-
-  <section class="support-panel" id="support-panel" role="dialog" aria-modal="true" aria-labelledby="support-panel-title" hidden data-support-panel>
-    <div class="support-panel-header">
-      <a href="../../index.html" class="support-brand" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
-        <img src="../../assets/img/nexa.svg" alt="" class="support-brand-image" width="110" height="34" />
-        <span class="visually-hidden">Nexa</span>
-      </a>
-      <button type="button" class="support-panel-close" aria-label="Close support panel" data-i18n-aria-label="shared.support.closeAria" data-support-close>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-          <path d="M6 6l12 12"></path>
-          <path d="M18 6L6 18"></path>
-        </svg>
-      </button>
-    </div>
-
-    <div class="support-panel-hero">
-      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Soporte</p>
-      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Elige el siguiente paso.</h2>
-      <p class="support-panel-copy" data-i18n="shared.support.copy">Habla con el equipo, revisa la plataforma o abre el FAQ.</p>
-    </div>
-
-    <div class="support-panel-body">
-      <a href="../company.html#contact" class="support-card support-card-primary">
-        <div>
-          <strong data-i18n="shared.support.card1Title">Hablar con el equipo</strong>
-          <span data-i18n="shared.support.card1Copy">Ve directo al equipo de despliegue.</span>
-        </div>
-        <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 12h14"></path>
-          <path d="M13 5l7 7-7 7"></path>
-        </svg>
-      </a>
-
-      <div class="support-card-grid">
-        <a href="../platform.html" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card2Title">Ver la plataforma</strong>
-            <span data-i18n="shared.support.card2Copy">Revisa como funciona el sistema.</span>
-          </div>
-        </a>
-        <a href="../faq.html#getting-started" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card3Title">Preguntas clave</strong>
-            <span data-i18n="shared.support.card3Copy">Abre las respuestas que mas revisan antes de decidir.</span>
-          </div>
-        </a>
-        <a href="index.html" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card4Title">Elegir solucion</strong>
-            <span data-i18n="shared.support.card4Copy">Encuentra el flujo que encaja con tu operacion.</span>
-          </div>
-        </a>
-      </div>
-
-      <a href="../faq.html" class="support-search">
-        <div>
-          <span class="support-search-label" data-i18n="shared.support.searchLabel">Buscar en el FAQ</span>
-          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Ir a respuestas estructuradas y detalles de implementacion.</span>
-        </div>
-        <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="7"></circle>
-          <path d="M20 20l-3.5-3.5"></path>
-        </svg>
-      </a>
-
-      <div class="support-composer">
-        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Inicia un mensaje</label>
-        <textarea id="support-message" class="support-composer-input" rows="3" disabled data-i18n-placeholder="shared.support.composerPlaceholder" placeholder="Live chat is coming soon. Use the contact form today."></textarea>
-        <p class="support-composer-note">
-          <span data-i18n="shared.support.composerNoteText">El chat en vivo estara disponible pronto. Por ahora, </span><a href="../company.html#contact" class="support-composer-link" data-i18n="shared.support.composerNoteLink">usa el formulario de contacto directo</a>.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
 
 <!-- Banner de Cookies -->
 <div class="cookie-banner" id="cookie-banner" hidden>

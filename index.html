@@ -34,6 +34,7 @@
 
     <div class="navbar-links" id="navbar-links">
       <a href="pages/platform.html" class="navbar-link" id="nav-platform" data-i18n="shared.nav.platform">Plataforma</a>
+      <a href="pages/buyer-portal.html" class="navbar-link" id="nav-buyer-portal" data-i18n="shared.nav.buyerPortal">Buyer Portal</a>
 
       <div class="dropdown-trigger" id="nav-solutions-trigger">
         <button class="navbar-link dropdown-btn" type="button" id="nav-solutions"
@@ -94,8 +95,8 @@
           <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
           <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
         </div>
-        <a href="pages/pricing.html#contact" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
-        <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+        <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+        <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
       </div>
     </div>
 
@@ -104,8 +105,46 @@
         <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
         <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
       </div>
-      <a href="pages/pricing.html#contact" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.requestDemo">Solicitar una demostracion</a>
-      <a href="https://nexa-webapp.onrender.com/#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+      <div class="dropdown-trigger" id="nav-login-trigger">
+        <button class="btn btn-secondary btn-sm navbar-login-btn dropdown-btn" type="button" id="nav-login"
+                aria-expanded="false" aria-controls="login-dropdown" aria-haspopup="true"
+                data-i18n="shared.nav.login">
+          Ingresar
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="dropdown-panel dropdown-panel-right" id="login-dropdown" role="menu">
+          <a href="#/auth/login" data-webapp-path="#/auth/login" class="dropdown-item" role="menuitem" id="nav-login-seller">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.login.seller.title">Ventas y Logistica</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.login.seller.desc">Ingresar al panel operativo para gestionar pedidos, inventario FEFO y rutas.</div>
+            </div>
+          </a>
+          <a href="#/auth/login" data-webapp-path="#/auth/login" class="dropdown-item" role="menuitem" id="nav-login-buyer">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.login.buyer.title">Buyer Portal (Cliente)</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.login.buyer.desc">Ingresar como restaurante, autoservicio o retail para comprar y seguir pedidos.</div>
+            </div>
+          </a>
+        </div>
+      </div>
       <a href="pages/faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
     </div>
 
@@ -132,7 +171,6 @@
   <div class="app-hero-gradient" aria-hidden="true"></div>
   <div class="container-wide">
     <div class="app-hero-content">
-
       <h1 class="app-hero-headline" id="hero-headline" data-i18n-html="home.hero.title">
         Haz visible tu<br>operacion de <span class="text-accent">charcuteria y lacteos.</span>
       </h1>
@@ -140,8 +178,8 @@
       <p class="app-hero-lead" data-i18n="home.hero.lead">Inventario, pedidos, temperatura y entregas en una sola vista operativa. Hecho para queso, charcuteria y lineas lacteas que no pueden depender de hojas sueltas ni de grupos de WhatsApp.</p>
 
       <div class="app-hero-ctas">
-        <a href="pages/pricing.html#contact" class="btn btn-primary btn-lg" id="hero-cta-primary" data-i18n="home.hero.ctaPrimary">
-          Contact Us
+        <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-lg" id="hero-cta-primary" data-i18n="shared.nav.registerWorkspace">
+          Registrar workspace
         </a>
         <a href="pages/pricing.html#plans" class="btn btn-secondary-light btn-lg" id="hero-cta-platform" data-i18n="home.hero.ctaSecondary">View Plan Details</a>
       </div>
@@ -160,7 +198,6 @@
           <span class="app-hero-stat-label" data-i18n="home.hero.stat3">acompanamiento post-despliegue</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -246,7 +283,7 @@
             <div class="app-nexa-row app-nexa-row-alert">
               <div class="app-nexa-row-left">
                 <div class="app-nexa-row-title" data-i18n="home.chaos.nexa.row3.title">Camara 04 · Alerta sin conexion</div>
-                <div class="app-nexa-row-detail" data-i18n="home.chaos.nexa.row3.detail">Equipo notificado en flujo demo</div>
+                <div class="app-nexa-row-detail" data-i18n="home.chaos.nexa.row3.detail">Equipo de soporte notificado de inmediato</div>
               </div>
               <span class="app-nexa-badge app-nexa-badge-cyan" data-i18n="home.chaos.nexa.row3.badge">Resuelto · 12s</span>
             </div>
@@ -327,6 +364,40 @@
   </div>
 </section>
 <!-- /Filtro Operativo -->
+
+<!-- Seccion de Perfiles de Compradores (3 Personas) -->
+<section class="section section-surface" id="buyer-profiles" aria-labelledby="personas-headline">
+  <div class="container-wide">
+    <div class="solutions-routing-head reveal" style="text-align: center; max-width: 760px; margin: 0 auto var(--space-8);">
+      <div class="badge mb-4" data-i18n="home.personas.badge">Perfiles Operativos</div>
+      <h2 id="personas-headline" data-i18n="home.personas.title" style="font-size: clamp(28px, 3.2vw, 38px); line-height: 1.15; font-weight: 750; letter-spacing: -0.02em; color: var(--c-text-primary); margin-bottom: var(--space-4); max-width: none;">Diseñado para cada tipo de comprador e indecisión.</h2>
+      <p class="text-lead" data-i18n="home.personas.copy" style="font-size: clamp(15px, 1.2vw, 17px); color: var(--c-text-secondary); line-height: 1.6;">Atendemos las necesidades de tus clientes recurrentes, compradores por impulso, y tomadores de decisiones racionales en una sola plataforma.</p>
+    </div>
+
+    <div class="persona-cards reveal reveal-delay-1">
+      <!-- Card Racional -->
+      <article class="persona-card">
+        <span class="persona-badge racional">Racional</span>
+        <h3 class="persona-title" data-i18n="home.personas.racional.title">El Comprador Racional</h3>
+        <p class="persona-desc" data-i18n="home.personas.racional.desc">Exige datos duros y garantias. Nexa ofrece trazabilidad completa de lotes FEFO, historial de temperatura, y documentos de referencia listos para auditorias.</p>
+      </article>
+
+      <!-- Card Emocional -->
+      <article class="persona-card">
+        <span class="persona-badge emocional">Emocional</span>
+        <h3 class="persona-title" data-i18n="home.personas.emocional.title">El Comprador Emocional</h3>
+        <p class="persona-desc" data-i18n="home.personas.emocional.desc">Compra impulsado por el alivio de fricciones. Nexa reemplaza el estres y desorden de los grupos de WhatsApp con un panel limpio y notificaciones instantaneas.</p>
+      </article>
+
+      <!-- Card Recurrente / Indeciso -->
+      <article class="persona-card">
+        <span class="persona-badge recurrente">Recurrente</span>
+        <h3 class="persona-title" data-i18n="home.personas.recurrente.title">El Indeciso / Recurrente</h3>
+        <p class="persona-desc" data-i18n="home.personas.recurrente.desc">Teme equivocarse o detener la operacion. Mitigamos el riesgo con un mapeo de proceso en 48 horas, soporte humano 24/7 y planes flexibles sin costos de TI.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
 <!-- Flujo de Trabajo -->
 <section class="app-timeline" id="day-with-nexa" aria-labelledby="timeline-headline">
@@ -420,7 +491,7 @@
           <div class="app-cap-forecast">
             <div class="app-cap-forecast-head">
               <span class="app-cap-forecast-product" data-i18n="home.capabilities.inventory.product">Queso Brie Artesanal</span>
-              <span class="app-cap-forecast-tag" data-i18n="home.capabilities.inventory.tag">Stock demo</span>
+              <span class="app-cap-forecast-tag" data-i18n="home.capabilities.inventory.tag">Stock activo</span>
             </div>
             <div class="app-cap-forecast-bars" aria-hidden="true">
               <div class="app-cap-bar is-40"></div>
@@ -562,7 +633,7 @@
         </article>
         <article class="app-product-card">
           <h3 data-i18n="home.product.card6.title">Operational Analytics</h3>
-          <p data-i18n="home.product.card6.copy">Demo-level signals for stock, orders, temperature and workflow status.</p>
+          <p data-i18n="home.product.card6.copy">Operational signals for stock, orders, temperature, and workflow status.</p>
         </article>
       </div>
     </div>
@@ -629,7 +700,6 @@
         </div>
         <h3 data-i18n="home.adopt.support.title">Soporte dedicado incluido</h3>
         <p data-i18n="home.adopt.support.copy">Cuando algo falla en piso, necesitas una persona que entienda tu operacion, no un bot.</p>
-        <a href="pages/pricing.html#contact" class="app-adopt-support-cta" data-i18n="home.adopt.support.cta">Talk to the Nexa team →</a>
       </div>
 
     </div>
@@ -644,37 +714,37 @@
     <div class="app-cta-inner reveal">
 
       <h2 id="cta-headline" data-i18n-html="home.cta.headline">
-        Sin demostraciones genericas.<br>Te mostramos como Nexa encaja en <span class="text-accent">tu operacion.</span>
+        Crea tu workspace y conecta <span class="text-accent">tu operacion B2B.</span>
       </h2>
 
       <div class="app-cta-steps">
         <div class="app-cta-step">
           <span class="app-cta-step-num">1</span>
           <div>
-            <strong data-i18n="home.cta.step1.title">Cuentanos sobre tu operacion</strong>
-            <span data-i18n="home.cta.step1.copy">Tamano, ubicaciones y principales dolores.</span>
+            <strong data-i18n="home.cta.step1.title">Registra tu empresa</strong>
+            <span data-i18n="home.cta.step1.copy">Define los datos base de tu organizacion y workspace.</span>
           </div>
         </div>
         <div class="app-cta-step-arrow" aria-hidden="true">→</div>
         <div class="app-cta-step">
           <span class="app-cta-step-num">2</span>
           <div>
-            <strong data-i18n="home.cta.step2.title">Te mostramos Nexa con tus datos</strong>
-            <span data-i18n="home.cta.step2.copy">No es una demostracion generica. Son tus productos y tus rutas.</span>
+            <strong data-i18n="home.cta.step2.title">Configura tu operacion</strong>
+            <span data-i18n="home.cta.step2.copy">Organiza catalogo, equipo, almacenes y reglas desde el inicio.</span>
           </div>
         </div>
         <div class="app-cta-step-arrow" aria-hidden="true">→</div>
         <div class="app-cta-step">
           <span class="app-cta-step-num">3</span>
           <div>
-            <strong data-i18n="home.cta.step3.title">Tu equipo revisa un alcance realista</strong>
-            <span data-i18n="home.cta.step3.copy">Puesta en marcha, capacitacion e integraciones quedan separadas por fase.</span>
+            <strong data-i18n="home.cta.step3.title">Empieza con trazabilidad</strong>
+            <span data-i18n="home.cta.step3.copy">Pedidos, inventario, despacho y Buyer Portal comparten el mismo flujo.</span>
           </div>
         </div>
       </div>
 
       <div class="app-cta-buttons">
-        <a href="pages/pricing.html#contact" class="btn btn-primary btn-lg" id="cta-primary" data-i18n="home.cta.primary">Contact Us</a>
+        <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-lg" id="cta-primary" data-i18n="shared.nav.registerWorkspace">Register workspace</a>
         <a href="pages/pricing.html#plans" class="btn btn-secondary btn-lg" id="cta-secondary" data-i18n="pricing.plans.viewDetails">View Plan Details</a>
       </div>
 
@@ -695,8 +765,7 @@
         <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
         <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
         <div class="footer-editorial-actions">
-          <a href="pages/pricing.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
-          <a href="pages/platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
+          <a href="pages/platform.html" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
         </div>
       </div>
 
@@ -719,7 +788,6 @@
               <li><a href="pages/about-the-team.html" data-i18n="shared.nav.aboutTeam">Sobre el equipo</a></li>
               <li><a href="pages/company.html" data-i18n="shared.nav.company">Sobre Nexa</a></li>
               <li><a href="pages/company.html#support" data-i18n="shared.footer.howWeSupport">Como acompanamos</a></li>
-              <li><a href="pages/company.html#contact" data-i18n="shared.footer.contact">Contacto</a></li>
               <li><a href="pages/faq.html" data-i18n="shared.nav.faq">FAQ</a></li>
             </ul>
           </div>
@@ -728,8 +796,8 @@
             <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
             <ul class="footer-links">
               <li><a href="pages/pricing.html" data-i18n="shared.nav.pricing">Pricing</a></li>
-              <li><a href="https://nexa-webapp.onrender.com/#/auth/login" data-i18n="shared.nav.login">Login</a></li>
-              <li><a href="pages/pricing.html#contact" data-i18n="shared.footer.requestDemo">Solicitar una demostracion</a></li>
+              <li><a href="#/auth/login" data-webapp-path="#/auth/login" data-i18n="shared.nav.login">Login</a></li>
+              <li><a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a></li>
             </ul>
           </div>
         </div>
@@ -746,11 +814,7 @@
                 <path d="M4 8l8 6 8-6"></path>
               </svg>
             </a>
-            <a href="pages/pricing.html#contact" class="footer-social-link" aria-label="Ir al contacto de Nexa" data-i18n-aria-label="shared.footer.contactAria">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-              </svg>
-            </a>
+
             <a href="pages/faq.html" class="footer-social-link" aria-label="Abrir el FAQ de Nexa" data-i18n-aria-label="shared.footer.faqAria">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -782,100 +846,6 @@
   </div>
 </footer>
 
-<!-- Widget de Soporte -->
-<div class="support-widget">
-  <button type="button" class="support-launcher is-hidden" id="support-launcher"
-          aria-label="Abrir panel de soporte" data-i18n-aria-label="shared.support.launcherAria"
-          aria-controls="support-panel" aria-expanded="false" data-support-launcher>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-      <path d="M8 9h8"></path>
-      <path d="M8 13h5"></path>
-    </svg>
-  </button>
-
-  <div class="support-overlay" hidden data-support-overlay></div>
-
-  <section class="support-panel" id="support-panel" role="dialog" aria-modal="true"
-           aria-labelledby="support-panel-title" hidden data-support-panel>
-    <div class="support-panel-header">
-      <a href="index.html" class="support-brand" aria-label="Inicio de Nexa" data-i18n-aria-label="shared.nav.logoAria">
-        <img src="assets/img/nexa.svg" alt="" class="support-brand-image" width="110" height="34" />
-        <span class="visually-hidden">Nexa</span>
-      </a>
-      <button type="button" class="support-panel-close"
-              aria-label="Cerrar panel de soporte" data-i18n-aria-label="shared.support.closeAria"
-              data-support-close>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-          <path d="M6 6l12 12"></path>
-          <path d="M18 6L6 18"></path>
-        </svg>
-      </button>
-    </div>
-
-    <div class="support-panel-hero">
-      <p class="support-panel-kicker" data-i18n="shared.support.kicker">Soporte</p>
-      <h2 class="support-panel-title" id="support-panel-title" data-i18n-html="shared.support.title">Elige el siguiente paso.</h2>
-      <p class="support-panel-copy" data-i18n="shared.support.copy">Habla con el equipo, revisa la plataforma o abre el FAQ.</p>
-    </div>
-
-    <div class="support-panel-body">
-      <a href="pages/pricing.html#contact" class="support-card support-card-primary">
-        <div>
-          <strong data-i18n="shared.support.card1Title">Hablar con el equipo</strong>
-          <span data-i18n="shared.support.card1Copy">Ve directo al equipo de despliegue.</span>
-        </div>
-        <svg class="support-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 12h14"></path>
-          <path d="M13 5l7 7-7 7"></path>
-        </svg>
-      </a>
-
-      <div class="support-card-grid">
-        <a href="pages/platform.html" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card2Title">Ver la plataforma</strong>
-            <span data-i18n="shared.support.card2Copy">Revisa como funciona el sistema.</span>
-          </div>
-        </a>
-        <a href="pages/faq.html#getting-started" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card3Title">Preguntas clave</strong>
-            <span data-i18n="shared.support.card3Copy">Abre las respuestas que mas revisan antes de decidir.</span>
-          </div>
-        </a>
-        <a href="pages/solutions/index.html" class="support-card">
-          <div>
-            <strong data-i18n="shared.support.card4Title">Elegir solucion</strong>
-            <span data-i18n="shared.support.card4Copy">Encuentra el flujo que encaja con tu operacion.</span>
-          </div>
-        </a>
-      </div>
-
-      <a href="pages/faq.html" class="support-search">
-        <div>
-          <span class="support-search-label" data-i18n="shared.support.searchLabel">Buscar en el FAQ</span>
-          <span class="support-search-copy" data-i18n="shared.support.searchCopy">Ir a respuestas estructuradas y detalles de implementacion.</span>
-        </div>
-        <svg class="support-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="7"></circle>
-          <path d="M20 20l-3.5-3.5"></path>
-        </svg>
-      </a>
-
-      <div class="support-composer">
-        <label class="support-composer-label" for="support-message" data-i18n="shared.support.composerLabel">Inicia un mensaje</label>
-        <textarea id="support-message" class="support-composer-input" rows="3" disabled
-                  data-i18n-placeholder="shared.support.composerPlaceholder"
-                  placeholder="El chat en vivo estara disponible pronto. Usa hoy el formulario de contacto."></textarea>
-        <p class="support-composer-note">
-          <span data-i18n="shared.support.composerNoteText">El chat en vivo estara disponible pronto. Por ahora, </span><a href="pages/company.html#contact" class="support-composer-link" data-i18n="shared.support.composerNoteLink">usa el formulario de contacto directo</a>.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<!-- /Widget de Soporte -->
 
 <!-- Banner de Cookies -->
 <div class="cookie-banner" id="cookie-banner" hidden>

@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const WEBAPP_BASE = 'https://nexa-webapp.onrender.com';
+  const FALLBACK_WEBAPP_BASE = 'http://localhost:5173';
+  const configuredWebappBase =
+    document.documentElement.dataset.webappBase ||
+    window.NEXA_WEBAPP_BASE ||
+    localStorage.getItem('nexa-webapp-base') ||
+    FALLBACK_WEBAPP_BASE;
+  const webappBase = configuredWebappBase.replace(/\/$/, '');
+  const webappUrl = (path) => `${webappBase}/${path.startsWith('#') ? path : `#/${path.replace(/^\//, '')}`}`;
   const getLang = () => (document.documentElement.lang.startsWith('es') ? 'es' : 'en');
 
   const copy = {
@@ -42,61 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdownBtn = document.getElementById('nav-solutions');
   const dropdownPanel = document.getElementById('solutions-dropdown');
   const navbarOverlay = document.getElementById('navbar-overlay');
-  const supportLauncher = document.querySelector('[data-support-launcher]');
-  const supportPanel = document.querySelector('[data-support-panel]');
-  const supportOverlay = document.querySelector('[data-support-overlay]');
-  const supportClose = document.querySelector('[data-support-close]');
-  const supportRevealAnchor = document.querySelector('#hero, .page-hero, .faq-page-hero, #faq-hero');
-  let supportShouldDisplay = false;
 
   if (dropdownPanel) {
     dropdownPanel.hidden = true;
-  }
-
-  if (supportPanel) {
-    supportPanel.hidden = true;
-    supportPanel.setAttribute('aria-hidden', 'true');
-  }
-
-  if (supportOverlay) {
-    supportOverlay.hidden = true;
-    supportOverlay.setAttribute('aria-hidden', 'true');
-  }
-
-  if (supportLauncher) {
-    supportLauncher.setAttribute('aria-expanded', 'false');
-  }
-
-  function isSupportOpen() {
-    return Boolean(supportPanel && !supportPanel.hidden);
-  }
-
-  function syncSupportLauncherVisibility() {
-    if (!supportLauncher) return;
-
-    const shouldHideLauncher = isSupportOpen() || !supportShouldDisplay;
-    supportLauncher.classList.toggle('is-hidden', shouldHideLauncher);
-    supportLauncher.setAttribute('aria-hidden', shouldHideLauncher ? 'true' : 'false');
-  }
-
-  function updateSupportAvailability() {
-    if (!supportLauncher) return;
-
-    if (supportRevealAnchor) {
-      const rect = supportRevealAnchor.getBoundingClientRect();
-      supportShouldDisplay = rect.bottom <= Math.max(window.innerHeight * 0.42, 180);
-    } else {
-      supportShouldDisplay = window.scrollY > 180;
-    }
-
-    syncSupportLauncherVisibility();
   }
 
   function syncShellState() {
     const mobileNavIsOpen = Boolean(navbarLinks && navbarLinks.classList.contains('mobile-open'));
     const dropdownIsOpen = Boolean(dropdownTrigger && dropdownTrigger.classList.contains('open'));
     const shouldShowOverlay = mobileNavIsOpen || dropdownIsOpen;
-    const supportOpen = isSupportOpen();
 
     if (navbarOverlay) {
       navbarOverlay.classList.toggle('visible', shouldShowOverlay);
@@ -111,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    document.body.style.overflow = mobileNavIsOpen || supportOpen ? 'hidden' : '';
+    document.body.style.overflow = mobileNavIsOpen ? 'hidden' : '';
   }
 
   function closeDropdown() {
@@ -154,50 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function closeSupportPanel(returnFocus = true) {
-    if (!supportPanel || !supportLauncher) return;
-
-    supportPanel.hidden = true;
-    supportPanel.setAttribute('aria-hidden', 'true');
-    supportLauncher.setAttribute('aria-expanded', 'false');
-
-    if (supportOverlay) {
-      supportOverlay.hidden = true;
-      supportOverlay.setAttribute('aria-hidden', 'true');
-    }
-
-    updateSupportAvailability();
-    syncShellState();
-
-    if (returnFocus && supportShouldDisplay) {
-      supportLauncher.focus();
-    }
-  }
-
-  function openSupportPanel() {
-    if (!supportPanel || !supportLauncher) return;
-
-    closeDropdown();
-    closeMobileMenu();
-
-    supportPanel.hidden = false;
-    supportPanel.setAttribute('aria-hidden', 'false');
-    supportLauncher.setAttribute('aria-expanded', 'true');
-    supportLauncher.classList.add('is-hidden');
-
-    if (supportOverlay) {
-      supportOverlay.hidden = false;
-      supportOverlay.setAttribute('aria-hidden', 'false');
-    }
-
-    syncSupportLauncherVisibility();
-    syncShellState();
-
-    if (supportClose) {
-      window.requestAnimationFrame(() => supportClose.focus());
-    }
-  }
-
   if (mobileToggle && navbarLinks) {
     mobileToggle.addEventListener('click', (event) => {
       event.stopPropagation();
@@ -223,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.setAttribute('aria-expanded', 'false');
       }
 
-      updateSupportAvailability();
       syncShellState();
       syncOpenFaqHeights();
     });
@@ -254,38 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (supportLauncher && supportPanel) {
-    updateSupportAvailability();
-    window.addEventListener('scroll', updateSupportAvailability, { passive: true });
-
-    supportLauncher.addEventListener('click', () => {
-      if (isSupportOpen()) {
-        closeSupportPanel();
-      } else {
-        openSupportPanel();
-      }
-    });
-
-    if (supportClose) {
-      supportClose.addEventListener('click', () => {
-        closeSupportPanel();
-      });
-    }
-
-    if (supportOverlay) {
-      supportOverlay.addEventListener('click', () => {
-        closeSupportPanel(false);
-      });
-    }
-  }
-
   document.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape') return;
-
-    if (isSupportOpen()) {
-      closeSupportPanel();
-      return;
-    }
 
     closeDropdown();
     closeMobileMenu();
@@ -497,23 +383,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       setSubmitting(true);
+      const company = document.getElementById('contact-company')?.value.trim() || '';
+      const subject = encodeURIComponent(`Nexa contact - ${company || contactFields.name.value.trim()}`);
+      const body = encodeURIComponent([
+        `Name: ${contactFields.name.value.trim()}`,
+        `Work email: ${contactFields.email.value.trim()}`,
+        `Company: ${company || '-'}`,
+        '',
+        contactFields.message.value.trim(),
+      ].join('\n'));
 
-      window.setTimeout(() => {
-        setSubmitting(false);
-        contactForm.classList.add('is-success');
-        contactSuccess.hidden = false;
-        contactSuccess.focus();
-      }, 700);
+      window.location.href = `mailto:hello@nexa.lat?subject=${subject}&body=${body}`;
+      setSubmitting(false);
+      contactForm.classList.add('is-success');
+      contactSuccess.hidden = false;
+      contactSuccess.focus();
     });
 
     document.addEventListener('nexa:languagechange', syncTranslatedErrors);
   }
 
   /* --- Acceso a la Aplicacion --- */
+  document.querySelectorAll('[data-webapp-path]').forEach((link) => {
+    link.setAttribute('href', webappUrl(link.dataset.webappPath || '#/auth/login'));
+  });
+
   document.querySelectorAll('[data-login-placeholder]').forEach((button) => {
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      window.location.href = `${WEBAPP_BASE}/#/auth/login`;
+      window.location.href = webappUrl('#/auth/login');
     });
   });
 
@@ -538,6 +436,63 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 400);
     });
   }
+
+  /* --- Login Dropdown Menu --- */
+  const loginTrigger = document.getElementById('nav-login-trigger');
+  const loginBtn = document.getElementById('nav-login');
+  const loginPanel = document.getElementById('login-dropdown');
+
+  if (loginPanel) {
+    loginPanel.hidden = true;
+  }
+
+  function closeLoginDropdown() {
+    if (!loginTrigger || !loginBtn) return;
+    loginTrigger.classList.remove('open');
+    loginBtn.setAttribute('aria-expanded', 'false');
+    if (loginPanel) loginPanel.hidden = true;
+  }
+
+  function openLoginDropdown() {
+    if (!loginTrigger || !loginBtn) return;
+    loginTrigger.classList.add('open');
+    loginBtn.setAttribute('aria-expanded', 'true');
+    if (loginPanel) loginPanel.hidden = false;
+  }
+
+  if (loginTrigger && loginBtn) {
+    loginBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = loginTrigger.classList.contains('open');
+      if (isOpen) {
+        closeLoginDropdown();
+      } else {
+        closeDropdown(); // Close solutions dropdown if open
+        openLoginDropdown();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!loginTrigger.contains(event.target)) {
+        closeLoginDropdown();
+      }
+    });
+
+    // Close login if solutions is opened
+    if (dropdownBtn) {
+      dropdownBtn.addEventListener('click', () => {
+        closeLoginDropdown();
+      });
+    }
+  }
+
+  // Extend escape key to close login dropdown
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeLoginDropdown();
+      if (loginBtn) loginBtn.blur();
+    }
+  });
 
   syncShellState();
 });

@@ -2,7 +2,7 @@
 
 <br/>
 
-<img src="./docs/assets/nexa-logo.svg" alt="Nexa" width="200"/>
+<img src="./assets/img/nexa.svg" alt="Nexa" width="200"/>
 
 <br/><br/>
 
@@ -23,7 +23,7 @@
 ![Cycle](https://img.shields.io/badge/Cycle-2026--10-0a2540?style=flat-square)
 ![University](https://img.shields.io/badge/University-UPC-0a2540?style=flat-square)
 ![Team](https://img.shields.io/badge/Team-King-2a67d9?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Release%201.0.0-22c55e?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Release%204.0.0-22c55e?style=flat-square)
 
 <br/>
 
@@ -60,7 +60,7 @@ Built entirely with vanilla HTML, CSS, and JavaScript. No frameworks, no build s
     <td width="50%">
       <p><a href="https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-webapp">nexa-webapp</a></p>
       <p>Main web application for operational workflows and buyer-facing coordination.</p>
-      <p><a href="https://nexa-webapp.onrender.com/#/auth/login">Open Live WebApp Login</a></p>
+      <p><a href="http://localhost:5173/#/auth/login">Open Local WebApp Login</a></p>
       <p>
         <img alt="Vue 3" src="https://img.shields.io/badge/Vue%203-35495E?style=flat-square&logo=vue.js&logoColor=4FC08D" />
         <img alt="Vite" src="https://img.shields.io/badge/Vite-0F172A?style=flat-square&logo=vite&logoColor=FFD62E" />
@@ -72,7 +72,7 @@ Built entirely with vanilla HTML, CSS, and JavaScript. No frameworks, no build s
     <td width="50%">
       <p><a href="https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform">nexa-platform</a></p>
       <p>Backend platform and API service layer — Clean Architecture, DDD, ASP.NET Core.</p>
-      <p><a href="https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform/wiki">Open Engineering Wiki</a></p>
+      <p><a href="https://github.com/upc-pre-202610-1asi0730-12242-king/nexa-platform">Open Platform Repository</a></p>
       <p>
         <img alt="Platform" src="https://img.shields.io/badge/.NET%20Core-10.0-512BD4?style=flat-square" />
         <img alt="API" src="https://img.shields.io/badge/API-domain%20services-0EA5E9?style=flat-square" />
@@ -99,7 +99,7 @@ Built entirely with vanilla HTML, CSS, and JavaScript. No frameworks, no build s
 | `/` | Home | Main landing — hero, product overview, segments, social proof |
 | `/pages/platform.html` | Platform | Module breakdown and operational feature details |
 | `/pages/about-the-product.html` | About the Product | Deep product context and workflow explanation |
-| `/pages/pricing.html` | Pricing | Plan tiers and contact/demo request form |
+| `/pages/pricing.html` | Pricing | Plan tiers and contact / informational request form |
 | `/pages/company.html` | Company | Team, mission, and contact section |
 | `/pages/faq.html` | FAQ | Common questions about the platform and process |
 | `/pages/solutions/importers.html` | Importers | Segment landing for food importers |
@@ -146,8 +146,6 @@ nexa-website/
 │   └── img/
 │       ├── nexa-team/          # Team member photos
 │       └── *.svg / *.png       # Brand assets and illustrations
-├── docs/
-│   └── assets/                 # Branding logo files (nexa-logo.svg)
 ├── pages/
 │   ├── platform.html
 │   ├── about-the-product.html
@@ -227,7 +225,7 @@ Every push to `main` is automatically reflected at the live URL within minutes.
 - **[Code of Conduct](.github/CODE_OF_CONDUCT.md)**
 - **[Contributing Guidelines](.github/CONTRIBUTING.md)**
 - **[Live Website](https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/)**
-- **[WebApp Login](https://nexa-webapp.onrender.com/#/auth/login)**
+- **[Local WebApp Login](http://localhost:5173/#/auth/login)**
 
 ---
 
