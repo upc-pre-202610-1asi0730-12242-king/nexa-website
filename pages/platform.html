@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta name="description" data-i18n-content="platform.meta.description" content="Nexa Platform — One system for charcuterie, cheese, and dairy catalog, inventory, orders, temperature, and delivery." />
+  <meta name="keywords" content="Nexa, plataforma, catalogo, inventario, pedidos, despacho, FEFO" />
+  <meta name="author" content="Nexa" />
+  <meta property="og:title" data-i18n-content="platform.meta.ogTitle" content="Nexa — What the Platform Actually Does" />
+  <meta property="og:description" data-i18n-content="platform.meta.ogDescription" content="Five operational areas. One system. No spreadsheets, no WhatsApp, no guessing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/pages/platform.html" />
+  <meta property="og:site_name" content="Nexa" />
+  <link rel="canonical" href="https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/pages/platform.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title data-i18n-content="platform.meta.title">Nexa — What the Platform Does</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/img/main-nexa-small-icon.svg" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body data-page="platform" data-lang="es-419">
+
+<a href="#modules" class="skip-to-content">Skip to content</a>
+
+
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation" data-i18n-aria-label="shared.nav.aria">
+  <div class="navbar-inner">
+
+    <a href="../index.html" class="navbar-logo" aria-label="Nexa home" data-i18n-aria-label="shared.nav.logoAria">
+      <img src="../assets/img/nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+      <span class="visually-hidden">Nexa</span>
+    </a>
+
+    <div class="navbar-links" id="navbar-links">
+      <a href="platform.html" class="navbar-link active" id="nav-platform" aria-current="page" data-i18n="shared.nav.platform">Plataforma</a>
+      <a href="buyer-portal.html" class="navbar-link" id="nav-buyer-portal" data-i18n="shared.nav.buyerPortal">Buyer Portal</a>
+
+      <div class="dropdown-trigger" id="nav-solutions-trigger">
+        <button class="navbar-link dropdown-btn" type="button" id="nav-solutions"
+                aria-expanded="false" aria-controls="solutions-dropdown" aria-haspopup="true"
+                data-i18n="shared.nav.solutions">
+          Soluciones
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="dropdown-panel" id="solutions-dropdown" role="menu">
+          <a href="solutions/importers.html" class="dropdown-item" role="menuitem" id="nav-importers">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.importers.title">Importadores y mayoristas</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.importers.desc">Ingreso portuario para lotes de queso, charcuteria y lacteos.</div>
+            </div>
+          </a>
+          <a href="solutions/distributors.html" class="dropdown-item" role="menuitem" id="nav-distributors">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.distributors.title">Distribuidores</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.distributors.desc">Cumplimiento de ultima milla, reposicion FEFO y pedidos B2B.</div>
+            </div>
+          </a>
+          <a href="solutions/cold-storage.html" class="dropdown-item" role="menuitem" id="nav-cold-storage">
+            <div class="dropdown-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="dropdown-item-title" data-i18n="shared.nav.storage.title">Operadores de camaras frias</div>
+              <div class="dropdown-item-desc" data-i18n="shared.nav.storage.desc">Camaras de queso, camaras lacteas y registros de inocuidad alimentaria.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="company.html" class="navbar-link" id="nav-company" data-i18n="shared.nav.company">Empresa</a>
+      <a href="pricing.html" class="navbar-link" id="nav-pricing" data-i18n="shared.nav.pricing">Pricing</a>
+      <a href="faq.html" class="navbar-link navbar-link-mobile-only" id="nav-faq-mobile" data-i18n="shared.nav.faq">FAQ</a>
+
+      <div class="navbar-mobile-actions">
+        <div class="lang-switch" role="group" aria-label="Selector de idioma" data-i18n-aria-label="shared.nav.languageAria">
+          <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+          <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
+        </div>
+        <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-sm" id="nav-cta-mobile" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+        <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      </div>
+    </div>
+
+    <div class="navbar-actions">
+      <div class="lang-switch" role="group" aria-label="Selector de idioma" data-i18n-aria-label="shared.nav.languageAria">
+        <button class="lang-switch-btn" type="button" data-lang-option="en">EN</button>
+        <button class="lang-switch-btn is-active" type="button" data-lang-option="es">ES</button>
+      </div>
+      <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-sm" id="nav-cta" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+      <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-sm navbar-login-btn" data-i18n="shared.nav.login">Ingresar</a>
+      <a href="faq.html" class="navbar-link navbar-link-action" data-i18n="shared.nav.faq">FAQ</a>
+    </div>
+
+    <button type="button" class="navbar-mobile-toggle" aria-label="Open navigation" data-i18n-aria-label="shared.nav.mobileToggle"
+            aria-expanded="false" aria-controls="navbar-links" id="mobile-menu-toggle">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+  </div>
+</nav>
+
+<div class="navbar-overlay" id="navbar-overlay" aria-hidden="true"></div>
+
+
+
+<header class="page-hero page-hero-split" id="platform-hero" aria-labelledby="platform-headline">
+  <div class="container-wide">
+    <div class="hero-split-layout reveal">
+      <div class="page-hero-copy page-hero-copy-left">
+        <div class="badge mb-4" data-i18n="platform.hero.badge">La plataforma</div>
+        <h1 id="platform-headline" data-i18n-html="platform.hero.title">Un solo sistema para todo lo que maneja<br>tu equipo de charcuteria y lacteos.</h1>
+        <p class="text-lead" data-i18n="platform.hero.copy">Catalogo, inventario, pedidos, temperatura y entrega para lineas de charcuteria, quesos y lacteos en un solo lugar. Sin hojas de calculo, sin grupos de WhatsApp, sin conciliacion manual.</p>
+        <div class="hero-cta-row">
+          <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-lg" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+          <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-lg" data-i18n="shared.nav.login">Ingresar</a>
+        </div>
+      </div>
+
+      <div class="hero-sidecard" aria-label="Platform operating footprint" data-i18n-aria-label="platform.hero.sidecardAria">
+        <div class="hero-sidecard-kicker" data-i18n="platform.hero.kicker">Huella operativa</div>
+        <div class="hero-sidecard-title" data-i18n="platform.hero.sidecardTitle">El mismo sistema sigue al producto desde el catalogo hasta la entrega final.</div>
+        <div class="hero-pill-grid">
+          <div class="page-hero-trust-pill" data-i18n="platform.hero.pill1">5 areas operativas</div>
+          <div class="page-hero-trust-pill" data-i18n="platform.hero.pill2">Funciona sin conexion</div>
+          <div class="page-hero-trust-pill" data-i18n="platform.hero.pill3">Monitoreo en tiempo real</div>
+          <div class="page-hero-trust-pill" data-i18n="platform.hero.pill4">Soporte dedicado incluido</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="section section-tight section-surface" id="webapp-screens" aria-labelledby="webapp-screens-headline">
+  <div class="container-wide">
+    <div class="section-header is-left is-tight reveal">
+      <div class="badge mb-4">WebApp actualizada</div>
+      <h2 id="webapp-screens-headline">Diseños reales del workspace Nexa.</h2>
+      <p class="text-lead">La plataforma vende software operativo: portal comprador, inventario y despacho conectados dentro del mismo tenant.</p>
+    </div>
+
+    <div class="webapp-screenshot-grid reveal reveal-delay-1">
+      <figure class="webapp-screenshot-card">
+        <img src="../assets/img/webapp/buyer-request-builder.png" alt="Buyer Request Builder actualizado en Nexa WebApp" width="1440" height="960" loading="lazy" />
+        <figcaption>Buyer Portal: solicitudes B2B con catalogo, cantidades y direccion estructurada.</figcaption>
+      </figure>
+      <figure class="webapp-screenshot-card">
+        <img src="../assets/img/webapp/inventory-control.png" alt="Inventory Control actualizado en Nexa WebApp" width="1440" height="960" loading="lazy" />
+        <figcaption>Inventory Control: stock por producto, lote automatico y riesgo visible.</figcaption>
+      </figure>
+      <figure class="webapp-screenshot-card">
+        <img src="../assets/img/webapp/dispatch-board.png" alt="Dispatch Board actualizado en Nexa WebApp" width="1440" height="960" loading="lazy" />
+        <figcaption>Dispatch Orders: filtros, ordenamiento y avance de despacho.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section section-tight section-surface" id="modules" aria-labelledby="modules-headline">
+  <div class="container-wide">
+    <div class="section-header is-left is-tight reveal">
+      <div class="badge mb-4" data-i18n="platform.modules.badge">Lo que cubre Nexa</div>
+      <h2 id="modules-headline" data-i18n="platform.modules.title">Cinco areas operativas. Un sistema.</h2>
+      <p class="text-lead" data-i18n="platform.modules.copy">Cada una resuelve un problema concreto. Juntas eliminan las grietas donde se pierde producto, se confunden pedidos y nadie sabe que esta pasando.</p>
+    </div>
+
+    <div class="platform-modules-grid">
+<div class="module-card module-card-featured reveal" id="catalog">
+        <div class="module-card-left">
+          <div class="module-card-number">01</div>
+          <div class="module-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect>
+            </svg>
+          </div>
+          <h3 data-i18n="platform.modules.catalog.title">Catalogo de producto</h3>
+          <p data-i18n="platform.modules.catalog.copy">Cada rueda de queso, SKU de charcuteria y linea lactea con su rango de temperatura, vida util y precio, visible para tu red de distribuidores dentro del catalogo operativo. Se acabaron los PDFs y las listas por correo.</p>
+        </div>
+<div class="module-preview-table" aria-label="Catalog preview">
+          <div class="module-table-header">
+            <div class="module-table-col-label" data-i18n="platform.modules.catalog.col1">Producto</div>
+            <div class="module-table-col-label" data-i18n="platform.modules.catalog.col2">Stock</div>
+            <div class="module-table-col-label" data-i18n="platform.modules.catalog.col3">Rango temp.</div>
+            <div class="module-table-col-label" data-i18n="platform.modules.catalog.col4">Estado</div>
+          </div>
+          <div class="module-table-row">
+            <div class="module-table-cell module-table-cell-primary">Brie Wheel 1kg</div>
+            <div class="module-table-cell">1,200 units</div>
+            <div class="module-table-cell module-table-cell-mono">+2°C / +6°C</div>
+            <div class="module-table-cell"><span class="status-dot status-optimal" data-i18n="platform.modules.catalog.statusOptimal">Optimo</span></div>
+          </div>
+          <div class="module-table-row">
+            <div class="module-table-cell module-table-cell-primary">Mild Gouda 2.5kg</div>
+            <div class="module-table-cell">4,500 kg</div>
+            <div class="module-table-cell module-table-cell-mono">+2°C / +6°C</div>
+            <div class="module-table-cell"><span class="status-dot status-optimal" data-i18n="platform.modules.catalog.statusOptimal">Optimo</span></div>
+          </div>
+          <div class="module-table-row">
+            <div class="module-table-cell module-table-cell-primary">Greek Yogurt 1kg</div>
+            <div class="module-table-cell">80 crates</div>
+            <div class="module-table-cell module-table-cell-mono">+1°C / +4°C</div>
+            <div class="module-table-cell"><span class="status-dot status-alert" data-i18n="platform.modules.catalog.statusLow">Stock bajo</span></div>
+          </div>
+          <div class="module-table-row">
+            <div class="module-table-cell module-table-cell-primary">Jamon Cocido 250g</div>
+            <div class="module-table-cell">620 kg</div>
+            <div class="module-table-cell module-table-cell-mono">0°C / +4°C</div>
+            <div class="module-table-cell"><span class="status-dot status-optimal" data-i18n="platform.modules.catalog.statusOptimal">Optimo</span></div>
+          </div>
+        </div>
+      </div>
+<div class="module-card reveal" id="inventory">
+        <div class="module-card-number">02</div>
+        <div class="module-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="8" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line>
+            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+          </svg>
+        </div>
+        <h3 data-i18n="platform.modules.inventory.title">Inventario operativo</h3>
+        <p data-i18n="platform.modules.inventory.copy">Ve que tienes, donde esta y cuando vence en cada bodega, camara fria y camara de maduracion de queso. La rotacion FEFO se muestra como regla operativa del flujo.</p>
+      </div>
+<div class="module-card reveal reveal-delay-1" id="orders">
+        <div class="module-card-number">03</div>
+        <div class="module-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </div>
+        <h3 data-i18n="platform.modules.orders.title">Pedidos B2B</h3>
+        <p data-i18n="platform.modules.orders.copy">Tus retailers, mostradores deli y equipos compradores hacen pedidos desde un portal con catalogo de productos, precios definidos y stock visible. Sin llamadas para confirmar disponibilidad. Sin hilos interminables de correo.</p>
+      </div>
+<div class="module-card reveal" id="telemetry">
+        <div class="module-card-number">04</div>
+        <div class="module-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+          </svg>
+        </div>
+        <h3 data-i18n-html="platform.modules.telemetry.title">Temperatura y entrega</h3>
+        <p data-i18n="platform.modules.telemetry.copy">Tus choferes registran evidencia de entrega de forma digital. Temperatura IoT, GPS y automatizaciones quedan separados como integraciones posteriores.</p>
+      </div>
+<div class="module-card reveal reveal-delay-1" id="traceability">
+        <div class="module-card-number">05</div>
+        <div class="module-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </div>
+        <h3 data-i18n="platform.modules.traceability.title">Trazabilidad completa</h3>
+        <p data-i18n="platform.modules.traceability.copy">Cada producto queda modelado con origen, bodegas, condiciones termicas y recepcion. Los expedientes de inocuidad y trazabilidad quedan preparados para integraciones operativas posteriores.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="what-changes" aria-labelledby="changes-headline">
+  <div class="container-wide">
+    <div class="section-header is-left is-tight reveal">
+      <div class="badge mb-4" data-i18n="platform.changes.badge">Cambios visibles</div>
+      <h2 id="changes-headline" data-i18n="platform.changes.title">Problemas que desaparecen cuando usas Nexa.</h2>
+      <p class="text-lead" data-i18n="platform.changes.copy">Tu trabajo diario cambia de formas muy practicas. Esto es lo primero que los operadores notan.</p>
+    </div>
+
+    <div class="platform-changes-grid reveal reveal-delay-1">
+      <div class="platform-change-card">
+        <div class="platform-change-before">
+          <span class="platform-change-label platform-change-label-red" data-i18n="shared.before">Antes</span>
+          <p data-i18n="platform.changes.card1.before">El stock se sigue en hojas de calculo. Nadie sabe que esta por vencer hasta que ya es tarde.</p>
+        </div>
+        <div class="platform-change-after">
+          <span class="platform-change-label platform-change-label-green" data-i18n="shared.after">Despues</span>
+          <p data-i18n="platform.changes.card1.after">Stock visible por ubicacion. Alertas de vencimiento dentro del flujo planificado. La rotacion FEFO deja de ser opcional.</p>
+        </div>
+      </div>
+      <div class="platform-change-card">
+        <div class="platform-change-before">
+          <span class="platform-change-label platform-change-label-red" data-i18n="shared.before">Antes</span>
+          <p data-i18n="platform.changes.card2.before">Los pedidos llegan por WhatsApp, telefono o correo. Tu equipo los vuelve a escribir en otro sistema.</p>
+        </div>
+        <div class="platform-change-after">
+          <span class="platform-change-label platform-change-label-green" data-i18n="shared.after">Despues</span>
+          <p data-i18n="platform.changes.card2.after">Los clientes piden desde un portal B2B con precios definidos y stock visible. Los pedidos llegan estructurados y listos para revision de despacho.</p>
+        </div>
+      </div>
+      <div class="platform-change-card">
+        <div class="platform-change-before">
+          <span class="platform-change-label platform-change-label-red" data-i18n="shared.before">Antes</span>
+          <p data-i18n="platform.changes.card3.before">Disputas de entrega sin evidencia. El cliente dice que llego tibio y no tienes como demostrar lo contrario.</p>
+        </div>
+        <div class="platform-change-after">
+          <span class="platform-change-label platform-change-label-green" data-i18n="shared.after">Despues</span>
+          <p data-i18n="platform.changes.card3.after">Firma digital y foto quedan modeladas en el flujo. GPS, temperatura y automatizaciones se tratan como roadmap.</p>
+        </div>
+      </div>
+      <div class="platform-change-card">
+        <div class="platform-change-before">
+          <span class="platform-change-label platform-change-label-red" data-i18n="shared.before">Antes</span>
+          <p data-i18n="platform.changes.card4.before">La data de temperatura vive en un logger local que nadie revisa hasta la auditoria.</p>
+        </div>
+        <div class="platform-change-after">
+          <span class="platform-change-label platform-change-label-green" data-i18n="shared.after">Despues</span>
+          <p data-i18n="platform.changes.card4.after">Monitoreo y alertas quedan planificados como integracion. TB1 muestra el flujo y la prioridad operativa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section section-tight section-surface" id="how-it-works" aria-labelledby="workflow-headline">
+  <div class="container-wide">
+    <div class="section-header is-left is-tight reveal">
+      <div class="badge mb-4" data-i18n="platform.workflow.badge">Como se usa</div>
+      <h2 id="workflow-headline" data-i18n="platform.workflow.title">Tu equipo no necesita entrenamiento tecnico para usar esto.</h2>
+      <p class="text-lead" data-i18n="platform.workflow.copy">Nexa esta diseñado para piso de bodega, camaras de queso y rutas de entrega, no para departamentos de TI.</p>
+    </div>
+
+    <div class="platform-workflow-grid reveal reveal-delay-1">
+      <div class="platform-workflow-step">
+        <div class="platform-workflow-number">01</div>
+        <h3 data-i18n="platform.workflow.step1.title">Los jefes de operacion usan el tablero</h3>
+        <p data-i18n="platform.workflow.step1.copy">Un tablero en navegador que funciona en cualquier laptop o tablet. Ve stock, pedidos y alertas planificadas en una sola vista.</p>
+      </div>
+      <div class="platform-workflow-step">
+        <div class="platform-workflow-number">02</div>
+        <h3 data-i18n="platform.workflow.step2.title">Los choferes usan su telefono</h3>
+        <p data-i18n="platform.workflow.step2.copy">La interfaz movil corre en cualquier navegador de smartphone. Los choferes registran entregas y fotos; temperatura y sincronizacion offline quedan como roadmap.</p>
+      </div>
+      <div class="platform-workflow-step">
+        <div class="platform-workflow-number">03</div>
+        <h3 data-i18n="platform.workflow.step3.title">Tus clientes usan el portal B2B</h3>
+        <p data-i18n="platform.workflow.step3.copy">Tus distribuidores, tiendas especializadas y equipos compradores ingresan, ven catalogo de productos con stock y precios, y piden directamente.</p>
+      </div>
+      <div class="platform-workflow-step">
+        <div class="platform-workflow-number">04</div>
+        <h3 data-i18n="platform.workflow.step4.title">Las alertas te llegan a ti</h3>
+        <p data-i18n="platform.workflow.step4.copy">Desvios de temperatura, stock bajo o camaras sin conexion quedan modelados como alertas planificadas para fases posteriores.</p>
+      </div>
+    </div>
+
+    <div class="platform-workflow-note reveal" data-i18n-html="platform.workflow.note"><strong>Sin descargas. Sin aplicaciones pesadas. Sin procesos paralelos.</strong> Una sola capa operativa compartida por jefes, choferes y compradores.</div>
+  </div>
+</section>
+
+
+
+<section class="section" id="get-started" aria-labelledby="phases-headline">
+  <div class="container-wide">
+    <div class="section-header is-left is-tight reveal">
+      <div class="badge mb-4" data-i18n="platform.phases.badge">Puesta en marcha</div>
+      <h2 id="phases-headline" data-i18n="platform.phases.title">Flujo de trabajo funcional desde el primer dia. Integraciones por roadmap.</h2>
+      <p class="text-lead" data-i18n="platform.phases.copy">Configuramos el alcance por fases mientras tu equipo sigue operando. Sin prometer integraciones fuera del MVP TB1.</p>
+    </div>
+
+    <div class="phase-grid">
+      <div class="phase-card reveal">
+        <div class="phase-number">01</div>
+        <div class="phase-title" data-i18n="platform.phases.step1.title">Aprendemos tu operacion</div>
+        <p class="phase-desc" data-i18n="platform.phases.step1.copy">Mapeamos productos, ubicaciones y rutas. Revisamos compatibilidad del equipo existente. Tu nos dices que esta roto y configuramos Nexa alrededor de eso.</p>
+        <ul class="phase-checklist">
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step1.item1">Mapeo de productos y rutas</span>
+          </li>
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step1.item2">Revision de compatibilidad del equipo</span>
+          </li>
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step1.item3">Tu equipo define que corregir primero</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="phase-card reveal reveal-delay-1">
+        <div class="phase-number">02</div>
+        <div class="phase-title" data-i18n="platform.phases.step2.title">Lo configuramos</div>
+        <p class="phase-desc" data-i18n="platform.phases.step2.copy">Cargamos el catalogo de productos y capacitamos al equipo. Sensores e integraciones quedan planificados para fases posteriores.</p>
+        <ul class="phase-checklist">
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step2.item1">Catalogo e inventario inicial listos</span>
+          </li>
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step2.item2">Sensores y equipos en validacion de compatibilidad</span>
+          </li>
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step2.item3">Capacitacion practica del equipo</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="phase-card reveal reveal-delay-2">
+        <div class="phase-number">03</div>
+        <div class="phase-title" data-i18n="platform.phases.step3.title">Validacion operativa y planificacion de fases</div>
+        <p class="phase-desc" data-i18n="platform.phases.step3.copy">Tu equipo valida Nexa en un entorno controlado. Las integraciones adicionales se activan cuando los servicios planificados estan listos.</p>
+        <ul class="phase-checklist">
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step3.item1">Operacion integrada desde el dia uno</span>
+          </li>
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step3.item2">Soporte dedicado por 30 dias</span>
+          </li>
+          <li>
+            <div class="phase-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span data-i18n="platform.phases.step3.item3">Soporte humano 24/7 despues de eso</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+
+
+<section class="section section-tight section-divider-top video-showcase-section" id="about-product-video" aria-labelledby="video-product-headline">
+  <div class="container">
+    <div class="section-header is-center reveal">
+      <div class="badge mb-4" data-i18n="platform.video.badge">Video</div>
+      <h2 id="video-product-headline" class="section-title" style="font-size: 2.25rem;" data-i18n="platform.video.title">About the Product</h2>
+      <p class="text-lead" style="max-width: 600px; margin: 16px auto 0;" data-i18n="platform.video.copy">Mira el video de presentación del producto para comprender cómo Nexa optimiza cada etapa de la distribución refrigerada.</p>
+    </div>
+    <div class="video-player-wrapper reveal reveal-delay-1">
+      <iframe class="video-iframe" src="https://www.youtube.com/embed/ypedAqjH19c" title="Nexa - About the Product Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="platform-cta" aria-labelledby="platform-cta-headline">
+  <div class="container">
+    <div class="closing-cta reveal">
+      <div class="closing-cta-copy">
+        <div class="badge mb-4" data-i18n="platform.cta.badge">Cierre de plataforma</div>
+        <h2 id="platform-cta-headline" data-i18n-html="platform.cta.title">Registra un workspace y empieza a vender software operativo con Nexa.</h2>
+        <p class="text-lead" data-i18n="platform.cta.copy">Activa un tenant, configura catalogo, stock, pedidos, despacho y portal B2B. Las integraciones externas quedan separadas como roadmap.</p>
+      </div>
+      <div class="closing-cta-actions">
+        <div class="closing-cta-note" data-i18n="platform.cta.note">Siguiente paso</div>
+        <p class="closing-cta-meta" data-i18n="platform.cta.meta">CTA directo: registrar workspace o ingresar. La app concentra el flujo comercial y logistico.</p>
+        <div class="cta-btn-row">
+          <a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" class="btn btn-primary btn-lg" id="platform-cta-primary" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a>
+          <a href="#/auth/login" data-webapp-path="#/auth/login" class="btn btn-secondary btn-lg" id="platform-cta-faq" data-i18n="platform.cta.secondary">Ingresar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer" id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-editorial">
+        <a href="../index.html" class="navbar-logo footer-logo" aria-label="Inicio de Nexa" data-i18n-aria-label="shared.nav.logoAria">
+          <img src="../assets/img/nexa.svg" alt="" class="navbar-logo-image" width="110" height="34" />
+          <span class="visually-hidden">Nexa</span>
+        </a>
+        <p class="footer-kicker" data-i18n="shared.footer.kicker">Mantente cerca</p>
+        <h2 class="footer-editorial-title" data-i18n="shared.footer.editorialTitle">Mantente cerca del equipo que esta construyendo claridad operativa para alimentos refrigerados.</h2>
+        <p class="footer-tagline" data-i18n="shared.footer.editorialCopy">Usa la misma linea directa que usamos durante los despliegues: habla con el equipo, explora la plataforma o entra al FAQ cuando necesites algo concreto.</p>
+        <div class="footer-editorial-actions">
+          <a href="company.html#contact" class="btn btn-primary btn-md" data-i18n="shared.footer.editorialPrimary">Hablar con el equipo</a>
+          <a href="platform.html" class="btn btn-secondary btn-md" data-i18n="shared.footer.editorialSecondary">Ver la plataforma</a>
+        </div>
+      </div>
+
+      <div class="footer-nav-shell">
+        <div class="footer-nav-grid">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.product">Producto</div>
+            <ul class="footer-links">
+              <li><a href="about-the-product.html" data-i18n="shared.nav.aboutProduct">Sobre el producto</a></li>
+              <li><a href="platform.html" data-i18n="shared.footer.platformOverview">Resumen de la plataforma</a></li>
+              <li><a href="platform.html#catalog" data-i18n="shared.footer.productData">Datos de producto</a></li>
+              <li><a href="platform.html#inventory" data-i18n="shared.footer.operationalInventory">Inventario operativo</a></li>
+              <li><a href="platform.html#traceability" data-i18n="shared.footer.traceability">Trazabilidad</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.company">Empresa</div>
+            <ul class="footer-links">
+              <li><a href="about-the-team.html" data-i18n="shared.nav.aboutTeam">Sobre el equipo</a></li>
+              <li><a href="company.html" data-i18n="shared.nav.company">Sobre Nexa</a></li>
+              <li><a href="company.html#support" data-i18n="shared.footer.howWeSupport">Como acompanamos</a></li>
+              <li><a href="company.html#contact" data-i18n="shared.footer.contact">Contacto</a></li>
+              <li><a href="faq.html" data-i18n="shared.nav.faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.resources">Recursos</div>
+            <ul class="footer-links">
+              <li><a href="pricing.html" data-i18n="shared.nav.pricing">Pricing</a></li>
+              <li><a href="#/auth/login" data-webapp-path="#/auth/login" data-i18n="shared.nav.login">Login</a></li>
+              <li><a href="#/tenant-management/register-organization" data-webapp-path="#/tenant-management/register-organization" data-i18n="shared.nav.registerWorkspace">Registrar workspace</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social-block">
+          <div>
+            <div class="footer-col-title" data-i18n="shared.footer.direct">Accesos directos</div>
+            <p class="footer-direct-copy" data-i18n="shared.footer.directCopy">Accesos directos para registrar tu workspace, ingresar o resolver dudas hoy.</p>
+          </div>
+          <div class="footer-social-row">
+            <a href="mailto:hello@nexa.lat" class="footer-social-link" aria-label="Enviar correo a Nexa" data-i18n-aria-label="shared.footer.emailAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="M4 8l8 6 8-6"></path>
+              </svg>
+            </a>
+            <a href="company.html#contact" class="footer-social-link" aria-label="Ir al contacto de Nexa" data-i18n-aria-label="shared.footer.contactAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+            <a href="faq.html" class="footer-social-link" aria-label="Abrir el FAQ de Nexa" data-i18n-aria-label="shared.footer.faqAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+            </a>
+            <a href="solutions/index.html" class="footer-social-link" aria-label="Ver soluciones de Nexa" data-i18n-aria-label="shared.footer.solutionsAria">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-legal" data-i18n="shared.footer.legal">© 2026 Nexa · King / VulturesDevs · Nexa Platform Showcase.</span>
+      <div class="footer-legal-links">
+        <a href="legal/terms.html" data-i18n="shared.footer.terms">Terms & Conditions</a>
+        <a href="legal/privacy.html" data-i18n="shared.footer.privacy">Privacy & Policy</a>
+        <a href="legal/cookies.html" data-i18n="shared.footer.cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Banner de Cookies -->
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <div class="cookie-banner-inner">
+    <p class="cookie-banner-text" data-i18n="shared.cookies.bannerText">
+      Usa cookies para asegurar la mejor experiencia de navegación y rendimiento.
+    </p>
+    <div class="cookie-banner-actions">
+      <a href="legal/cookies.html" class="cookie-banner-link" data-i18n="shared.cookies.bannerLearnMore">Aprender mas</a>
+      <button type="button" class="btn btn-primary btn-sm cookie-banner-btn" id="cookie-accept-btn" data-i18n="shared.cookies.bannerAccept">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/interactions.js"></script>
+<script src="../assets/js/animations.js"></script>
+</body>
+</html>
