@@ -242,7 +242,7 @@
   }
 }
 
-/* Global safeguard: Hide all contact and demo references */
+/* Global safeguard: Hide all contact and trial references */
 a[href*="#contact"], 
 [data-i18n="shared.footer.contact"],
 [data-i18n="shared.footer.editorialPrimary"] {

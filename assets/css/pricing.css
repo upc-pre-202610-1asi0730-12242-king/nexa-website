@@ -362,14 +362,14 @@ body[data-page="pricing"] {
 
 .pricing-mockup-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(18px, 2vw, 28px);
 }
 
 .pricing-mockup {
   display: grid;
   gap: 18px;
-  min-height: 380px;
+  min-height: 0;
   padding: clamp(20px, 2.4vw, 28px);
   border-radius: var(--radius-xl);
 }
@@ -377,14 +377,19 @@ body[data-page="pricing"] {
 .pricing-webapp-image {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top left;
+  aspect-ratio: 16 / 9;
+  height: clamp(260px, 31vw, 420px);
+  object-fit: contain;
+  object-position: top center;
   overflow: hidden;
   border: 1px solid var(--c-border-light);
   border-radius: var(--radius-lg);
   background: #f8fbff;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.72);
+}
+
+.pricing-mockup-billing {
+  grid-column: 1 / -1;
 }
 
 .mock-sidebar-layout {
@@ -753,5 +758,9 @@ body[data-page="pricing"] {
 
   .pricing-contact-form .btn {
     justify-self: stretch;
+  }
+
+  .pricing-mockup-billing {
+    grid-column: auto;
   }
 }

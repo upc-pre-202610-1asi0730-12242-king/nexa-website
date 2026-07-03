@@ -1,33 +1,51 @@
-# Security Policy
+# Nexa Website Security Policy
 
-## Supported Versions
+## Supported Version
 
-This repository hosts the **Nexa public landing website** — a static site deployed via GitHub Pages. There is no backend runtime, authentication layer, or database in this repository.
+| Repository | Current Release | Delivery | Security Support |
+|---|---:|---|---|
+| `nexa-website` | `v4.0.1` | TB2 | Active |
 
-| Scope | Status |
+Older tags remain available for academic traceability, but security corrections are applied to the latest active release line.
+
+## Scope
+
+Security review for this repository includes:
+
+- Static HTML, CSS, and JavaScript.
+- Public links to WebApp, Platform API, and legal pages.
+- GitHub Pages deployment configuration.
+- Client-side i18n and cookie consent behavior.
+- External embeds or third-party links when present.
+
+## Live Security Surface
+
+| Service | URL |
 |---|---|
-| Static HTML / CSS / JS | ✅ In scope |
-| GitHub Pages deployment | ✅ In scope |
-| Third-party embeds (YouTube iframe) | ⚠️ Out of scope — report to provider |
-| WebApp backend (`nexa-webapp`) | ⚠️ Out of scope — report separately |
+| Website | https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/ |
+| WebApp | https://nexa-webapp.onrender.com/#/auth/login |
+| Platform API | https://nexa-platform-20wt.onrender.com |
 
 ## Reporting a Vulnerability
 
-If you discover a security concern related to this repository (e.g. exposed credentials in source, malicious script injection, or broken access in GitHub Actions workflows), please follow responsible disclosure:
+Do not open a public issue for vulnerabilities. Report privately to the Team King maintainers or through GitHub private vulnerability reporting when available.
 
-1. **Do not open a public GitHub Issue** for security vulnerabilities.
-2. **Contact the team directly** via the contact form on the live website:  
-   [https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/pages/company.html#contact](https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/pages/company.html#contact)
-3. Include a clear description of the issue, affected file(s), and steps to reproduce if applicable.
+Include:
 
-We will acknowledge your report within **72 hours** and work to address confirmed issues as a priority.
+- Affected page, file, link, or script.
+- Steps to reproduce.
+- Expected and actual behavior.
+- Browser and environment details.
+- Risk level and suggested mitigation, if known.
 
-## Scope Notes
+## Security Requirements
 
-- This site does **not** process payments, store user credentials, or transmit sensitive personal data.
-- All login actions redirect externally to `nexa-webapp.onrender.com` — this is a separate repository and runtime environment.
-- Cookie consent is managed client-side via `localStorage`. No tracking cookies are set.
+- Do not commit secrets, tokens, private contact data, or local artifacts.
+- Keep public links accurate and HTTPS-based.
+- Avoid adding third-party scripts without review.
+- Keep cookie and privacy language aligned with current site behavior.
+- Validate JavaScript syntax before release.
 
 ---
 
-*Universidad Peruana de Ciencias Aplicadas · Team King · Course 1ASI0730 · 2026-10*
+Team King · UPC · Aplicaciones Web · TB2 · 2026-10

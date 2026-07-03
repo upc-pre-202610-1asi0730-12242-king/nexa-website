@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'Documentos comerciales',
           'Control de inventario',
           'Órdenes de despacho',
-          'Prueba de entrega (POD)',
+          'Evidencia de entrega (POD)',
           'Seguimiento para el comprador',
           'Gestión de facturación y pagos',
           'Resumen de envío, impuestos y pago',

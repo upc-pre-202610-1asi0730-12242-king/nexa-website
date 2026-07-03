@@ -16,7 +16,7 @@
 /* --- SECCIÓN 1: HERO (Impacto inicial) --- */
 .app-hero {
   position: relative;
-  min-height: max(768px, calc(100svh - 64px));
+  min-height: max(640px, calc(100svh - 64px));
   display: flex;
   align-items: center;
   overflow: clip;
@@ -61,16 +61,16 @@
 }
 
 .app-hero-content {
-  max-width: 616px;
-  padding: clamp(64px, 10vh, 112px) 0;
+  max-width: 760px;
+  padding: clamp(48px, 8vh, 84px) 0;
 }
 
 .app-hero-headline {
-  font-size: clamp(44px, 5.8vw, 84px);
+  font-size: clamp(38px, 4vw, 58px);
   font-weight: 800;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
-  margin-bottom: var(--space-6);
+  letter-spacing: 0;
+  line-height: 1.04;
+  margin-bottom: var(--space-5);
   color: var(--c-text-primary);
   animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -79,8 +79,8 @@
   font-size: var(--app-body-lg);
   color: var(--c-text-secondary);
   line-height: 1.6;
-  margin-bottom: var(--space-8);
-  max-width: 544px;
+  margin-bottom: var(--space-6);
+  max-width: 560px;
   animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
 }
 
@@ -89,7 +89,7 @@
   align-items: center;
   gap: var(--space-4);
   flex-wrap: wrap;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
   animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
 }
 
@@ -160,7 +160,7 @@
 
 @media (max-width: 1024px) {
   .app-hero {
-    min-height: max(720px, calc(100svh - 64px));
+    min-height: max(620px, calc(100svh - 64px));
   }
 
   .app-hero-content {
@@ -189,7 +189,7 @@
   }
 
   .app-hero-headline {
-    font-size: clamp(44px, 13vw, 64px);
+    font-size: clamp(36px, 10vw, 52px);
   }
 
   .app-hero-lead {
@@ -1750,7 +1750,10 @@
 .webapp-screenshot-card img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 10;
+  height: clamp(240px, 24vw, 360px);
+  object-fit: contain;
+  object-position: top center;
   background: var(--c-surface);
   border-bottom: 1px solid var(--c-border-light);
 }
@@ -7050,7 +7053,7 @@ body[data-page="home"] .app-adopt-sub {
 }
 
 body[data-page="home"] .app-hero {
-  min-height: max(780px, calc(100svh - 64px));
+  min-height: max(640px, calc(100svh - 64px));
 }
 
 body[data-page="home"] .app-hero-content {
@@ -7068,11 +7071,11 @@ body[data-page="home"] .app-hero-stats {
 }
 
 body[data-page="home"] .app-hero-headline {
-  max-width: 7ch;
+  max-width: 12ch;
 }
 
 body[data-page="home"] .app-hero-lead {
-  max-width: 29ch;
+  max-width: 46ch;
 }
 
 body[data-page="home"] .app-hero-ctas {

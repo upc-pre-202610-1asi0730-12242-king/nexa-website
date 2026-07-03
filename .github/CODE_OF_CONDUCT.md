@@ -1,42 +1,42 @@
-# Code of Conduct
-
-## Our Commitment
-
-We are committed to maintaining an open, respectful, and collaborative environment for everyone who contributes to or interacts with this project, regardless of background, experience level, or identity.
-
-## Expected Behavior
-
-- Use welcoming and inclusive language.
-- Be respectful of differing viewpoints and experiences.
-- Accept constructive feedback gracefully.
-- Focus on what is best for the project and the team.
-- Show empathy toward other contributors.
-
-## Unacceptable Behavior
-
-- Harassment, discrimination, or personal attacks of any kind.
-- Posting or sharing offensive, derogatory, or inappropriate content.
-- Deliberately disrupting collaborative work or discussions.
-- Any conduct that would be considered inappropriate in a professional academic setting.
+# Nexa Code of Conduct
 
 ## Scope
 
-This Code of Conduct applies within all project spaces — GitHub Issues, Pull Requests, commit messages, discussions, and any direct communication between team members related to this project.
+This Code of Conduct applies to the Nexa repositories maintained by Team King for the TB2 delivery of **1ASI0730 Aplicaciones Web**:
+
+- `nexa-platform`
+- `nexa-webapp`
+- `nexa-website`
+- `nexa-ecosystem-report`
+
+## Our Commitment
+
+We maintain a respectful, professional, and collaborative environment for all contributors and reviewers. Every interaction should support clear engineering work, academic integrity, and constructive delivery.
+
+## Expected Behavior
+
+- Communicate respectfully and directly.
+- Keep feedback focused on code, architecture, documentation, validation, or product quality.
+- Respect bounded-context ownership and existing repository conventions.
+- Keep secrets, credentials, and private information out of public channels.
+- Document meaningful changes with clear commits and pull request notes.
+
+## Unacceptable Behavior
+
+- Harassment, discrimination, personal attacks, or intimidation.
+- Publishing private information without permission.
+- Committing credentials, tokens, or private deployment values.
+- Introducing misleading release notes, unsupported claims, or unverified deployment statements.
+- Disrupting reviews, issues, or project coordination.
 
 ## Reporting
 
-If you observe a violation of this Code of Conduct, please report it directly to the team lead:
-
-- **Diego Yucra Sandoval** — [github.com/DiegoS284](https://github.com/DiegoS284)
-
-Reports will be handled with discretion and confidentiality.
+Report concerns privately to the Team King maintainers or through the repository security/reporting features when appropriate. Reports will be reviewed discreetly and handled according to severity.
 
 ## Enforcement
 
-Violations may result in a warning, temporary restriction from contributing, or permanent removal from the project, depending on severity and context.
+Maintainers may request edits, close issues, block pull requests, remove content, or restrict participation when conduct conflicts with these standards.
 
 ---
 
-*This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1.*
-
-*Universidad Peruana de Ciencias Aplicadas · Team King · Course 1ASI0730 · 2026-10*
+Team King · UPC · Aplicaciones Web · TB2 · 2026-10
