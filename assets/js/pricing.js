@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'Manual document checklist',
           'Basic notifications',
           'Limited team access',
-          'No advanced AI',
+          'No advanced decision support',
           'No dedicated integrations'
         ]
       },
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'Professional Buyer Catalog experience',
           'Advanced customer-specific discounts',
           'Advanced promotions',
-          'AI assistant expansion',
+          'Decision-support expansion',
           'Predictive demand recommendations',
           'Cold-chain anomaly insights',
           'Analytics exports',
