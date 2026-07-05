@@ -33,6 +33,11 @@
   padding-top: clamp(var(--space-12), 5vw, var(--space-16));
 }
 
+.anchor-sentinel {
+  height: 0;
+  scroll-margin-top: 96px;
+}
+
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -248,4 +253,3 @@ a[href*="#contact"],
 [data-i18n="shared.footer.editorialPrimary"] {
   display: none !important;
 }
-
