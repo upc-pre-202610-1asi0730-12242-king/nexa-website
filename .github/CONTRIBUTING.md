@@ -1,67 +1,30 @@
 # Contributing to Nexa Website
 
-## Repository Context
+## Repository context
 
-`nexa-website` is the public product website for the Nexa TB2 delivery.
-
-| Field | Value |
-|---|---|
-| Current release | `v4.0.1` |
-| Delivery | TB2 |
-| Runtime | Static HTML / CSS / JavaScript |
-| Deployment | GitHub Pages |
-| Live Website | https://upc-pre-202610-1asi0730-12242-king.github.io/nexa-website/ |
-| WebApp | https://nexa-webapp.onrender.com/#/auth/login |
+This repository contains a static bilingual website for Nexa. It describes product scope and public status; it does not publish a live application endpoint.
 
 ## Workflow
 
-1. Create a branch from `develop` unless the maintainer requests a release correction from `main`.
-2. Keep changes scoped to one page, one content area, or one documentation concern.
-3. Use conventional commits.
-4. Validate locally before opening a pull request.
-5. Do not commit temporary files, local screenshots, OS metadata, or unrelated generated artifacts.
+1. Follow the repository branch and review process configured by maintainers.
+2. Keep edits scoped to a page, content area, or documentation concern.
+3. Use Conventional Commit messages when a commit is requested.
+4. Validate locally before proposing publication.
+5. Do not commit screenshots, local environment files, secrets, or unrelated generated artifacts.
 
-## Branch Names
+## Architecture
 
-| Prefix | Use |
-|---|---|
-| `feature/` | New public page or section |
-| `fix/` | Broken link, copy, layout, or script fix |
-| `docs/` | Documentation update |
-| `style/` | Visual refinement without content contract change |
-| `chore/` | Configuration, tooling, release maintenance |
-
-## Architecture Rules
-
-- Use semantic HTML.
-- Keep styles in the existing CSS structure.
+- Preserve semantic HTML and the existing CSS structure.
 - Keep JavaScript small and page-focused.
-- Keep visible content aligned with Nexa's B2B cold-chain domain.
-- Keep public links pointing to current deployed services.
-- Do not introduce external dependencies unless approved.
+- Treat approved product decisions as authority for Nexa product scope.
+- Distinguish product targets from implemented and accepted capabilities.
+- Do not add unverified application endpoints, pricing, SLA, or support claims.
+- Do not add external dependencies without project approval.
 
-## Validation Checklist
-
-Before requesting review:
+## Local preview
 
 ```bash
 python3 -m http.server 8000
-node --check assets/js/i18n.js
-node --check assets/js/pricing.js
 ```
 
-For visual work, verify desktop and mobile layouts in a browser.
-
-## Pull Request Notes
-
-Each pull request should include:
-
-- Affected page or section.
-- Public claim or link changes.
-- Responsive layout impact.
-- Validation commands and results.
-- Deployment notes, if any.
-
----
-
-Team King · UPC · Aplicaciones Web · TB2 · 2026-10
+The site uses static HTML, CSS, and JavaScript; no package installation is required.

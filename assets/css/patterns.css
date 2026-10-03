@@ -760,7 +760,8 @@
 .status-critical::before { background: #EF4444; }
 .status-critical { color: #DC2626; }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
+  .navbar-link-mobile-only { display: inline-flex; }
   .navbar-links {
     display: none;
   }
@@ -877,4 +878,11 @@
     line-height: 1.05;
     text-align: center;
   }
+}
+
+/* Keep desktop navigation within its container before the menu breakpoint. */
+@media (min-width: 1181px) and (max-width: 1280px) {
+  .navbar-inner { gap: 16px; padding-inline: 24px; }
+  .navbar-link { padding-inline: 10px; }
+  .navbar-actions .navbar-link-action { display: none; }
 }

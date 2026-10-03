@@ -1,35 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const FALLBACK_WEBAPP_BASE = 'https://nexa-webapp.onrender.com';
-  const configuredWebappBase =
-    document.documentElement.dataset.webappBase ||
-    window.NEXA_WEBAPP_BASE ||
-    localStorage.getItem('nexa-webapp-base') ||
-    FALLBACK_WEBAPP_BASE;
-  const webappBase = configuredWebappBase.replace(/\/$/, '');
-  const webappUrl = (path) => `${webappBase}/${path.replace(/^\#?\/?/, '')}`;
-  const getLang = () => (document.documentElement.lang.startsWith('es') ? 'es' : 'en');
-
-  const copy = {
-    en: {
-      nameRequired: 'Please enter your name.',
-      nameShort: 'Use at least 2 characters.',
-      emailRequired: 'Enter your work email.',
-      emailInvalid: 'Enter a valid work email.',
-      messageRequired: 'Tell us a bit about your operation.',
-      messageShort: 'Share at least 20 characters so we can understand your setup.'
-    },
-    es: {
-      nameRequired: 'Ingresa tu nombre.',
-      nameShort: 'Usa al menos 2 caracteres.',
-      emailRequired: 'Ingresa tu correo de trabajo.',
-      emailInvalid: 'Ingresa un correo de trabajo valido.',
-      messageRequired: 'Cuentanos un poco sobre tu operacion.',
-      messageShort: 'Comparte al menos 20 caracteres para entender tu operacion.'
-    }
-  };
-
-  const t = (key) => copy[getLang()][key] || copy.en[key];
-
   /* --- Interaccion del Menu (Scroll) --- */
   const navbar = document.getElementById('navbar');
 
@@ -65,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (navbarLinks) {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 1180) {
         navbarLinks.setAttribute('aria-hidden', mobileNavIsOpen ? 'false' : 'true');
       } else {
         navbarLinks.removeAttribute('aria-hidden');
@@ -96,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navbarLinks.classList.remove('mobile-open');
     mobileToggle.setAttribute('aria-expanded', 'false');
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1180) {
       closeDropdown();
     } else {
       syncShellState();
@@ -123,19 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navbarLinks.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) closeMobileMenu();
+        if (window.innerWidth <= 1180) closeMobileMenu();
       });
     });
 
     document.addEventListener('click', (event) => {
-      if (window.innerWidth > 768) return;
+      if (window.innerWidth > 1180) return;
       if (!navbarLinks.contains(event.target) && !mobileToggle.contains(event.target)) {
         closeMobileMenu();
       }
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1180) {
         navbarLinks.classList.remove('mobile-open');
         mobileToggle.setAttribute('aria-expanded', 'false');
       }
@@ -282,138 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', syncOpenFaqHeights, { passive: true });
     document.addEventListener('nexa:languagechange', syncOpenFaqHeights);
   }
-
-  /* --- Formulario de Contacto --- */
-  const contactForm = document.getElementById('contact-form');
-  const contactSuccess = document.getElementById('contact-success');
-  const contactSubmit = document.getElementById('contact-submit');
-  const contactFields = {
-    name: document.getElementById('contact-name'),
-    email: document.getElementById('contact-email'),
-    message: document.getElementById('contact-message')
-  };
-  const contactErrors = {
-    name: document.getElementById('contact-name-error'),
-    email: document.getElementById('contact-email-error'),
-    message: document.getElementById('contact-message-error')
-  };
-  const contactFieldKeys = Object.keys(contactFields);
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function setFieldError(fieldName, message = '') {
-    const field = contactFields[fieldName];
-    const error = contactErrors[fieldName];
-    if (!field || !error) return;
-
-    const hasError = Boolean(message);
-    field.setAttribute('aria-invalid', hasError ? 'true' : 'false');
-    error.textContent = message;
-    error.hidden = !hasError;
-  }
-
-  function validateField(fieldName) {
-    const field = contactFields[fieldName];
-    if (!field) return true;
-
-    const value = field.value.trim();
-    let messageKey = '';
-
-    if (fieldName === 'name') {
-      if (!value) messageKey = 'nameRequired';
-      else if (value.length < 2) messageKey = 'nameShort';
-    }
-
-    if (fieldName === 'email') {
-      if (!value) messageKey = 'emailRequired';
-      else if (!emailPattern.test(value)) messageKey = 'emailInvalid';
-    }
-
-    if (fieldName === 'message') {
-      if (!value) messageKey = 'messageRequired';
-      else if (value.length < 20) messageKey = 'messageShort';
-    }
-
-    setFieldError(fieldName, messageKey ? t(messageKey) : '');
-    return !messageKey;
-  }
-
-  function syncTranslatedErrors() {
-    contactFieldKeys.forEach((fieldName) => {
-      const field = contactFields[fieldName];
-      if (field && field.getAttribute('aria-invalid') === 'true') {
-        validateField(fieldName);
-      }
-    });
-  }
-
-  function setSubmitting(isSubmitting) {
-    if (!contactSubmit) return;
-    contactSubmit.classList.toggle('is-loading', isSubmitting);
-    contactSubmit.disabled = isSubmitting;
-    contactSubmit.setAttribute('aria-busy', isSubmitting ? 'true' : 'false');
-  }
-
-  if (contactForm && contactSuccess && contactSubmit) {
-    contactFieldKeys.forEach((fieldName) => {
-      const field = contactFields[fieldName];
-      if (!field) return;
-
-      field.addEventListener('blur', () => {
-        if (!contactForm.classList.contains('is-success')) {
-          validateField(fieldName);
-        }
-      });
-
-      field.addEventListener('input', () => {
-        if (field.getAttribute('aria-invalid') === 'true') {
-          validateField(fieldName);
-        }
-      });
-    });
-
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      if (contactForm.classList.contains('is-success')) return;
-
-      const firstInvalidField = contactFieldKeys.find((fieldName) => !validateField(fieldName));
-
-      if (firstInvalidField) {
-        contactFields[firstInvalidField].focus();
-        return;
-      }
-
-      setSubmitting(true);
-      const company = document.getElementById('contact-company')?.value.trim() || '';
-      const subject = encodeURIComponent(`Nexa contact - ${company || contactFields.name.value.trim()}`);
-      const body = encodeURIComponent([
-        `Name: ${contactFields.name.value.trim()}`,
-        `Work email: ${contactFields.email.value.trim()}`,
-        `Company: ${company || '-'}`,
-        '',
-        contactFields.message.value.trim(),
-      ].join('\n'));
-
-      window.location.href = `mailto:hello@nexa.lat?subject=${subject}&body=${body}`;
-      setSubmitting(false);
-      contactForm.classList.add('is-success');
-      contactSuccess.hidden = false;
-      contactSuccess.focus();
-    });
-
-    document.addEventListener('nexa:languagechange', syncTranslatedErrors);
-  }
-
-  /* --- Acceso a la Aplicacion --- */
-  document.querySelectorAll('[data-webapp-path]').forEach((link) => {
-    link.setAttribute('href', webappUrl(link.dataset.webappPath || '#/auth/login'));
-  });
-
-  document.querySelectorAll('[data-login-placeholder]').forEach((button) => {
-    button.addEventListener('click', (event) => {
-      event.preventDefault();
-      window.location.href = webappUrl('#/auth/login');
-    });
-  });
 
   /* --- Cookie Consent Banner --- */
   const cookieBanner = document.getElementById('cookie-banner');
